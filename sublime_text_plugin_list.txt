@@ -1,0 +1,18 @@
+﻿1337 Color Scheme
+Text Pastry
+TabNukerNuker
+BracketHighlighter
+Diffy
+FileIcons
+Git
+GitGutter
+NeoVintageous
+Package Control
+SideBarEnchancements
+SublimePythonIDE
+TabNine
+Terminus
+
+additional settings:
+    "translate_tabs_to_spaces": true,
+    "tab_size": 4,

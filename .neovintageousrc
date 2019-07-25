@@ -1,0 +1,27 @@
+" Type :h neovintageousrc for help.
+
+" setting leader key
+let mapleader="<Space>"
+
+" cd to current file
+nnoremap <leader>cd :cd %:h<CR>
+
+" code formatting
+nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
+vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
+vnoremap <leader>fp :'<,'>!python -m yapf<CR>
+
+" force exit
+nnoremap <leader>qq ZQ
+
+" buffer management
+nnoremap <leader>w :w<CR>
+
+" no highlight search
+noremap <C-l> :nohlsearch<CR>
+
+" Yank and paste using system clipboard.
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
