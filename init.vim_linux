@@ -45,14 +45,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 noremap <A-t> :CtrlPTag<CR>
 
-" list recent file and edit by number
-map <leader>be :browse oldfiles!<CR>
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
 " setting theme
 set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
@@ -82,6 +74,8 @@ map <leader>po :split term://ipython<CR>a
 map <leader>tt :e term://zsh<CR>a
 map <leader>pp :e term://ipython<CR>a
 map <leader>ps y<C-w><C-w>pa<CR><CR><CR><C-[><C-w><C-w>
+
+" keep terminal session alive even if not displayed
 augroup custom_term
     autocmd!
     autocmd TermOpen * setlocal bufhidden=hide
@@ -99,6 +93,11 @@ map <leader>gs :Gstatus<CR>}2j
 
 " force exit
 map <leader>qq :q!<CR>
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " buffer management mapping
 map <leader>bp :bprev!<Return>
