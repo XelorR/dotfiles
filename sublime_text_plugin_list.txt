@@ -2,7 +2,6 @@
 Text Pastry
 TabNukerNuker
 BracketHighlighter
-Diffy
 FileIcons
 Git
 GitGutter
