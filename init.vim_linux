@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter' " git row markers
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
+Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file searcher
