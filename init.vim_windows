@@ -142,6 +142,7 @@ vnoremap , zf
 " J behaviour
 set nojoinspaces
 
+" run macro in visual selecthion
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
