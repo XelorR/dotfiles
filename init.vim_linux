@@ -51,8 +51,6 @@ noremap <A-t> :CtrlPTag<CR>
 if executable('rg')
   set grepprg=rg\ --color=never
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 1
-  let g:ctrlp_clear_cache_on_exit = 0
 endif
 
 " ignore some paths while searching
@@ -103,6 +101,8 @@ vnoremap <leader>fp :'<,'>!python -m yapf<CR>
 map <leader>gcc :Gcommit<CR>
 map <leader>gca :Gcommit -a<CR>
 map <leader>gs :Gstatus<CR>}2j
+map <C-A-up> :cd %:h<CR>:!git push<CR>
+map <C-A-down> :cd %:h<CR>:!git pull<CR>
 
 " force exit
 map <leader>qq :q!<CR>
