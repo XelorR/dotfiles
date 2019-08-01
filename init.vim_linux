@@ -16,6 +16,7 @@ Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file searcher
+Plug 'jremmen/vim-ripgrep' " search in files via Rg
 Plug 'matze/vim-move' " <A-j>/<A-k> to move row/selection
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'xolox/vim-session' " managing sessions
