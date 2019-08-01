@@ -1,0 +1,207 @@
+" setting leader key
+let maplocalleader = "\\"
+let mapleader = "\<Space>"
+
+" importing modules via VimPlug
+if has("win32") || has("win16")
+  call plug#begin('C:/vimplugins')
+else
+  call plug#begin('~/.local/share/nvim/plugged')
+endif
+" Plug 'zxqfl/tabnine-vim' " completion engine
+Plug 'python-mode/python-mode' " completion engine
+Plug 'terryma/vim-multiple-cursors' " Ctrl+n for multicursour editing
+Plug 'easymotion/vim-easymotion' " cursor quick movements
+Plug 'ayu-theme/ayu-vim' " theme
+Plug 'airblade/vim-gitgutter' " git row markers
+Plug 'tpope/vim-fugitive' " git wrapper
+Plug 'tpope/vim-commentary' " type gcc to comment
+Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
+Plug 'tpope/vim-repeat' " use dot for surroundings
+Plug 'Yggdroot/indentLine' " visualize indents with lines
+Plug 'vim-airline/vim-airline' " informative bar
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
+Plug 'junegunn/fzf.vim' " better fuzzy searcher
+Plug 'matze/vim-move' " <A-j>/<A-k> to move row/selection
+Plug 'machakann/vim-highlightedyank' " highlit copied selection
+Plug 'xolox/vim-session' " managing sessions
+Plug 'xolox/vim-misc' " dependency for sessions
+Plug 'ludovicchabant/vim-gutentags' " ctags auto management
+Plug 'scrooloose/nerdtree' " sidebar
+call plug#end()
+
+" session config
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
+let g:session_autosave_periodic = 5
+let g:session_autosave_silent = 1
+let g:session_default_to_last = 1
+
+" splits windows in more habitual manner
+set splitright
+set splitbelow
+
+" line numbers - normal and relative
+set nu
+" set rnu
+
+" increment file search binding
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_working_path_mode = 'ra'
+
+" Using ripgrep for CtrlP
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+endif
+
+" ignore some paths while searching
+set wildignore+=*/.git/*,*/tmp/*,*.swp
+
+" setting theme
+set termguicolors     " enable true colors support
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+" theme switch maping
+map <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
+map <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
+map <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
+
+" IndentLine {{
+let g:indentLine_char = '┊'
+let g:indentLine_first_char = '┊'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+" " }}
+
+" cd to current file
+map <leader>cd :cd %:p:h<CR>
+
+" terminal
+if executable("powershell")
+  map <leader>' :vsplit term://powershell<CR>a
+  map <leader>- :split term://powershell<CR>a
+  map <leader>tt :e term://powershell<CR>a
+  map <A-t> :e term://powershell<CR>a
+elseif executable("cmd")
+  map <leader>' :vsplit term://cmd<CR>a
+  map <leader>- :vsplit term://cmd<CR>a
+  map <leader>tt :e term://cmd<CR>a
+  map <A-t> :e term://cmd<CR>a
+elseif executable("fish")
+  map <leader>' :vsplit term://fish<CR>a
+  map <leader>- :vsplit term://fish<CR>a
+  map <leader>tt :e term://fish<CR>a
+  map <A-t> :e term://fish<CR>a
+elseif executable("zsh")
+  map <leader>' :vsplit term://zsh<CR>a
+  map <leader>- :vsplit term://zsh<CR>a
+  map <leader>tt :e term://zsh<CR>a
+  map <A-t> :e term://zsh<CR>a
+elseif executable("bash")
+  map <leader>' :vsplit term://bash<CR>a
+  map <leader>- :vsplit term://bash<CR>a
+  map <leader>tt :e term://bash<CR>a
+  map <A-t> :e term://bash<CR>a
+else
+  map <leader>' :vsplit term://sh<CR>a
+  map <leader>- :vsplit term://sh<CR>a
+  map <leader>tt :e term://sh<CR>a
+  map <A-t> :e term://sh<CR>a
+endif
+
+" keep terminal session alive even if not displayed
+augroup custom_term
+    autocmd!
+    autocmd TermOpen * setlocal bufhidden=hide
+augroup END
+
+" code formatting
+nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
+vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
+vnoremap <leader>fp :'<,'>!python -m yapf<CR>
+
+" git
+map <leader>gcc :Gcommit<CR>
+map <leader>gca :Gcommit -a<CR>
+map <leader>gs :Gstatus<CR>}2j
+map <leader>gp :cd %:h<CR>:!git pull<CR>
+map <C-A-up> :cd %:h<CR>:!git push<CR>
+map <C-A-down> :cd %:h<CR>:!git pull<CR>
+
+" force exit
+map <leader>qq :q!<CR>
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" buffer management mapping
+map <leader>bp :bprev!<Return>
+map <leader>bn :bnext!<Return>
+map <leader>bd :bdelete!<Return>
+nnoremap <A-w> :bdelete!<Return>
+tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
+inoremap <A-w> <C-[>:bdelete!<Return>
+map <leader><tab> :b!#<Return>
+imap <A-k> <C-[>:bprev!<Return>
+imap <A-j> <C-[>:bnext!<Return>
+map <A-k> :bprev!<Return>
+map <A-j> :bnext!<Return>
+tnoremap <A-k> <C-\><C-n>:bprev!<Return>
+tnoremap <A-j> <C-\><C-n>:bnext!<Return>
+imap <C-PageUp> <C-[>:bprev!<Return>
+imap <C-PageDown> <C-[>:bnext!<Return>
+map <C-PageUp> :bprev!<Return>
+map <C-PageDown> :bnext!<Return>
+tnoremap <C-PageUp> <C-\><C-n>:bprev!<Return>
+tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
+map <leader>e :browse oldfiles!<Return>
+map <leader>w :w<Return>
+
+" navigating search results (vimgrep results)
+map <C-S-PageUp> :cprev!<Return>
+map <C-S-PageDown> :cnext!<Return>
+
+" Yank and paste using system clipboard.
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
+
+" toggle NERDTree
+nnoremap <C-k><C-b> :NERDTreeToggle<CR>
+
+" reset highlight
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" exit to normal mode from insert with 'jj' and 'Esc'
+inoremap jj <C-[>
+tnoremap <Esc> <C-\><C-n>
+tnoremap jj <C-\><C-n>
+
+" To simulate |i_CTRL-R| in terminal-mode: >
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+
+" folding for python
+set foldmethod=indent
+nnoremap , za
+vnoremap , zf
+
+" J behaviour
+set nojoinspaces
+
+" run macro in visual selecthion
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" just type :w!! to save the file, even if you did not run Vim with sudo.
+cmap w!! w !sudo tee % >/dev/null
