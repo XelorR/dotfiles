@@ -53,6 +53,9 @@ if executable('rg')
   let g:ctrlp_use_caching = 0
 endif
 
+" ignore some paths while searching
+set wildignore+=*/.git/*,*/tmp/*,*.swp
+
 " setting theme
 set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
