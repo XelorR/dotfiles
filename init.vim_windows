@@ -76,7 +76,6 @@ let g:indentLine_setColors = 0
 
 " cd to current file
 map <leader>cd :cd %:p:h<CR>
-map <leader>lcd :lcd %:p:h<CR>
 
 " console and REPL
 map <leader>' :vsplit term://powershell<CR>a
