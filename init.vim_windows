@@ -129,6 +129,10 @@ tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
 map <leader>e :browse oldfiles!<Return>
 map <leader>w :w<Return>
 
+" navigating search results (vimgrep results)
+map <C-S-PageUp> :cprev!<Return>
+map <C-S-PageDown> :cnext!<Return>
+
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
 noremap <leader>Y "+Y
