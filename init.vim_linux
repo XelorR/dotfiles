@@ -16,13 +16,12 @@ Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file searcher
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim' " more fuzzy searchs
 Plug 'matze/vim-move' " <A-j>/<A-k> to move row/selection
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'xolox/vim-session' " managing sessions
 Plug 'xolox/vim-misc' " dependency for sessions
 Plug 'ludovicchabant/vim-gutentags' " ctags auto management
+Plug 'scrooloose/nerdtree' " sidebar
 call plug#end()
 
 " session config
