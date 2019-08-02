@@ -16,12 +16,14 @@
 "
 " it should be easy to modify
 "
-" it should be convenient for sublime text users
+" it should be convenient for Sublime Text users
 "         multiple cursor support (with ctrl+n here)
 "         buffer switch (with ctrl+pgup/ctrl+pgdown)
 "         fuzzy file/text search (CtrlP, fzf, rg)
 "         buffer close (with alt+w in this config)
 "         split windows right and below
+"         save sessions
+"         same binding for side bar toggle
 
 " --- Why NeoVim -----------------------------------
 
