@@ -14,8 +14,8 @@ if has("win32") || has("win16")
 else
   call plug#begin('~/.local/share/nvim/plugged')
 endif
-" Plug 'zxqfl/tabnine-vim' " completion engine
-Plug 'python-mode/python-mode' " completion engine
+Plug 'zxqfl/tabnine-vim' " completion engine
+" Plug 'python-mode/python-mode' " completion engine
 Plug 'terryma/vim-multiple-cursors' " Ctrl+n for multicursour editing
 Plug 'easymotion/vim-easymotion' " cursor quick movements
 Plug 'ayu-theme/ayu-vim' " theme
@@ -27,6 +27,7 @@ Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'xolox/vim-session' " managing sessions
@@ -134,16 +135,22 @@ endfunction
 noremap <leader>mm @q
 
 " n - navigation
-noremap <leader>nn :CtrlPMixed<CR>    " everything
-noremap <leader>nf :Files<CR>         " files in folder
-noremap <leader>nl :Lines<CR>         " lines here
-noremap <leader>nc :Rg<CR>            " lines in folder files
-noremap <leader>nt :CtrlPTag<CR>      " tags
-noremap <leader>ne :bro ol!<CR>       " recently visited
-noremap <leader>nm :CtrlPMRUFiles<CR> " recently visited
+" everything
+    noremap <leader>nn :CtrlPMixed<CR>
+" files in folder
+    noremap <leader>nf :Files<CR>
+" lines in current file
+    noremap <leader>nl :Lines<CR>
+" lines in folder files
+    noremap <leader>nc :Rg<CR>
+" tags specified in tags files
+    noremap <leader>nt :CtrlPTag<CR>
+" recently visited files
+    noremap <leader>ne :bro ol!<CR>
+    noremap <leader>nm :CtrlPMRUFiles
 
 " s - search (?)
-" reserved
+" reserved for easymotion
 
 " t - terminal
 if executable("powershell")
