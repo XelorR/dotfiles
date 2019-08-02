@@ -7,6 +7,11 @@
 "
 " it should work as fast as possible
 "
+" it should primarly use leader key combinations
+"         with SPC as leader key
+"         grouping commands by letters
+"         as in SpaceMacs
+"
 " you should be able to use it as terminal too
 "
 " it should be easy to modify
@@ -17,6 +22,28 @@
 "         fuzzy file/text search (CtrlP, fzf, rg)
 "         buffer close (with alt+w in this config)
 "         split windows right and below
+
+" === Why NeoVim ===================================
+
+" why not Vim?
+"         Vim does not contain terminal
+"         Lack of cyrillic support in termux version
+"
+" why not Sublime Text?
+"         poor modal editing support in all plugins
+"         'ActualVim' plugin is unstable
+"         proprietary, asks for license
+"
+" why not SpaceMacs?
+"         SpaceMacs is huge
+"         it should always run as service to be
+"                 able to start fast
+"
+" why not Emacs?
+"         lack of text editor
+"
+" why not IDE?
+"         most of it require more that 0.5s to start
 
 " === Dependencies =================================
 
