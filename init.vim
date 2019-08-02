@@ -23,7 +23,7 @@
 "         buffer close (with alt+w in this config)
 "         split windows right and below
 
-" === Why NeoVim ===================================
+" --- Why NeoVim -----------------------------------
 
 " why not Vim?
 "         Vim does not contain terminal
