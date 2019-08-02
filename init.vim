@@ -256,6 +256,7 @@ tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 nnoremap <A-w> :bdelete!<Return>
 tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
 inoremap <A-w> <C-[>:bdelete!<Return>
+nnoremap <A-u> :GundoToggle<CR>
 
 " --- Control --------------------------------------
 
