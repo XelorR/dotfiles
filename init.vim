@@ -274,26 +274,37 @@ map <C-A-down> :cd %:h<CR>:!git pull<CR>
 " --- Mixed ----------------------------------------
 
 " theme switch maping
-map <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
-map <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
-map <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
+function! Theme_toggle()
+  if (g:ayucolor == "dark")
+    let g:ayucolor="light" 
+    colorscheme ayu
+  else
+    let g:ayucolor="dark" 
+    colorscheme ayu
+  endif
+endfunction
+
+noremap <leader>tg :call Theme_toggle()<CR>
+noremap <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
+noremap <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
+noremap <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
 
 " cd to current file
-map <leader>cd :cd %:p:h<CR>
+map <leader>cd :cd %:p:h<cr>
 
-" Yank and paste using system clipboard
+" yank and paste using system clipboard
 noremap <leader>y "+y
-noremap <leader>Y "+Y
+noremap <leader>y "+y
 noremap <leader>p "+p
-noremap <leader>P "+P
+noremap <leader>p "+p
 
-" exit to normal mode from insert with 'jj' and 'Esc'
-inoremap jj <C-[>
-tnoremap jj <C-\><C-n>
-tnoremap <Esc> <C-\><C-n>
+" exit to normal mode from insert with 'jj' and 'esc'
+inoremap jj <c-[>
+tnoremap jj <c-\><c-n>
+tnoremap <esc> <c-\><c-n>
 
-" toggle NERDTree - same hotkey as in ST3
-nnoremap <C-k><C-b> :NERDTreeToggle<CR>
+" toggle nerdtree - same hotkey as in st3
+nnoremap <c-k><c-b> :nerdtreetoggle<cr>
 
 " reset highlight on screen refresh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
