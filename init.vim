@@ -174,7 +174,8 @@ vnoremap <leader>fp :'<,'>!python -m yapf<CR>
 map <leader>gcc :Gcommit<CR>
 map <leader>gca :Gcommit -a<CR>
 map <leader>gs :Gstatus<CR>}2j
-map <leader>gp :cd %:h<CR>:!git pull<CR>
+map <leader>go :Gpull<CR>
+map <leader>gp :Gpush<CR>
 
 " m - macro
 " run macro in visual selecthion
@@ -270,8 +271,8 @@ map <C-S-PageUp> :cprev!<Return>
 map <C-S-PageDown> :cnext!<Return>
 
 " git
-map <C-A-up> :cd %:h<CR>:!git push<CR>
-map <C-A-down> :cd %:h<CR>:!git pull<CR>
+map <C-A-up> :Gpush<CR>
+map <C-A-down> :Gpull<CR>
 
 " <C-w> - windows management - reserved
 
