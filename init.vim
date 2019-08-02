@@ -190,6 +190,9 @@ noremap <leader>mm @q
     noremap <leader>nn :CtrlPMixed<CR>
 " files in folder
     noremap <leader>nf :Files<CR>
+" lines in current view
+    map <Leader>l <Plug>(easymotion-bd-jk)
+    nmap <Leader>l <Plug>(easymotion-overwin-line)
 " lines in current file
     noremap <leader>nl :Lines<CR>
 " lines in folder files
