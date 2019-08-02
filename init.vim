@@ -1,3 +1,23 @@
+" === Core ideas ===================================
+
+" it should work on:
+"         PC (tested on GNU/Linux: Manjaro)
+"         WC (tested on Windows 10)
+"         my android phone (via termux)
+"
+" it should work as fast as possible
+"
+" you should be able to use it as terminal too
+"
+" it should be easy to modify
+"
+" it should be convenient for sublime text users
+"         multiple cursor support (with ctrl+n here)
+"         buffer switch (with ctrl+pgup/ctrl+pgdown)
+"         fuzzy file/text search (CtrlP, fzf, rg)
+"         buffer close (with alt+w in this config)
+"         split windows right and below
+
 " === Dependencies =================================
 
 " VimPlug - for import plugins
