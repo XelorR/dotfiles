@@ -84,6 +84,7 @@ Plug 'xolox/vim-session' " managing sessions
 Plug 'xolox/vim-misc' " dependency for sessions
 Plug 'ludovicchabant/vim-gutentags' " ctags auto management
 Plug 'scrooloose/nerdtree' " sidebar
+Plug 'sjl/gundo.vim' " undo tree
 call plug#end()
 
 " === Lettings-Settings ============================
@@ -164,6 +165,7 @@ map <leader>bn :bnext!<Return>
 map <leader>bd :bdelete!<Return>
 map <leader><tab> :b!#<Return>
 map <leader>w :w<Return>
+nnoremap <leader>bu :GundoToggle<CR>
 
 " f - code formatting
 nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
