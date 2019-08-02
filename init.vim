@@ -13,6 +13,7 @@
 "         as in SpaceMacs
 "
 " you should be able to use it as terminal too
+"         and it should work with most popular terms
 "
 " it should be easy to modify
 "
