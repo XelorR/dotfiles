@@ -1,6 +1,4 @@
-" setting leader key
-let maplocalleader = "\\"
-let mapleader = "\<Space>"
+" --- Imports --------------------------------------
 
 " importing modules via VimPlug
 if has("win32") || has("win16")
@@ -29,6 +27,8 @@ Plug 'xolox/vim-misc' " dependency for sessions
 Plug 'ludovicchabant/vim-gutentags' " ctags auto management
 Plug 'scrooloose/nerdtree' " sidebar
 call plug#end()
+
+" --- Lettings-Settings ----------------------------
 
 " session config
 let g:session_autoload = 'yes'
@@ -66,17 +66,40 @@ set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 
-" theme switch maping
-map <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
-map <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
-map <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
-
 " IndentLine {{
 let g:indentLine_char = '┊'
 let g:indentLine_first_char = '┊'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 " " }}
+
+" keep terminal session alive even if not displayed
+augroup custom_term
+    autocmd!
+    autocmd TermOpen * setlocal bufhidden=hide
+augroup END
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" folding for python
+set foldmethod=indent
+
+" J behaviour
+set nojoinspaces
+
+" --- Mapings --------------------------------------
+
+" setting leader key
+let maplocalleader = "\\"
+let mapleader = "\<Space>"
+
+" theme switch maping
+map <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
+map <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
+map <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
 
 " cd to current file
 map <leader>cd :cd %:p:h<CR>
@@ -114,12 +137,6 @@ else
   map <A-t> :e term://sh<CR>a
 endif
 
-" keep terminal session alive even if not displayed
-augroup custom_term
-    autocmd!
-    autocmd TermOpen * setlocal bufhidden=hide
-augroup END
-
 " code formatting
 nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
 vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
@@ -135,11 +152,6 @@ map <C-A-down> :cd %:h<CR>:!git pull<CR>
 
 " force exit
 map <leader>qq :q!<CR>
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 " buffer management mapping
 map <leader>bp :bprev!<Return>
@@ -187,14 +199,6 @@ tnoremap jj <C-\><C-n>
 
 " To simulate |i_CTRL-R| in terminal-mode: >
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
-
-" folding for python
-set foldmethod=indent
-nnoremap , za
-vnoremap , zf
-
-" J behaviour
-set nojoinspaces
 
 " run macro in visual selecthion
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
