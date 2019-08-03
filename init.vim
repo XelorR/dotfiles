@@ -189,23 +189,23 @@ endfunction
 noremap <leader>mm @q
 
 " n - navigation
-" everything
+" navigate to file in folder and history
     noremap <leader>nn :CtrlPMixed<CR>
-" files in folder
+" navigate to files in current folder
     noremap <leader>nf :Files<CR>
-" lines in current view
+" navigate to line in current view
     map <Leader>l <Plug>(easymotion-bd-jk)
     nmap <Leader>l <Plug>(easymotion-overwin-line)
-" lines in current file
+" navigate to line in opened buffers
     noremap <leader>nl :Lines<CR>
-" lines in folder files
-    noremap <leader>nc :Rg<CR>
-" tags specified in tags files
+" navigate via rg - cearch text in all files in current folder
+    noremap <leader>nr :Rg<CR>
+" navigate by tags specified in tags files
     noremap <leader>nt :CtrlPTag<CR>
-" recently visited files
+" navigate by recently visited files
     noremap <leader>ne :bro ol!<CR>
     noremap <leader>nm :CtrlPMRUFiles
-
+" navigate by jump history
 function! GotoJump()
   jumps
   let j = input("Select your jump: ")
@@ -219,7 +219,7 @@ function! GotoJump()
     endif
   endif
 endfunction
-
+" navigate by jump history
 nmap <Leader>j :call GotoJump()<CR>
 
 " s - search (?)
