@@ -85,6 +85,7 @@ Plug 'xolox/vim-misc' " dependency for sessions
 Plug 'ludovicchabant/vim-gutentags' " ctags auto management
 Plug 'scrooloose/nerdtree' " sidebar
 Plug 'sjl/gundo.vim' " undo tree
+Plug 'nelstrom/vim-visual-star-search' " search all in v mode by pressing *
 call plug#end()
 
 " === Lettings-Settings ============================
