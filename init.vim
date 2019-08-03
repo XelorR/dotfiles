@@ -206,6 +206,22 @@ noremap <leader>mm @q
     noremap <leader>ne :bro ol!<CR>
     noremap <leader>nm :CtrlPMRUFiles
 
+function! GotoJump()
+  jumps
+  let j = input("Select your jump: ")
+  if j != ''
+    let pattern = '\v\c^\+'
+    if j =~ pattern
+      let j = substitute(j, pattern, '', 'g')
+      execute "normal " . j . "\<c-i>"
+    else
+      execute "normal " . j . "\<c-o>"
+    endif
+  endif
+endfunction
+
+nmap <Leader>j :call GotoJump()<CR>
+
 " s - search (?)
 " reserved for easymotion
 
