@@ -199,7 +199,7 @@ noremap <leader>mm @q
     nmap <Leader>l <Plug>(easymotion-overwin-line)
 " navigate to line in opened buffers
     noremap <leader>nl :Lines<CR>
-" navigate via rg - cearch text in all files in current folder
+" navigate via rg - search text in all files in current folder
     noremap <leader>nr :Rg<CR>
 " navigate by tags specified in tags files
     noremap <leader>nt :CtrlPTag<CR>
