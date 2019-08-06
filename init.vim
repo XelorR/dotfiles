@@ -56,7 +56,8 @@
 " fzf, ripgrep - fuzzy search
 " git
 " python3
-" python3 -m pip install --user --upgrade neovim yapf python-language-server[all] pyls
+" python3 -m pip install --user --upgrade neovim jedi yapf python-language-server[all] pyls
+" :CocInstall coc-python
 
 " === Imports ======================================
 
@@ -64,14 +65,11 @@
 if has("win32") || has("win16")
   call plug#begin('C:/vimplugins')
   " let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'} " completion engine
-  " run
-  " :CocInstall coc-python
-  " first time
 else
   call plug#begin('~/.local/share/nvim/plugged')
-  Plug 'zxqfl/tabnine-vim' " completion engine
 endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " completion engine
+" Plug 'zxqfl/tabnine-vim' " completion engine
 " Plug 'python-mode/python-mode' " completion engine
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " completion engine
 " Plug 'deoplete-plugins/deoplete-jedi' "completion source
