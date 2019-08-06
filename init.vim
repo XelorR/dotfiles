@@ -70,6 +70,7 @@ else
   call plug#begin('~/.local/share/nvim/plugged')
 endif
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " completion engine
+Plug 'ervandew/supertab' " use tab for completions
 " Plug 'zxqfl/tabnine-vim' " completion engine
 " Plug 'python-mode/python-mode' " completion engine
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " completion engine
@@ -97,6 +98,8 @@ call plug#end()
 " for completion
 " let g:deoplete#enable_at_startup = 1
 set tags='' " i don't actually use tags, rg is moe convenient for in-file search
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " splits windows in more habitual manner
 set splitright
