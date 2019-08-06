@@ -64,6 +64,7 @@
 " importing modules via VimPlug
 if has("win32") || has("win16")
   call plug#begin('C:/vimplugins')
+  " for deoplete
   " let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
 else
   call plug#begin('~/.local/share/nvim/plugged')
