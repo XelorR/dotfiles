@@ -50,14 +50,13 @@
 
 " === Dependencies =================================
 
+" neovim
 " VimPlug - for import plugins
-" yapf - code formatting
 " nodejs, yarn
-" python - to run yapf
 " fzf, ripgrep - fuzzy search
 " git
-" neovim and neovim installed via pip3
-" python-language-server[all], pyls
+" python3
+" python3 -m pip install --user --upgrade neovim yapf python-language-server[all] pyls
 
 " === Imports ======================================
 
