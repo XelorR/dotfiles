@@ -24,7 +24,7 @@
 "         buffer close (with alt+w in this config)
 "         split windows right and below
 "         save sessions
-"         same binding for side bar toggle
+"         side bar (SPC b b)
 
 " --- Why NeoVim -----------------------------------
 
@@ -52,51 +52,53 @@
 
 " VimPlug - for import plugins
 " yapf - code formatting
+" nodejs, yarn
 " python - to run yapf
 " fzf, ripgrep - fuzzy search
 " git
+" neovim and neovim installed via pip3
+" python-language-server[all], pyls
 
 " === Imports ======================================
 
 " importing modules via VimPlug
 if has("win32") || has("win16")
   call plug#begin('C:/vimplugins')
+  " let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'} " completion engine
+  " run
+  " :CocInstall coc-python
+  " first time
 else
   call plug#begin('~/.local/share/nvim/plugged')
+  Plug 'zxqfl/tabnine-vim' " completion engine
 endif
-Plug 'zxqfl/tabnine-vim' " completion engine
 " Plug 'python-mode/python-mode' " completion engine
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " completion engine
+" Plug 'deoplete-plugins/deoplete-jedi' "completion source
 Plug 'terryma/vim-multiple-cursors' " Ctrl+n for multicursour editing
-Plug 'easymotion/vim-easymotion' " cursor quick movements
-Plug 'ayu-theme/ayu-vim' " theme
-Plug 'airblade/vim-gitgutter' " git row markers
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
+Plug 'ayu-theme/ayu-vim' " theme
 Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
+Plug 'airblade/vim-gitgutter' " git row markers
+Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
-Plug 'machakann/vim-highlightedyank' " highlit copied selection
-Plug 'xolox/vim-session' " managing sessions
-Plug 'xolox/vim-misc' " dependency for sessions
-Plug 'ludovicchabant/vim-gutentags' " ctags auto management
+Plug 'easymotion/vim-easymotion' " cursor quick movements
 Plug 'scrooloose/nerdtree' " sidebar
-Plug 'sjl/gundo.vim' " undo tree
 Plug 'nelstrom/vim-visual-star-search' " search all in v mode by pressing *
 call plug#end()
 
 " === Lettings-Settings ============================
 
-" Session config
-set sessionoptions=buffers,folds,winsize
-let g:session_autoload = 'yes'
-let g:session_autosave = 'yes'
-let g:session_autosave_periodic = 5
-let g:session_autosave_silent = 1
-let g:session_default_to_last = 1
+" for completion
+" let g:deoplete#enable_at_startup = 1
+set tags='' " i don't actually use tags, rg is moe convenient for in-file search
 
 " splits windows in more habitual manner
 set splitright
@@ -124,6 +126,7 @@ endif
 set wildignore+=*/.git/*,*/tmp/*,*.swp
 
 " Theme
+syntax enable
 set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
@@ -135,12 +138,6 @@ let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 " " }}
 
-" Keep terminal session alive even if not displayed
-augroup custom_term
-    autocmd!
-    autocmd TermOpen * setlocal bufhidden=hide
-augroup END
-
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -151,6 +148,12 @@ set foldmethod=indent
 
 " J behaviour
 set nojoinspaces
+
+" Keep terminal session alive even if not displayed
+augroup custom_term
+    autocmd!
+    autocmd TermOpen * setlocal bufhidden=hide
+augroup END
 
 " === Key bindings =================================
 
@@ -164,9 +167,10 @@ let mapleader = "\<Space>"
 map <leader>bp :bprev!<Return>
 map <leader>bn :bnext!<Return>
 map <leader>bd :bdelete!<Return>
+map <leader>bb :NERDTreeToggle<CR>
 map <leader><tab> :b!#<Return>
+map <leader>e :browse old!<CR>
 map <leader>w :w<Return>
-nnoremap <leader>bu :GundoToggle<CR>
 
 " f - code formatting
 nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
@@ -201,11 +205,9 @@ noremap <leader>mm @q
     noremap <leader>nl :Lines<CR>
 " navigate via rg - search text in all files in current folder
     noremap <leader>nr :Rg<CR>
-" navigate by tags specified in tags files
-    noremap <leader>nt :CtrlPTag<CR>
 " navigate by recently visited files
     noremap <leader>ne :bro ol!<CR>
-    noremap <leader>nm :CtrlPMRUFiles
+    noremap <leader>nm :CtrlPMRUFiles<CR>
 " navigate by jump history
 function! GotoJump()
   jumps
@@ -259,6 +261,17 @@ else
   map <A-t> :e term://sh<CR>a
 endif
 
+" python terminal
+if executable("ipython3")
+  map <leader>tp :e term://ipython3<CR>a
+elseif executable("ipython")
+  map <leader>tp :e term://ipython<CR>a
+elseif executable("python3")
+  map <leader>tp :e term://python3<CR>a
+else
+  map <leader>tp :e term://python<CR>a
+endif
+
 " --- Alt ------------------------------------------
 
 " buffers
@@ -273,7 +286,6 @@ tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 nnoremap <A-w> :bdelete!<Return>
 tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
 inoremap <A-w> <C-[>:bdelete!<Return>
-nnoremap <A-u> :GundoToggle<CR>
 
 " --- Control --------------------------------------
 
@@ -327,9 +339,6 @@ noremap <leader>p "+p
 inoremap jj <c-[>
 tnoremap jj <c-\><c-n>
 tnoremap <esc> <c-\><c-n>
-
-" toggle nerdtree - same hotkey as in st3
-nnoremap <c-k><c-b> :nerdtreetoggle<cr>
 
 " reset highlight on screen refresh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
