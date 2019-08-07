@@ -266,12 +266,12 @@ endif
 " python terminal
 if executable("ipython3")
   nnoremap <leader>tpp :e term://ipython3<CR>a
-  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  vnoremap <leader>r "+y<C-w><C-w>a%paste<Return><C-\><C-n><C-w><C-w>
+  nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
+  vnoremap <S-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
 elseif executable("ipython")
   nnoremap <leader>tpp :e term://ipython<CR>a
-  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  vnoremap <leader>r "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
+  nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
+  vnoremap <S-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
 elseif executable("python3")
   nnoremap <leader>tpp :e term://python3<CR>a
   nnoremap <leader>tpr :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
