@@ -232,46 +232,52 @@ nmap <Leader>j :call GotoJump()<CR>
 
 " t - terminal
 if executable("powershell")
-  map <leader>' :vsplit term://powershell<CR>a
-  map <leader>- :split term://powershell<CR>a
-  map <leader>tt :e term://powershell<CR>a
-  map <A-t> :e term://powershell<CR>a
+  nnoremap <leader>' :vsplit term://powershell<CR>a
+  nnoremap <leader>- :split term://powershell<CR>a
+  nnoremap <leader>tt :e term://powershell<CR>a
+  nnoremap <A-t> :e term://powershell<CR>a
 elseif executable("cmd")
-  map <leader>' :vsplit term://cmd<CR>a
-  map <leader>- :vsplit term://cmd<CR>a
-  map <leader>tt :e term://cmd<CR>a
-  map <A-t> :e term://cmd<CR>a
+  nnoremap <leader>' :vsplit term://cmd<CR>a
+  nnoremap <leader>- :vsplit term://cmd<CR>a
+  nnoremap <leader>tt :e term://cmd<CR>a
+  nnoremap <A-t> :e term://cmd<CR>a
 elseif executable("fish")
-  map <leader>' :vsplit term://fish<CR>a
-  map <leader>- :vsplit term://fish<CR>a
-  map <leader>tt :e term://fish<CR>a
-  map <A-t> :e term://fish<CR>a
+  nnoremap <leader>' :vsplit term://fish<CR>a
+  nnoremap <leader>- :vsplit term://fish<CR>a
+  nnoremap <leader>tt :e term://fish<CR>a
+  nnoremap <A-t> :e term://fish<CR>a
 elseif executable("zsh")
-  map <leader>' :vsplit term://zsh<CR>a
-  map <leader>- :vsplit term://zsh<CR>a
-  map <leader>tt :e term://zsh<CR>a
-  map <A-t> :e term://zsh<CR>a
+  nnoremap <leader>' :vsplit term://zsh<CR>a
+  nnoremap <leader>- :vsplit term://zsh<CR>a
+  nnoremap <leader>tt :e term://zsh<CR>a
+  nnoremap <A-t> :e term://zsh<CR>a
 elseif executable("bash")
-  map <leader>' :vsplit term://bash<CR>a
-  map <leader>- :vsplit term://bash<CR>a
-  map <leader>tt :e term://bash<CR>a
-  map <A-t> :e term://bash<CR>a
+  nnoremap <leader>' :vsplit term://bash<CR>a
+  nnoremap <leader>- :vsplit term://bash<CR>a
+  nnoremap <leader>tt :e term://bash<CR>a
+  nnoremap <A-t> :e term://bash<CR>a
 else
-  map <leader>' :vsplit term://sh<CR>a
-  map <leader>- :vsplit term://sh<CR>a
-  map <leader>tt :e term://sh<CR>a
-  map <A-t> :e term://sh<CR>a
+  nnoremap <leader>' :vsplit term://sh<CR>a
+  nnoremap <leader>- :vsplit term://sh<CR>a
+  nnoremap <leader>tt :e term://sh<CR>a
+  nnoremap <A-t> :e term://sh<CR>a
 endif
 
 " python terminal
 if executable("ipython3")
-  map <leader>tp :e term://ipython3<CR>a
+  nnoremap <leader>tpp :e term://ipython3<CR>a
+  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
+  vnoremap <leader>r "+y<C-w><C-w>a%paste<Return><C-\><C-n><C-w><C-w>
 elseif executable("ipython")
-  map <leader>tp :e term://ipython<CR>a
+  nnoremap <leader>tpp :e term://ipython<CR>a
+  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
+  vnoremap <leader>r "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
 elseif executable("python3")
-  map <leader>tp :e term://python3<CR>a
+  nnoremap <leader>tpp :e term://python3<CR>a
+  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
 else
-  map <leader>tp :e term://python<CR>a
+  nnoremap <leader>tpp :e term://python<CR>a
+  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
 endif
 
 " --- Alt ------------------------------------------
