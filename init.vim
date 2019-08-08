@@ -81,7 +81,8 @@ Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'morhetz/gruvbox' " theme
-" Plug 'Yggdroot/indentLine' " visualize indents with lines
+" Plug 'sickill/vim-monokai' " theme
+Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'airblade/vim-gitgutter' " git row markers
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
@@ -130,14 +131,16 @@ set wildignore+=*/.git/*,*/tmp/*,*.swp
 " Theme
 syntax enable
 set termguicolors     " enable true colors support
-let backcolor="dark"
+let g:backcolor="dark"
+let g:gruvbox_contrast_dark="medium"
+let g:gruvbox_contrast_light="medium"
 colorscheme gruvbox
 
 " IndentLine {{
-" let g:indentLine_char = '┊'
-" let g:indentLine_first_char = '┊'
-" let g:indentLine_showFirstIndentLevel = 1
-" let g:indentLine_setColors = 0
+let g:indentLine_char = '┊'
+let g:indentLine_first_char = '┊'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 1
 " " }}
 
 " Enable the list of buffers
@@ -319,9 +322,11 @@ function! Theme_toggle()
   if (g:backcolor == "dark")
     let g:backcolor="light" 
     set background=light
+    " colorscheme gruvbox
   else
     let g:backcolor="dark" 
     set background=dark
+    " colorscheme monokai
   endif
 endfunction
 
