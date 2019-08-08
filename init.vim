@@ -80,8 +80,8 @@ Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
-Plug 'ayu-theme/ayu-vim' " theme
-Plug 'Yggdroot/indentLine' " visualize indents with lines
+Plug 'morhetz/gruvbox' " theme
+" Plug 'Yggdroot/indentLine' " visualize indents with lines
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'airblade/vim-gitgutter' " git row markers
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
@@ -130,14 +130,14 @@ set wildignore+=*/.git/*,*/tmp/*,*.swp
 " Theme
 syntax enable
 set termguicolors     " enable true colors support
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+let backcolor="dark"
+colorscheme gruvbox
 
 " IndentLine {{
-let g:indentLine_char = '┊'
-let g:indentLine_first_char = '┊'
-let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 0
+" let g:indentLine_char = '┊'
+" let g:indentLine_first_char = '┊'
+" let g:indentLine_showFirstIndentLevel = 1
+" let g:indentLine_setColors = 0
 " " }}
 
 " Enable the list of buffers
@@ -265,19 +265,15 @@ endif
 
 " python terminal
 if executable("ipython3")
-  nnoremap <leader>tpp :e term://ipython3<CR>a
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  vnoremap <S-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
+  vnoremap <C-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
 elseif executable("ipython")
-  nnoremap <leader>tpp :e term://ipython<CR>a
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  vnoremap <S-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
+  vnoremap <C-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
 elseif executable("python3")
-  nnoremap <leader>tpp :e term://python3<CR>a
-  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
+  nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
 else
-  nnoremap <leader>tpp :e term://python<CR>a
-  nnoremap <leader>tpr :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
+  nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
 endif
 
 " --- Alt ------------------------------------------
@@ -320,19 +316,16 @@ map <C-A-down> :Gpull<CR>
 
 " theme switch maping
 function! Theme_toggle()
-  if (g:ayucolor == "dark")
-    let g:ayucolor="light" 
-    colorscheme ayu
+  if (g:backcolor == "dark")
+    let g:backcolor="light" 
+    set background=light
   else
-    let g:ayucolor="dark" 
-    colorscheme ayu
+    let g:backcolor="dark" 
+    set background=dark
   endif
 endfunction
 
 noremap <leader>tg :call Theme_toggle()<CR>
-noremap <leader>td :let ayucolor="dark" \| colorscheme ayu<CR>
-noremap <leader>tm :let ayucolor="mirage" \| colorscheme ayu<CR>
-noremap <leader>tl :let ayucolor="light" \| colorscheme ayu<CR>
 
 " cd to current file
 map <leader>cd :cd %:p:h<cr>
