@@ -167,7 +167,7 @@ augroup END
 set lazyredraw
 
 " encryption mode (:X to encrypt)
-set cryptmethod=blowfish2
+" set cryptmethod=blowfish2
 
 " === Key bindings =================================
 
