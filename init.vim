@@ -93,6 +93,7 @@ Plug 'easymotion/vim-easymotion' " cursor quick movements
 Plug 'scrooloose/nerdtree' " sidebar
 Plug 'nelstrom/vim-visual-star-search' " search all in v mode by pressing *
 Plug 'severin-lemaignan/vim-minimap' " code map on the right
+Plug 'Konfekt/FastFold'
 call plug#end()
 
 " === Lettings-Settings ============================
