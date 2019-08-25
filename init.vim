@@ -384,6 +384,9 @@ au FocusGained,BufEnter * :checktime
 " force exit
 map <leader>qq :q!<CR>
 
+" enter destruscion free mode
+nnoremap <leader>df :Goyo<CR>:Limelight!!<CR>
+
 " just type :w!! to save the file, even if you did not run Vim with sudo.
 cmap w!! w !sudo tee % >/dev/null
 
