@@ -369,6 +369,9 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " To simulate |i_CTRL-R| in terminal-mode: >
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
+" Auto-resize splits when Vim gets resized.
+autocmd VimResized * wincmd =
+
 " force exit
 map <leader>qq :q!<CR>
 
