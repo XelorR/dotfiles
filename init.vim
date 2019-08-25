@@ -163,6 +163,12 @@ augroup custom_term
     autocmd TermOpen * setlocal bufhidden=hide
 augroup END
 
+" Don’t update screen during macro and script execution
+set lazyredraw
+
+" encryption mode (:X to encrypt)
+set cryptmethod=blowfish2
+
 " === Key bindings =================================
 
 " defining leader key
