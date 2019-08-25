@@ -350,6 +350,14 @@ noremap <leader>y "+y
 noremap <leader>p "+p
 noremap <leader>p "+p
 
+" Seamlessly treat visual lines as actual lines when moving around.
+noremap j gj
+noremap k gk
+noremap <Down> gj
+noremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
 " exit to normal mode from insert with 'jj' and 'esc'
 inoremap jj <c-[>
 tnoremap jj <c-\><c-n>
