@@ -98,7 +98,7 @@ Plug 'junegunn/goyo.vim' " disrtuction free mode
 Plug 'junegunn/limelight.vim' " highlight only current paragraph
 Plug 'SirVer/ultisnips' " snippets engine
 Plug 'honza/vim-snippets' " useful language related snippets 
-Plugin 'godlygeek/tabular' " dependency for markdown support
+Plug 'godlygeek/tabular' " dependency for markdown support
 Plug 'plasticboy/vim-markdown' " markdown support
 call plug#end()
 
