@@ -98,8 +98,10 @@ Plug 'junegunn/goyo.vim' " disrtuction free mode
 Plug 'junegunn/limelight.vim' " highlight only current paragraph
 Plug 'SirVer/ultisnips' " snippets engine
 Plug 'honza/vim-snippets' " useful language related snippets 
+Plug 'elzr/vim-json' " json support
 Plug 'godlygeek/tabular' " dependency for markdown support
 Plug 'plasticboy/vim-markdown' " markdown support
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " preview markdown in browser
 call plug#end()
 
 " === Lettings-Settings ============================
