@@ -372,6 +372,9 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 " Auto-resize splits when Vim gets resized.
 autocmd VimResized * wincmd =
 
+" Update a buffer's contents on focus if it changed outside of Vim.
+au FocusGained,BufEnter * :checktime
+
 " force exit
 map <leader>qq :q!<CR>
 
