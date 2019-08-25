@@ -96,6 +96,8 @@ Plug 'severin-lemaignan/vim-minimap' " code map on the right
 Plug 'Konfekt/FastFold'
 Plug 'junegunn/goyo.vim' " disrtuction free mode
 Plug 'junegunn/limelight.vim' " highlight only current paragraph
+Plug 'SirVer/ultisnips' " snippets engine
+Plug 'honza/vim-snippets' " useful language related snippets 
 call plug#end()
 
 " === Lettings-Settings ============================
