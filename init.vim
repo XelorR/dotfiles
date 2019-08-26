@@ -95,7 +95,6 @@ Plug 'nelstrom/vim-visual-star-search' " search all in v mode by pressing *
 Plug 'severin-lemaignan/vim-minimap' " code map on the right
 Plug 'Konfekt/FastFold'
 Plug 'junegunn/goyo.vim' " disrtuction free mode
-Plug 'junegunn/limelight.vim' " highlight only current paragraph
 Plug 'SirVer/ultisnips' " snippets engine
 Plug 'honza/vim-snippets' " useful language related snippets 
 Plug 'elzr/vim-json' " json support
@@ -385,7 +384,7 @@ au FocusGained,BufEnter * :checktime
 map <leader>qq :q!<CR>
 
 " enter destruscion free mode
-nnoremap <leader>df :Goyo<CR>:Limelight!!<CR>
+nnoremap <leader>df :Goyo<CR>
 
 " just type :w!! to save the file, even if you did not run Vim with sudo.
 cmap w!! w !sudo tee % >/dev/null
