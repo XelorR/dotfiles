@@ -12,5 +12,19 @@
               "Shift O"
             ],
             "selector": ".jp-Notebook:focus"
+        },
+        {
+            "command": "notebook:hide-cell-code",
+            "keys": [
+                "9"
+            ],
+            "selector": ".jp-Notebook:focus"
+        },
+        {
+            "command": "notebook:show-cell-code",
+            "keys": [
+              "Shift 9"
+            ],
+            "selector": ".jp-Notebook:focus"
         }
  ]}
