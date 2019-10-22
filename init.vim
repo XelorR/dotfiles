@@ -1,4 +1,4 @@
-" dependensies: vimplug, git, fzf, ripgrep, python, yapf
+" dependencies: vimplug, git, fzf, ripgrep, python, yapf, jedi
 
 if has("win32") || has("win16")
   call plug#begin('C:/vimplugins')
@@ -16,11 +16,11 @@ Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
+Plug 'roxma/nvim-yarp' "dependency for completion engine
+Plug 'ncm2/ncm2' " completion engine
+Plug 'ncm2/ncm2-bufword' " completions from buffer
+Plug 'ncm2/ncm2-path' " path completions for ncm2
+Plug 'ncm2/ncm2-jedi' " python completions via jedi
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
