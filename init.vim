@@ -16,6 +16,11 @@ Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
@@ -28,6 +33,10 @@ set foldmethod=indent
 set number
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
 
 " theme
 set termguicolors
