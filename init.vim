@@ -7,7 +7,7 @@ else
 endif
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'morhetz/gruvbox' " theme
-Plug 'sickill/vim-monokai' " theme
+Plug 'tomasr/molokai' " theme
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'ervandew/supertab' " use tab for completions
 Plug 'Konfekt/FastFold'
@@ -32,7 +32,7 @@ let g:SuperTabContextDefaultCompletionType = "<c-n>"
 " theme
 set termguicolors
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t' " Show just the filename
 
