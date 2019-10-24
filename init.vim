@@ -6,7 +6,6 @@ else
   call plug#begin('~/.local/share/nvim/plugged')
 endif
 Plug 'vim-airline/vim-airline' " informative bar
-Plug 'morhetz/gruvbox' " theme
 Plug 'tomasr/molokai' " theme
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'ervandew/supertab' " use tab for completions
@@ -236,7 +235,7 @@ tnoremap jj <c-\><c-n>
 tnoremap <esc> <c-\><c-n>
 
 " reset highlight on screen refresh
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>:colorscheme molokai<CR>
 
 " To simulate |i_CTRL-R| in terminal-mode: >
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
