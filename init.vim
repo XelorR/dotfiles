@@ -1,4 +1,4 @@
-" dependencies: vimplug, git, fzf, ripgrep, python, yapf, jedi
+" dependensies: vimplug, git, fzf, ripgrep, python, yapf
 
 if has("win32") || has("win16")
   call plug#begin('C:/vimplugins')
@@ -16,11 +16,11 @@ Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
-Plug 'roxma/nvim-yarp' "dependency for completion engine
-Plug 'ncm2/ncm2' " completion engine
-Plug 'ncm2/ncm2-bufword' " completions from buffer
-Plug 'ncm2/ncm2-path' " path completions for ncm2
-Plug 'ncm2/ncm2-jedi' " python completions via jedi
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
@@ -85,6 +85,7 @@ let mapleader = "\<Space>"
 map <leader>bp :bprev!<Return>
 map <leader>bn :bnext!<Return>
 map <leader>bd :bdelete!<Return>
+map <leader>bb :NERDTreeToggle<CR>
 map <leader><tab> :b!#<Return>
 map <leader>e :browse old!<CR>
 map <leader>w :w<Return>
@@ -142,27 +143,27 @@ if executable("powershell")
   nnoremap <A-t> :e term://powershell<CR>a
 elseif executable("cmd")
   nnoremap <leader>' :vsplit term://cmd<CR>a
-  nnoremap <leader>- :split term://cmd<CR>a
+  nnoremap <leader>- :vsplit term://cmd<CR>a
   nnoremap <leader>tt :e term://cmd<CR>a
   nnoremap <A-t> :e term://cmd<CR>a
 elseif executable("fish")
   nnoremap <leader>' :vsplit term://fish<CR>a
-  nnoremap <leader>- :split term://fish<CR>a
+  nnoremap <leader>- :vsplit term://fish<CR>a
   nnoremap <leader>tt :e term://fish<CR>a
   nnoremap <A-t> :e term://fish<CR>a
 elseif executable("zsh")
   nnoremap <leader>' :vsplit term://zsh<CR>a
-  nnoremap <leader>- :split term://zsh<CR>a
+  nnoremap <leader>- :vsplit term://zsh<CR>a
   nnoremap <leader>tt :e term://zsh<CR>a
   nnoremap <A-t> :e term://zsh<CR>a
 elseif executable("bash")
   nnoremap <leader>' :vsplit term://bash<CR>a
-  nnoremap <leader>- :split term://bash<CR>a
+  nnoremap <leader>- :vsplit term://bash<CR>a
   nnoremap <leader>tt :e term://bash<CR>a
   nnoremap <A-t> :e term://bash<CR>a
 else
   nnoremap <leader>' :vsplit term://sh<CR>a
-  nnoremap <leader>- :split term://sh<CR>a
+  nnoremap <leader>- :vsplit term://sh<CR>a
   nnoremap <leader>tt :e term://sh<CR>a
   nnoremap <A-t> :e term://sh<CR>a
 endif
@@ -170,14 +171,18 @@ endif
 " python terminal
 if executable("ipython3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  vnoremap <C-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
+  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  tnoremap <leader>x %paste -q<CR><c-\><c-n><C-w><C-w>
 elseif executable("ipython")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  vnoremap <C-CR> "+y<C-w><C-w>a%paste<C-\><C-n><C-w><C-w>
+  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  tnoremap <leader>x %paste -q<CR><c-\><c-n><C-w><C-w>
 elseif executable("python3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
+  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
 else
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
+  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
 endif
 
 " --- Alt ------------------------------------------
