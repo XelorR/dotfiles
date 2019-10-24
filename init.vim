@@ -7,6 +7,7 @@ else
 endif
 Plug 'vim-airline/vim-airline' " informative bar
 Plug 'tomasr/molokai' " theme
+Plug 'junegunn/goyo.vim' " disrtuction free mode
 Plug 'machakann/vim-highlightedyank' " highlit copied selection
 Plug 'ervandew/supertab' " use tab for completions
 Plug 'Konfekt/FastFold'
@@ -245,4 +246,7 @@ map <leader>qq :q!<CR>
 
 " just type :w!! to save the file, even if you did not run Vim with sudo.
 cmap w!! w !sudo tee % >/dev/null
+
+" enter destruscion free mode
+nnoremap <leader>df :Goyo<CR>
 
