@@ -143,27 +143,27 @@ if executable("powershell")
   nnoremap <A-t> :e term://powershell<CR>a
 elseif executable("cmd")
   nnoremap <leader>' :vsplit term://cmd<CR>a
-  nnoremap <leader>- :vsplit term://cmd<CR>a
+  nnoremap <leader>- :split term://cmd<CR>a
   nnoremap <leader>tt :e term://cmd<CR>a
   nnoremap <A-t> :e term://cmd<CR>a
 elseif executable("fish")
   nnoremap <leader>' :vsplit term://fish<CR>a
-  nnoremap <leader>- :vsplit term://fish<CR>a
+  nnoremap <leader>- :split term://fish<CR>a
   nnoremap <leader>tt :e term://fish<CR>a
   nnoremap <A-t> :e term://fish<CR>a
 elseif executable("zsh")
   nnoremap <leader>' :vsplit term://zsh<CR>a
-  nnoremap <leader>- :vsplit term://zsh<CR>a
+  nnoremap <leader>- :split term://zsh<CR>a
   nnoremap <leader>tt :e term://zsh<CR>a
   nnoremap <A-t> :e term://zsh<CR>a
 elseif executable("bash")
   nnoremap <leader>' :vsplit term://bash<CR>a
-  nnoremap <leader>- :vsplit term://bash<CR>a
+  nnoremap <leader>- :split term://bash<CR>a
   nnoremap <leader>tt :e term://bash<CR>a
   nnoremap <A-t> :e term://bash<CR>a
 else
   nnoremap <leader>' :vsplit term://sh<CR>a
-  nnoremap <leader>- :vsplit term://sh<CR>a
+  nnoremap <leader>- :split term://sh<CR>a
   nnoremap <leader>tt :e term://sh<CR>a
   nnoremap <A-t> :e term://sh<CR>a
 endif
