@@ -171,18 +171,18 @@ endif
 " python terminal
 if executable("ipython3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
   tnoremap <leader>x %paste -q
 elseif executable("ipython")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
   tnoremap <leader>x %paste -q
 elseif executable("python3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
 else
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
 endif
 
 " --- Alt ------------------------------------------
