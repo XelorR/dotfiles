@@ -186,6 +186,3 @@ map <leader>qq :q!<CR>
 " just type :w!! to save the file, even if you did not run Vim with sudo.
 cmap w!! w !sudo tee % >/dev/null
 
-" enter destruscion free mode
-nnoremap <leader>df :Goyo<CR>
-
