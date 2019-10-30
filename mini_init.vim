@@ -38,9 +38,7 @@ let mapleader = "\<Space>"
 " --- Leader ---------------------------------------
 
 " b - buffer management
-map <leader>bp :bprev!<Return>
-map <leader>bn :bnext!<Return>
-map <leader>bd :bdelete!<Return>
+nnoremap <leader>b :ls<CR>:b<Space>
 map <leader><tab> :b!#<Return>
 map <leader>e :browse old!<CR>
 map <leader>w :w<Return>
