@@ -85,7 +85,6 @@ let mapleader = "\<Space>"
 map <leader>bp :bprev!<Return>
 map <leader>bn :bnext!<Return>
 map <leader>bd :bdelete!<Return>
-map <leader>bb :NERDTreeToggle<CR>
 map <leader><tab> :b!#<Return>
 map <leader>e :browse old!<CR>
 map <leader>w :w<Return>
