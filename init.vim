@@ -17,11 +17,6 @@ Plug 'tpope/vim-commentary' " type gcc to comment
 Plug 'tpope/vim-surround' " cs, ds, ys for surroundings
 Plug 'tpope/vim-repeat' " use dot for surroundings
 Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy file and mru searcher
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " better fuzzy searcher
 Plug 'nelstrom/vim-visual-star-search' " search all in v mode by pressing *
@@ -33,9 +28,6 @@ set foldmethod=indent
 set number
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-" IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
 " theme
@@ -49,18 +41,9 @@ let g:airline#extensions#tabline#fnamemod = ':t' " Show just the filename
 set splitright
 set splitbelow
 
-" Increment file search
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_working_path_mode = 'ra'
-
-" Using ripgrep for CtrlP
+" Using ripgrep as default searcher
 if executable('rg')
   set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 endif
 
 " Ignore some paths while fuzzy-searching
@@ -108,11 +91,11 @@ function! ExecuteMacroOverVisualRange()
 endfunction
 
 " n - navigation
-noremap <leader>nn :CtrlPMixed<CR>
+noremap <leader>nn :cd %:h<CR>:Files<CR>
 noremap <leader>nf :Files<CR>
 noremap <leader>nr :Rg<CR>
 noremap <leader>ne :bro ol!<CR>
-noremap <leader>nm :CtrlPMRUFiles<CR>
+noremap <leader>nm :History<CR>
 noremap <leader>nl :Lines<CR>
 map <Leader>l <Plug>(easymotion-bd-jk)
 nmap <Leader>l <Plug>(easymotion-overwin-line)
