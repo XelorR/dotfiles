@@ -6,7 +6,7 @@ git config --global user.email user@user.org
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py --user
 
-python3 -m pip install --user datatable pandas jupyterlab jupytext rope pylint autopep8 yapf pwgen tldr seaborn 
+python3 -m pip install --user -U datatable pandas jupyterlab jupytext rope pylint autopep8 yapf pwgen tldr seaborn xlrd xlwt xlsxwriter openpyxl
 # python3 -m pip install --user sklearn catboost lightgbm tensorflow xgboost
 
 echo "export PATH=~/.local/bin:$PATH" >> ~/.bashrc
