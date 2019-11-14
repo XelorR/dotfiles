@@ -12,7 +12,7 @@ git config --global user.email user@user.org
 # echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list 
 
 
-# sudo apt-get --print-uris install aria2 neovim codium | grep 'http' | awk '{print$1}' | tr -d "'" > ./soft/apt_downloads/update.txt
+# apt-get --print-uris install aria2 neovim codium | grep 'http' | awk -F"'" '{print$2}' > ./soft/apt_downloads/update.txt
 # wget -i ./soft/apt_downloads/update.txt
 sudo dpkg -i ./soft/apt_downloads/update.txt
 
