@@ -14,7 +14,7 @@ wget -i ./soft/apt_downloads/update.txt -P ./soft/apt_downloads
 
 curl https://www.torproject.org/dist/torbrowser/9.0.1/tor-browser-linux64-9.0.1_en-US.tar.xz -o ./soft/tor-browser-linux64-9.0.1_en-US.tar.xz
 
-python3 -m pip download -d ./soft/pip_downloads_min https://s3.amazonaws.com/h2o-release/datatable/stable/datatable-0.9.0/datatable-0.9.0-cp37-cp37m-linux_x86_64.whl pandas jupyterlab jupytext autopep8 seaborn xlrd xlwt xlsxwriter openpyxl pyyaml==5.1.2
-python3 -m pip download -d ./soft/pip_downloads_rest sklearn catboost lightgbm tensorflow xgboost plotly_express pyautogui keyboard
+$HOME/miniconda/bin/python3 -m pip download -d ./soft/pip_downloads_min https://s3.amazonaws.com/h2o-release/datatable/stable/datatable-0.9.0/datatable-0.9.0-cp37-cp37m-linux_x86_64.whl pandas jupyterlab jupytext autopep8 seaborn xlrd xlwt xlsxwriter openpyxl pyyaml==5.1.2
+$HOME/miniconda/bin/python3 -m pip download -d ./soft/pip_downloads_rest sklearn catboost lightgbm tensorflow xgboost plotly_express pyautogui keyboard
 
 wget -O ./soft/init.vim https://raw.githubusercontent.com/XelorR/dotfiles/master/mini_init.vim
