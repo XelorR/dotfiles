@@ -32,7 +32,6 @@ augroup END
 " === Key bindings =================================
 
 " defining leader key
-let maplocalleader = "\\"
 let mapleader = "\<Space>"
 
 " --- Leader ---------------------------------------
