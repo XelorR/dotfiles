@@ -66,9 +66,9 @@ let mapleader = "\<Space>"
 
 " b - buffer management
 nnoremap <leader>b :ls<CR>:b<Space>
-map <leader><tab> :b!#<Return>
-map <leader>e :browse old!<CR>
-map <leader>w :w<Return>
+noremap <leader><tab> :b!#<Return>
+noremap <leader>e :browse old!<CR>
+noremap <leader>w :w<Return>
 
 " f - code formatting
 nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
@@ -151,45 +151,53 @@ endif
 " python terminal
 if executable("ipython3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
-  tnoremap <leader>x %paste -q
+  nnoremap <leader>gg :e term://ipython3<CR>a
+  nnoremap <A-g> :e term://ipython3<CR>a
 elseif executable("ipython")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
-  tnoremap <leader>x %paste -q
+  nnoremap <leader>gg :e term://ipython<CR>a
+  nnoremap <A-g> :e term://ipython<CR>a
 elseif executable("python3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>gg :e term://python3<CR>a
+  nnoremap <A-g> :e term://python3<CR>a
 else
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>gg :e term://python<CR>a
+  nnoremap <A-g> :e term://python<CR>a
 endif
 
 " --- Alt ------------------------------------------
 
 " buffers
 " movements
-imap <A-k> <C-[>:bprev!<Return>
-imap <A-j> <C-[>:bnext!<Return>
-map <A-k> :bprev!<Return>
-map <A-j> :bnext!<Return>
+inoremap <A-k> <C-[>:bprev!<Return>
+inoremap <A-j> <C-[>:bnext!<Return>
+noremap <A-k> :bprev!<Return>
+noremap <A-j> :bnext!<Return>
 tnoremap <A-k> <C-\><C-n>:bprev!<Return>
 tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 " force close any buffer
 nnoremap <A-w> :bdelete!<Return>
 tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
 inoremap <A-w> <C-[>:bdelete!<Return>
+noremap <A-Up> ddkP
+noremap <A-Down> ddp
+inoremap <A-Up> <C-[>ddkPa
+inoremap <A-Down> <C-[>ddpa
 
 " --- Control --------------------------------------
 
 " buffers
 " movements
-imap <C-PageUp> <C-[>:bprev!<Return>
-imap <C-PageDown> <C-[>:bnext!<Return>
-map <C-PageUp> :bprev!<Return>
-map <C-PageDown> :bnext!<Return>
+inoremap <C-PageUp> <C-[>:bprev!<Return>
+inoremap <C-PageDown> <C-[>:bnext!<Return>
+noremap <C-PageUp> :bprev!<Return>
+noremap <C-PageDown> :bnext!<Return>
 tnoremap <C-PageUp> <C-\><C-n>:bprev!<Return>
 tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
+noremap <C-Up> <C-y>
+noremap <C-Down> <C-e>
 
 " --- Mixed ----------------------------------------
 
@@ -198,9 +206,9 @@ map <leader>cd :cd %:p:h<cr>
 
 " yank and paste using system clipboard
 noremap <leader>y "+y
-noremap <leader>y "+y
+noremap <leader>Y "+Y
 noremap <leader>p "+p
-noremap <leader>p "+p
+noremap <leader>P "+P
 
 " Seamlessly treat visual lines as actual lines when moving around.
 noremap j gj
