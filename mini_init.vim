@@ -153,7 +153,7 @@ noremap <C-PageDown> :bnext!<Return>
 tnoremap <C-PageUp> <C-\><C-n>:bprev!<Return>
 tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
 noremap <C-Up> <C-y>
-noremap <C-Down> <C-o>
+noremap <C-Down> <C-e>
 
 " --- Mixed ----------------------------------------
 
