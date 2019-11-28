@@ -155,9 +155,9 @@ map <leader>cd :cd %:p:h<cr>
 
 " yank and paste using system clipboard
 noremap <leader>y "+y
-noremap <leader>y "+y
+noremap <leader>Y "+Y
 noremap <leader>p "+p
-noremap <leader>p "+p
+noremap <leader>P "+P
 
 " Seamlessly treat visual lines as actual lines when moving around.
 noremap j gj
