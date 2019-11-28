@@ -104,21 +104,23 @@ else
   nnoremap <A-t> :e term://sh<CR>a
 endif
 
-" python terminal
+" open python terminal
 if executable("ipython3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
-  tnoremap <leader>x %paste -q
+  nnoremap <leader>gg :e term://ipython3<CR>a
+  nnoremap <A-g> :e term://ipython3<CR>a
 elseif executable("ipython")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
-  tnoremap <leader>x %paste -q
+  nnoremap <leader>gg :e term://ipython<CR>a
+  nnoremap <A-g> :e term://ipython<CR>a
 elseif executable("python3")
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>gg :e term://python3<CR>a
+  nnoremap <A-g> :e term://python3<CR>a
 else
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
-  nnoremap <leader>x :cd %:h<CR>?#.\?%%<CR>"+yN''<C-w><C-w>a
+  nnoremap <leader>gg :e term://python<CR>a
+  nnoremap <A-g> :e term://python<CR>a
 endif
 
 " --- Alt ------------------------------------------
