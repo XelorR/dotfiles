@@ -137,6 +137,10 @@ tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 nnoremap <A-w> :bdelete!<Return>
 tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
 inoremap <A-w> <C-[>:bdelete!<Return>
+noremap <A-Up> ddkP
+noremap <A-Down> ddp
+inoremap <A-Up> <C-[>ddkPa
+inoremap <A-Down> <C-[>ddpa
 
 " --- Control --------------------------------------
 
@@ -148,6 +152,8 @@ noremap <C-PageUp> :bprev!<Return>
 noremap <C-PageDown> :bnext!<Return>
 tnoremap <C-PageUp> <C-\><C-n>:bprev!<Return>
 tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
+noremap <C-Up> <C-y>
+noremap <C-Down> <C-o>
 
 " --- Mixed ----------------------------------------
 
