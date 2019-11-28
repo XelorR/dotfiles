@@ -38,9 +38,9 @@ let mapleader = "\<Space>"
 
 " b - buffer management
 nnoremap <leader>b :ls<CR>:b<Space>
-map <leader><tab> :b!#<Return>
-map <leader>e :browse old!<CR>
-map <leader>w :w<Return>
+noremap <leader><tab> :b!#<Return>
+noremap <leader>e :browse old!<CR>
+noremap <leader>w :w<Return>
 
 " f - code formatting - yapf required
 nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
@@ -69,7 +69,7 @@ function! GotoJump()
     endif
   endif
 endfunction
-nmap <Leader>j :call GotoJump()<CR>
+nnoremap <Leader>j :call GotoJump()<CR>
 
 " t - terminal
 if executable("powershell")
@@ -125,10 +125,10 @@ endif
 
 " buffers
 " movements
-imap <A-k> <C-[>:bprev!<Return>
-imap <A-j> <C-[>:bnext!<Return>
-map <A-k> :bprev!<Return>
-map <A-j> :bnext!<Return>
+inoremap <A-k> <C-[>:bprev!<Return>
+inoremap <A-j> <C-[>:bnext!<Return>
+noremap <A-k> :bprev!<Return>
+noremap <A-j> :bnext!<Return>
 tnoremap <A-k> <C-\><C-n>:bprev!<Return>
 tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 " force close any buffer
@@ -140,17 +140,17 @@ inoremap <A-w> <C-[>:bdelete!<Return>
 
 " buffers
 " movements
-imap <C-PageUp> <C-[>:bprev!<Return>
-imap <C-PageDown> <C-[>:bnext!<Return>
-map <C-PageUp> :bprev!<Return>
-map <C-PageDown> :bnext!<Return>
+inoremap <C-PageUp> <C-[>:bprev!<Return>
+inoremap <C-PageDown> <C-[>:bnext!<Return>
+noremap <C-PageUp> :bprev!<Return>
+noremap <C-PageDown> :bnext!<Return>
 tnoremap <C-PageUp> <C-\><C-n>:bprev!<Return>
 tnoremap <C-PageDown> <C-\><C-n>:bnext!<Return>
 
 " --- Mixed ----------------------------------------
 
 " cd to current file
-map <leader>cd :cd %:p:h<cr>
+noremap <leader>cd :cd %:p:h<cr>
 
 " yank and paste using system clipboard
 noremap <leader>y "+y
@@ -178,7 +178,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>:colorscheme desert<CR>
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
 " force exit
-map <leader>qq :q!<CR>
+noremap <leader>qq :q!<CR>
 
 " just type :w!! to save the file, even if you did not run Vim with sudo.
 cmap w!! w !sudo tee % >/dev/null
