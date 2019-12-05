@@ -42,11 +42,6 @@ noremap <leader><tab> :b!#<Return>
 noremap <leader>e :browse old!<CR>
 noremap <leader>w :w<Return>
 
-" f - code formatting - yapf required
-nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
-vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
-vnoremap <leader>fp :'<,'>!python -m yapf<CR>
-
 " m - macro
 " run macro in visual selecthion
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
@@ -104,23 +99,43 @@ else
   nnoremap <A-t> :e term://sh<CR>a
 endif
 
-" open python terminal
+" python hotkeys
 if executable("ipython3")
+" python terminal start
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython3<CR><C-w><C-w>
   nnoremap <leader>gg :e term://ipython3<CR>a
   nnoremap <A-g> :e term://ipython3<CR>a
+" f - code formatting - yapf required
+  nnoremap <leader>fb :%!python3 -m yapf --style "google"<CR>
+  vnoremap <leader>ff :'<,'>!python3 -m yapf --style "google"<CR>
+  vnoremap <leader>fp :'<,'>!python3 -m yapf<CR>
 elseif executable("ipython")
+" python terminal start
   nnoremap <leader>r :cd %:h<CR>:vsplit term://ipython<CR><C-w><C-w>
   nnoremap <leader>gg :e term://ipython<CR>a
   nnoremap <A-g> :e term://ipython<CR>a
+" f - code formatting - yapf required
+  nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
+  vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
+  vnoremap <leader>fp :'<,'>!python -m yapf<CR>
 elseif executable("python3")
+" python terminal start
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python3<CR><C-w><C-w>
   nnoremap <leader>gg :e term://python3<CR>a
   nnoremap <A-g> :e term://python3<CR>a
+" f - code formatting - yapf required
+  nnoremap <leader>fb :%!python3 -m yapf --style "google"<CR>
+  vnoremap <leader>ff :'<,'>!python3 -m yapf --style "google"<CR>
+  vnoremap <leader>fp :'<,'>!python3 -m yapf<CR>
 else
+" python terminal start
   nnoremap <leader>r :cd %:h<CR>:vsplit term://python<CR><C-w><C-w>
   nnoremap <leader>gg :e term://python<CR>a
   nnoremap <A-g> :e term://python<CR>a
+" f - code formatting - yapf required
+  nnoremap <leader>fb :%!python -m yapf --style "google"<CR>
+  vnoremap <leader>ff :'<,'>!python -m yapf --style "google"<CR>
+  vnoremap <leader>fp :'<,'>!python -m yapf<CR>
 endif
 
 " --- Alt ------------------------------------------
