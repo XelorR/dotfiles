@@ -1,14 +1,32 @@
 " dependensies: ripgrep, python, yapf (everything is optional)
 
-" for programming
-syntax enable
-set foldmethod=indent
-set number
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set noexpandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile *.txt set noexpandtab
+au BufRead,BufNewFile *.ini set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
 
-" theme
+" --------------------------------------------------------------------------------
+" configure editor with tabs and nice stuff...
+" --------------------------------------------------------------------------------
+set expandtab           " enter spaces when tab is pressed
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+" look and feel
 set termguicolors
 set background=dark
 colorscheme desert
+syntax enable
+set foldmethod=indent
+set number
 
 " splits windows in more habitual manner
 set splitright
