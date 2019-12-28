@@ -1,15 +1,15 @@
-﻿1337 Color Scheme
+﻿# 1337 Color Scheme
 Text Pastry
 TabNukerNuker
 BracketHighlighter
-FileIcons
-Git
+# FileIcons
+# Git
 GitGutter
-NeoVintageous
+# NeoVintageous
 Package Control
 SideBarEnchancements
-SublimePythonIDE
-TabNine
+# SublimePythonIDE
+# TabNine
 Terminus
 
 additional settings:
