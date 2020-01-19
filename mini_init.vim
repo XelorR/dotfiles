@@ -170,6 +170,14 @@ tnoremap <A-j> <C-\><C-n>:bnext!<Return>
 nnoremap <A-w> :bdelete!<Return>
 tnoremap <A-w> <C-\><C-n>:bdelete!<Return>
 inoremap <A-w> <C-[>:bdelete!<Return>
+" switch windows
+nnoremap <A-n> <C-w><C-w>
+tnoremap <A-n> <C-\><C-n><C-w><C-w>
+inoremap <A-n> <C-[><C-w><C-w>
+nnoremap <leader><tab> <C-w><C-w>
+tnoremap <leader><tab> <C-\><C-n><C-w><C-w>
+inoremap <leader><tab> <C-[><C-w><C-w>
+" switch rows
 noremap <A-Up> ddkP
 noremap <A-Down> ddp
 inoremap <A-Up> <C-[>ddkPa
