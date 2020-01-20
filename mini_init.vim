@@ -68,6 +68,9 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
+" quick run macro from q
+nnoremap <leader>2 @q
+
 " navigate by jump history
 function! GotoJump()
   jumps
