@@ -56,7 +56,6 @@ let mapleader = "\<Space>"
 
 " b - buffer management
 nnoremap <leader>b :ls<CR>:b<Space>
-noremap <leader><tab> :b!#<Return>
 noremap <leader>e :browse old!<CR>
 noremap <leader>w :w<Return>
 
