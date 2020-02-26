@@ -6,6 +6,7 @@ au BufRead,BufNewFile *.c set noexpandtab
 au BufRead,BufNewFile *.h set noexpandtab
 au BufRead,BufNewFile *.txt set noexpandtab
 au BufRead,BufNewFile *.ini set noexpandtab
+au BufRead,BufNewFile *.cfg set noexpandtab
 au BufRead,BufNewFile Makefile* set noexpandtab
 
 " --------------------------------------------------------------------------------
