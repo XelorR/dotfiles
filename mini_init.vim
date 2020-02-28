@@ -89,12 +89,7 @@ endfunction
 nnoremap <Leader>j :call GotoJump()<CR>
 
 " t - terminal
-if executable("powershell")
-  nnoremap <leader>' :vsplit term://powershell<CR>a
-  nnoremap <leader>- :split term://powershell<CR>a
-  nnoremap <leader>tt :e term://powershell<CR>a
-  nnoremap <A-t> :e term://powershell<CR>a
-elseif executable("cmd")
+if executable("cmd")
   nnoremap <leader>' :vsplit term://cmd<CR>a
   nnoremap <leader>- :split term://cmd<CR>a
   nnoremap <leader>tt :e term://cmd<CR>a
