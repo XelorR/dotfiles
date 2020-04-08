@@ -11,3 +11,6 @@ mkdir -p ~/.vim/colors
 cp ~/.config/nvim/colors/molokai.vim ~/.vim/colors/
 sed -i 's/desert/molokai/g' ~/.vimrc
 
+git clone https://github.com/axvr/zepl.vim ~/.config/nvim/pack/plugins/start/zepl
+nvim +'helptags ~/.config/nvim/pack/plugins/start/zepl/doc/' +q
+
