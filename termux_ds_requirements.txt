@@ -16,7 +16,7 @@ ipython-genutils==0.2.0
 isodate==0.6.0
 jdcal==1.4.1
 jedi==0.15.1
-Jinja2==2.10.3
+Jinja2==2.11.3
 jsonschema==3.1.1
 jupyter-core==4.6.1
 leather==0.3.3
