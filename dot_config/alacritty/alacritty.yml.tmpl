@@ -10,7 +10,11 @@ font:
     #family: JetBrainsMono Nerd Font
     #family: iMWritingMono Nerd Font
     family: MesloLGS Nerd Font Mono
+{{ if eq .chezmoi.hostname "x270" }}
   size: 9
+{{ else }}
+  size: 13
+{{ end }}
   #offset:
   #  x: 1
 key_bindings:
@@ -24,7 +28,6 @@ key_bindings:
   - { key: V, mods: Command, action: Paste }
   - { key: W, mods: Command, action: Quit }
   - { key: Q, mods: Command, action: Quit }
-  #- { key: T, mods: Alt, action: CreateNewTab }
   - { key: Key0, mods: Alt, action: ResetFontSize }
   - { key: Equals, mods: Alt, action: IncreaseFontSize }
   - { key: Minus, mods: Alt, action: DecreaseFontSize }
@@ -35,8 +38,4 @@ key_bindings:
   - { key: Equals, mods: Command, action: IncreaseFontSize }
   - { key: Minus, mods: Command, action: DecreaseFontSize }
 import:
-  # uncomment the flavour you want below:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
