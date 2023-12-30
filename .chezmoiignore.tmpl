@@ -5,19 +5,19 @@ kwinrc
 ahk
 etc
 
-{{- if ne .chezmoi.os "linux" }}
-dot_config/rofi
-dot_config/hypr
-dot_config/i3
+{{ if ne .chezmoi.os "linux" }}
+dot_config/rofi/**
+dot_config/hypr/**
+dot_config/i3/**
 dot_config/user-dirs.locale
 dot_config/private_user-dirs.dirs
 dot_config/symlink_kglobalshortcutsrc.tmpl
 dot_config/symlink_kwinrc.tmpl
-dot_local/share/konsole
-{{- end }}
+dot_local/share/konsole/**
+{{ end }}
 
-{{- if ne .chezmoi.os "darwin" }}
-dot_config/yabai
-dot_config/skhd
-dot_config/spacebar
-{{- end }}
+{{ if ne .chezmoi.os "darwin" }}
+dot_config/yabai/**
+dot_config/skhd/**
+dot_config/spacebar/**
+{{ end }}
