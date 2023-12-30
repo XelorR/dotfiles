@@ -12,7 +12,7 @@
 - [ ] script for xremap systemd rule in etc
 - [ ] script for sshd config in etc (different arch/ubuntu)
 - [ ] windows-specific --- glazewm (do under windows)
-- [ ] .chezmoiignore to diffirenciate macos/linux (do under mac)
+- [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
 - [ ] macos execute-once script to hide dock (do under macos)
 - [ ] software installations macos/arch/ubuntu/windows/termux
 - [ ] termux specific config (do under termux)
