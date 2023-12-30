@@ -24,7 +24,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfil
 - [ ] separate plasma bindings for ubuntu (do under ubuntu)
 - [ ] installing tpm for tmux
 - [ ] installing spacemacs
-- [ ] installing lazyvim
+- [x] installing lazyvim
 - [ ] installing prezto
 - [ ] script for xremap systemd rule in etc
 - [ ] script for sshd config in etc (different arch/ubuntu)
