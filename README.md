@@ -32,6 +32,6 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfil
 - [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
 - [ ] macos execute-once script to hide dock (do under macos)
 - [x] software installations macos/arch/ubuntu/windows/termux
-- [ ] termux specific config (do under termux)
+- [x] termux specific config (do under termux)
 - [ ] fonts for different folders macos/linux/windows/termux
 - [x] readme --- setup oneliners

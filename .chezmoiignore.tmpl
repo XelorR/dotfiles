@@ -22,3 +22,7 @@ scripts
 .config/skhd/**
 .config/spacebar/**
 {{ end }}
+
+{{ if ne .chezmoi.os "android" }}
+.termux
+{{ end }}
