@@ -3,7 +3,7 @@
 ## Migration to Chezmoi
 
 - [x] alacritty font size difference
-- [ ] alacritty decorations enable for plasma
+- [x] alacritty decorations enable for plasma
 - [ ] separate plasma bindings for ubuntu (do under ubuntu)
 - [ ] installing tpm for tmux
 - [ ] installing spacemacs
