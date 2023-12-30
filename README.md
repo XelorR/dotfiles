@@ -1,5 +1,22 @@
 # My dotfiles
 
+## Setup oneliners
+
+unix https
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply xelorr
+```
+
+unix ssh
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfiles.git
+```
+
+unix ssh wget version
+```bash
+sh -c "$(wget -qO- get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfiles.git
+```
+
 ## Migration to Chezmoi
 
 - [x] alacritty font size difference
@@ -17,4 +34,4 @@
 - [x] software installations macos/arch/ubuntu/windows/termux
 - [ ] termux specific config (do under termux)
 - [ ] fonts for different folders macos/linux/windows/termux
-- [ ] readme --- setup oneliners
+- [x] readme --- setup oneliners
