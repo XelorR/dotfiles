@@ -4,16 +4,16 @@
 
 - [ ] alacritty font size difference
 - [ ] alacritty decorations enable for plasma
-- [ ] separate plasma bindings for ubuntu
+- [ ] separate plasma bindings for ubuntu (do under ubuntu)
 - [ ] installing tpm for tmux
 - [ ] installing spacemacs
 - [ ] installing lazyvim
 - [ ] installing prezto
 - [ ] script for xremap systemd rule in etc
 - [ ] script for sshd config in etc (different arch/ubuntu)
-- [ ] windows-specific --- glazewm
-- [ ] .chezmoiignore to diffirenciate macos/linux
-- [ ] macos execute-once script to hide dock
-- [ ] software installations
-- [ ] termux specific config
+- [ ] windows-specific --- glazewm (do under windows)
+- [ ] .chezmoiignore to diffirenciate macos/linux (do under mac)
+- [ ] macos execute-once script to hide dock (do under macos)
+- [ ] software installations macos/arch/ubuntu/windows/termux
+- [ ] termux specific config (do under termux)
 - [ ] fonts for different folders macos/linux/windows/termux
