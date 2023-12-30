@@ -17,3 +17,4 @@
 - [x] software installations macos/arch/ubuntu/windows/termux
 - [ ] termux specific config (do under termux)
 - [ ] fonts for different folders macos/linux/windows/termux
+- [ ] readme --- setup oneliners
