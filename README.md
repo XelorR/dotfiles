@@ -14,6 +14,6 @@
 - [ ] windows-specific --- glazewm (do under windows)
 - [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
 - [ ] macos execute-once script to hide dock (do under macos)
-- [ ] software installations macos/arch/ubuntu/windows/termux
+- [x] software installations macos/arch/ubuntu/windows/termux
 - [ ] termux specific config (do under termux)
 - [ ] fonts for different folders macos/linux/windows/termux
