@@ -1,0 +1,6 @@
+configuration {
+  modi: [window,drun,run,filebrowser,ssh,combi];
+}
+
+@import "spotlight-dark"
+@import "Manjaro"

@@ -1,0 +1,42 @@
+env:
+  TERM: xterm-256color
+
+window:
+  decorations: none
+  option_as_alt: Both
+
+font:
+  normal:
+    #family: JetBrainsMono Nerd Font
+    #family: iMWritingMono Nerd Font
+    family: MesloLGS Nerd Font Mono
+  size: 9
+  #offset:
+  #  x: 1
+key_bindings:
+  - { key: N, mods: Alt, action: SpawnNewInstance }
+  - { key: C, mods: Alt, action: Copy }
+  - { key: V, mods: Alt, action: Paste }
+  - { key: W, mods: Alt, action: Quit }
+  - { key: Q, mods: Alt, action: Quit }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: C, mods: Command, action: Copy }
+  - { key: V, mods: Command, action: Paste }
+  - { key: W, mods: Command, action: Quit }
+  - { key: Q, mods: Command, action: Quit }
+  #- { key: T, mods: Alt, action: CreateNewTab }
+  - { key: Key0, mods: Alt, action: ResetFontSize }
+  - { key: Equals, mods: Alt, action: IncreaseFontSize }
+  - { key: Minus, mods: Alt, action: DecreaseFontSize }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml

@@ -1,0 +1,11 @@
+keymap:
+  - name: "MacOS-like tabs"
+    remap:
+      Alt-Shift-rightbrace: Control-pagedown
+      Alt-Shift-leftbrace: Control-pageup
+      Control-Shift-rightbrace: Control-pagedown
+      Control-Shift-leftbrace: Control-pageup
+      Alt-rightbrace: Alt-right
+      Alt-leftbrace: Alt-left
+      Control-rightbrace: Alt-right
+      Control-leftbrace: Alt-left

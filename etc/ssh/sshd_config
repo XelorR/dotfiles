@@ -1,0 +1,6 @@
+Include /etc/ssh/sshd_config.d/*.conf
+Port 46538
+PasswordAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+Subsystem	sftp	/usr/lib/ssh/sftp-server

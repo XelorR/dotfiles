@@ -1,0 +1,97 @@
+# APPLICATION SPECIFIC BINDINGS ---------------------------------
+#
+# cmd - n [
+#     "kitty"       : echo "hello kitty"
+#     *             : echo "hello everyone"
+#     "qutebrowser" : echo "hello qutebrowser"
+#     "terminal"    ~
+#     "finder"      : false
+# ]
+
+# PREVENT SKHD FROM MONITORING EVENTS FOR SPECIFIC APPLICATIONS.
+#
+.blacklist [
+#    "emacs"
+   "outlook"
+#    "kitty"
+#    "terminal"
+#    "qutebrowser"
+]
+
+# LAUNCHERS AND SWITCHES
+
+#ctrl + alt - t : open -n /Applications/Alacritty.app ~
+ctrl + alt - t : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+ctrl + alt - e : emacsclient -c -n -a '' & sleep 0.5 && yabai -m window --focus $(yabai -m query --windows | jq '[.[] | select ( .title | contains("Emacs") )][0].id')
+alt - e : open ~
+
+alt - q : yabai -m window --close
+
+alt + shift - s : yabai -m window --toggle split
+alt + shift - d : yabai -m window --toggle float; yabai -m window --grid 16:5:1:1:3:14
+alt + shift - f : yabai -m window --toggle zoom-fullscreen
+alt + shift - r : yabai --restart-service && skhd --restart-service && brew services restart spacebar
+
+# WINDOWS -------------------------------------------------------
+# - focus:  alt +         direction keys
+# - move:   alt + shift + direction keys
+# - resize: alt + shift + direction keys
+
+# FOCUS
+# for left/right: if it fails becaus this was the west-most/east-most window, try to switch displays
+# this will make alt -h/l work seamlessly over multiple monitors
+alt - h : yabai -m window --focus west || yabai -m display --focus west
+alt - l : yabai -m window --focus east || yabai -m display --focus east
+
+# for up/down: try to switch focus in a stack first, if this fails (because there is no stack or because we are at the topmost or last element of the stack) focus the north/south window
+alt - j : yabai -m window --focus stack.next || yabai -m window --focus south
+alt - k : yabai -m window --focus stack.prev || yabai -m window --focus north
+
+# RESIZE
+alt + shift - h : yabai -m window --resize left:-100:0; yabai -m window --resize right:-100:0
+alt + shift - j : yabai -m window --resize bottom:0:100; yabai -m window --resize top:0:100
+alt + shift - k : yabai -m window --resize top:0:-100; yabai -m window --resize bottom:0:-100
+alt + shift - l : yabai -m window --resize right:100:0; yabai -m window --resize left:100:0
+
+# MOVE
+alt + lctrl + shift - h : yabai -m window --warp west || yabai -m window --display west
+alt + lctrl + shift - l : yabai -m window --warp east || yabai -m window --display east
+alt + lctrl + shift - j : yabai -m window --warp south 
+alt + lctrl + shift - k : yabai -m window --warp north
+
+# SPACES --------------------------------------------------------
+
+# cycle (doesn't work by some reason)
+ctrl + alt - l : yabai -m space --focus next || yabai -m window --focus first_node
+ctrl + alt - h : yabai -m space --focus prev || yabai -m window --focus last_node
+ctrl + alt - right : yabai -m space --focus next || yabai -m window --focus first_node
+ctrl + alt - left : yabai -m space --focus prev || yabai -m window --focus last_node
+
+# move to neighboring space (doesn't work by some reason)
+ctrl + alt + shift - right : yabai -m window --space next ; yabai -m space --focus next
+ctrl + alt + shift - left  : yabai -m window --space prev ; yabai -m space --focus prev
+
+# focus spaces
+alt - 1 : yabai -m space --focus 1  || yabai -m space --focus recent
+alt - 2 : yabai -m space --focus 2  || yabai -m space --focus recent
+alt - 3 : yabai -m space --focus 3  || yabai -m space --focus recent
+alt - 4 : yabai -m space --focus 4  || yabai -m space --focus recent
+alt - 5 : yabai -m space --focus 5  || yabai -m space --focus recent
+alt - 6 : yabai -m space --focus 6  || yabai -m space --focus recent
+alt - 7 : yabai -m space --focus 7  || yabai -m space --focus recent
+alt - 8 : yabai -m space --focus 8  || yabai -m space --focus recent
+alt - 9 : yabai -m space --focus 9  || yabai -m space --focus recent
+alt - 0 : yabai -m space --focus 10 || yabai -m space --focus recent
+
+# send window to desktop and follow focus (follow focus doesn't work by some reason)
+alt + shift - 1 : yabai -m window --space 1  ; yabai -m space --focus 1 
+alt + shift - 2 : yabai -m window --space 2  ; yabai -m space --focus 2 
+alt + shift - 3 : yabai -m window --space 3  ; yabai -m space --focus 3 
+alt + shift - 4 : yabai -m window --space 4  ; yabai -m space --focus 4 
+alt + shift - 5 : yabai -m window --space 5  ; yabai -m space --focus 5 
+alt + shift - 6 : yabai -m window --space 6  ; yabai -m space --focus 6 
+alt + shift - 7 : yabai -m window --space 7  ; yabai -m space --focus 7 
+alt + shift - 8 : yabai -m window --space 8  ; yabai -m space --focus 8 
+alt + shift - 9 : yabai -m window --space 9  ; yabai -m space --focus 9 
+alt + shift - 0 : yabai -m window --space 10 ; yabai -m space --focus 10 
+

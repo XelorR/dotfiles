@@ -1,0 +1,69 @@
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# OS check
+if [[ $(uname) == "Darwin" ]]; then
+	# PyCharm CLI tool for MacOS
+	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+else
+	# MacOS-like pbcopy/pbpaste and open on GNU Linux
+	if command -v xclip &>/dev/null; then
+		alias pbcopy='xclip -selection clipboard'
+		alias pbpaste='xclip -selection clipboard -o'
+	fi
+	alias open=xdg-open
+fi
+
+# Editing in terminal
+if command -v emacs &>/dev/null; then
+	alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
+	alias macs="emacsclient -a '' -c -nw"
+	alias emax="emacsclient -a '' -c"
+fi
+if command -v nvim &>/dev/null; then
+	export VISUAL=nvim
+	alias vi=nvim
+fi
+export EDITOR=vi
+
+# Useful aliases
+if command -v rsync &>/dev/null; then
+	alias cpv='rsync -ah --info=progress2'
+fi
+alias tm='tmux a || tmux'
+alias ff='find . -type f -iname'
+alias la='ls -lisA'
+alias lt='du -sh * | sort -h'
+alias ll='ls -lh'
+alias ve='python3 -m venv ./venv'
+alias va='source ./venv/bin/activate'
+alias vd=deactivate
+alias www='ifconfig | grep broadcast ; python3 -m http.server'
+
+# Generating passwords
+if command -v openssl &>/dev/null; then
+	alias getpass="openssl rand -base64 20"
+fi
+
+# Navigating directories
+if command -v lf &>/dev/null; then
+	lfcd() {
+		# `command` is needed in case `lfcd` is aliased to `lf`
+		cd "$(command lf -print-last-dir "$@")"
+	}
+	alias lf=lfcd
+fi
+
+# Loading external confirurations if available
+if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
+	if test -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"; then
+		source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+	fi
+	if command -v starship &>/dev/null; then
+		eval "$(starship init zsh)"
+	fi
+elif [ -n "$($SHELL -c 'echo $BASH_VERSION')" ]; then
+	if command -v starship &>/dev/null; then
+		eval "$(starship init bash)"
+	fi
+fi

@@ -1,0 +1,6 @@
+modmap:
+  - name: "Better capslock"
+    remap:
+      CAPSLOCK:
+        held: LEFTCTRL
+        alone: ESC

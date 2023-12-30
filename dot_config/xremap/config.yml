@@ -1,0 +1,39 @@
+# To be used with laptop keyboard when QMK keyboard is not connected
+# (it simalates my QMK config)
+modmap:
+  - name: "CAPS as both CONTROL and ESCAPE"
+    remap:
+      CAPSLOCK:
+        held: LEFTCTRL
+        alone: ESC
+  - name: "SPACE as ALT on hold"
+    remap:
+      SPACE:
+        held: LEFTALT
+        alone: SPACE
+  - name: "LEFT ALT as COMMAND --- simulating macos-like Command+letter shortcuts"
+    remap:
+      LEFTALT:
+        held: RIGHTCTRL
+        alone: LEFTALT
+  - name: "RIGHT ALT to switch layout on tap (usually mapped on CAPS)"
+    remap:
+      RIGHTALT:
+        held: RIGHTALT
+        alone: CAPSLOCK
+  - name: "ENTER as RIGHT SHIFT on hold --- sometimes I accidentaly hold it instead of RIGHT SHIFT"
+    remap:
+      ENTER:
+        held: RIGHTSHIFT
+        alone: ENTER
+keymap:
+  - name: "MacOS-like tabs"
+    remap:
+      Alt-Shift-rightbrace: Control-pagedown
+      Alt-Shift-leftbrace: Control-pageup
+      Control-Shift-rightbrace: Control-pagedown
+      Control-Shift-leftbrace: Control-pageup
+      Alt-rightbrace: Alt-right
+      Alt-leftbrace: Alt-left
+      Control-rightbrace: Alt-right
+      Control-leftbrace: Alt-left

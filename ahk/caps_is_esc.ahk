@@ -1,0 +1,2 @@
+SetCapsLockState "AlwaysOff"
+CapsLock::Escape
