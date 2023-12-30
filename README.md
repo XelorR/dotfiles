@@ -15,3 +15,5 @@
 - [ ] .chezmoiignore to diffirenciate macos/linux
 - [ ] macos execute-once script to hide dock
 - [ ] software installations
+- [ ] termux specific config
+- [ ] fonts for different folders macos/linux/windows/termux
