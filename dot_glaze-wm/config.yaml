@@ -1,0 +1,233 @@
+rosewater: &rosewater "#f5e0dc"
+flamingo: &flamingo "#f2cdcd"
+pink: &pink "#f5c2e7"
+mauve: &mauve "#cba6f7"
+red: &red "#f38ba8"
+maroon: &maroon "#eba0ac"
+peach: &peach "#fab387"
+yellow: &yellow "#f9e2af"
+green: &green "#a6e3a1"
+teal: &teal "#94e2d5"
+sky: &sky "#89dceb"
+sapphire: &sapphire "#74c7ec"
+blue: &blue "#89b4fa"
+lavender: &lavender "#b4befe"
+text: &text "#cdd6f4"
+subtext1: &subtext1 "#bac2de"
+subtext0: &subtext0 "#a6adc8"
+overlay2: &overlay2 "#9399b2"
+overlay1: &overlay1 "#7f849c"
+overlay0: &overlay0 "#6c7086"
+surface2: &surface2 "#585b70"
+surface1: &surface1 "#45475a"
+surface0: &surface0 "#313244"
+base: &base "#1e1e2e"
+mantle: &mantle "#181825"
+crust: &crust "#11111b"
+
+general:
+  focus_follows_cursor: true
+  cursor_follow_focus: true
+  toggle_workspace_on_refocus: true
+  show_floating_on_top: true
+  floating_window_move_amount: "5%"
+  window_animations: false
+
+gaps:
+  inner_gap: "7px"
+  outer_gap: "10px"
+
+focus_borders:
+  active:
+    enabled: true
+    color: *mauve
+  inactive:
+    enabled: false
+    color: "#ff0000"
+
+bar:
+  height: "30px"
+  position: "top"
+  opacity: 1.0
+  background: *crust
+  foreground: *mauve
+  font_family: "Segoe UI"
+  font_size: "13px"
+  padding: "4px 6px"
+  offset_x: "0"
+  offset_y: "0"
+  border_radius: "0"
+  components_left:
+    - type: "workspaces"
+      focused_workspace_background: "#ffffff33"
+      displayed_workspace_background: "#00000033"
+      default_workspace_background: "transparent"
+  components_center:
+    - type: "window title"
+  components_right:
+    - type: "system tray"
+    - type: "battery"
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
+    - type: "binding mode"
+      background: "#ffffff33"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "hh:mm tt  (ww) ddd MMM d"
+
+workspaces:
+  - name: "1"
+    display_name: "1. Web"
+    keep_alive: true
+  - name: "2"
+    display_name: "2. Notes"
+    keep_alive: true
+  - name: "3"
+    display_name: "3. Chat"
+    keep_alive: true
+  - name: "4"
+    display_name: "4. Mail"
+    keep_alive: true
+  - name: "5"
+    display_name: "5. Files"
+    keep_alive: true
+  - name: "6"
+    display_name: "6. Sett"
+    keep_alive: true
+  - name: "7"
+    display_name: "7. Conf"
+    keep_alive: true
+  - name: "8"
+    display_name: "8. Dev"
+    keep_alive: true
+  - name: "9"
+    display_name: "9. Dev"
+    keep_alive: true
+  - name: "10"
+    display_name: "10. Misc"
+    keep_alive: true
+
+window_rules:
+  - command: "set floating"
+    match_process_name: "Webex"
+  - command: "set floating"
+    match_process_name: "/Taskmgr|ScreenClippingHost/"
+  - command: "set floating"
+    match_class_name: "#32770" # File Explorer save/open dialog
+  - command: "resize borders 0px -7px -7px -7px"
+    match_process_name: "steam"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    match_process_name: "Outlook"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    match_process_name: "/Microsoft Teams|Telegram Desktop/"
+
+keybindings:
+  # LAUNCHERS AND SWITCHES
+  - command: "exec wt"
+    binding: "Ctrl+Alt+T"
+  - command: "exec emacsclientw -a '' -c -n"
+    binding: "Ctrl+Alt+E"
+  - command: "exec explorer"
+    binding: "Alt+E"
+
+  #- command: 'exec "rundll32.exe user32.dll,LockWorkStation"'
+  #  binding: "Ctrl+Alt+Q"
+  - command: "close"
+    binding: "Alt+Q"
+
+  - command: "tiling direction toggle"
+    binding: "Alt+Shift+S"
+  - command: "toggle floating"
+    binding: "Alt+Shift+D"
+  - command: "toggle maximized"
+    binding: "Alt+Shift+F"
+  - command: "reload config"
+    binding: "Alt+Shift+R"
+
+  # WINDOWS
+  # Shift FOCUS in a given direction.
+  - command: "focus left"
+    binding: "Alt+H"
+  - command: "focus right"
+    binding: "Alt+L"
+  - command: "focus up"
+    binding: "Alt+K"
+  - command: "focus down"
+    binding: "Alt+J"
+  # RESIZE focused window by a percentage or pixel amount.
+  - command: "resize width -100px"
+    binding: "Alt+Shift+H"
+  - command: "resize width +100px"
+    binding: "Alt+Shift+L"
+  - command: "resize height +100px"
+    binding: "Alt+Shift+J"
+  - command: "resize height -100px"
+    binding: "Alt+Shift+K"
+  # MOVE focused window in a given direction.
+  - command: "move left"
+    binding: "Alt+Shift+Ctrl+H"
+  - command: "move right"
+    binding: "Alt+Shift+Ctrl+L"
+  - command: "move up"
+    binding: "Alt+Shift+Ctrl+K"
+  - command: "move down"
+    binding: "Alt+Shift+Ctrl+J"
+
+  # WORKSPACES
+
+  # cycle workspaces (moving left-right doesn't work by some reason)
+  - command: "focus workspace next"
+    bindings: ["Alt+Ctrl+Right", "Alt+Ctrl+L"]
+  - command: "focus workspace prev"
+    bindings: ["Alt+Ctrl+Left", "Alt+Ctrl+H"]
+
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace 7"
+    binding: "Alt+7"
+  - command: "focus workspace 8"
+    binding: "Alt+8"
+  - command: "focus workspace 9"
+    binding: "Alt+9"
+  - command: "focus workspace 10"
+    binding: "Alt+0"
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    binding: "Alt+Shift+6"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    binding: "Alt+Shift+7"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    binding: "Alt+Shift+8"
+  - commands: ["move to workspace 9", "focus workspace 9"]
+    binding: "Alt+Shift+9"
+  - commands: ["move to workspace 10", "focus workspace 10"]
+    bindings: ["Alt+Shift+0"]
