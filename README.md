@@ -4,17 +4,17 @@
 
 unix https
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply xelorr
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply xelorr
 ```
 
 unix ssh
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:xelorr/dotfiles.git
 ```
 
 unix ssh wget version
 ```bash
-sh -c "$(wget -qO- get.chezmoi.io)" -- init --apply git@github.com:xelorr/dotfiles.git
+sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:xelorr/dotfiles.git
 ```
 
 ## Migration to Chezmoi
