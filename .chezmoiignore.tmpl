@@ -3,7 +3,6 @@ LICENSE
 kglobalshortcutsrc
 kglobalshortcutsrc_ubuntu
 kwinrc
-ahk
 etc
 scripts
 
@@ -26,6 +25,11 @@ scripts
 
 {{ if ne .chezmoi.os "android" }}
 .termux
+{{ end }}
+
+{{ if ne .chezmoi.os "windows" }}
+.glaze-wm/**
+ahk
 {{ end }}
 
 .emacs.d/.cache
