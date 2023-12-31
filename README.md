@@ -21,7 +21,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [ ] installing prezto
 - [ ] script for xremap systemd rule in etc
 - [ ] script for sshd config in etc (different arch/ubuntu)
-- [ ] windows-specific --- glazewm (do under windows)
+- [x] windows-specific --- glazewm (do under windows)
 - [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
 - [ ] macos execute-once script to hide dock (do under macos)
 - [x] software installations macos/arch/ubuntu/windows/termux
