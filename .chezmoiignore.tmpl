@@ -32,6 +32,10 @@ scripts
 ahk
 {{ end }}
 
+{{ if eq .chezmoi.os "windows" }}
+run_once_before_install-starship.sh
+{{ end }}
+
 .emacs.d/.cache
 .emacs.d/core/libs/**
 .emacs.d/org-roam.db
