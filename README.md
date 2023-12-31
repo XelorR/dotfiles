@@ -26,5 +26,5 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [ ] macos execute-once script to hide dock (do under macos)
 - [x] software installations macos/arch/ubuntu/windows/termux
 - [x] termux specific config (do under termux)
-- [ ] fonts for different folders macos/linux/windows/termux
+- [x] fonts for different folders macos/linux/windows/termux
 - [x] readme --- setup oneliners
