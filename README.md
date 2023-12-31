@@ -23,7 +23,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] alacritty decorations enable for plasma
 - [x] separate plasma bindings for ubuntu (do under ubuntu)
 - [ ] installing tpm for tmux
-- [ ] installing spacemacs
+- [x] installing spacemacs
 - [x] installing lazyvim
 - [ ] installing prezto
 - [ ] script for xremap systemd rule in etc

@@ -1,0 +1,5 @@
+[".emacs.d"]
+  type = "archive"
+  url = "https://codeload.github.com/syl20bnr/spacemacs/zip/refs/heads/develop"
+  exact = true
+  stripComponents = 1
