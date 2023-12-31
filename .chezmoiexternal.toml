@@ -8,3 +8,6 @@
   url = "https://codeload.github.com/tmux-plugins/tpm/zip/refs/heads/master"
   exact = true
   stripComponents = 1
+[".fonts"]
+  type = "archive"
+  url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
