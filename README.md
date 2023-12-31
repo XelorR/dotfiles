@@ -15,7 +15,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] alacritty font size difference
 - [x] alacritty decorations enable for plasma
 - [x] separate plasma bindings for ubuntu (do under ubuntu)
-- [ ] installing tpm for tmux
+- [x] installing tpm for tmux
 - [x] installing spacemacs
 - [x] installing lazyvim
 - [ ] installing prezto
