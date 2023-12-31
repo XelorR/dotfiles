@@ -23,7 +23,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [ ] script for sshd config in etc (different arch/ubuntu)
 - [x] windows-specific --- glazewm (do under windows)
 - [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
-- [ ] macos execute-once script to hide dock (do under macos)
+- [x] macos execute-once script to hide dock (do under macos)
 - [x] software installations macos/arch/ubuntu/windows/termux
 - [x] termux specific config (do under termux)
 - [x] fonts for different folders macos/linux/windows/termux
