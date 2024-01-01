@@ -1,12 +1,50 @@
 packages:
   brews:
+    - aria2
+    - bat
+    - borgbackup
+    - curl
+    - exa
+    - fd
+    - ffmpeg
+    - fish
+    - fpp
+    - fzf
+    - gawk
     - git
+    - hugo
+    - imagemagick
+    - jq
+    - lazygit
+    - lf
+    - luajit
+    - magic-wormhole
+    - minetest
+    - ncdu
+    - neovim
+    - node
+    - p7zip
+    - ripgrep
+    - rsync
+    - syncthing
+    - tmate
+    - tmux
+    - w3m
+    - wget
   casks:
-    - kitty
     - alacritty
-  apts:
-    - git
-    - p7zip-full
+    - element
+    - keepassxc
+    - kitty
+    - logseq
+    - mega
+    - pycharm-ce
+    - qbittorrent
+    - telegram
+    - termius
+    - vimr
+    - visual-studio-code
+    - vlc
   pacmans:
     - aria2
     - bash-language-server
@@ -26,7 +64,7 @@ packages:
     - fzf
     - gawk
     - git
-    - git
+    - gnu-netcat
     - hugo
     - imagemagick
     - ipython
@@ -37,10 +75,12 @@ packages:
     - lf
     - libheif
     - libreoffice-fresh
+    - luajit
     - magic-wormhole
-    - mc
     - minetest
+    - ncdu
     - neovim
+    - netcat
     - npm
     - p7zip
     - pycharm-community-edition
@@ -75,6 +115,7 @@ packages:
     - xclip
     - yay
     - zsh
+    - w3m
   aur:
     - displaylink
     - etcher-bin
@@ -84,9 +125,15 @@ packages:
     - logseq-desktop-bin
     - python-autoflake
     - python-ptvsd
+  apts:
+    - git
+    - p7zip-full
+    - xclip
   snaps:
     - telegram-desktop
+    - element-desktop
   flatpaks:
     - net.minetest.Minetest
   scoops:
+    - aria2
     - git
