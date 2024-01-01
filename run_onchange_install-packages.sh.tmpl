@@ -19,7 +19,7 @@ sudo snap install {{ range .packages.snaps -}} {{ . }} {{ end -}} ;
 {{ end -}}
 
 {{ if eq .chezmoi.osRelease.idLike "arch" -}}
-sudo pacman -Sy --noconfirm {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
-yay -Sy --noconfirm {{ range .packages.aur -}} {{ . }} {{ end -}} ;
+sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
+yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
 {{ end -}}
