@@ -11,9 +11,15 @@ cask {{ . | quote }}
 EOF
 {{ end -}}
 
+{{ if eq .chezmoi.os "linux" -}}
 {{ if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
 sudo snap install {{ range .packages.snaps -}} {{ . }} {{ end -}} ;
 # flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 {{ end -}}
 
+{{ if eq .chezmoi.osRelease.idLike "arch" -}}
+sudo pacman -Sy --noconfirm {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
+yay -Sy --noconfirm {{ range .packages.aur -}} {{ . }} {{ end -}} ;
+{{ end -}}
+{{ end -}}
