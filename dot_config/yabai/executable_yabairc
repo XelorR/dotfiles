@@ -99,6 +99,8 @@ yabai -m rule --add title="^Run/Debug Configurations.*" manage=off
 yabai -m rule --add title="^Add File to Git$" manage=off
 yabai -m rule --add title="^Emacs Everywhere.*" manage=off
 
+yabai -m rule --add label=emacs app=Emacs manage=on
+
 # Set padding for spacebar
 yabai -m config external_bar all:0:29
 
