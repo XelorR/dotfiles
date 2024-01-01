@@ -23,6 +23,7 @@ packages:
     - ncdu
     - neovim
     - node
+    - openssh
     - p7zip
     - ripgrep
     - rsync
