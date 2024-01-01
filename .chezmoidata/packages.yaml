@@ -6,6 +6,7 @@ packages:
   - 'alacritty'
   apts:
   - 'git'
+  - 'p7zip-full'
   pacmans:
   - 'git'
   yays:

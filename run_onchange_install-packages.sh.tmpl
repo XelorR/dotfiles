@@ -12,9 +12,6 @@ EOF
 {{ end -}}
 
 {{ if eq .chezmoi.osRelease.idLike "debian" -}}
-sudo apt update && sudo apt install -y <<EOF
-{{ range .packages.apts -}}
-{{ . | quote }}
+sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}}
 {{ end -}}
-EOF
-{{ end -}}
+
