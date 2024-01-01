@@ -87,6 +87,6 @@ packages:
   snaps:
     - telegram-desktop
   flatpaks:
-    - minetest
+    - net.minetest.Minetest
   scoops:
     - git
