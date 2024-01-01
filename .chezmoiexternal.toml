@@ -11,3 +11,7 @@
 [".fonts"]
   type = "archive"
   url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
+#[".opt/ventoy"]
+#  type = "archive"
+#  url = "https://github.com/ventoy/Ventoy/releases/latest/download/ventoy-1.0.96-linux.tar.gz"
+#  exact = true
