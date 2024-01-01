@@ -8,8 +8,9 @@ packages:
   - 'git'
   - 'p7zip-full'
   pacmans:
+  - 'yay'
   - 'git'
-  yays:
+  aur:
   - 'logseq-desktop-bin'
   snaps:
   - 'telegram-desktop'
