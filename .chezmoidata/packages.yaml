@@ -32,6 +32,9 @@ packages:
     - tmux
     - w3m
     - wget
+    - koekeishiya/formulae/yabai
+    - koekeishiya/formulae/skhd
+    - cmacrae/formulae/spacebar
   casks:
     - alacritty
     - element
