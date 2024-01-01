@@ -45,6 +45,7 @@ packages:
     - termius
     - vimr
     - visual-studio-code
+    - vivaldi
     - vlc
   pacmans:
     - aria2
