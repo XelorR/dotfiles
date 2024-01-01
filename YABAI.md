@@ -24,5 +24,5 @@ brew services start spacebar
 
 4. then [disable system integrity protection](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
 
-5. and finally ensure launching `sudo yabai --load-sa` on startup
+5. and finally ensure launching `sudo yabai --load-sa` on startup (to automate: https://www.launchd.info/)
 
