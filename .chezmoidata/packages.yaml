@@ -1,20 +1,92 @@
 packages:
   brews:
-  - 'git'
+    - git
   casks:
-  - 'kitty'
-  - 'alacritty'
+    - kitty
+    - alacritty
   apts:
-  - 'git'
-  - 'p7zip-full'
+    - git
+    - p7zip-full
   pacmans:
-  - 'yay'
-  - 'git'
+    - aria2
+    - bash-language-server
+    - bat
+    - borg
+    - code
+    - curl
+    - doublecmd-qt5
+    - edk2-ovmf
+    - element-desktop
+    - emacs
+    - exa
+    - fd
+    - ffmpeg
+    - fish
+    - foliate
+    - fzf
+    - gawk
+    - git
+    - git
+    - hugo
+    - imagemagick
+    - ipython
+    - jupyterlab
+    - keepassxc
+    - kitty
+    - lazygit
+    - lf
+    - libheif
+    - libreoffice-fresh
+    - magic-wormhole
+    - mc
+    - minetest
+    - neovim
+    - npm
+    - p7zip
+    - pycharm-community-edition
+    - pyright
+    - python-beautifulsoup4
+    - python-black
+    - python-ipdb
+    - python-ipykernel
+    - python-isort
+    - python-jedi
+    - python-lxml
+    - python-openpyxl
+    - python-pandas
+    - python-pyarrow
+    - python-scikit-learn
+    - python-seaborn
+    - qbittorrent
+    - qemu-full
+    - qt5-wayland
+    - qt6-wayland
+    - ripgrep
+    - rsync
+    - rustup
+    - sddm
+    - syncthing
+    - telegram-desktop
+    - tmate
+    - vivaldi
+    - vivaldi-ffmpeg-codecs
+    - vlc
+    - wget
+    - xclip
+    - yay
+    - zsh
   aur:
-  - 'logseq-desktop-bin'
+    - displaylink
+    - etcher-bin
+    - evdi
+    - fpp
+    - kwin-bismuth
+    - logseq-desktop-bin
+    - python-autoflake
+    - python-ptvsd
   snaps:
-  - 'telegram-desktop'
+    - telegram-desktop
   flatpaks:
-  - 'minetest'
+    - minetest
   scoops:
-  - 'git'
+    - git
