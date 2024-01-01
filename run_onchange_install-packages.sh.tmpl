@@ -12,6 +12,8 @@ EOF
 {{ end -}}
 
 {{ if eq .chezmoi.osRelease.idLike "debian" -}}
-sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}}
+sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
+sudo snap install {{ range .packages.snaps -}} {{ . }} {{ end -}} ;
+# flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 {{ end -}}
 

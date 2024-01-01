@@ -11,5 +11,9 @@ packages:
   - 'git'
   yays:
   - 'logseq-desktop-bin'
+  snaps:
+  - 'telegram-desktop'
+  flatpaks:
+  - 'minetest'
   scoops:
   - 'git'
