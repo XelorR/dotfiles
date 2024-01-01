@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+{{ if eq .chezmoi.os "darwin" -}}
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range .packages.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+EOF
+{{ end -}}
+
+{{ if eq .chezmoi.osRelease.idLike "debian" -}}
+sudo apt update && sudo apt install -y <<EOF
+{{ range .packages.apts -}}
+{{ . | quote }}
+{{ end -}}
+EOF
+{{ end -}}
