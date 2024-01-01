@@ -28,4 +28,4 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] termux specific config (do under termux)
 - [x] fonts for different folders macos/linux/windows/termux
 - [x] readme --- setup oneliners
-- [ ] declarative package installation darwin/arch/debian/android, https://chezmoi.io/user-guide/advanced/install-packages-declaratively/
+- [x] declarative package installation darwin/arch/debian/android, https://chezmoi.io/user-guide/advanced/install-packages-declaratively/
