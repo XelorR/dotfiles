@@ -10,9 +10,9 @@ brew install cmacrae/formulae/spacebar
 
 2. then put configs to corresponding folders:
 
-- .config/yabai/[yabairc](.config/yabai/yabairc)
-- .config/skhd/[skhdrc](.config/skhd/skhdrc)
-- .config/spacebar/[spacebarrc](.config/spacebar/spacebarrc)
+- .config/yabai/[yabairc](dot_config/yabai/executable_yabairc)
+- .config/skhd/[skhdrc](dot_config/skhd/skhdrc)
+- .config/spacebar/[spacebarrc](dot_config/spacebar/executable_spacebarrc)
 
 3. then start services
 
