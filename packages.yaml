@@ -1,0 +1,14 @@
+packages:
+  brews:
+  - 'git'
+  casks:
+  - 'kitty'
+  - 'alacritty'
+  apts:
+  - 'git'
+  pacmans:
+  - 'git'
+  yays:
+  - 'logseq-desktop-bin'
+  scoops:
+  - 'git'
