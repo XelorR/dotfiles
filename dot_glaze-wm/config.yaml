@@ -183,10 +183,10 @@ keybindings:
   # WORKSPACES
 
   # cycle workspaces (moving left-right doesn't work by some reason)
-  - command: "focus workspace next"
-    bindings: ["Alt+Ctrl+Right", "Alt+Ctrl+L"]
-  - command: "focus workspace prev"
-    bindings: ["Alt+Ctrl+Left", "Alt+Ctrl+H"]
+  #  - command: "focus workspace next"
+  #    bindings: ["Alt+Ctrl+Right", "Alt+Ctrl+L"]
+  #  - command: "focus workspace prev"
+  #    bindings: ["Alt+Ctrl+Left", "Alt+Ctrl+H"]
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace 1"
