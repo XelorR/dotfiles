@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 {{ if eq .chezmoi.os "darwin" -}}
+export HOMEBREW_INSTALL_FROM_API=1
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.brews -}}
 brew {{ . | quote }}
