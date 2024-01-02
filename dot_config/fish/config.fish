@@ -11,6 +11,8 @@ if status is-interactive
             alias open=xdg-open
         case Darwin
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+            set PATH /opt/homebrew/bin $PATH
+            set HOMEBREW_INSTALL_FROM_API 1
     end
 
     # EDITOR

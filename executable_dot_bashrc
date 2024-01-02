@@ -5,6 +5,8 @@ export PATH="$HOME/.local/bin:$PATH"
 if [[ $(uname) == "Darwin" ]]; then
 	# PyCharm CLI tool for MacOS
 	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+	export PATH="/opt/homebrew/bin:$PATH"
+	export HOMEBREW_INSTALL_FROM_API=1
 else
 	# MacOS-like pbcopy/pbpaste and open on GNU Linux
 	if command -v xclip &>/dev/null; then
