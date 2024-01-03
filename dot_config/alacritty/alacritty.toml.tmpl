@@ -1,10 +1,10 @@
-import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ end }}
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-{{ if eq .chezmoi.hostname "x270" }}size = 9{{ else }}size: 13{{ end }}
+{{ if eq .chezmoi.hostname "x270" }}size = 9{{ else }}size = 13{{ end }}
 
 [font.normal]
 family = "MesloLGS Nerd Font Mono"
@@ -105,5 +105,5 @@ key = "Minus"
 mods = "Command"
 
 [window]
-{{ if eq .chezmoi.os "linux" }}decorations = "full"{{ else }}decorations: none{{ end }}
+{{ if eq .chezmoi.os "linux" }}decorations = "full"{{ else }}decorations = "none"{{ end }}
 {{ if eq .chezmoi.os "darwin" }}option_as_alt = "Both"{{ end }}
