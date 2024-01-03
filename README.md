@@ -18,7 +18,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] installing tpm for tmux
 - [x] installing spacemacs
 - [x] installing lazyvim
-- [ ] installing prezto
+- [x] installing prezto
 - [ ] script for xremap systemd rule in etc
 - [ ] script for sshd config in etc (different arch/ubuntu)
 - [x] windows-specific --- glazewm (do under windows)
