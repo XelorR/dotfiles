@@ -45,7 +45,7 @@ packages:
     - keepassxc
     - kitty
     - logseq
-    - mega
+    #- mega
     - microsoft-teams
     - pycharm-ce
     - qbittorrent
