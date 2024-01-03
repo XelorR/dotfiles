@@ -102,7 +102,7 @@ yabai -m rule --add title="^Emacs Everywhere.*" manage=off
 yabai -m rule --add label=emacs app=Emacs manage=on
 
 # Set padding for spacebar
-yabai -m config external_bar all:0:29
+# yabai -m config external_bar all:0:29
 
 # Focus window to mous when windows/application is destroyed
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
