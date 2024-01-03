@@ -29,3 +29,4 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] fonts for different folders macos/linux/windows/termux
 - [x] readme --- setup oneliners
 - [x] declarative package installation darwin/arch/debian/android, https://chezmoi.io/user-guide/advanced/install-packages-declaratively/
+- [ ] install correct xremap version depending on X11/Wayland (Linux only, obviously)
