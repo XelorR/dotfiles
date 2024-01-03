@@ -6,6 +6,8 @@ kglobalshortcutsrc_ubuntu
 kwinrc
 etc
 scripts
+lib/systemd/system
+lib/systemd/system/**
 
 {{ if ne .chezmoi.os "linux" }}
 .config/rofi/**
@@ -16,6 +18,7 @@ scripts
 .config/kglobalshortcutsrc
 .config/kwinrc
 .local/share/konsole/**
+xremap-copy-systemd-rule.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}

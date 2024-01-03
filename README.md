@@ -19,7 +19,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@gith
 - [x] installing spacemacs
 - [x] installing lazyvim
 - [x] installing prezto
-- [ ] script for xremap systemd rule in etc
+- [x] script for xremap systemd rule
 - [ ] script for sshd config in etc (different arch/ubuntu)
 - [x] windows-specific --- glazewm (do under windows)
 - [x] .chezmoiignore to diffirenciate macos/linux (do under mac)
