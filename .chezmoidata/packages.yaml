@@ -58,6 +58,7 @@ packages:
     - vlc
     - vmware-horizon-client
     - webex-meetings
+    - xmind
   pacmans:
     - aria2
     - bash-language-server
