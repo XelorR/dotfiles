@@ -38,6 +38,7 @@ packages:
     - wget
   casks:
     - alacritty
+    - displaylink
     - element
     - keepassxc
     - kitty
@@ -47,6 +48,8 @@ packages:
     - qbittorrent
     - telegram
     - termius
+    - via
+    - vial
     - vimr
     - visual-studio-code
     - vivaldi
