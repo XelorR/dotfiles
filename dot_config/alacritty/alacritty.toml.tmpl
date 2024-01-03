@@ -4,6 +4,9 @@
 [env]
 TERM = "xterm-256color"
 
+[shell]
+{{ if eq .chezmoi.os "darwin" }}program = "/opt/homebrew/bin/fish"{{ else if eq .chezmoi.os "linux" }}program = "/usr/bin/fish"{{ end }}
+
 [font]
 {{ if eq .chezmoi.hostname "x270" }}size = 9{{ else }}size = 13{{ end }}
 
