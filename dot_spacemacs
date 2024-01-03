@@ -90,6 +90,7 @@ This function should only modify configuration layer settings."
     org-ql
     qrencode
     doom-themes
+    catppuccin-theme
     emacs-everywhere
     telega
     (org-logseq :location (recipe
