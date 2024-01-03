@@ -4,6 +4,7 @@ packages:
     - bat
     - borgbackup
     # - cmacrae/formulae/spacebar
+    - chezmoi
     - curl
     - emacs-mac
     - exa
