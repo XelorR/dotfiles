@@ -2,6 +2,6 @@
 
 yabai --start-service
 skhd --start-service
-brew services start spacebar
+# brew services start spacebar
 
 sudo yabai --load-sa
