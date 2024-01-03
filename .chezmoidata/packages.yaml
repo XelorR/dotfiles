@@ -6,7 +6,6 @@ packages:
     # - cmacrae/formulae/spacebar
     - chezmoi
     - curl
-    - emacs-mac
     - exa
     - fd
     - ffmpeg
@@ -39,12 +38,15 @@ packages:
     - wget
   casks:
     - alacritty
+    - anaconda
     - displaylink
     - element
+    - emacs-mac
     - keepassxc
     - kitty
     - logseq
     - mega
+    - microsoft-teams
     - pycharm-ce
     - qbittorrent
     - telegram
@@ -55,6 +57,8 @@ packages:
     - visual-studio-code
     - vivaldi
     - vlc
+    - vmware-horizon-client
+    - webex-meetings
   pacmans:
     - aria2
     - bash-language-server
