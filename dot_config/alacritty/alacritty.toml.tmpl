@@ -1,4 +1,5 @@
-{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ end }}
+#{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ end }}
+{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/tokyonight_night.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/tokyonight_night.toml"]{{ end }}
 
 [env]
 TERM = "xterm-256color"
