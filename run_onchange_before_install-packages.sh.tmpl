@@ -25,3 +25,7 @@ sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ e
 yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
 {{ end -}}
+
+{{ if eq .chezmoi.os "android" -}}
+pkg install {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
+{{ end -}}
