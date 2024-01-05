@@ -144,11 +144,21 @@ packages:
     - python-ptvsd
   apts:
     - git
+    - i3
     - p7zip-full
+    - rofi
+    - thunar
     - xclip
   snaps:
-    - telegram-desktop
     - element-desktop
+    - logseq
+    - multipass
+    - telegram-desktop
+  snaps_classic:
+    - code
+    - emacs
+    - nvim
+    - pycharm-community
   flatpaks:
     - net.minetest.Minetest
   scoops:
