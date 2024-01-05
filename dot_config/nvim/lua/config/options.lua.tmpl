@@ -6,4 +6,4 @@ vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 vim.opt.autoread = true
 vim.o.termguicolors = true
-vim.cmd("language en_US.utf8")
+{{ if ne .chezmoi.os "android" }}vim.cmd("language en_US.utf8"){{ end }}
