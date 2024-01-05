@@ -146,6 +146,7 @@ packages:
     #- kwin-bismuth
     - aria2
     - borgbackup
+    - cargo
     - cmake
     - curl
     - exa
