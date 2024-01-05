@@ -96,11 +96,11 @@ set $ws2  "2. Notes"
 set $ws3  "3. Chat"
 set $ws4  "4. Mail"
 set $ws5  "5. Files"
-set $ws6  "6. Misc"
+set $ws6  "6. Sett"
 set $ws7  "7. Conf"
-set $ws8  "8. Misc"
-set $ws9  "9. Misc"
-set $ws10 "10. Float"
+set $ws8  "8. Dev"
+set $ws9  "9. Dev"
+set $ws10 "10. Misc"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
