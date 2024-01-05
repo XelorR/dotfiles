@@ -157,7 +157,6 @@ packages:
   termux:
     - aria2
     - bat
-    - borgbackup
     - clang
     - cmake
     - curl
