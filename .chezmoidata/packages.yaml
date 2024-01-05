@@ -151,3 +151,10 @@ packages:
   scoops:
     - aria2
     - git
+  termux:
+    - git
+    - neovim
+    - emacs
+    - ripgrep
+    - fzf
+    - lf
