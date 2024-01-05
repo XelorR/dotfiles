@@ -181,6 +181,8 @@ packages:
     - netcat-openbsd
     - nmap
     - nodejs
+    - openssh
+    - openssl
     - p7zip
     - python
     - ripgrep
