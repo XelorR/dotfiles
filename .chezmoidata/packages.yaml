@@ -5,6 +5,7 @@ packages:
     - borgbackup
     # - cmacrae/formulae/spacebar
     - chezmoi
+    - cmake
     - curl
     - exa
     - fd
@@ -13,6 +14,7 @@ packages:
     - fpp
     - fzf
     - gawk
+    - gcc
     - git
     - hugo
     - imagemagick
@@ -23,6 +25,7 @@ packages:
     - lf
     - luajit
     - magic-wormhole
+    - make
     - minetest
     - ncdu
     - neovim
@@ -152,9 +155,39 @@ packages:
     - aria2
     - git
   termux:
-    - git
-    - neovim
+    - aria2
+    - bat
+    - borgbackup
+    - clang
+    - cmake
+    - curl
     - emacs
-    - ripgrep
+    - exa
+    - fd
+    - ffmpeg
+    - fish
     - fzf
+    - gawk
+    - git
+    - imagemagick
+    - jq
     - lf
+    - libheif
+    - luajit
+    - magic-wormhole-rs
+    - make
+    - man
+    - ncdu
+    - neovim
+    - netcat-openbsd
+    - nmap
+    - nodejs
+    - p7zip
+    - python
+    - ripgrep
+    - rsync
+    - tmate
+    - tmux
+    - w3m
+    - wget
+    - zsh
