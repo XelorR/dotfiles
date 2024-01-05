@@ -19,7 +19,8 @@ EOF
 {{ if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
 
-sudo snap install {{ range .packages.snaps -}} {{ . }} {{ end -}} ;
+{{ range .packages.snaps -}}sudo snap install {{ . }} ;
+{{ end -}}
 
 {{ range .packages.snaps_classic -}}sudo snap install {{ . }} --classic ;
 {{ end -}}

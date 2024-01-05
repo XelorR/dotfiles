@@ -143,18 +143,58 @@ packages:
     - python-autoflake
     - python-ptvsd
   apts:
+    #- kwin-bismuth
+    - aria2
+    - borgbackup
+    - cmake
+    - curl
+    - exa
+    - fd-find
+    - ffmpeg
+    - fzf
+    - gawk
+    - gcc
     - git
+    - heif-gdk-pixbuf
+    - hugo
     - i3
+    - imagemagick
+    - jq
+    - keepassxc
+    - kitty
+    - lfm
+    - luajit
+    - magic-wormhole
+    - make
+    - ncdu
+    - netcat
+    - nmap
+    - ovmf
     - p7zip-full
+    - python3-ipython
+    - python3-llfuse
+    - qbittorrent
+    - qemu-kvm
+    - ripgrep
     - rofi
+    - rsync
+    - sddm
+    - ssh
     - thunar
+    - tmate
+    - tmux
+    - vlc
+    - w3m
     - xclip
+    - zsh
   snaps:
     - element-desktop
+    - foliate
     - logseq
     - multipass
     - telegram-desktop
   snaps_classic:
+    - alacritty
     - code
     - emacs
     - nvim
