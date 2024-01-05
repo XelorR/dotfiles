@@ -27,5 +27,5 @@ yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
 
 {{ if eq .chezmoi.os "android" -}}
-pkg install {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
+pkg install {{ range .packages.termux -}} {{ . }} {{ end -}} ;
 {{ end -}}
