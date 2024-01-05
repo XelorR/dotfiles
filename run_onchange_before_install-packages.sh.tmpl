@@ -13,11 +13,20 @@ cask {{ . | quote }}
 EOF
 {{ end -}}
 
+
 {{ if eq .chezmoi.os "linux" -}}
+
 {{ if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
+
 sudo snap install {{ range .packages.snaps -}} {{ . }} {{ end -}} ;
-# flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
+
+{{ range .packages.snaps_classic -}}sudo snap install {{ . }} --classic ;
+{{ end -}}
+
+{{ if ne .chezmoi.hostname "linux" }}
+flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
+{{ end }}
 {{ end -}}
 
 {{ if eq .chezmoi.osRelease.idLike "arch" -}}
@@ -25,6 +34,7 @@ sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ e
 yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
 {{ end -}}
+
 
 {{ if eq .chezmoi.os "android" -}}
 pkg install {{ range .packages.termux -}} {{ . }} {{ end -}} ;
