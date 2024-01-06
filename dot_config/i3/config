@@ -108,10 +108,7 @@ bindsym $mod+Ctrl+e exec "emacsclient -a '' -c"
 bindsym $mod+e exec thunar
 
 bindsym $mod+space exec --no-startup-id "rofi -show combi -modes combi -combi-modes 'window,drun,run,filebrowser' -show-icons"
-# TODO CTRL-ALT-Q to lock
-bindsym Ctrl+Alt+q exec --no-startup-id i3exit lock
-# TODO win-l to lock
-bindsym $mod4+l exec --no-startup-id i3exit lock
+bindsym $mod4+l exec --no-startup-id "i3lock -c 1e1e2e & sleep 1.5 && xset dpms force off"
 bindsym $mod+Shift+f fullscreen toggle
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+c reload
