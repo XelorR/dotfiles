@@ -28,6 +28,7 @@ sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ en
 {{ if ne .chezmoi.hostname "linux" }}
 flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 {{ end }}
+cargo install {{ range .packages.cargo -}} {{ . }} {{ end -}} ;
 {{ end -}}
 
 {{ if eq .chezmoi.osRelease.idLike "arch" -}}
