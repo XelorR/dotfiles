@@ -117,6 +117,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+c reload
 
 # WINDOWS
+exec_always --no-startup-id autotiling
 
 # change focus
 bindsym $mod+h focus left

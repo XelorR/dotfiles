@@ -1,5 +1,5 @@
 if status is-interactive
-    set PATH ~/.local/bin ~/.cargo $PATH
+    set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
     # OS SPECIFIC
     switch (uname)

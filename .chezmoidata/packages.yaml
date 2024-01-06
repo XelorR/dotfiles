@@ -172,8 +172,10 @@ packages:
     - nmap
     - ovmf
     - p7zip-full
+    - python3-i3ipc
     - python3-ipython
     - python3-llfuse
+    - python3-pip
     - qbittorrent
     - qemu-kvm
     - ripgrep
@@ -244,4 +246,6 @@ packages:
     - wget
     - zsh
   cargo:
-    - i3-auto-layout
+    #- '--git https://github.com/chmln/i3-auto-layout'
+  sudo_pip:
+    - autotiling
