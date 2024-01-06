@@ -106,6 +106,7 @@ floating_modifier $mod
 bindsym $mod+Ctrl+t exec kitty
 bindsym $mod+Ctrl+e exec "emacsclient -a '' -c"
 bindsym $mod+e exec thunar
+bindsym $mod+q kill
 
 bindsym $mod+space exec --no-startup-id "rofi -show combi -modes combi -combi-modes 'window,drun,run,filebrowser' -show-icons"
 bindsym $mod4+l exec --no-startup-id "i3lock -c 1e1e2e & sleep 1.5 && xset dpms force off"
