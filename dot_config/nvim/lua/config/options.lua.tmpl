@@ -6,4 +6,10 @@ vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 vim.opt.autoread = true
 vim.o.termguicolors = true
-{{ if ne .chezmoi.os "android" }}vim.cmd("language en_US.utf8"){{ end }}
+
+{{ if eq .chezmoi.os "linux" "windows"}}
+vim.cmd("language en_US.utf8")
+{{ else if eq .chezmoi.os "darwin" }}
+vim.cmd("language en_US.UTF-8")
+{{ end }}
+
