@@ -247,5 +247,6 @@ packages:
     - zsh
   cargo:
     #- '--git https://github.com/chmln/i3-auto-layout'
+  pip:
   sudo_pip:
     - autotiling
