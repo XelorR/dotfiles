@@ -1,5 +1,5 @@
 # PATH
-export PATH="$HOME/.local/bin:$HOME/.cargo:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 # OS check
 if [[ $(uname) == "Darwin" ]]; then
