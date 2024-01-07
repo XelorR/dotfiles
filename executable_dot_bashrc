@@ -57,14 +57,14 @@ if command -v lf &>/dev/null; then
 fi
 
 # Loading external confirurations if available
-if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
-	if test -f "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"; then
-		source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [ -z "${BASH_VERSINFO+x}" ]; then
+	if test -f "$HOME/.zprezto/init.zsh"; then
+		source "$HOME/.zprezto/init.zsh"
 	fi
 	if command -v starship &>/dev/null; then
 		eval "$(starship init zsh)"
 	fi
-elif [ -n "$($SHELL -c 'echo $BASH_VERSION')" ]; then
+else
 	if command -v starship &>/dev/null; then
 		eval "$(starship init bash)"
 	fi
