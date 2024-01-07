@@ -225,6 +225,7 @@ packages:
     - git
     - imagemagick
     - jq
+    - lazygit
     - lf
     - libheif
     - luajit
