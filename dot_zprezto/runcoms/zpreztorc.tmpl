@@ -31,8 +31,8 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule {{ if eq .chezmoi.os "darwin" }}'osx' 'homebrew'{{else if eq .chezmoi.os "android" }}{{ else if eq .chezmoi.osRelease.idLike "arch" }}'pacman'{{ else if eq .chezmoi.osRelease.idLike "debian" }}'dpkg'{{ end }}\
   'archive' \
-  'autosuggestions' \
   'syntax-highlighting' \
+  'autosuggestions' \
   'python' \
   'ssh' \
   'git' \
