@@ -38,6 +38,13 @@ macos-fish-as-default-shell.sh
 .termux
 {{ end }}
 
+{{ if eq .chezmoi.os "android" }}
+prezto-install.sh
+.zprezto/
+.zprezto/**
+.p10k.zsh
+{{ end }}
+
 {{ if ne .chezmoi.os "windows" }}
 .glaze-wm/**
 ahk
@@ -46,4 +53,7 @@ ahk
 {{ if eq .chezmoi.os "windows" }}
 install-starship.sh
 prezto-install.sh
+.zprezto/
+.zprezto/**
+.p10k.zsh
 {{ end }}
