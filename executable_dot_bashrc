@@ -69,6 +69,7 @@ if [ -z "${BASH_VERSINFO+x}" ]; then
 		source "$HOME/.zprezto/init.zsh"
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    source "$HOME/.zprezto/modules/syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 	elif command -v starship &>/dev/null; then
 		eval "$(starship init zsh)"
 	fi
