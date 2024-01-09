@@ -9,10 +9,7 @@
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts"]{{ else }}[".fonts"]{{ end }}
   type = "archive"
   url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
-#{{ if ne .chezmoi.os "windows" }}[".zprezto"]
-#  type = "git-repo"
-#  url = "https://github.com/sorin-ionescu/prezto.git"
-#  args = ["--recursive"]
+{{ if ne .chezmoi.os "windows" }}
 [".oh-my-zsh"]
     type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
@@ -25,8 +22,4 @@
     type = "archive"
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
     stripComponents = 1
-#{{ end }}
-#[".opt/ventoy"]
-#  type = "archive"
-#  url = "https://github.com/ventoy/Ventoy/releases/latest/download/ventoy-1.0.96-linux.tar.gz"
-#  exact = true
+{{ end }}
