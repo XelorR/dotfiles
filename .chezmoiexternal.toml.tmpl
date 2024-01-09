@@ -22,4 +22,13 @@
     type = "archive"
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.19.0.tar.gz"
     stripComponents = 1
+[".config/fish"]
+    type = "archive"
+    url = "https://github.com/ilancosman/tide/archive/master.tar.gz"
+    stripComponents = 1
+    include = ["*/completions/**", "*/conf.d/**", "*/functions/**"]
+[".config/fish/themes/Catppuccin Mocha.theme"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme"
+    # fish_config theme save "Catppuccin Mocha"
 {{ end }}
