@@ -1,14 +1,14 @@
 [".emacs.d"]
-  type = "git-repo"
-  url = "https://github.com/syl20bnr/spacemacs"
+    type = "git-repo"
+    url = "https://github.com/syl20bnr/spacemacs"
 [".config/tmux/plugins/tpm"]
-  type = "archive"
-  url = "https://codeload.github.com/tmux-plugins/tpm/zip/refs/heads/master"
-  exact = true
-  stripComponents = 1
+    type = "archive"
+    url = "https://codeload.github.com/tmux-plugins/tpm/zip/refs/heads/master"
+    exact = true
+    stripComponents = 1
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts"]{{ else }}[".fonts"]{{ end }}
-  type = "archive"
-  url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
 {{ if ne .chezmoi.os "windows" }}
 [".oh-my-zsh"]
     type = "archive"
