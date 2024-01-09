@@ -85,7 +85,7 @@ else
       *i*) ;;
         *) return;;
     esac
-    export OSH='/data/data/com.termux/files/home/.oh-my-bash'
+    export OSH="$HOME/.oh-my-bash"
     OSH_THEME="purity"
     OMB_USE_SUDO=true
     completions=(
