@@ -32,7 +32,6 @@ X11-switch-layout-binding.sh
 macos-instantly-show-dock-on-mouse-hover.sh
 macos-enable-tiling.sh
 macos-remove-chezmoi-binary.sh
-macos-fish-as-default-shell.sh
 .config/yabai/**
 .config/skhd/**
 .config/spacebar/**
@@ -43,9 +42,9 @@ macos-fish-as-default-shell.sh
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
-prezto-install.sh
 .zprezto/
 .zprezto/**
+macos-fish-as-default-shell.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
@@ -58,4 +57,5 @@ install-starship.sh
 .zprezto/
 .zprezto/**
 .p10k.zsh
+macos-fish-as-default-shell.sh
 {{ end }}
