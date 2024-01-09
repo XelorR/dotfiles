@@ -86,7 +86,7 @@ else
         *) return;;
     esac
     export OSH='/data/data/com.termux/files/home/.oh-my-bash'
-    OSH_THEME="font"
+    OSH_THEME="purity"
     OMB_USE_SUDO=true
     completions=(
       git
