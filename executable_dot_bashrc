@@ -64,6 +64,7 @@ fi
 
 if [ -z "${BASH_VERSINFO+x}" ]; then
   if test -f "$HOME/.oh-my-zsh/oh-my-zsh.sh"; then
+    # ZSH VERSION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
     # Initialization code that may require console input (password prompts, [y/n]
     # confirmations, etc.) must go above this block; everything else may go below.
@@ -80,6 +81,7 @@ if [ -z "${BASH_VERSINFO+x}" ]; then
 		eval "$(starship init zsh)"
 	fi
 else
+  # BASH VERSION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   if test -f "$HOME/.oh-my-bash/oh-my-bash.sh"; then
     case $- in
       *i*) ;;
