@@ -1,8 +1,8 @@
 
-# PATH
+# PATH ------------------------------
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
-# OS SPECIFIC
+# OS SPECIFIC ------------------------------
 
 if [[ $(uname) == "Darwin" ]]; then
 	# PyCharm CLI tool for MacOS
@@ -18,7 +18,7 @@ else
 	alias open=xdg-open
 fi
 
-# EDITORS
+# EDITORS ------------------------------
 
 if command -v emacs &>/dev/null; then
 	alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
