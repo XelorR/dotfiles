@@ -3,11 +3,11 @@
 ## Setup oneliners
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:xelorr/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xelorr
 ```
 or
 ```bash
-sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:xelorr/dotfiles.git
+sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xelorr
 ```
 
 ## Migration to Chezmoi
