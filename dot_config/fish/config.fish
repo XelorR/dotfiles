@@ -1,7 +1,7 @@
 if status is-interactive
     set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
-    # OS SPECIFIC
+    # OS SPECIFIC ------------------------------
     switch (uname)
         case Linux
             if command -v xclip &>/dev/null
@@ -15,7 +15,7 @@ if status is-interactive
             set HOMEBREW_INSTALL_FROM_API 1
     end
 
-    # EDITOR
+    # EDITOR ------------------------------
     if command -v emacs &>/dev/null
         alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
         alias macs="emacsclient -a '' -c -nw"
@@ -26,7 +26,7 @@ if status is-interactive
     end
     set -gx EDITOR vi
 
-    # ALIAS
+    # ALIAS ------------------------------
     if command -v rsync &>/dev/null
         alias cpv='rsync -ah --info=progress2'
     end
@@ -53,7 +53,7 @@ if status is-interactive
         alias lf=lfcd
     end
 
-    # PROMPT
+    # PROMPT ------------------------------
     if ! test -f "$HOME/.config/fish/conf.d/_tide_init.fish"
         if command -v starship &>/dev/null
             starship init fish | source
@@ -61,6 +61,7 @@ if status is-interactive
     end
 end
 
+# CONDA ------------------------------
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f $HOME/.anaconda3/bin/conda
