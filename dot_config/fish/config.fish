@@ -54,7 +54,9 @@ if status is-interactive
     end
 
     # PROMPT
-    if command -v starship &>/dev/null
+    if test -f "$HOME/.config/fish/conf.d/_tide_init.fish"
+        echo lol
+    else if command -v starship &>/dev/null
         starship init fish | source
     end
 end
