@@ -58,3 +58,14 @@ if status is-interactive
         starship init fish | source
     end
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f $HOME/.anaconda3/bin/conda
+    eval $HOME/.anaconda3/bin/conda "shell.fish" hook $argv | source
+end
+
+if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+    source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+end
+# <<< conda initialize <<<
