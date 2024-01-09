@@ -63,9 +63,11 @@ end
 # !! Contents within this block are managed by 'conda init' !!
 if test -f $HOME/.anaconda3/bin/conda
     eval $HOME/.anaconda3/bin/conda "shell.fish" hook $argv | source
+    if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+        source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+        mamba deactivate
+    end
+    conda deactivate
 end
 
-if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
-    source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
-end
 # <<< conda initialize <<<
