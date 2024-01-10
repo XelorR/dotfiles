@@ -40,10 +40,6 @@ macos-remove-chezmoi-binary.sh
 .termux
 {{ end }}
 
-{{ if eq .chezmoi.os "android" }}
-macos-fish-as-default-shell.sh
-{{ end }}
-
 {{ if ne .chezmoi.os "windows" }}
 .glaze-wm/**
 ahk
