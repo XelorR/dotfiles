@@ -1,26 +1,18 @@
+# SPACEMACS ------------------------------
 [".emacs.d"]
     type = "git-repo"
     url = "https://github.com/syl20bnr/spacemacs"
+# TMUX ------------------------------
 [".config/tmux/plugins/tpm"]
     type = "archive"
     url = "https://codeload.github.com/tmux-plugins/tpm/zip/refs/heads/master"
     exact = true
     stripComponents = 1
+# FONTS ------------------------------
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts"]{{ else }}[".fonts"]{{ end }}
     type = "archive"
-    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_regular.ttf"]{{ else }}[".fonts/mesloLGS_NF_regular.ttf"]{{ end }}
-    type = "file"
-    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true"
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_bold.ttf"]{{ else }}[".fonts/mesloLGS_NF_bold.ttf"]{{ end }}
-    type = "file"
-    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true"
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_italic.ttf"]{{ else }}[".fonts/mesloLGS_NF_italic.ttf"]{{ end }}
-    type = "file"
-    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true"
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_bold_italic.ttf"]{{ else }}[".fonts/mesloLGS_NF_bold_italic.ttf"]{{ end }}
-    type = "file"
-    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
+# PROMPT ------------------------------
 {{ if ne .chezmoi.os "windows" }}
 [".oh-my-zsh"]
     type = "archive"
@@ -44,6 +36,6 @@
     url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme"
 [".oh-my-bash"]
     type = "archive"
-    url = "https://github.com/ohmybash/oh-my-bash/archive/master.zip"
+    url = "https://github.com/ohmybash/oh-my-bash/archive/master.tar.gz"
     stripComponents = 1
 {{ end }}
