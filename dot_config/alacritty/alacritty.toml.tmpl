@@ -11,7 +11,10 @@ program = {{ lookPath "fish" | quote }}
 {{ if eq .chezmoi.hostname "x270" }}size = 9{{ else }}size = 13{{ end }}
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono"
+{{ if eq .chezmoi.os "linux" }}family = "MesloLGS Nerd Font Mono"{{ else if eq .chezmoi.os "darwin" }}family = "JetBrainsMono NF Light"{{ else }}family = "MesloLGS Nerd Font Mono"{{ end }}
+#family = "MesloLGS Nerd Font Mono"
+#family = "JetBrainsMono NF Light"
+#family = "iMWritingMono Nerd Font"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
