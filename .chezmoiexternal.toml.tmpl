@@ -9,6 +9,18 @@
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts"]{{ else }}[".fonts"]{{ end }}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_regular.ttf"]{{ else }}[".fonts/mesloLGS_NF_regular.ttf"]{{ end }}
+    type = "file"
+    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_bold.ttf"]{{ else }}[".fonts/mesloLGS_NF_bold.ttf"]{{ end }}
+    type = "file"
+    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_italic.ttf"]{{ else }}[".fonts/mesloLGS_NF_italic.ttf"]{{ end }}
+    type = "file"
+    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/mesloLGS_NF_bold_italic.ttf"]{{ else }}[".fonts/mesloLGS_NF_bold_italic.ttf"]{{ end }}
+    type = "file"
+    url = "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true"
 {{ if ne .chezmoi.os "windows" }}
 [".oh-my-zsh"]
     type = "archive"
