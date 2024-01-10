@@ -25,4 +25,6 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 - [ ] tmux plugins to be managed as external
 - [ ] spacemacs as archive
 - [ ] colors for fish tide
+- [ ] find the file which stores tide theme for fish config
+- [ ] add declarative omf installation
 - [ ] windows adaptation
