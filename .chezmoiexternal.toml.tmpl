@@ -9,9 +9,15 @@
     exact = true
     stripComponents = 1
 # FONTS ------------------------------
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts"]{{ else }}[".fonts"]{{ end }}
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/meslo"]{{ else }}[".fonts/meslo"]{{ end }}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/jetbrains"]{{ else }}[".fonts/jetbrains"]{{ end }}
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
+{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/iawriter"]{{ else }}[".fonts/iawriter"]{{ end }}
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/iA-Writer.tar.xz"
 # PROMPT ------------------------------
 {{ if ne .chezmoi.os "windows" }}
 [".oh-my-zsh"]
