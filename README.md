@@ -20,7 +20,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 
 ## todo
 
-- [ ] symlinks fish, bash, zsh, tmux, spacemacs
+- [x] symlinks fish, bash, zsh, tmux, spacemacs
 - [ ] natable things to readme
 - [ ] tmux plugins to be managed as external
 - [ ] spacemacs as archive
