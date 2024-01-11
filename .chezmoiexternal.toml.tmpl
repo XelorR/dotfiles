@@ -3,9 +3,16 @@
     type = "git-repo"
     url = "https://github.com/syl20bnr/spacemacs"
 # TMUX ------------------------------
+# plugin manager
 [".config/tmux/plugins/tpm"]
     type = "archive"
     url = "https://codeload.github.com/tmux-plugins/tpm/zip/refs/heads/master"
+    exact = true
+    stripComponents = 1
+# theme
+[".config/tmux/plugins/tmux"]
+    type = "archive"
+    url = "https://github.com/catppuccin/tmux/archive/master.tar.gz"
     exact = true
     stripComponents = 1
 # FONTS ------------------------------
