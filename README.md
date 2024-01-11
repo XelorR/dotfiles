@@ -21,9 +21,8 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 ## todo
 
 - [x] symlinks fish, bash, zsh, tmux, spacemacs
-- [ ] natable things to readme
+- [ ] notable things to readme
 - [x] tmux plugins to be managed as external
-- [ ] spacemacs as archive
 - [ ] colors for fish tide
 - [ ] find the file which stores tide theme for fish config
 - [ ] add declarative omf installation
