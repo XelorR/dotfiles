@@ -26,7 +26,7 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 - [ ] colors for fish tide
 - [ ] find the file which stores tide theme for fish config
 - [ ] add declarative omf installation
-- [ ] windows adaptation
+- [x] windows adaptation
 - [ ] windows scoop Setup
 - [ ] windows declarative package installation
 - [ ] windows powershell configuration
