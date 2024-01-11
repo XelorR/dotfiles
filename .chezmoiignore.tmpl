@@ -48,10 +48,16 @@ macos-remove-chezmoi-binary.sh
 {{ if ne .chezmoi.os "windows" }}
 .glaze-wm/**
 ahk
+AppData
+AppData/**
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
 install-starship.sh
 configure-fish.fish
 .p10k.zsh
+.zshrc
+.bashrc
+.config
+.config/**
 {{ end }}
