@@ -29,3 +29,4 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 - [ ] windows adaptation
 - [ ] windows scoop Setup
 - [ ] windows declarative package installation
+- [ ] windows powershell configuration
