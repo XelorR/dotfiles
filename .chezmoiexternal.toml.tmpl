@@ -4,6 +4,7 @@
     url = "https://github.com/syl20bnr/spacemacs"
     clone.args = ["--depth=3"]
 # TMUX ------------------------------
+{{ if ne .chezmoi.os "windows" }}
 # plugin manager
 [".config/tmux/plugins/tpm"]
     type = "archive"
@@ -16,6 +17,7 @@
     url = "https://github.com/catppuccin/tmux/archive/master.tar.gz"
     exact = true
     stripComponents = 1
+{{ end }}
 # FONTS ------------------------------
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts/meslo"]{{ else }}[".fonts/meslo"]{{ end }}
     type = "archive"
