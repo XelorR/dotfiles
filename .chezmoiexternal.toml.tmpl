@@ -1,5 +1,5 @@
 # SPACEMACS ------------------------------
-[".emacs.d"]
+{{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
     type = "git-repo"
     url = "https://github.com/syl20bnr/spacemacs"
     clone.args = ["--depth=3"]
