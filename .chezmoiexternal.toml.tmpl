@@ -68,7 +68,7 @@
     type = "archive"
 	  url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
 	  stripComponents = 1
-{{ end }}
+{{ else }}
 # oh-my-zsh
 [".oh-my-zsh"]
     type = "archive"
@@ -83,6 +83,7 @@
     type = "archive"
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.19.0.tar.gz"
     stripComponents = 1
+{{ end }}
 # fish
 [".config/fish"]
     type = "archive"
