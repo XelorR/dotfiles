@@ -102,7 +102,11 @@ else
         *) return;;
     esac
     export OSH="$HOME/.oh-my-bash"
-    OSH_THEME="purity"
+	  if command -v starship &>/dev/null; then
+	  	eval "$(starship init bash)"
+    else
+      OSH_THEME="purity"
+    fi
     OMB_USE_SUDO=true
     completions=(
       git
