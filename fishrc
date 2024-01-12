@@ -43,6 +43,18 @@ if status is-interactive
         alias getpass="openssl rand -base64 20"
     end
 
+    # Managing dotfiles
+    if command -v chezmoi &>/dev/null
+        alias cz='chezmoi'
+        alias czu='chezmoi update'
+        alias czp='chezmoi apply'
+        alias cza='chezmoi add'
+        alias czcd='chezmoi cd'
+        alias cze='chezmoi edit'
+        alias czea='chezmoi edit --apply'
+        alias czra='chezmoi re-add'
+    end
+
     # FILE MANAGER
     if command -v lf &>/dev/null
         function lfcd --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
