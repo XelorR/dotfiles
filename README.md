@@ -31,3 +31,4 @@ sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xe
 - [ ] windows declarative package installation
 - [ ] windows powershell configuration
 - [x] exchange symlinks with sources: .spacemacs, alacritty, nvim
+- [ ] zprezto for mac and linux, ohmyzsh for termux
