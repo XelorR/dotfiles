@@ -65,4 +65,11 @@ enable_syncthing.sh
 .spacemacs
 .config
 .config/**
+.zprezto
+.zprezto/**
+{{ end }}
+
+{{ if eq .chezmoi.os "android" }}
+.zprezto
+.zprezto/**
 {{ end }}
