@@ -30,6 +30,10 @@
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/iA-Writer.tar.xz"
 # PROMPT ------------------------------
 {{ if ne .chezmoi.os "windows" }}
+# prezto
+{{ if ne .chezmoi.os "android" }}
+{{ end }}
+# oh-my-zsh
 [".oh-my-zsh"]
     type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
@@ -43,6 +47,7 @@
     type = "archive"
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.19.0.tar.gz"
     stripComponents = 1
+# fish
 [".config/fish"]
     type = "archive"
     url = "https://github.com/ilancosman/tide/archive/master.tar.gz"
@@ -51,6 +56,7 @@
 [".config/fish/themes/Catppuccin Mocha.theme"]
     type = "file"
     url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme"
+# oh-my-bash
 [".oh-my-bash"]
     type = "archive"
     url = "https://github.com/ohmybash/oh-my-bash/archive/master.tar.gz"
