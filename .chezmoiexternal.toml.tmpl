@@ -32,6 +32,10 @@
 {{ if ne .chezmoi.os "windows" }}
 # prezto
 {{ if ne .chezmoi.os "android" }}
+[".zprezto"]
+    type = "archive"
+    url = "https://github.com/sorin-ionescu/prezto/archive/master.tar.gz"
+    stripComponents = 1
 {{ end }}
 # oh-my-zsh
 [".oh-my-zsh"]
