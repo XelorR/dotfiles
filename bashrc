@@ -46,6 +46,18 @@ alias va='source ./venv/bin/activate'
 alias vd=deactivate
 alias www='ifconfig | grep broadcast ; python3 -m http.server'
 
+# Managing dotfiles
+if command -v chezmoi &>/dev/null; then
+  alias cz='chezmoi'
+  alias czu='chezmoi update'
+  alias czp='chezmoi apply'
+  alias cza='chezmoi add'
+  alias czcd='chezmoi cd'
+  alias cze='chezmoi edit'
+  alias czea='chezmoi edit --apply'
+  alias czra='chezmoi re-add'
+fi
+
 # Generating passwords
 if command -v openssl &>/dev/null; then
 	alias getpass="openssl rand -base64 20"
