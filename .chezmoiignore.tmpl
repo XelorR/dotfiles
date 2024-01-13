@@ -13,6 +13,8 @@ lib/**
 AppData/Local/nvim/*.json
 fish_variables
 .config/fish/fish_variables
+install-starship.sh
+configure-fish.fish
 
 bashrc
 fishrc
@@ -57,8 +59,6 @@ AppData/**
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
-install-starship.sh
-configure-fish.fish
 install-packages.sh
 enable_syncthing.sh
 .p10k.zsh
