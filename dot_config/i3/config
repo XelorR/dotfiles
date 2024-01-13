@@ -104,7 +104,7 @@ floating_modifier $mod
 
 # LAUNCHERS
 
-bindsym $mod+Ctrl+t exec kitty
+bindsym $mod+Ctrl+t exec alacritty
 bindsym $mod+Ctrl+e exec "emacsclient -a '' -c"
 bindsym $mod+e exec thunar
 bindsym $mod+q kill
