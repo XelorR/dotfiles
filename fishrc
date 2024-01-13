@@ -1,4 +1,5 @@
 if status is-interactive
+    set fish_greeting
     set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
     # OS SPECIFIC ------------------------------
