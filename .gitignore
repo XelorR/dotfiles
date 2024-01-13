@@ -1,2 +1,2 @@
 .DS_Store
-AppData/Local/nvim/lazy-lock.json
+AppData/Local/nvim/*.json
