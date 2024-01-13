@@ -1,5 +1,5 @@
-#{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ end }}
-{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/tokyonight_night.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/tokyonight_night.toml"]{{ end }}
+{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/catppuccin/catppuccin-mocha.toml"]{{ end }}
+#{{ if eq .chezmoi.os "linux" }}import = ["/home/user/.config/alacritty/tokyonight_night.toml"]{{ else if eq .chezmoi.os "darwin" }}import = ["/Users/user/.config/alacritty/tokyonight_night.toml"]{{ end }}
 
 [env]
 TERM = "xterm-256color"
@@ -8,7 +8,7 @@ TERM = "xterm-256color"
 program = {{ lookPath "fish" | quote }}
 
 [font]
-{{ if eq .chezmoi.hostname "x270" }}size = 9{{ else }}size = 13{{ end }}
+{{ if eq .chezmoi.os "linux" }}size = 9{{ else }}size = 11.5{{ end }}
 
 [font.normal]
 {{ if eq .chezmoi.os "linux" }}family = "MesloLGS Nerd Font Mono"{{ else if eq .chezmoi.os "darwin" }}family = "JetBrainsMono NF Light"{{ else }}family = "MesloLGS Nerd Font Mono"{{ end }}
