@@ -47,6 +47,7 @@ macos-remove-chezmoi-binary.sh
 
 {{ if ne .chezmoi.os "android" }}
 .termux
+.hushlogin
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
