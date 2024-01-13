@@ -13,8 +13,11 @@ lib/**
 AppData/Local/nvim/*.json
 fish_variables
 .config/fish/fish_variables
-install-starship.sh
-configure-fish.fish
+.config/user-dirs.locale
+.config/private_user-dirs.dirs
+
+scripts/install-starship.sh
+scripts/configure-fish.fish
 
 bashrc
 fishrc
@@ -26,24 +29,24 @@ powerlevel10k.zsh
 .config/rofi/**
 .config/hypr/**
 .config/i3/**
-.config/user-dirs.locale
-.config/private_user-dirs.dirs
 .config/kglobalshortcutsrc
 .config/kwinrc
 .local/share/konsole/**
-xremap-copy-systemd-rule.sh
-anaconda-install.sh
-X11-switch-layout-binding.sh
+
+scripts/linux/xremap-copy-systemd-rule.sh
+scripts/linux/X11-switch-layout-binding.sh
+scripts/anaconda-install.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
-00-install-homebrew.sh
-macos-instantly-show-dock-on-mouse-hover.sh
-macos-enable-tiling.sh
-macos-remove-chezmoi-binary.sh
 .config/yabai/**
 .config/skhd/**
 .config/spacebar/**
+
+scripts/macos/00-install-homebrew.sh
+scripts/macos/macos-enable-tiling.sh
+scripts/macos/macos-remove-chezmoi-binary.sh
+scripts/macos/macos-instantly-show-dock-on-mouse-hover.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "android" }}
@@ -52,16 +55,15 @@ macos-remove-chezmoi-binary.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
-00-install-scoop.ps1.sh
 .glaze-wm/**
 ahk
 AppData
 AppData/**
+
+scripts/windows/00-install-scoop.ps1
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
-install-packages.sh
-enable_syncthing.sh
 .p10k.zsh
 .zshrc
 .bashrc
@@ -70,6 +72,9 @@ enable_syncthing.sh
 .config/**
 .zprezto
 .zprezto/**
+
+install-packages.sh
+scripts/enable_syncthing.sh
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
