@@ -22,6 +22,23 @@ if command -v gsettings &>/dev/null; then
 
     gsettings org.gnome.desktop.wm.keybindings close ['<Alt>q']
 
+    # pop-shell configs
+
+    gsettings org.gnome.shell.extensions.pop-shell activate-launcher ['<Alt>space']
+    gsettings org.gnome.shell.extensions.pop-shell focus-down ['<Alt>j']
+    gsettings org.gnome.shell.extensions.pop-shell focus-left ['<Alt>h']
+    gsettings org.gnome.shell.extensions.pop-shell focus-right ['<Alt>l']
+    gsettings org.gnome.shell.extensions.pop-shell focus-up ['<Alt>k']
+    gsettings org.gnome.shell.extensions.pop-shell mouse-cursor-focus-location uint32 1
+    gsettings org.gnome.shell.extensions.pop-shell mouse-cursor-follows-active-window true
+    gsettings org.gnome.shell.extensions.pop-shell tile-resize-down ['<Shift><Alt>k']
+    gsettings org.gnome.shell.extensions.pop-shell tile-resize-left ['<Shift><Alt>j']
+    gsettings org.gnome.shell.extensions.pop-shell tile-resize-right ['<Shift><Alt>l']
+    gsettings org.gnome.shell.extensions.pop-shell tile-resize-up ['<Shift><Alt>h']
+    gsettings org.gnome.shell.extensions.pop-shell toggle-tiling ['<Super>y']
+    gsettings org.gnome.shell.extensions.pop-shell tile-orientation ['<Shift><Alt>s']
+    gsettings org.gnome.shell.extensions.pop-shell toggle-floating ['<Shift><Alt>d']
+
     # layout settings
 
     gsettings org.gnome.desktop.input-sources current uint32 0
