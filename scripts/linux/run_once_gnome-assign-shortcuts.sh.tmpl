@@ -13,14 +13,14 @@ if command -v gsettings &>/dev/null; then
     	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Alt>$i']"
     done
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Alt><Shift>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Alt>0']"
 
     gsettings org.gnome.desktop.wm.keybindings switch-applications ['<Super>Tab']
     gsettings org.gnome.desktop.wm.keybindings switch-applications-backward ['<Shift><Super>Tab']
-    gsettings org.gnome.desktop.wm.keybindings close ['<Alt>q']
     gsettings org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
     gsettings org.gnome.desktop.wm.keybindings switch-windows-backward ['<Shift><Alt>Tab']
 
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Alt>0']"
+    gsettings org.gnome.desktop.wm.keybindings close ['<Alt>q']
 
     # layout settings
 
