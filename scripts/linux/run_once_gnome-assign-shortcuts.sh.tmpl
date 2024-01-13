@@ -1,0 +1,12 @@
+#!{{ lookPath "sh" }}
+
+# gsettings list-recursively org.gnome.desktop.wm.keybindings | grep to-workspace
+# org.gnome.desktop.wm.keybindings move-to-workspace-5 @as []
+# org.gnome.desktop.wm.keybindings switch-to-workspace-5 @as []
+
+for i in $(seq 9); do
+	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Alt><Shift>$i']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Alt>$i']"
+done
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Alt><Shift>0']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Alt>0']"
