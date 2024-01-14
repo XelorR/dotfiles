@@ -28,6 +28,7 @@ packages:
     - magic-wormhole
     - make
     - minetest
+    - mosh
     - ncdu
     - neovim
     - node
@@ -97,6 +98,7 @@ packages:
     - luajit
     - magic-wormhole
     - minetest
+    - mosh
     - ncdu
     - neovim
     - netcat
@@ -170,6 +172,7 @@ packages:
     - luajit
     - magic-wormhole
     - make
+    - mosh
     - ncdu
     - netcat
     - nmap
@@ -233,6 +236,7 @@ packages:
     - magic-wormhole-rs
     - make
     - man
+    - mosh
     - ncdu
     - neovim
     - netcat-openbsd
