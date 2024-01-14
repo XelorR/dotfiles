@@ -6,6 +6,7 @@ packages:
     # - cmacrae/formulae/spacebar
     - chezmoi
     - cmake
+    - coreutils
     - curl
     - exa
     - fd
