@@ -32,7 +32,6 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule {{ if eq .chezmoi.os "darwin" }}'osx' 'homebrew'{{else if eq .chezmoi.os "android" }}{{ else if eq .chezmoi.osRelease.idLike "arch" }}'pacman'{{ else if eq .chezmoi.osRelease.idLike "debian" }}'dpkg'{{ end }}\
   'archive' \
   'syntax-highlighting' \
-  'autosuggestions' \
   'python' \
   'ssh' \
   'git' \
@@ -46,6 +45,7 @@ zstyle ':prezto:load' pmodule {{ if eq .chezmoi.os "darwin" }}'osx' 'homebrew'{{
   'utility' \
   'completion' \
   'history-substring-search' \
+  'autosuggestions' \
   'prompt'
 
 #
