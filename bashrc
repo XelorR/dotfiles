@@ -30,6 +30,9 @@ if command -v nvim &>/dev/null; then
 	alias vi=nvim
 fi
 export EDITOR=vi
+if command -v fzf &>/dev/null; then
+        alias vf='vi $(fzf)'
+fi
 
 # ALIASES ------------------------------
 
@@ -38,9 +41,6 @@ if command -v rsync &>/dev/null; then
 fi
 alias tm='tmux a || tmux'
 alias ff='find . -type f -iname'
-alias la='ls -lisA'
-alias lt='du -sh * | sort -h'
-alias ll='ls -lh'
 alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
 alias vd=deactivate
