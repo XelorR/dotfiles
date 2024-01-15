@@ -37,6 +37,7 @@ packages:
     - ripgrep
     - rsync
     - syncthing
+    - thefuck
     - tmate
     - tmux
     - w3m
@@ -128,6 +129,7 @@ packages:
     - sddm
     - syncthing
     - telegram-desktop
+    - thefuck
     - tmate
     - vivaldi
     - vivaldi-ffmpeg-codecs
@@ -189,6 +191,7 @@ packages:
     - rsync
     - sddm
     - ssh
+    - thefuck
     - thunar
     - tmate
     - tmux
@@ -248,6 +251,7 @@ packages:
     - python
     - ripgrep
     - rsync
+    - thefuck
     - tmate
     - tmux
     - w3m
