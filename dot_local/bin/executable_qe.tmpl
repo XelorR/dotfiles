@@ -3,9 +3,15 @@
 # crossos alias for qemu
 
 {{ if eq .chezmoi.os "linux" }}
+#sudo qemu-system-x86_64 -enable-kvm -bios /usr/share/ovmf/OVMF.fd \
+#  -smp 2 -m 1G -cdrom some.iso -drive file=w11.vhd,format=vpc,index=0,media=disk \
+#  -hdb /dev/sdb -hdc some.img -boot d \
+#  -usb -device usb-host,hostbus=3,hostaddr=2 \
+#  -nic hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
+#--accel whpx
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
