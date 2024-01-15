@@ -251,7 +251,6 @@ packages:
     - python
     - ripgrep
     - rsync
-    - thefuck
     - tmate
     - tmux
     - w3m
