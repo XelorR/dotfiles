@@ -7,10 +7,7 @@ set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
 unbind r
 bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded"
 
-#bind -n C-h select-pane -L
-#bind -n C-j select-pane -D
-#bind -n C-k select-pane -U
-#bind -n C-l select-pane -R
+# Conrtol-h/j/k/l are used by vim-tmux-navigator
 
 bind-key -n C-M-k resize-pane -U 5
 bind-key -n C-M-j resize-pane -D 5
