@@ -43,3 +43,5 @@ yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 pkg install {{ range .packages.termux -}} {{ . }} {{ end -}} ;
 chsh -s fish
 {{ end -}}
+
+# python3 -m pip install --user --update {{ range .packages.pip -}} {{ . }} {{ end -}} ;
