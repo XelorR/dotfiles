@@ -76,6 +76,9 @@ fi
 
 if [ -z "${BASH_VERSINFO+x}" ]; then
   # ZSH VERSION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	if command -v thefuck &>/dev/null; then
+    eval $(thefuck --alias)
+	fi
   if test -f "$HOME/.zprezto/init.zsh"; then
     source "$HOME/.zprezto/init.zsh"
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
