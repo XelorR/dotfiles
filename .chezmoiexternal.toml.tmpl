@@ -17,6 +17,11 @@
     url = "https://github.com/catppuccin/tmux/archive/master.tar.gz"
     exact = true
     stripComponents = 1
+[".config/tmux/plugins/vim-tmux-navigator"]
+    type = "archive"
+    url = "https://github.com/christoomey/vim-tmux-navigator/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
 {{ end }}
 # FONTS ------------------------------
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts/meslo"]{{ else }}[".fonts/meslo"]{{ end }}
