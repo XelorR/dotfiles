@@ -59,6 +59,7 @@ tm () {
     tmux a -t $1 || tmux new -s $1
   fi
 }
+alias tml='tmux list-sessions'
 
 # Managing dotfiles
 if command -v chezmoi &>/dev/null; then
