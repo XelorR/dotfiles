@@ -10,22 +10,25 @@ from sys import argv
 image = argv[1]
 other_params = argv[2:]
 
-formats = {
-    "qcow2": "qcow2",
-    "qed": "qed",
-    "raw ": "raw ",
-    "vdi": "vdi",
-    "vhd": "vpc ",
-    "vmdk": "vmdk",
-    "vdi.vtoy": "vdi",
-    "vhd.vtoy": "vpc ",
-}
-format = formats[image.split(".")[-1]]
-# TODO to handle iso
-
 resources = ["-smp", 4, "-m", "4G"]
 # TODO detect resources available and set automatickaly
-drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
+
+if image.endswith(".iso"):
+    drive = ["-cdrom", image, "-boot", "d"]
+else:
+    formats = {
+        "qcow2": "qcow2",
+        "qed": "qed",
+        "raw ": "raw ",
+        "vdi": "vdi",
+        "vhd": "vpc ",
+        "vmdk": "vmdk",
+        "vdi.vtoy": "vdi",
+        "vhd.vtoy": "vpc ",
+    }
+    format = formats[image.split(".")[-1]]
+    drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
+
 port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
 fat_folder = []
 
