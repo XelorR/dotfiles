@@ -24,6 +24,7 @@ format = formats[image.split(".")[-1]]
 # TODO to handle iso
 
 resources = ["-smp", 4, "-m", "4G"]
+# TODO detect resources available and set automatickaly
 drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
 fat_folder = []
