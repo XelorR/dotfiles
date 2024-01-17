@@ -3,14 +3,30 @@
 # crossos alias for qemu
 
 {{ if eq .chezmoi.os "linux" }}
+import re
+from platform import architecture
 from subprocess import run
 from sys import argv
 
 image = argv[1]
 other_params = argv[2:]
 
-format_voc = {}
-format = "vpc"
+formats = {
+    "qcow2": "qcow2",
+    "qed": "qed",
+    "raw ": "raw ",
+    "vdi": "vdi",
+    "vhd ": "vpc ",
+    "vmdk": "vmdk",
+}                               |
+format = formats[image.split(".")[-1]]
+# TODO to handle iso
+
+archs = {
+    "64bit": "x86_64",
+}
+arch = archs[architecture()[0]]
+# TODO detect on mac m1
 
 accel = ["-enable-kvm"]
 resources = ["-smp", 4, "-m", "4G"]
@@ -18,7 +34,7 @@ bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
 drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
 
-command = ["qemu-system-x86_64"] + accel + resources + bios + drive + port_fwd + other_params
+command = [f"qemu-system-{arch}"] + accel + resources + bios + drive + port_fwd + other_params
 run(command)
 {{ end }}
 
