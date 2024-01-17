@@ -2,9 +2,8 @@
 
 # crossos alias for qemu
 
-{{ if eq .chezmoi.os "linux" }}
 import re
-from platform import architecture
+from platform import architecture, system
 from subprocess import run
 from sys import argv
 
@@ -18,9 +17,14 @@ formats = {
     "vdi": "vdi",
     "vhd ": "vpc ",
     "vmdk": "vmdk",
-}                               |
+}
 format = formats[image.split(".")[-1]]
 # TODO to handle iso
+
+resources = ["-smp", 4, "-m", "4G"]
+drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
+port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
+fat_folder = []
 
 archs = {
     "64bit": "x86_64",
@@ -28,27 +32,17 @@ archs = {
 arch = archs[architecture()[0]]
 # TODO detect on mac m1
 
-accel = ["-enable-kvm"]
-resources = ["-smp", 4, "-m", "4G"]
-bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
-drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
-port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
+os_family = system().lower()
+if os_family == "linux":
+    accel = ["-enable-kvm"]
+    bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
+elif os_family == "windows":
+    accel = ["--accel", "whpx"]
+    bios = []
+elif os_family == "darwin":
+    raise NotImplementedError
+else:
+    raise NotImplementedError
 
-command = [f"qemu-system-{arch}"] + accel + resources + bios + drive + port_fwd + other_params
+command = [f"qemu-system-{arch}"] + accel + resources + bios + fat_folder + drive + port_fwd + other_params
 run(command)
-{{ end }}
-
-{{ if eq .chezmoi.os "windows" }}
-#--accel whpx
-{{ end }}
-
-{{ if eq .chezmoi.os "darwin" }}
-{{ end }}
-
-# TODO
-# [ ] take arguments
-#   - imagename
-#   - (optional) image type
-# [ ] run the command for linux with portforwarding and using kvm using hardware accelerator
-# [ ] run the command for windows with portforwarding and using hyper as hardware accelerator
-# [ ] irnore macos for a while
