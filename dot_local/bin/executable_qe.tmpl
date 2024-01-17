@@ -7,8 +7,15 @@ from platform import architecture, system
 from subprocess import run
 from sys import argv
 
-image = argv[1]
-other_params = argv[2:]
+if len(argv) < 2:
+    print("Usage: qe image.ext (qemu additional args)\n\n", "You should pass an image!")
+    exit()
+elif len(argv) == 2:
+    image = argv[1]
+    other_params = []
+else:
+    image = argv[1]
+    other_params = argv[2:]
 
 resources = ["-smp", 4, "-m", "4G"]
 # TODO detect resources available and set automatickaly
