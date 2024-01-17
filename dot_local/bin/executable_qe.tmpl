@@ -45,4 +45,6 @@ else:
     raise NotImplementedError
 
 command = [f"qemu-system-{arch}"] + accel + resources + bios + fat_folder + drive + port_fwd + other_params
+
+print(command)
 run(command)
