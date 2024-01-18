@@ -112,5 +112,5 @@ key = "Minus"
 mods = "Command"
 
 [window]
-decorations = "buttonless"
+decorations = {{ if eq .chezmoi.os "darwin" }}"buttonless"{{ else }}"none"{{ end }}
 {{ if eq .chezmoi.os "darwin" }}option_as_alt = "Both"{{ end }}
