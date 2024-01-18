@@ -83,6 +83,7 @@ yabai -m rule --add title="^Disk Utility$" manage=off         # MacOS Disk utili
 yabai -m rule --add title="^Find & Replace$" manage=off       # Excel find and replace dialog
 yabai -m rule --add app="^App Store$" manage=off              # MacOS App Store
 yabai -m rule --add app=".*Webex.*" manage=off                # Webex meetings
+yabai -m rule --add app="Webex" manage=off                    # Webex meetings
 yabai -m rule --add app=".*Outline.*" manage=off              # Outline VPN
 # yabai -m rule --add app=".*Logseq.*" manage=off             # Logseq notetaking app
 yabai -m rule --add app=".*KeePass.*" manage=off              # KeePass and KeePassXC
