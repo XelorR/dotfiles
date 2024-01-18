@@ -39,7 +39,7 @@ else
         *) return;;
     esac
     export OSH="$HOME/.oh-my-bash"
-    OSH_THEME="purity"
+    OSH_THEME="rana"
     OMB_USE_SUDO=true
     completions=(
       git
