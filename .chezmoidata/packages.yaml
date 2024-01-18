@@ -50,6 +50,7 @@ packages:
     - kitty
     - logseq
     - microsoft-teams
+    - obs
     - pycharm-ce
     - qbittorrent
     - telegram
