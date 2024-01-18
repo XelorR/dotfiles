@@ -86,6 +86,7 @@ yabai -m rule --add app=".*Webex.*" manage=off                # Webex meetings
 yabai -m rule --add app=".*Outline.*" manage=off              # Outline VPN
 # yabai -m rule --add app=".*Logseq.*" manage=off             # Logseq notetaking app
 yabai -m rule --add app=".*KeePass.*" manage=off              # KeePass and KeePassXC
+yabai -m rule --add app=".*OBS.*" manage=off                  # OBS Studio
 
 # PyCharm
 yabai -m rule --add title="^Merge Revisions.*" manage=off
