@@ -12,7 +12,6 @@ packages:
     - fd
     - ffmpeg
     - fish
-    - fpp
     - fzf
     - gawk
     - gcc
@@ -44,7 +43,6 @@ packages:
     - wget
   casks:
     - alacritty
-    - anaconda
     - displaylink
     - element
     - emacs-mac
@@ -88,8 +86,6 @@ packages:
     - gnu-netcat
     - hugo
     - imagemagick
-    - ipython
-    - jupyterlab
     - keepassxc
     - kitty
     - lazygit
@@ -106,21 +102,8 @@ packages:
     - npm
     - p7zip
     - pycharm-community-edition
-    - pyright
-    - python-beautifulsoup4
-    - python-black
-    - python-ipdb
-    - python-ipykernel
-    - python-isort
-    - python-jedi
-    - python-lxml
-    - python-openpyxl
-    - python-pandas
-    - python-pyarrow
-    - python-scikit-learn
-    - python-seaborn
     - qbittorrent
-    - qemu-full
+    - qemu-desktop
     - qt5-wayland
     - qt6-wayland
     - ripgrep
@@ -140,14 +123,8 @@ packages:
     - zsh
     - w3m
   aur:
-    - displaylink
     - etcher-bin
-    - evdi
-    - fpp
-    - kwin-bismuth
     - logseq-desktop-bin
-    - python-autoflake
-    - python-ptvsd
   apts:
     #- kwin-bismuth
     - aria2
@@ -170,7 +147,6 @@ packages:
     - jq
     - keepassxc
     - kitty
-    - lfm
     - luajit
     - magic-wormhole
     - make
@@ -180,10 +156,7 @@ packages:
     - nmap
     - ovmf
     - p7zip-full
-    - python3-i3ipc
-    - python3-ipython
     - python3-llfuse
-    - python3-pip
     - qbittorrent
     - qemu-kvm
     - ripgrep
@@ -206,7 +179,6 @@ packages:
     - multipass
     - telegram-desktop
   snaps_classic:
-    - alacritty
     - code
     - emacs
     - nvim
