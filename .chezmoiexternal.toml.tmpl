@@ -17,12 +17,6 @@
     url = "https://github.com/catppuccin/tmux/archive/master.tar.gz"
     exact = true
     stripComponents = 1
-# nvim/tmux seamless navigation
-[".config/tmux/plugins/vim-tmux-navigator"]
-    type = "archive"
-    url = "https://github.com/christoomey/vim-tmux-navigator/archive/master.tar.gz"
-    exact = true
-    stripComponents = 1
 {{ end }}
 # FONTS ------------------------------
 {{ if eq .chezmoi.os "darwin" }}["Library/Fonts/meslo"]{{ else }}[".fonts/meslo"]{{ end }}
@@ -46,30 +40,39 @@
 [".zprezto/modules/autosuggestions/external"]
     type = "archive"
   	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/history-substring-search/external"]
     type = "archive"
   	url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/syntax-highlighting/external"]
     type = "archive"
 	  url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/completion/external"]
     type = "archive"
 	  url = "https://github.com/zsh-users/zsh-completions/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/prompt/external/powerline"]
     type = "archive"
 	  url = "https://github.com/davidjrice/prezto_powerline/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/prompt/external/agnoster"]
     type = "archive"
 	  url = "https://github.com/agnoster/agnoster-zsh-theme/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/prompt/external/pure"]
     type = "archive"
 	  url = "https://github.com/sindresorhus/pure/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/fasd/external"]
     type = "archive"
 	  url = "https://github.com/clvv/fasd/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/prompt/external/async"]
     type = "archive"
 	  url = "https://github.com/mafredri/zsh-async/archive/master.tar.gz"
+    stripComponents = 1
 [".zprezto/modules/prompt/external/powerlevel10k"]
     type = "archive"
 	  url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
