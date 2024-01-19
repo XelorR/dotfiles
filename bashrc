@@ -66,13 +66,29 @@ if [[ $(uname) == "Darwin" ]]; then
 	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
 	export PATH="/opt/homebrew/bin:$PATH"
 	export HOMEBREW_INSTALL_FROM_API=1
+  alias o=open
+  alias pbc=pbcopy
+  alias pbp=pbpaste
 else
 	# MacOS-like pbcopy/pbpaste and open on GNU Linux
 	if command -v xclip &>/dev/null; then
 		alias pbcopy='xclip -selection clipboard'
 		alias pbpaste='xclip -selection clipboard -o'
+    alias pbc=pbcopy
+    alias pbp=pbpaste
+	elif command -v xsel &>/dev/null; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+    alias pbc=pbcopy
+    alias pbp=pbpaste
+	elif command -v wl-copy &>/dev/null; then
+    alias pbcopy=wl-copy
+    alias pbpaste=wl-paste
+    alias pbc=pbcopy
+    alias pbp=pbpaste
 	fi
 	alias open=xdg-open
+	alias o=xdg-open
 fi
 
 # EDITORS ------------------------------
