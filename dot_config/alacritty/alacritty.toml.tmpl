@@ -5,7 +5,7 @@
 TERM = "xterm-256color"
 
 [shell]
-program = {{ lookPath "zsh" | quote }}
+program = {{ lookPath "fish" | quote }}
 
 [font]
 size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11.5{{ end }}
