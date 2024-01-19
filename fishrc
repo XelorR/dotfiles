@@ -34,7 +34,6 @@ if status is-interactive
     if command -v rsync &>/dev/null
         alias cpv='rsync -ah --info=progress2'
     end
-    alias tm='tmux a || tmux'
     alias ff='find . -type f -iname'
     alias ve='python3 -m venv ./venv'
     alias va='source ./venv/bin/activate'
@@ -55,6 +54,16 @@ if status is-interactive
         alias czea='chezmoi edit --apply'
         alias czra='chezmoi re-add'
     end
+
+    # Tmux
+    function tm
+        if count $argv >/dev/null
+            tmux a -t $argv || tmux new -s $argv
+        else
+            tmux a || tmux
+        end
+    end
+    alias tml='tmux list-sessions'
 
     # FILE MANAGER
     if command -v lf &>/dev/null
