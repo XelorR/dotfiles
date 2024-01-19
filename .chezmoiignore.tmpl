@@ -73,7 +73,11 @@ scripts/windows/00-install-scoop.ps1
 .config/**
 .zprezto
 .zprezto/**
-
+.zlogin
+.zlogout
+.zpreztorc
+.zprofile
+.zshenv
 install-packages.sh
 scripts/enable_syncthing.sh
 {{ end }}
@@ -81,4 +85,9 @@ scripts/enable_syncthing.sh
 {{ if eq .chezmoi.os "android" }}
 .zprezto
 .zprezto/**
+.zlogin
+.zlogout
+.zpreztorc
+.zprofile
+.zshenv
 {{ end }}
