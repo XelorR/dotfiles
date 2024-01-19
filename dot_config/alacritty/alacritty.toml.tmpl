@@ -11,10 +11,13 @@ program = {{ lookPath "zsh" | quote }}
 size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11.5{{ end }}
 
 [font.normal]
-{{ if eq .chezmoi.os "linux" }}family = "MesloLGS Nerd Font Mono"{{ else if eq .chezmoi.os "darwin" }}family = "JetBrainsMono NF Light"{{ else }}family = "MesloLGS Nerd Font Mono"{{ end }}
-#family = "MesloLGS Nerd Font Mono"
+family = "MesloLGS Nerd Font Mono"
 #family = "JetBrainsMono NF Light"
 #family = "iMWritingMono Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
