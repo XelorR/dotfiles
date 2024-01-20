@@ -57,6 +57,9 @@ if status is-interactive
     end
 
     # Listing directory
+    if command -v gls &>/dev/null
+        alias ls=gls
+    end
     alias l='ls -1A' # Lists in one column, hidden files.
     alias ll='ls -lh' # Lists human readable sizes.
     alias lr='ll -R' # Lists human readable sizes, recursively.
