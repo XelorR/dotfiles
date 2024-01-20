@@ -55,6 +55,10 @@ if status is-interactive
     if command -v openssl &>/dev/null
         alias getpass="openssl rand -base64 20"
     end
+    function mkcd -d "Make directory and cd into it"
+        mkdir $argv[1]
+        cd $argv[1]
+    end
 
     # Download files
     if command -v aria2c &>/dev/null
