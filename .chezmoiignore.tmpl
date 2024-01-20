@@ -15,9 +15,7 @@ fish_variables
 .config/fish/fish_variables
 .config/user-dirs.locale
 .config/private_user-dirs.dirs
-
 scripts/install-starship.sh
-scripts/configure-fish.fish
 
 bashrc
 fishrc
@@ -80,6 +78,7 @@ scripts/windows/00-install-scoop.ps1
 .zshenv
 install-packages.sh
 scripts/enable_syncthing.sh
+scripts/configure-fish.fish
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
