@@ -106,9 +106,11 @@ if test -f $HOME/.anaconda3/bin/conda
     eval $HOME/.anaconda3/bin/conda "shell.fish" hook $argv | source
     if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
         source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
-        mamba deactivate
     end
-    conda deactivate
+    # kill the right prompt __conda_add_prompt 😠
+    function __conda_add_prompt
+    end
+    conda config --set auto_activate_base false
 end
 
 # <<< conda initialize <<<
