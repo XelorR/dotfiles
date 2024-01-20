@@ -1,5 +1,5 @@
 if status is-interactive
-    # PATH
+    # PATH ------------------------------
     set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
     # PROMPT ------------------------------
@@ -10,8 +10,7 @@ if status is-interactive
     end
     set fish_greeting
 
-    # OS SPECIFIC ------------------------------
-    # MacOS everywhere
+    # MAC-LIKE COPY, PASTE, DOWNLOAD ------------------------------
     switch (uname -o)
         case GNU/Linux
             if command -v xclip &>/dev/null
@@ -30,6 +29,7 @@ if status is-interactive
             alias pbpaste='termux-clipboard-get'
             alias open='termux-open'
         case Darwin
+            # MAC AND HOMEBREW SPECIFIC CONFIG ------------------------------
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
             set PATH /opt/homebrew/bin $PATH
             set HOMEBREW_INSTALL_FROM_API 1
@@ -52,24 +52,18 @@ if status is-interactive
         alias vf='vi $(fzf)'
     end
 
-    # ALIAS ------------------------------
-    if command -v rsync &>/dev/null
-        alias cpv='rsync -ah --info=progress2'
-    end
-    alias ff='find . -type f -iname'
+    # PYTHON ------------------------------
     alias ve='python3 -m venv ./venv'
     alias va='source ./venv/bin/activate'
     alias vd=deactivate
     alias www='ifconfig | grep broadcast ; python3 -m http.server'
+
+    # GENERATE PASSWORD ------------------------------
     if command -v openssl &>/dev/null
         alias getpass="openssl rand -base64 20"
     end
-    function mkcd -d "Make directory and cd into it"
-        mkdir $argv[1]
-        cd $argv[1]
-    end
 
-    # Download files
+    # DOWNLOAD FILES ------------------------------
     if command -v aria2c &>/dev/null
         alias get='aria2c --continue --remote-time --max-tries=0'
     else if command -v curl &>/dev/null
@@ -78,11 +72,11 @@ if status is-interactive
         alias get='wget --continue --progress=bar --timestamping'
     end
 
-    # Resource Usage
+    # VIEW RESOURCE USAGE ------------------------------
     alias df='df -kh'
     alias du='du -kh'
 
-    # Listing directory
+    # LISTING DIRECTORY ------------------------------
     if command -v gls &>/dev/null
         alias ls=gls
     end
@@ -99,8 +93,18 @@ if status is-interactive
         cd $argv[1]
         la
     end
+    function mkcd -d "Make directory and cd into it"
+        mkdir $argv[1]
+        cd $argv[1]
+    end
 
-    # Managing dotfiles
+    # COPY FILES WITH PROGRESS BAR ------------------------------
+    if command -v rsync &>/dev/null
+        alias cpv='rsync -ah --info=progress2'
+    end
+    alias ff='find . -type f -iname'
+
+    # MANAGING DOTFILES ------------------------------
     if command -v chezmoi &>/dev/null
         alias cz='chezmoi'
         alias czu='chezmoi update'
@@ -112,7 +116,7 @@ if status is-interactive
         alias czra='chezmoi re-add'
     end
 
-    # Tmux
+    # TMUX SESSIONS ------------------------------
     function tm
         if count $argv >/dev/null
             tmux a -t $argv || tmux new -s $argv
@@ -122,7 +126,7 @@ if status is-interactive
     end
     alias tml='tmux list-sessions'
 
-    # FILE MANAGER
+    # FILE MANAGER ------------------------------
     if command -v lf &>/dev/null
         function lfcd --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
             # `command` is needed in case `lfcd` is aliased to `lf`.
