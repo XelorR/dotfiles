@@ -1,8 +1,17 @@
 if status is-interactive
-    set fish_greeting
+    # PATH
     set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
+    # PROMPT ------------------------------
+    if ! test -f "$HOME/.config/fish/conf.d/_tide_init.fish"
+        if command -v starship &>/dev/null
+            starship init fish | source
+        end
+    end
+    set fish_greeting
+
     # OS SPECIFIC ------------------------------
+    # MacOS everywhere
     switch (uname -o)
         case GNU/Linux
             if command -v xclip &>/dev/null
@@ -123,12 +132,6 @@ if status is-interactive
         alias lf=lfcd
     end
 
-    # PROMPT ------------------------------
-    if ! test -f "$HOME/.config/fish/conf.d/_tide_init.fish"
-        if command -v starship &>/dev/null
-            starship init fish | source
-        end
-    end
 end
 
 # CONDA ------------------------------
