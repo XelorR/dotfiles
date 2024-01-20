@@ -225,6 +225,7 @@ packages:
     - python
     - ripgrep
     - rsync
+    - termux-api
     - tmate
     - tmux
     - w3m
