@@ -3,34 +3,31 @@ if status is-interactive
     set PATH ~/.local/bin ~/.cargo/bin/ $PATH
 
     # OS SPECIFIC ------------------------------
-    switch (uname)
-        case Linux
+    switch (uname -o)
+        case GNU/Linux
             if command -v xclip &>/dev/null
                 alias pbcopy='xclip -selection clipboard'
                 alias pbpaste='xclip -selection clipboard -o'
-                alias pbc=pbcopy
-                alias pbp=pbpaste
             else if command -v xsel &>/dev/null
                 alias pbcopy='xsel --clipboard --input'
                 alias pbpaste='xsel --clipboard --output'
-                alias pbc=pbcopy
-                alias pbp=pbpaste
             else if command -v wl-copy &>/dev/null
                 alias pbcopy=wl-copy
                 alias pbpaste=wl-paste
-                alias pbc=pbcopy
-                alias pbp=pbpaste
             end
             alias open=xdg-open
-            alias o=xdg-open
+        case Android
+            alias pbcopy='termux-clipboard-set'
+            alias pbpaste='termux-clipboard-get'
+            alias open='termux-open'
         case Darwin
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
             set PATH /opt/homebrew/bin $PATH
             set HOMEBREW_INSTALL_FROM_API 1
-            alias pbc=pbcopy
-            alias pbp=pbpaste
-            alias o=open
     end
+    alias pbc=pbcopy
+    alias pbp=pbpaste
+    alias o=open
 
     # EDITOR ------------------------------
     if command -v emacs &>/dev/null
