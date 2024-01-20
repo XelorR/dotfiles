@@ -61,35 +61,32 @@ else
 fi
 
 # OS SPECIFIC ------------------------------
-if [[ $(uname) == "Darwin" ]]; then
+if [[ $(uname -o) == "Darwin" ]]; then
 	# PyCharm CLI tool for MacOS
 	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
 	export PATH="/opt/homebrew/bin:$PATH"
 	export HOMEBREW_INSTALL_FROM_API=1
-  alias o=open
-  alias pbc=pbcopy
-  alias pbp=pbpaste
-else
-	# MacOS-like pbcopy/pbpaste and open on GNU Linux
+# MacOS-like pbcopy/pbpaste and open on GNU Linux
+elif [[ $(uname -o) == "Android" ]]; then
+    alias pbcopy='termux-clipboard-set'
+    alias pbpaste='termux-clipboard-get'
+    alias open='termux-open'
+elif [[ $(uname -o) == "GNU/Linux" ]]; then
 	if command -v xclip &>/dev/null; then
 		alias pbcopy='xclip -selection clipboard'
 		alias pbpaste='xclip -selection clipboard -o'
-    alias pbc=pbcopy
-    alias pbp=pbpaste
 	elif command -v xsel &>/dev/null; then
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
-    alias pbc=pbcopy
-    alias pbp=pbpaste
 	elif command -v wl-copy &>/dev/null; then
-    alias pbcopy=wl-copy
-    alias pbpaste=wl-paste
-    alias pbc=pbcopy
-    alias pbp=pbpaste
+    alias pbcopy='wl-copy'
+    alias pbpaste='wl-paste'
 	fi
 	alias open=xdg-open
-	alias o=xdg-open
 fi
+alias pbc=pbcopy
+alias pbp=pbpaste
+alias o=open
 
 # EDITORS ------------------------------
 if command -v emacs &>/dev/null; then
