@@ -56,6 +56,15 @@ if status is-interactive
         alias getpass="openssl rand -base64 20"
     end
 
+    # Download files
+    if command -v aria2c &>/dev/null
+        alias get='aria2c --continue --remote-time --max-tries=0'
+    else if command -v curl &>/dev/null
+        alias get='curl --continue-at - --location --progress-bar --remote-name --remote-time'
+    else if command -v wget &>/dev/null
+        alias get='wget --continue --progress=bar --timestamping'
+    end
+
     # Listing directory
     if command -v gls &>/dev/null
         alias ls=gls
