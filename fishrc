@@ -65,6 +65,10 @@ if status is-interactive
         alias get='wget --continue --progress=bar --timestamping'
     end
 
+    # Resource Usage
+    alias df='df -kh'
+    alias du='du -kh'
+
     # Listing directory
     if command -v gls &>/dev/null
         alias ls=gls
