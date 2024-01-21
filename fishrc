@@ -10,7 +10,7 @@ if status is-interactive
         case GNU/Linux
             alias pbcopy='fish_clipboard_copy'
             alias pbpaste='fish_clipboard_paste'
-            alias open=xdg-open
+            alias open='xdg-open'
         case Android
             alias pbcopy='termux-clipboard-set'
             alias pbpaste='termux-clipboard-get'
@@ -21,9 +21,9 @@ if status is-interactive
             set PATH /opt/homebrew/bin $PATH
             set HOMEBREW_INSTALL_FROM_API 1
     end
-    alias pbc=pbcopy
-    alias pbp=pbpaste
-    alias o=open
+    alias pbc='pbcopy'
+    alias pbp='pbpaste'
+    alias o='open'
 
     # EDITOR ------------------------------
     if command -v emacs &>/dev/null
@@ -42,7 +42,7 @@ if status is-interactive
     # PYTHON ------------------------------
     alias ve='python3 -m venv ./venv'
     alias va='source ./venv/bin/activate'
-    alias vd=deactivate
+    alias vd='deactivate'
     alias www='ifconfig | grep broadcast ; python3 -m http.server'
 
     # GENERATE PASSWORD ------------------------------
@@ -65,7 +65,7 @@ if status is-interactive
 
     # HANDLING DIRECTORIES ------------------------------
     if command -v gls &>/dev/null
-        alias ls=gls
+        alias ls='gls'
     end
     function cdl -d "cd into directory and list it's contents"
         cd $argv[1]
@@ -116,7 +116,7 @@ if status is-interactive
             # Quotes will cause `cd` to not change directory if `lf` prints nothing to stdout due to an error.
             cd "$(command lf -print-last-dir $argv)"
         end
-        alias lf=lfcd
+        alias lf='lfcd'
     end
 
 end
