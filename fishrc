@@ -5,7 +5,7 @@ if status is-interactive
     # PROMPT ------------------------------
     set fish_greeting
 
-    # MAC-LIKE COPY, PASTE, DOWNLOAD ------------------------------
+    # MAC-LIKE COPY, PASTE, OPEN ------------------------------
     switch (uname -o)
         case GNU/Linux
             if command -v xclip &>/dev/null
