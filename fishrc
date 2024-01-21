@@ -5,25 +5,14 @@ if status is-interactive
     # PROMPT ------------------------------
     set fish_greeting
 
-    # MAC-LIKE COPY, PASTE, OPEN ------------------------------
+    # OS SPECIFIC ------------------------------
     switch (uname -o)
-        case GNU/Linux
-            alias pbcopy='fish_clipboard_copy'
-            alias pbpaste='fish_clipboard_paste'
-            alias open='xdg-open'
-        case Android
-            alias pbcopy='termux-clipboard-set'
-            alias pbpaste='termux-clipboard-get'
-            alias open='termux-open'
         case Darwin
             # MAC AND HOMEBREW SPECIFIC CONFIG ------------------------------
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
             set PATH /opt/homebrew/bin $PATH
             set HOMEBREW_INSTALL_FROM_API 1
     end
-    alias pbc='pbcopy'
-    alias pbp='pbpaste'
-    alias o='open'
 
     # EDITOR ------------------------------
     if command -v emacs &>/dev/null
