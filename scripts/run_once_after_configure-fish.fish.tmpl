@@ -7,10 +7,7 @@ if ! type -q fisher &>/dev/null
     else if command -v wget &>/dev/null
         wget -qO- https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
     end
-    fish_update_completions
-end
-if ! type -q tide &>/dev/null
-    fisher install IlanCosman/tide@v6
+    fisher update
     switch (uname -o)
         case Android
             tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Darkest --show_time='24-hour format' --classic_prompt_separators=Slanted --powerline_prompt_heads=Slanted --powerline_prompt_tails=Slanted --powerline_prompt_style='Two lines, character' --prompt_connection=Solid --powerline_right_prompt_frame=No --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Sparse --icons='Few icons' --transient=Yes
@@ -19,6 +16,6 @@ if ! type -q tide &>/dev/null
         case Darwin
             tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Darkest --show_time='24-hour format' --classic_prompt_separators=Slanted --powerline_prompt_heads=Slanted --powerline_prompt_tails=Slanted --powerline_prompt_style='Two lines, character' --prompt_connection=Solid --powerline_right_prompt_frame=No --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Sparse --icons='Many icons' --transient=Yes
     end
-    fisher install catppuccin/fish
     yes | fish_config theme save "Catppuccin Mocha"
+    fish_update_completions
 end
