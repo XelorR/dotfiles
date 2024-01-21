@@ -94,21 +94,6 @@ if status is-interactive
         alias czra='chezmoi re-add'
     end
 
-    # TMUX SESSIONS ------------------------------
-    function tm
-        if count $argv >/dev/null
-            tmux a -t $argv || tmux new -s $argv
-        else
-            tmux a || tmux
-        end
-    end
-    alias tml='tmux list-sessions'
-    # if not set -q TMUX
-    #     set -g TMUX tmux new-session -d -s base
-    #     eval $TMUX
-    #     tmux attach-session -d -t base
-    # end
-
     # FILE MANAGER ------------------------------
     if command -v lf &>/dev/null
         function lfcd --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
