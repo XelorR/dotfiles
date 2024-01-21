@@ -111,6 +111,11 @@ if status is-interactive
         end
     end
     alias tml='tmux list-sessions'
+    # if not set -q TMUX
+    #     set -g TMUX tmux new-session -d -s base
+    #     eval $TMUX
+    #     tmux attach-session -d -t base
+    # end
 
     # FILE MANAGER ------------------------------
     if command -v lf &>/dev/null
