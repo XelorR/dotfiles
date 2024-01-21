@@ -8,16 +8,8 @@ if status is-interactive
     # MAC-LIKE COPY, PASTE, OPEN ------------------------------
     switch (uname -o)
         case GNU/Linux
-            if command -v xclip &>/dev/null
-                alias pbcopy='xclip -selection clipboard'
-                alias pbpaste='xclip -selection clipboard -o'
-            else if command -v xsel &>/dev/null
-                alias pbcopy='xsel --clipboard --input'
-                alias pbpaste='xsel --clipboard --output'
-            else if command -v wl-copy &>/dev/null
-                alias pbcopy=wl-copy
-                alias pbpaste=wl-paste
-            end
+            alias pbcopy='fish_clipboard_copy'
+            alias pbpaste='fish_clipboard_paste'
             alias open=xdg-open
         case Android
             alias pbcopy='termux-clipboard-set'
