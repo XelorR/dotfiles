@@ -17,6 +17,8 @@ if status is-interactive
             switch (bash -c '. /etc/os-release && echo $ID_LIKE')
                 case arch
                     set os_icon 
+                case debian
+                    set os_icon 
                 case '*'
                     set os_icon 
             end
