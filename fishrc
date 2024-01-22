@@ -10,21 +10,21 @@ if status is-interactive
     set --global hydro_color_git f9e2af
     set --global hydro_color_duration 94e2d5
     set --global hydro_multiline true
+    switch (uname -o)
+        case Darwin
+            set os_icon 
+        case GNU/Linux
+            switch (bash -c '. /etc/os-release && echo $ID_LIKE')
+                case arch
+                    set os_icon 
+                case '*'
+                    set os_icon 
+            end
+        case Android
+            set os_icon 
+    end
     functions --copy fish_prompt fish_prompt_origin
     function fish_prompt
-        switch (uname -o)
-            case Darwin
-                set os_icon 
-            case GNU/Linux
-                switch (bash -c '. /etc/os-release && echo $ID_LIKE')
-                    case arch
-                        set os_icon 
-                    case '*'
-                        set os_icon 
-                end
-            case Android
-                set os_icon 
-        end
         echo -n \n"$os_icon "
         fish_prompt_origin
     end
