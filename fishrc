@@ -12,7 +12,15 @@ if status is-interactive
     set --global hydro_multiline true
     functions --copy fish_prompt fish_prompt_origin
     function fish_prompt
-        echo
+        switch (uname -o)
+            case Darwin
+                set os_icon @
+            case GNU/Linux
+                set os_icon 
+            case Android
+                set os_icon 
+        end
+        echo -n \n"$os_icon "
         fish_prompt_origin
     end
     # function fish_right_prompt
