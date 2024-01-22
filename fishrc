@@ -10,6 +10,14 @@ if status is-interactive
     set --global hydro_color_git f9e2af
     set --global hydro_color_duration 94e2d5
     set --global hydro_multiline true
+    functions --copy fish_prompt fish_prompt_origin
+    function fish_prompt
+        echo
+        fish_prompt_origin
+    end
+    # function fish_right_prompt
+    #     echo $(hostname)
+    # end
 
     # OS SPECIFIC ------------------------------
     switch (uname -o)
