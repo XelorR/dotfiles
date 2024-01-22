@@ -11,20 +11,45 @@ if status is-interactive
     set --global hydro_color_duration 94e2d5
     set --global hydro_multiline true
     switch (uname -o)
+        # selecting icons
+        # https://www.nerdfonts.com/cheat-sheet
         case Darwin
             set os_icon 
+        case Android
+            set os_icon 
         case GNU/Linux
             switch (bash -c '. /etc/os-release && echo $ID_LIKE')
                 case arch
-                    set os_icon 
+                    switch (bash -c '. /etc/os-release && echo $ID')
+                        case manjaro
+                            set os_icon 
+                        case garuda
+                            set os_icon 
+                        case '*'
+                            set os_icon 
+                    end
                 case debian
-                    set os_icon 
+                    switch (bash -c '. /etc/os-release && echo $ID')
+                        case ubuntu
+                            set os_icon 
+                        case kubuntu
+                            set os_icon 
+                        case mint
+                            set os_icon 󰣭
+                        case pop
+                            set os_icon 
+                        case ubuntu
+                            set os_icon 
+                        case parrot
+                            set os_icon 
+                        case '*'
+                            set os_icon 
+                    end
                 case '*'
                     set os_icon 
             end
-        case Android
-            set os_icon 
     end
+    # wrapping existing prompt and adding newline and the icon
     functions --copy fish_prompt fish_prompt_origin
     function fish_prompt
         echo -n \n"$os_icon "
