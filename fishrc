@@ -16,7 +16,12 @@ if status is-interactive
             case Darwin
                 set os_icon 
             case GNU/Linux
-                set os_icon 
+                switch (bash -c '. /etc/os-release && echo $ID_LIKE')
+                    case arch
+                        set os_icon 
+                    case '*'
+                        set os_icon 
+                end
             case Android
                 set os_icon 
         end
