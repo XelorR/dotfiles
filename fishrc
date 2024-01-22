@@ -54,6 +54,8 @@ if status is-interactive
     # wrapping existing prompt and adding newline and the icon
     functions --copy fish_prompt fish_prompt_origin
     function fish_prompt
+        # set $_hydro_git " $$_hydro_git"
+        # set branch " $branch"
         echo -n \n"$os_icon "
         fish_prompt_origin
     end
