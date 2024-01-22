@@ -55,7 +55,7 @@ if status is-interactive
     functions --copy fish_prompt fish_prompt_origin
     function fish_prompt
         # set $_hydro_git " $$_hydro_git"
-        # set branch " $branch"
+        # currently working variant is editing row 95 in hydro.fish
         echo -n \n"$os_icon "
         fish_prompt_origin
     end
