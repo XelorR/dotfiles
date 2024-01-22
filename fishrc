@@ -14,7 +14,7 @@ if status is-interactive
     function fish_prompt
         switch (uname -o)
             case Darwin
-                set os_icon @
+                set os_icon 
             case GNU/Linux
                 set os_icon 
             case Android
