@@ -44,6 +44,7 @@ packages:
   casks:
     - alacritty
     - displaylink
+    - drawio
     - element
     - emacs-mac
     - keepassxc
