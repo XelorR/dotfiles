@@ -45,14 +45,14 @@ return {
     "mrshmllow/orgmode-babel.nvim",
     dependencies = {
       "nvim-orgmode/orgmode",
-      "nvim-treesitter/nvim-treesitter"
+      "nvim-treesitter/nvim-treesitter",
     },
     cmd = { "OrgExecute", "OrgTangle" },
     opts = {
       langs = { "python", "lua", "shell" },
 
       -- paths to emacs packages to additionally load
-      load_paths = {}
-    }
+      load_paths = {},
+    },
   },
 }
