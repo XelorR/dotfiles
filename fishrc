@@ -51,14 +51,19 @@ if status is-interactive
                     set os_icon 
             end
     end
+    set --global hydro_prompt_prefix \n"$os_icon "
+    set --global hydro_git_prefix " "
+    set --global hydro_pwd_prefix " "
+    set --global hydro_duration_prefix "󰅐 "
+
     # wrapping existing prompt and adding newline and the icon
-    functions --copy fish_prompt fish_prompt_origin
-    function fish_prompt
-        # set $_hydro_git " $$_hydro_git"
-        # currently working variant is editing row 95 in hydro.fish
-        echo -n \n"$os_icon "
-        fish_prompt_origin
-    end
+    ##functions --copy fish_prompt fish_prompt_origin
+    ##function fish_prompt
+    ##    # set $_hydro_git " $$_hydro_git"
+    ##    # currently working variant is editing row 95 in hydro.fish
+    ##    echo -n \n"$os_icon "
+    ##    fish_prompt_origin
+    ##end
     # function fish_right_prompt
     #     echo $(hostname)
     # end
