@@ -30,6 +30,7 @@ return {
         org_highlight_latex_and_related = "entities",
         org_agenda_span = "day",
         org_agenda_start_on_weekday = false,
+        org_todo_keywords = { "TODO", "|", "DONE", "CANCELED" },
         -- org_startup_folded = "showeverything",
       })
     end,
