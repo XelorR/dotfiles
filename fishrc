@@ -51,10 +51,10 @@ if status is-interactive
                     set os_icon 
             end
     end
-    set --global hydro_prompt_prefix \n"$os_icon "
-    set --global hydro_git_prefix " "
-    set --global hydro_pwd_prefix " "
-    set --global hydro_duration_prefix "󰅐 "
+    set --global hydro_prefix_beginning \n"$os_icon "
+    set --global hydro_prefix_git " "
+    set --global hydro_prefix_pwd " "
+    set --global hydro_prefix_duration "󰅐 "
 
     # wrapping existing prompt and adding newline and the icon
     ##functions --copy fish_prompt fish_prompt_origin
