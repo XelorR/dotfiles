@@ -53,7 +53,7 @@ if status is-interactive
     end
     set --global hydro_prefix_beginning \n"$os_icon "
     set --global hydro_prefix_git " "
-    set --global hydro_prefix_pwd " "
+    #set --global hydro_prefix_pwd " "
     set --global hydro_prefix_duration "󰅐 "
 
     # wrapping existing prompt and adding newline and the icon
