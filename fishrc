@@ -56,18 +56,6 @@ if status is-interactive
     #set --global hydro_prefix_pwd " "
     set --global hydro_prefix_duration "󰅐 "
 
-    # wrapping existing prompt and adding newline and the icon
-    ##functions --copy fish_prompt fish_prompt_origin
-    ##function fish_prompt
-    ##    # set $_hydro_git " $$_hydro_git"
-    ##    # currently working variant is editing row 95 in hydro.fish
-    ##    echo -n \n"$os_icon "
-    ##    fish_prompt_origin
-    ##end
-    # function fish_right_prompt
-    #     echo $(hostname)
-    # end
-
     # OS SPECIFIC ------------------------------
     switch (uname -o)
         case Darwin
