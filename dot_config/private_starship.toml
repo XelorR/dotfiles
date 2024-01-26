@@ -11,7 +11,10 @@ vimcmd_symbol = "[❮](teal)"
 [directory]
 truncation_length = 4
 style = "bold lavender"
+
+[hostname]
 ssh_symbol = " "
+style = "green"
 
 [shell]
 disabled = false
