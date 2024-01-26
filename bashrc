@@ -4,17 +4,17 @@ export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 # PROMPTS ------------------------------
 if [ -z "${BASH_VERSINFO+x}" ]; then
 	# ZSH VERSION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-	# Prezto + p10k
 	if command -v thefuck &>/dev/null; then
 		eval $(thefuck --alias)
 	fi
+	# Prezto + Starship
 	if test -f "$HOME/.zprezto/init.zsh"; then
 		source "$HOME/.zprezto/init.zsh"
 		# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 		if command -v starship &>/dev/null; then
 			eval "$(starship init zsh)"
 		fi
-	# Oh-my-zsh + p10k
+	# Oh-my-zsh + Starship
 	elif test -f "$HOME/.oh-my-zsh/oh-my-zsh.sh"; then
 		export ZSH="$HOME/.oh-my-zsh"
 		if command -v starship &>/dev/null; then
