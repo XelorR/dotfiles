@@ -4,9 +4,9 @@ format = '$os$all'
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[❯](green)"
+success_symbol = "[❯](teal)"
 error_symbol = "[❯](maroon)"
-vimcmd_symbol = "[❮](green)"
+vimcmd_symbol = "[❮](teal)"
 
 [directory]
 truncation_length = 4
@@ -14,7 +14,7 @@ style = "bold lavender"
 
 [shell]
 disabled = false
-style = "green"
+style = "teal"
 bash_indicator = ""
 zsh_indicator = ""
 fish_indicator = ""
