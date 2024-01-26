@@ -8,13 +8,24 @@ success_symbol = "[❯](teal)"
 error_symbol = "[❯](maroon)"
 vimcmd_symbol = "[❮](teal)"
 
+[git_branch]
+format = "[on](subtext0) [$symbol$branch(:$remote_branch)]($style) "
+
 [directory]
 truncation_length = 4
 style = "bold lavender"
+read_only = "󰉐"
 
 [hostname]
+format = "[$ssh_symbol$hostname]($style) [in](subtext0) "
 ssh_symbol = " "
 style = "green"
+
+[cmd_duration]
+format = "[took](subtext0) [$duration]($style) "
+
+[username]
+format = "[$user]($style) [in](subtext0) "
 
 [shell]
 disabled = false
