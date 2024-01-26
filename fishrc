@@ -1,60 +1,12 @@
 if status is-interactive
     # PATH ------------------------------
-    set PATH ~/.local/bin ~/.cargo/bin/ $PATH
+    set PATH ~/.local/bin $PATH
 
     # PROMPT ------------------------------
     set fish_greeting
-    set --global hydro_color_prompt 94e2d5
-    set --global hydro_color_error f38ba8
-    set --global hydro_color_pwd b4befe
-    set --global hydro_color_git f9e2af
-    set --global hydro_color_duration 94e2d5
-    set --global hydro_multiline true
-    switch (uname -o)
-        # selecting icons
-        # https://www.nerdfonts.com/cheat-sheet
-        case Darwin
-            set os_icon 
-        case Android
-            set os_icon 
-        case GNU/Linux
-            switch (bash -c '. /etc/os-release && echo $ID_LIKE')
-                case arch
-                    switch (bash -c '. /etc/os-release && echo $ID')
-                        case manjaro
-                            set os_icon 
-                        case garuda
-                            set os_icon 
-                        case '*'
-                            set os_icon 
-                    end
-                case debian
-                    switch (bash -c '. /etc/os-release && echo $ID')
-                        case ubuntu
-                            set os_icon 
-                        case kubuntu
-                            set os_icon 
-                        case mint
-                            set os_icon 󰣭
-                        case pop
-                            set os_icon 
-                        case ubuntu
-                            set os_icon 
-                        case parrot
-                            set os_icon 
-                        case '*'
-                            set os_icon 
-                    end
-                case 'rhel fedora'
-                    set os_icon 
-                case '*'
-                    set os_icon 
-            end
+    if command -v starship &>/dev/null
+        starship init fish | source
     end
-    set --global hydro_prefix_beginning \n"$os_icon "
-    set --global hydro_prefix_git " "
-    #set --global hydro_prefix_pwd " "
-    set --global hydro_prefix_duration "󰅐 "
 
     # OS SPECIFIC ------------------------------
     switch (uname -o)
@@ -140,15 +92,15 @@ end
 # CONDA ------------------------------
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f $HOME/.anaconda3/bin/conda
-    eval $HOME/.anaconda3/bin/conda "shell.fish" hook $argv | source
-    if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
-        source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
-    end
-    # kill the right prompt __conda_add_prompt 😠
-    function __conda_add_prompt
-    end
-    conda config --set auto_activate_base false
-end
+#if test -f $HOME/.anaconda3/bin/conda
+#    eval $HOME/.anaconda3/bin/conda "shell.fish" hook $argv | source
+#    if test -f "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+#        source "$HOME/.anaconda3/etc/fish/conf.d/mamba.fish"
+#    end
+#    # kill the right prompt __conda_add_prompt 😠
+#    function __conda_add_prompt
+#    end
+#    conda config --set auto_activate_base false
+#end
 
 # <<< conda initialize <<<

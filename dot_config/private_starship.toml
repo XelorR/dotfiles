@@ -1,5 +1,6 @@
 # Sets user-defined palette
 palette = "catppuccin_mocha"
+format = '$os$all'
 
 [character]
 # Note the use of Catppuccin color 'maroon'
@@ -9,8 +10,61 @@ vimcmd_symbol = "[❮](green)"
 
 [directory]
 truncation_length = 4
-# Catppuccin 'lavender'
 style = "bold lavender"
+
+[shell]
+disabled = false
+style = "green"
+bash_indicator = ""
+zsh_indicator = ""
+fish_indicator = ""
+cmd_indicator = ""
+powershell_indicator = ""
+
+[os]
+disabled = false
+format = "$symbol "
+symbols.Alpaquita = ""
+symbols.Alpine = ""
+symbols.Amazon = ""
+symbols.Android = ""
+symbols.Arch = ""
+symbols.Artix = ""
+symbols.CentOS = ""
+symbols.Debian = ""
+symbols.DragonFly = "BSD"
+symbols.Emscripten = ""
+symbols.EndeavourOS = ""
+symbols.Fedora = ""
+symbols.FreeBSD = ""
+symbols.Garuda = ""
+symbols.Gentoo = ""
+symbols.HardenedBSD = "󱁘"
+symbols.Illumos = ""
+symbols.Linux = "󰌽"
+symbols.Mabox = ""
+symbols.Macos = ""
+symbols.Manjaro = ""
+symbols.Mariner = ""
+symbols.MidnightBSD = ""
+symbols.Mint = "󰣭"
+symbols.NetBSD = ""
+symbols.NixOS = ""
+symbols.OpenBSD = ""
+symbols.OpenCloudOS = "☁️"
+symbols.OracleLinux = "󱄛"
+symbols.Pop = "󰣭"
+symbols.Raspbian = ""
+symbols.RedHatEnterprise = "󱄛"
+symbols.Redhat = "󱄛"
+symbols.Redox = "󰰠"
+symbols.SUSE = ""
+symbols.Solus = ""
+symbols.Ubuntu = ""
+symbols.Unknown = ""
+symbols.Windows = ""
+symbols.openEuler = "󱄛"
+symbols.openSUSE = ""
 
 # palette tables should be last in the config ⚓️
 [palettes.catppuccin_macchiato]
