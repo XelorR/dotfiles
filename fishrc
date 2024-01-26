@@ -6,7 +6,7 @@ if status is-interactive
     set fish_greeting
     if command -v starship &>/dev/null
         starship init fish | source
-        enable_transience
+        # enable_transience
     end
 
     # OS SPECIFIC ------------------------------
