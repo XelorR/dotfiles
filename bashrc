@@ -6,8 +6,10 @@ if [ -z "${BASH_VERSINFO+x}" ]; then
   # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
   # Initialization code that may require console input (password prompts, [y/n]
   # confirmations, etc.) must go above this block; everything else may go below.
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+	if ! command -v starship &>/dev/null; then
+    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+      source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    fi
   fi
   # ZSH VERSION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # Prezto + p10k
@@ -17,15 +19,25 @@ if [ -z "${BASH_VERSINFO+x}" ]; then
   if test -f "$HOME/.zprezto/init.zsh"; then
     source "$HOME/.zprezto/init.zsh"
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+	if command -v starship &>/dev/null; then
+		eval "$(starship init zsh)"
+  else
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+	fi
   # Oh-my-zsh + p10k
   elif test -f "$HOME/.oh-my-zsh/oh-my-zsh.sh"; then
     export ZSH="$HOME/.oh-my-zsh"
-    ZSH_THEME="powerlevel10k/powerlevel10k"
+  	if command -v starship &>/dev/null; then
+  		eval "$(starship init zsh)"
+    else
+      ZSH_THEME="powerlevel10k/powerlevel10k"
+    fi
     plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
     source $ZSH/oh-my-zsh.sh
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  	if ! command -v starship &>/dev/null; then
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    fi
   # Starship
 	elif command -v starship &>/dev/null; then
 		eval "$(starship init zsh)"
@@ -39,7 +51,11 @@ else
         *) return;;
     esac
     export OSH="$HOME/.oh-my-bash"
-    OSH_THEME="rana"
+  	if command -v starship &>/dev/null; then
+  		eval "$(starship init bash)"
+    else
+      OSH_THEME="rana"
+    fi
     OMB_USE_SUDO=true
     completions=(
       git
