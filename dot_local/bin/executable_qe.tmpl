@@ -33,12 +33,12 @@ else:
         "qed": "qed",
         "raw ": "raw ",
         "vdi": "vdi",
-        "vhd": "vpc ",
+        "vhd": "vpc",
         "vmdk": "vmdk",
         "vdi.vtoy": "vdi",
-        "vhd.vtoy": "vpc ",
+        "vhd.vtoy": "vpc",
     }
-    format = formats[image.split(".")[-1]]
+    format = [e for k, e in formats.items() if image.endswith(k)][0]
     drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 
 port_ssh = 9922
@@ -48,6 +48,7 @@ fat_folder = []
 
 archs = {
     "64bit": "x86_64",
+    "aarch": "TODO",
 }
 arch = archs[architecture()[0]]
 # TODO detect on mac m1
@@ -58,7 +59,7 @@ if os_family == "linux":
     bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
 elif os_family == "windows":
     accel = ["--accel", "whpx"]
-    bios = []
+    bios = ["./OVMF.fd"]
 elif os_family == "darwin":
     raise NotImplementedError
 else:
