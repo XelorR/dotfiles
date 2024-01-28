@@ -53,6 +53,8 @@ archs = {
 arch = archs[architecture()[0]]
 # TODO detect on mac m1
 
+# TODO detect USB devices if -u arg, list and ask to select
+
 os_family = system().lower()
 if os_family == "linux":
     accel = ["-enable-kvm"]
