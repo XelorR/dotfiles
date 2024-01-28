@@ -110,6 +110,8 @@ window_rules:
   - command: "set floating"
     match_process_name: "/Taskmgr|ScreenClippingHost/"
   - command: "set floating"
+    match_process_name: "alacritty"
+  - command: "resize borders 0px -7px -7px -7px"
     match_class_name: "#32770" # File Explorer save/open dialog
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
