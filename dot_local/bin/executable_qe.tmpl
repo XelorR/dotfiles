@@ -41,7 +41,9 @@ else:
     format = formats[image.split(".")[-1]]
     drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 
-port_fwd = ["-nic", "hostfwd=tcp:127.0.0.1:9922-0.0.0.0:22,hostfwd=tcp:127.0.0.1:9980-0.0.0.0:80"]
+port_ssh = 9922
+port_http = 9980
+port_fwd = ["-nic", f"hostfwd=tcp:127.0.0.1:{port_ssh}-0.0.0.0:22,hostfwd=tcp:127.0.0.1:{port_http}-0.0.0.0:80"]
 fat_folder = []
 
 archs = {
