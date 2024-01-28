@@ -80,6 +80,6 @@ else:
 command = [f"qemu-system-{arch}"] + accel + resources + bios + fat_folder + drive + port_fwd + other_params
 
 if "-n" in argv:
-    print(" ".join(command))
+    print(" ".join([c for c in command if c != "-n"]))
 else:
     run(command)
