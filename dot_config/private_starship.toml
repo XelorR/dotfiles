@@ -77,7 +77,7 @@ symbols.SUSE = ""
 symbols.Solus = ""
 symbols.Ubuntu = ""
 symbols.Unknown = ""
-symbols.Windows = ""
+symbols.Windows = "󰨡"
 symbols.openEuler = "󱄛"
 symbols.openSUSE = ""
 
