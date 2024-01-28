@@ -2,7 +2,7 @@
 
 # crossos alias for qemu
 
-import re
+import re, os
 from platform import architecture, system
 from subprocess import run
 from sys import argv
@@ -56,10 +56,20 @@ arch = archs[architecture()[0]]
 os_family = system().lower()
 if os_family == "linux":
     accel = ["-enable-kvm"]
-    bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
+    if os.path.isfile("/usr/share/ovmf/OVMF.fd"):
+        bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
+    elif os.path.isfile("/usr/share/ovmf/x64/OVMF.fd"):
+        bios = ["-bios", "/usr/share/ovmf/x64/OVMF.fd"]
+    elif os.path.isfile("./OVMF.fd"):
+        bios = ["-bios", "./OVMF.fd"]
+    else:
+        bios = []
 elif os_family == "windows":
     accel = ["--accel", "whpx"]
-    bios = ["./OVMF.fd"]
+    if os.path.isfile("./OVMF.fd"):
+        bios = ["-bios", "./OVMF.fd"]
+    else:
+        bios = []
 elif os_family == "darwin":
     raise NotImplementedError
 else:
