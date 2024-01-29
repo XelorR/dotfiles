@@ -17,6 +17,7 @@ EOF
 {{ else if eq .chezmoi.os "linux" -}}
 
 {{ if eq .chezmoi.osRelease.id "fedora" -}}
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
 flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 
