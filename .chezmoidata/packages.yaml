@@ -198,8 +198,10 @@ packages:
     - aria2
     - git
   dnf:
+    - ImageMagick
     - alacritty
     - aria2
+    - arianna
     - bat
     - bismuth
     - borgbackup
@@ -215,12 +217,14 @@ packages:
     - git
     - jq
     - keepassxc
+    - libheif
     - luajit
     - make
     - mosh
     - ncdu
     - neovim
     - npm
+    - obs-studio
     - openssh
     - p7zip
     - python-pip
