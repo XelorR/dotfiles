@@ -29,7 +29,7 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
-zstyle ':prezto:load' pmodule {{ if eq .chezmoi.os "darwin" }}'osx' 'homebrew' 'gnu-utility'{{else if eq .chezmoi.os "android" }}{{ else if eq .chezmoi.osRelease.idLike "arch" }}'pacman'{{ else if eq .chezmoi.osRelease.idLike "debian" }}'dpkg'{{ end }}\
+zstyle ':prezto:load' pmodule {{ if eq .chezmoi.os "darwin" }}'osx' 'homebrew' 'gnu-utility'{{ else if eq .chezmoi.osRelease.id "fedora" }}'dnf'{{else if eq .chezmoi.os "android" }}{{ else if eq .chezmoi.osRelease.idLike "arch" }}'pacman'{{ else if eq .chezmoi.osRelease.idLike "debian" }}'dpkg'{{ end }}\
   'archive' \
   'command-not-found' \
   'syntax-highlighting' \

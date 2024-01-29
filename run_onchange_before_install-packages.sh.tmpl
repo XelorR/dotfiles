@@ -12,11 +12,13 @@ brew {{ . | quote }}
 cask {{ . | quote }}
 {{ end -}}
 EOF
-{{ end -}}
 
 # LINUX ------------------------------
-{{ if eq .chezmoi.os "linux" -}}
-{{ if eq .chezmoi.osRelease.idLike "debian" -}}
+{{ else if eq .chezmoi.os "linux" -}}
+
+{{ if eq .chezmoi.osRelease.id "fedora" -}}
+
+{{ else if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
 
 {{ range .packages.snaps -}}sudo snap install {{ . }} ;
@@ -26,9 +28,8 @@ sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ en
 {{ end -}}
 
 flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
-{{ end -}}
 
-{{ if eq .chezmoi.osRelease.idLike "arch" -}}
+{{ else if eq .chezmoi.osRelease.idLike "arch" -}}
 sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
 yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
