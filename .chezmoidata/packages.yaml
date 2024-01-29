@@ -188,6 +188,7 @@ packages:
     - pycharm-community
   flatpaks:
     - com.logseq.Logseq
+    - com.microsoft.Edge
     - com.visualstudio.code
     - im.riot.Riot
     - net.minetest.Minetest
@@ -223,6 +224,7 @@ packages:
     - p7zip
     - python-pip
     - qalculate-qt
+    - qbittorrent
     - qemu-kvm
     - ripgrep
     - syncthing
