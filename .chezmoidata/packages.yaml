@@ -190,6 +190,7 @@ packages:
     - com.logseq.Logseq
     - com.microsoft.Edge
     - com.visualstudio.code
+    - com.vivaldi.Vivaldi
     - im.riot.Riot
     - net.minetest.Minetest
     - org.telegram.desktop
