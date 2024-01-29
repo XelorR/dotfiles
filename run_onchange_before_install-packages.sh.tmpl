@@ -17,6 +17,8 @@ EOF
 {{ else if eq .chezmoi.os "linux" -}}
 
 {{ if eq .chezmoi.osRelease.id "fedora" -}}
+sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 
 {{ else if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;

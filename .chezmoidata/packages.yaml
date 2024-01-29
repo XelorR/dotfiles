@@ -187,10 +187,51 @@ packages:
     - nvim
     - pycharm-community
   flatpaks:
+    - com.logseq.Logseq
+    - com.visualstudio.code
+    - im.riot.Riot
     - net.minetest.Minetest
+    - org.telegram.desktop
   scoops:
     - aria2
     - git
+  dnf:
+    - alacritty
+    - aria2
+    - bat
+    - bismuth
+    - borgbackup
+    - cmake
+    - curl
+    - doublecmd-qt
+    - emacs
+    - eza
+    - fd-find
+    - fish
+    - fzf
+    - gcc
+    - git
+    - jq
+    - keepassxc
+    - luajit
+    - make
+    - mosh
+    - ncdu
+    - neovim
+    - npm
+    - openssh
+    - p7zip
+    - python-pip
+    - qalculate-qt
+    - qemu-kvm
+    - ripgrep
+    - syncthing
+    - tmux
+    - vlc
+    - w3m
+    - wget
+    - xclip
+    - zsh
   termux:
     - aria2
     - bat
