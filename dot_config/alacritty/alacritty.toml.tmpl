@@ -8,7 +8,7 @@ TERM = "xterm-256color"
 program = {{ lookPath "fish" | quote }}
 
 [font]
-size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11.5{{ end }}
+size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}13{{ end }}
 
 [font.normal]
 family = "MesloLGS Nerd Font Mono"
@@ -115,5 +115,5 @@ key = "Minus"
 mods = "Command"
 
 [window]
-decorations = {{ if eq .chezmoi.os "darwin" }}"buttonless"{{ else }}"none"{{ end }}
+decorations = {{ if eq .chezmoi.os "darwin" }}"buttonless"{{ else if eq .chezmoi.os "linux" }}"full"{{ else }}"none"{{ end }}
 {{ if eq .chezmoi.os "darwin" }}option_as_alt = "Both"{{ end }}
