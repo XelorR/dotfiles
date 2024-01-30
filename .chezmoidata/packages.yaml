@@ -233,6 +233,7 @@ packages:
     - qemu-kvm
     - ripgrep
     - syncthing
+    - tmate
     - tmux
     - vlc
     - w3m
