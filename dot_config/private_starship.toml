@@ -27,6 +27,10 @@ format = "[took](subtext0) [$duration]($style) "
 [username]
 format = "[$user]($style) [in](subtext0) "
 
+[python]
+symbol = " "
+format = '[via](subtext0) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
 [shell]
 disabled = false
 style = "teal"
