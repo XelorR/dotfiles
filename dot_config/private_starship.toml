@@ -31,6 +31,10 @@ format = "[$user]($style) [in](subtext0) "
 symbol = " "
 format = '[via](subtext0) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
+[rust]
+symbol = " "
+format = '[via](subtext0) [$symbol($version )]($style)'
+
 [shell]
 disabled = false
 style = "teal"
