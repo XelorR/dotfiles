@@ -19,4 +19,8 @@ if vim.g.neovide then
 {{ else }}
     vim.o.guifont = "MesloLGS Nerd Font Mono:h11.5"
 {{ end }}
+    vim.keymap.set("n", "M-+", "<cmd>ZoomIn<cr>", { silent = true })
+    vim.keymap.set("n", "M--", "<cmd>ZoomOut<cr>", { silent = true })
+    vim.keymap.set("n", "c-+", "<cmd>ZoomIn<cr>", { silent = true })
+    vim.keymap.set("n", "c--", "<cmd>ZoomOut<cr>", { silent = true })
 end
