@@ -5,7 +5,7 @@
 TERM = "xterm-256color"
 
 [shell]
-program = {{ lookPath "fish" | quote }}
+program = {{ if eq .chezmoi.os "windows" }}{{ lookPath "powershell" | quote }}{{ else }}{{ lookPath "fish" | quote }}{{ end }}
 
 [font]
 size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}13{{ end }}
