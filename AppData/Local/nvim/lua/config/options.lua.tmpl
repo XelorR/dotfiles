@@ -16,6 +16,8 @@ vim.cmd("language en_US.UTF-8")
 if vim.g.neovide then
 {{ if eq .chezmoi.os "darwin" }}
     vim.o.guifont = "MesloLGS Nerd Font Mono:h14"
+{{ else if eq .chezmoi.hostname "x270" }}
+    vim.o.guifont = "MesloLGS Nerd Font Mono:h8"
 {{ else }}
     vim.o.guifont = "MesloLGS Nerd Font Mono:h11.5"
 {{ end }}
