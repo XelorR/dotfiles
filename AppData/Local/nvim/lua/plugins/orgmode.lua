@@ -24,7 +24,7 @@ return {
         org_default_notes_file = "~/org/pages/refile.org",
         org_hide_leading_stars = true,
         org_blank_before_new_entry = { heading = false, plain_list_item = false },
-        org_indent_mode = "noindent",
+        org_startup_indented = false,
         org_edit_src_content_indentation = 2,
         win_split_mode = "auto",
         org_highlight_latex_and_related = "entities",
