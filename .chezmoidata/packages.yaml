@@ -187,6 +187,8 @@ packages:
     - nvim
     - pycharm-community
   flatpaks:
+    - chat.delta.desktop
+    - com.github.tchx84.Flatseal
     - com.logseq.Logseq
     - com.microsoft.Edge
     - com.visualstudio.code
