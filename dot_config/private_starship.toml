@@ -38,9 +38,9 @@ format = '[via](subtext0) [$symbol($version )]($style)'
 [shell]
 disabled = false
 style = "teal"
-bash_indicator = ""
+bash_indicator = ""
 zsh_indicator = ""
-fish_indicator = ""
+fish_indicator = ""
 cmd_indicator = ""
 powershell_indicator = ""
 
