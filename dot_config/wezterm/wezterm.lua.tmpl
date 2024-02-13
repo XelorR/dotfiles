@@ -15,6 +15,9 @@ config.font_dirs = { ".fonts", "Library/Fonts" }
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = {{ if eq .chezmoi.os "darwin" }}14{{ else if eq .chezmoi.hostname "x270" }}8{{ else }}11.5{{ end }}
 
+-- disabling confirmation on exit
+config.window_close_confirmation = "NeverPrompt"
+
 -- key binding
 config.keys = {
 	{
@@ -40,7 +43,12 @@ config.keys = {
 	{
 		key = "w",
 		mods = "ALT",
-		action = wezterm.action.CloseCurrentTab{confirm=true},
+		action = wezterm.action.CloseCurrentTab{confirm=false},
+	},
+	{
+		key = "q",
+		mods = "ALT",
+		action = wezterm.action.CloseCurrentPane{confirm=false},
 	},
 	{
 		key = "=",
