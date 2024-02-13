@@ -11,4 +11,43 @@ config.font_dirs = { ".fonts", "Library/Fonts" }
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = {{ if eq .chezmoi.os "darwin" }}14{{ else if eq .chezmoi.hostname "x270" }}8{{ else }}11.5{{ end }}
 
+-- key binding
+config.keys = {
+	{
+		key = "c",
+		mods = "ALT",
+		action = wezterm.action.CopyTo("Clipboard"),
+	},
+	{
+		key = "v",
+		mods = "ALT",
+		action = wezterm.action.PasteFrom("Clipboard"),
+	},
+	{
+		key = "n",
+		mods = "ALT",
+		action = wezterm.action.SpawnWindow,
+	},
+	{
+		key = "t",
+		mods = "ALT",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		key = "w",
+		mods = "ALT",
+		action = wezterm.action.CloseCurrentTab{confirm=true},
+	},
+	{
+		key = "=",
+		mods = "ALT",
+		action = wezterm.action.IncreaseFontSize,
+	},
+	{
+		key = "-",
+		mods = "ALT",
+		action = wezterm.action.DecreaseFontSize,
+	},
+}
+
 return config
