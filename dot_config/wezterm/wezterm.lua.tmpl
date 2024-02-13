@@ -1,6 +1,10 @@
 local wezterm = require("wezterm")
 local config = {}
 
+{{ if eq .chezmoi.os "windows" }}
+config.default_prog = { "powershell" }
+{{ end }}
+
 -- basic decorations and theme
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
