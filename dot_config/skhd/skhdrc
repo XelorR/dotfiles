@@ -20,7 +20,8 @@
 
 # LAUNCHERS AND SWITCHES
 
-ctrl + alt - t : open -n /Applications/Alacritty.app
+ctrl + alt - t : open -n /Applications/WezTerm.app
+#ctrl + alt - t : open -n /Applications/Alacritty.app
 #ctrl + alt - t : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 ctrl + alt - e : emacsclient -c -n -a '' & sleep 0.5 && yabai -m window --focus $(yabai -m query --windows | jq '[.[] | select ( .title | contains("Emacs") )][0].id')
 alt - e : open ~

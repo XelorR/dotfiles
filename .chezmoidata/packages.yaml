@@ -65,6 +65,7 @@ packages:
     - vmware-horizon-client
     - warp
     - webex-meetings
+    - wezterm
     - xmind
   pacmans:
     - aria2
