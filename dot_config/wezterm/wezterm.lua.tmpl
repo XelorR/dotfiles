@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 
 {{ if eq .chezmoi.os "windows" }}
-config.default_prog = { "{{ lookPath "powershell" }}" }
+config.default_prog = { '{{ lookPath "powershell" }}' }
 {{ end }}
 
 -- basic decorations and theme
