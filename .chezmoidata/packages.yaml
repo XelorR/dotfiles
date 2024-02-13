@@ -197,6 +197,7 @@ packages:
     - im.riot.Riot
     - net.minetest.Minetest
     - org.telegram.desktop
+    - org.wezfurlong.wezterm
   scoops:
     - aria2
     - git
