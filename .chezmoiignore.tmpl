@@ -22,28 +22,23 @@ spacemacsrc
 powerlevel10k.zsh
 
 {{ if ne .chezmoi.os "linux" }}
+scripts/linux/**
+scripts/anaconda-install.sh
+
 .config/rofi/**
 .config/hypr/**
 .config/i3/**
 .config/xremap/**
 .config/systemd/**
 .local/share/konsole/**
-
-scripts/linux/xremap-copy-systemd-rule.sh
-scripts/linux/X11-switch-layout-binding.sh
-scripts/linux/gnome-assign-shortcuts.sh
-scripts/anaconda-install.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
+scripts/macos/**
+
 .config/yabai/**
 .config/skhd/**
 .config/spacebar/**
-
-scripts/macos/00-install-homebrew.sh
-scripts/macos/macos-enable-tiling.sh
-scripts/macos/macos-remove-chezmoi-binary.sh
-scripts/macos/macos-instantly-show-dock-on-mouse-hover.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "android" }}
@@ -52,11 +47,11 @@ scripts/macos/macos-instantly-show-dock-on-mouse-hover.sh
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
+scripts/windows/**
+
 .glaze-wm/**
 AppData/Local/Microsoft/WindowsApps/**
 ahk
-
-scripts/windows/00-install-scoop.ps1
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
