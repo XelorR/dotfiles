@@ -1,3 +1,10 @@
+# NEOVIM ------------------------------
+{{ if eq .chezmoi.os "linux" }}
+[opt/nvim.appimage]
+    type = "file"
+    url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+    executable = true
+{{ end }}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
     type = "git-repo"
