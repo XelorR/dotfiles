@@ -4,6 +4,9 @@
     type = "file"
     url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
     executable = true
+["opt/lf"]
+    type = "archive"
+    url = "https://github.com/gokcehan/lf/releases/latest/download/lt-linux-amd64.tar.gz"
 {{ end }}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
