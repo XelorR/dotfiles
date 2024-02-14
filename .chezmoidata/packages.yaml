@@ -77,7 +77,6 @@ packages:
     - doublecmd-qt5
     - edk2-ovmf
     - element-desktop
-    - exa
     - fd
     - ffmpeg
     - fish
@@ -134,7 +133,6 @@ packages:
     - cargo
     - cmake
     - curl
-    - exa
     - fd-find
     - ffmpeg
     - flameshot
@@ -205,7 +203,6 @@ packages:
     - borgbackup
     - cmake
     - doublecmd-qt
-    - eza
     - fd-find
     - fish
     - fzf
