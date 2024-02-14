@@ -7,9 +7,9 @@
 ["opt/lf"]
     type = "archive"
     url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
-["opt/eza"]
-    type = "archive"
-    url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
+#["opt/eza"]
+#    type = "archive"
+#    url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
 {{ end -}}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
@@ -41,7 +41,8 @@
 {{ if eq .chezmoi.os "darwin" -}}
 ["Library/Fonts/meslo"]
 {{ else -}}
-[".fonts/meslo"]{{ end }}
+[".fonts/meslo"]
+{{ end -}}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
 # PROMPT ------------------------------
