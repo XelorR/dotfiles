@@ -208,9 +208,6 @@ packages:
     - org.telegram.desktop
     - org.videolan.VLC
     - org.wezfurlong.wezterm
-  scoops:
-    - aria2
-    - git
   dnf:
     - aria2
     - bat
@@ -290,3 +287,6 @@ packages:
   pip:
   sudo_pip:
     - autotiling
+  scoops:
+    - aria2
+    - git
