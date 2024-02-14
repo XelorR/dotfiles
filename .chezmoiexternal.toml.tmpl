@@ -1,4 +1,4 @@
-# NEOVIM ------------------------------
+# BINARIES ------------------------------
 {{ if eq .chezmoi.os "linux" }}
 ["opt/nvim.appimage"]
     type = "file"
@@ -7,6 +7,9 @@
 ["opt/lf"]
     type = "archive"
     url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
+["opt/eza"]
+    type = "archive"
+    url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
 {{ end }}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
