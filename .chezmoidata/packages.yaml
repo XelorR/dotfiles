@@ -189,30 +189,36 @@ packages:
     - pycharm-community
   flatpaks:
     - chat.delta.desktop
+    - com.borgbase.Vorta
     - com.github.tchx84.Flatseal
     - com.logseq.Logseq
     - com.microsoft.Edge
+    - com.obsproject.Studio
     - com.visualstudio.code
     - com.vivaldi.Vivaldi
     - im.riot.Riot
+    - io.github.Qalculate.qalculate-qt
     - net.minetest.Minetest
+    - org.gnome.Boxes
+    - org.gnu.emacs
+    - org.kde.arianna
+    - org.keepassxc.KeePassXC
+    - org.libreoffice.LibreOffice
+    - org.qbittorrent.qBittorrent
     - org.telegram.desktop
+    - org.videolan.VLC
     - org.wezfurlong.wezterm
   scoops:
     - aria2
     - git
   dnf:
-    - ImageMagick
-    - alacritty
     - aria2
-    - arianna
     - bat
     - bismuth
     - borgbackup
     - cmake
     - curl
     - doublecmd-qt
-    - emacs
     - eza
     - fd-find
     - fish
@@ -220,7 +226,6 @@ packages:
     - gcc
     - git
     - jq
-    - keepassxc
     - libheif
     - luajit
     - make
@@ -228,18 +233,13 @@ packages:
     - ncdu
     - neovim
     - npm
-    - obs-studio
     - openssh
     - p7zip
     - python-pip
-    - qalculate-qt
-    - qbittorrent
-    - qemu-kvm
     - ripgrep
     - syncthing
     - tmate
     - tmux
-    - vlc
     - w3m
     - wget
     - xclip
