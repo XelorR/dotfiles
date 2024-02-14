@@ -41,7 +41,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 ["Library/Fonts/meslo"]
 {{ else -}}
-[".fonts/meslo"]{{ end -}}
+[".fonts/meslo"]{{ end }}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
 # PROMPT ------------------------------
@@ -55,11 +55,11 @@
     exclude = ["*/runcoms/zpreztorc"]
 [".zprezto/modules/autosuggestions/external"]
     type = "archive"
-  	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+    url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
     stripComponents = 1
 [".zprezto/modules/history-substring-search/external"]
     type = "archive"
-  	url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
+    url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
     stripComponents = 1
 [".zprezto/modules/syntax-highlighting/external"]
     type = "archive"
@@ -114,7 +114,7 @@
     stripComponents = 1
 [".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
     type = "archive"
-  	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+    url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
     stripComponents = 1
 {{ end -}}
 # oh-my-bash
