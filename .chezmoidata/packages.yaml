@@ -101,7 +101,6 @@ packages:
     - minetest
     - mosh
     - ncdu
-    - neovim
     - netcat
     - npm
     - p7zip
@@ -185,7 +184,6 @@ packages:
   snaps_classic:
     - code
     - emacs
-    - nvim
     - pycharm-community
   flatpaks:
     - chat.delta.desktop
@@ -226,7 +224,6 @@ packages:
     - make
     - mosh
     - ncdu
-    - neovim
     - npm
     - python-pip
     - ripgrep
