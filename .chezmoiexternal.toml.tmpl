@@ -1,5 +1,5 @@
 # BINARIES ------------------------------
-{{ if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "linux" -}}
 ["opt/nvim.appimage"]
     type = "file"
     url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
@@ -10,14 +10,14 @@
 ["opt/eza"]
     type = "archive"
     url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
-{{ end }}
+{{ end -}}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
     type = "git-repo"
     url = "https://github.com/syl20bnr/spacemacs"
     clone.args = ["--depth=3"]
 # TMUX ------------------------------
-{{ if ne .chezmoi.os "windows" }}
+{{ if ne .chezmoi.os "windows" -}}
 # plugin manager
 [".config/tmux/plugins/tpm"]
     type = "archive"
@@ -36,21 +36,18 @@
     url = "https://github.com/christoomey/vim-tmux-navigator/archive/master.tar.gz"
     exact = true
     stripComponents = 1
-{{ end }}
+{{ end -}}
 # FONTS ------------------------------
-{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/meslo"]{{ else }}[".fonts/meslo"]{{ end }}
+{{ if eq .chezmoi.os "darwin" -}}
+["Library/Fonts/meslo"]
+{{ else -}}
+[".fonts/meslo"]{{ end -}}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
-#{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/jetbrains"]{{ else }}[".fonts/jetbrains"]{{ end }}
-#    type = "archive"
-#    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
-#{{ if eq .chezmoi.os "darwin" }}["Library/Fonts/iawriter"]{{ else }}[".fonts/iawriter"]{{ end }}
-#    type = "archive"
-#    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/iA-Writer.tar.xz"
 # PROMPT ------------------------------
-{{ if ne .chezmoi.os "windows" }}
+{{ if ne .chezmoi.os "windows" -}}
 # prezto
-{{ if ne .chezmoi.os "android" }}
+{{ if ne .chezmoi.os "android" -}}
 [".zprezto"]
     type = "archive"
     url = "https://github.com/sorin-ionescu/prezto/archive/master.tar.gz"
@@ -96,7 +93,7 @@
     type = "archive"
 	  url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
 	  stripComponents = 1
-{{ else }}
+{{ else -}}
 # oh-my-zsh
 [".oh-my-zsh"]
     type = "archive"
@@ -119,16 +116,7 @@
     type = "archive"
   	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
     stripComponents = 1
-{{ end }}
-# fish
-#[".config/fish"]
-#    type = "archive"
-#    url = "https://github.com/ilancosman/tide/archive/master.tar.gz"
-#    stripComponents = 1
-#    include = ["*/completions/**", "*/conf.d/**", "*/functions/**"]
-#[".config/fish/themes/Catppuccin Mocha.theme"]
-#    type = "file"
-#    url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Mocha.theme"
+{{ end -}}
 # oh-my-bash
 [".oh-my-bash"]
     type = "archive"
