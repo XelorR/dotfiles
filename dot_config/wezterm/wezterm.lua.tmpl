@@ -1,14 +1,16 @@
 local wezterm = require("wezterm")
 local config = {}
 
-{{ if eq .chezmoi.os "windows" }}
+{{ if eq .chezmoi.os "windows" -}}
 config.default_prog = { "powershell" }
 {{ end }}
 
 -- basic decorations and theme
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
+{{ if ne .chezmoi.os "windows" -}}
 config.hide_tab_bar_if_only_one_tab = true
+{{ end }}
 
 -- font
 config.font_dirs = { ".fonts", "Library/Fonts" }
