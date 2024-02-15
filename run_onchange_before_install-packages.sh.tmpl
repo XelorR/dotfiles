@@ -1,7 +1,7 @@
 #!{{ lookPath "sh" }}
 
-# MACOS ------------------------------
 {{ if eq .chezmoi.os "darwin" -}}
+# MACOS ------------------------------
 export HOMEBREW_INSTALL_FROM_API=1
 alias brew=/opt/homebrew/bin/brew
 brew bundle --no-lock --file=/dev/stdin <<EOF
@@ -13,8 +13,8 @@ cask {{ . | quote }}
 {{ end -}}
 EOF
 
-# LINUX ------------------------------
 {{ else if eq .chezmoi.os "linux" }}
+# LINUX ------------------------------
 
 {{ if eq .chezmoi.osRelease.id "fedora" }}
 {{ if eq .chezmoi.osRelease.variantID "kinoite" -}}
@@ -35,11 +35,7 @@ flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/fl
 flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 {{ end }}
 
-# TERMUX ------------------------------
 {{ if eq .chezmoi.os "android" -}}
+# TERMUX ------------------------------
 pkg install {{ range .packages.termux -}} {{ . }} {{ end -}} ;
 {{ end -}}
-
-# sudo python3 -m pip install {{ range .packages.sudo_pip -}} {{ . }} {{ end -}} ;
-# python3 -m pip install --user --update {{ range .packages.pip -}} {{ . }} {{ end -}} ;
-# cargo install {{ range .packages.cargo -}} {{ . }} {{ end -}} ;
