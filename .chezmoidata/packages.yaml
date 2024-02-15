@@ -207,7 +207,6 @@ packages:
     - fish
     - fzf
     - gcc
-    - libheif
     - luajit
     - make
     - mosh
