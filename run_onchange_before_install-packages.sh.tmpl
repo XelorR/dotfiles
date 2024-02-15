@@ -14,29 +14,26 @@ cask {{ . | quote }}
 EOF
 
 # LINUX ------------------------------
-{{ else if eq .chezmoi.os "linux" -}}
+{{ else if eq .chezmoi.os "linux" }}
 
-{{ if eq .chezmoi.osRelease.id "fedora" -}}
-flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+{{ if eq .chezmoi.osRelease.id "fedora" }}
+{{ if eq .chezmoi.osRelease.variantID "kinoite" -}}
+rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+{{ else }}
 sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
-flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
+{{ end }}
 
 {{ else if eq .chezmoi.osRelease.idLike "debian" -}}
 sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
-
-{{ range .packages.snaps -}}sudo snap install {{ . }} ;
-{{ end -}}
-
-{{ range .packages.snaps_classic -}}sudo snap install {{ . }} --classic ;
-{{ end -}}
-
-flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
 
 {{ else if eq .chezmoi.osRelease.idLike "arch" -}}
 sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
 yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
 {{ end -}}
-{{ end -}}
+
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
+{{ end }}
 
 # TERMUX ------------------------------
 {{ if eq .chezmoi.os "android" -}}
