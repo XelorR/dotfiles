@@ -187,7 +187,6 @@ packages:
     - im.riot.Riot
     - io.github.Qalculate.qalculate-qt
     - net.minetest.Minetest
-    - org.gnome.Boxes
     - org.gnu.emacs
     - org.kde.arianna
     - org.keepassxc.KeePassXC
@@ -213,6 +212,7 @@ packages:
     - ncdu
     - npm
     - python-pip
+    - qemu-kvm
     - ripgrep
     - syncthing
     - tmate
