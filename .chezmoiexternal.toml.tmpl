@@ -23,7 +23,6 @@
 ["opt/starship"]
     type = "archive"
     url = "https://github.com/starship/starship/releases/latest/download/starship-aarch64-apple-darwin.tar.gz"
-    stripComponents = 1
 {{ end -}}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
