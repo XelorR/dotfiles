@@ -11,6 +11,14 @@
     type = "archive"
     url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
     stripComponents = 1
+["opt/starship"]
+    type = "archive"
+    url = "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz"
+    stripComponents = 1
+["opt/Outline-Client.AppImage"]
+    type = "file"
+    url = "https://s3.amazonaws.com/outline-releases/client/linux/stable/Outline-Client.AppImage"
+    executable = true
 {{ end -}}
 # SPACEMACS ------------------------------
 {{ if eq .chezmoi.os "windows" }}["AppData/Roaming/.emacs.d"]{{ else }}[".emacs.d"]{{ end }}
