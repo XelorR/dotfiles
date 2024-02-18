@@ -59,6 +59,7 @@ ahk
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
+.local/bin/starship
 .p10k.zsh
 .zshrc
 .bashrc
@@ -81,6 +82,7 @@ scripts/configure-fish.fish
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
+.local/bin/starship
 .zprezto
 .zprezto/**
 .zlogin
