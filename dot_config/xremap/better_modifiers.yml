@@ -21,8 +21,8 @@ modmap:
       RIGHTALT:
         held: RIGHTALT
         alone: CAPSLOCK
-  - name: "ENTER as RIGHT SHIFT on hold --- sometimes I accidentaly hold it instead of RIGHT SHIFT"
+  - name: "ENTER as HYPER on hold"
     remap:
       ENTER:
-        held: RIGHTSHIFT
+        held: [CTRL_L, SUPER_L, ALT_L, SHIFT_L]
         alone: ENTER
