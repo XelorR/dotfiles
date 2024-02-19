@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+sudo /home/user/opt/xremap/xremap --watch /home/user/.config/xremap/config.yml
+
