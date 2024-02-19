@@ -19,6 +19,11 @@
     type = "file"
     url = "https://s3.amazonaws.com/outline-releases/client/linux/stable/Outline-Client.AppImage"
     executable = true
+{{ if eq .chezmoi.osRelease.id "fedora" -}}
+["opt/xremap"]
+    type = "archive"
+    url = "https://github.com/k0kubun/xremap/releases/latest/download/xremap-linux-x86_64-kde.zip"
+{{ end -}}
 {{ else if eq .chezmoi.os "darwin" -}}
 ["opt/starship"]
     type = "archive"
