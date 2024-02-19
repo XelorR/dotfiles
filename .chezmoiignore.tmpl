@@ -3,8 +3,6 @@ YABAI.md
 LICENSE
 etc
 scripts
-lib/
-lib/**
 .oh-my-zsh/cache
 .oh-my-zsh/cache/**
 AppData/Local/nvim/*.json
@@ -22,6 +20,9 @@ spacemacsrc
 powerlevel10k.zsh
 
 {{ if ne .chezmoi.os "linux" }}
+lib/
+lib/**
+
 .local/bin/exa
 .local/bin/lf
 .local/bin/nvim
