@@ -62,6 +62,8 @@ if os_family == "linux":
         bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
     elif os.path.isfile("/usr/share/ovmf/x64/OVMF.fd"):
         bios = ["-bios", "/usr/share/ovmf/x64/OVMF.fd"]
+    elif os.path.isfile("/usr/share/edk2/ovmf/OVMF_CODE.fd"):
+        bios = ["-bios", "/usr/share/edk2/ovmf/OVMF_CODE.fd"]
     elif os.path.isfile("./OVMF.fd"):
         bios = ["-bios", "./OVMF.fd"]
     else:
