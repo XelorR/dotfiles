@@ -90,7 +90,6 @@ packages:
     - imagemagick
     - keepassxc
     - kitty
-    - lazygit
     - lf
     - libheif
     - libreoffice-fresh
