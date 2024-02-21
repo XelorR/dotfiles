@@ -9,15 +9,26 @@ from sys import argv
 from multiprocessing import cpu_count
 from psutil import virtual_memory
 
+usage = """
+Usage: qe [image] (args) (other qemu params)
+
+Available options:
+-p enable port forwarding
+-u select USB device (TODO)
+-f FAT folder (TODO)
+-n dry run
+"""
+options = ["-p", "-u", "-f", "-n"]
+
 if len(argv) < 2:
-    print("Usage: qe image.ext (qemu additional args)\n\n", "You should pass an image!")
+    print(usage, "\nYou should pass an image!")
     exit()
 elif len(argv) == 2:
     image = argv[1]
     other_params = []
 else:
     image = argv[1]
-    other_params = argv[2:]
+    other_params = [o for o in argv[2:] if o not in options]
 
 mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
 cpus = int(cpu_count() * 0.4)
@@ -41,9 +52,15 @@ else:
     format = [e for k, e in formats.items() if image.endswith(k)][0]
     drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 
-port_ssh = 9922
-port_http = 9980
-port_fwd = ["-nic", f"hostfwd=tcp:127.0.0.1:{port_ssh}-0.0.0.0:22,hostfwd=tcp:127.0.0.1:{port_http}-0.0.0.0:80"]
+if "-p" in argv:
+    port_ssh = 9922
+    port_http = 9980
+    port_fwd = [
+        "-nic",
+        f"hostfwd=tcp:127.0.0.1:{port_ssh}-0.0.0.0:22,hostfwd=tcp:127.0.0.1:{port_http}-0.0.0.0:80",
+    ]
+else:
+    port_fwd = []
 fat_folder = []
 
 archs = {
@@ -79,9 +96,17 @@ elif os_family == "darwin":
 else:
     raise NotImplementedError
 
-command = [f"qemu-system-{arch}"] + accel + resources + bios + other_params + drive + port_fwd + fat_folder
+command = (
+    [f"qemu-system-{arch}"]
+    + accel
+    + resources
+    + bios
+    + other_params
+    + drive
+    + port_fwd
+    + fat_folder
+)
 
-if "-n" in argv:
-    print(" ".join([c for c in command if c != "-n"]))
-else:
+print(" ".join([c for c in command if c != "-n"]))
+if "-n" not in argv:
     run(command)
