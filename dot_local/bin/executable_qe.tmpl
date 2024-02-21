@@ -16,9 +16,10 @@ Available options:
 -p enable port forwarding
 -u select USB device (TODO)
 -f FAT folder (TODO)
+--no-efi run without OVMF
 -n dry run
 """
-options = ["-p", "-u", "-f", "-n"]
+options = ["-p", "-u", "-f", "--no-efi", "-n"]
 
 if len(argv) < 2:
     print(usage, "\nYou should pass an image!")
@@ -95,6 +96,8 @@ elif os_family == "darwin":
     raise NotImplementedError
 else:
     raise NotImplementedError
+if "--no-efi" in argv:
+    bios = []
 
 command = (
     [f"qemu-system-{arch}"]
