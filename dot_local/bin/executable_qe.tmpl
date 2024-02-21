@@ -107,6 +107,6 @@ command = (
     + fat_folder
 )
 
-print(" ".join([c for c in command if c != "-n"]))
+print(" ".join([c for c in command]))
 if "-n" not in argv:
     run(command)
