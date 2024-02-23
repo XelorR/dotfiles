@@ -31,11 +31,18 @@ else:
     image = argv[1]
     other_params = [o for o in argv[2:] if o not in options]
 
-mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
-cpus = int(cpu_count() * 0.4)
-mem = 4 if mem > 4 else mem
-cpus = 2 if cpus > 2 else cpus
-resources = ["-smp", f"{cpus}", "-m", f"{mem}G"]
+if "-m" not in argv:
+    mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
+    mem = 4 if mem > 4 else mem
+    mem_amount = ["-m", f"{mem}G"]
+else:
+    mem_amount = []
+if "-smp" not in argv:
+    cpus = int(cpu_count() * 0.4)
+    cpus = 2 if cpus > 2 else cpus
+    cpu_count = ["-smp", f"{cpus}"]
+else:
+    cpu_count = []
 
 if image.endswith(".iso"):
     drive = ["-cdrom", image, "-boot", "d"]
@@ -102,7 +109,8 @@ if "--no-efi" in argv:
 command = (
     [f"qemu-system-{arch}"]
     + accel
-    + resources
+    + cpu_count
+    + mem_amount
     + bios
     + other_params
     + drive
