@@ -188,8 +188,10 @@ packages:
     - net.minetest.Minetest
     - org.gnu.emacs
     - org.kde.arianna
+    - org.kde.okular
     - org.keepassxc.KeePassXC
     - org.libreoffice.LibreOffice
+    - org.mozilla.Thunderbird
     - org.qbittorrent.qBittorrent
     - org.telegram.desktop
     - org.videolan.VLC
