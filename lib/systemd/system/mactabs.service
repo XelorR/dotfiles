@@ -1,8 +1,0 @@
-[Unit]
-Description=MacOS-like tabs
-
-[Service]
-ExecStart=xremap --watch /home/user/.config/xremap/mac-like_tabs.yml
-
-[Install]
-WantedBy=multi-user.target

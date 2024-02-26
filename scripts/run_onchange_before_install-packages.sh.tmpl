@@ -5,10 +5,10 @@
 export HOMEBREW_INSTALL_FROM_API=1
 alias brew=/opt/homebrew/bin/brew
 brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range .packages.brews -}}
+{{ range .packages.brew -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ range .packages.casks -}}
+{{ range .packages.cask -}}
 cask {{ . | quote }}
 {{ end -}}
 EOF
@@ -16,6 +16,7 @@ EOF
 {{ else if eq .chezmoi.os "linux" }}
 # LINUX ------------------------------
 
+# Fedora
 {{ if eq .chezmoi.osRelease.id "fedora" }}
 {{ if eq .chezmoi.osRelease.variantID "kinoite" -}}
 rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
@@ -23,16 +24,14 @@ rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end -}}
 sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
 {{ end }}
 
-{{ else if eq .chezmoi.osRelease.idLike "debian" -}}
-sudo apt update && sudo apt install -y {{ range .packages.apts -}} {{ . }} {{ end -}} ;
+# OpenSuse
+{{ else if eq .chezmoi.osRelease.id "opensuse-tumbleweed" }}
+sudo zypper install --no-confirm {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+{{ end }}
 
-{{ else if eq .chezmoi.osRelease.idLike "arch" -}}
-sudo pacman -Sy --noconfirm --needed {{ range .packages.pacmans -}} {{ . }} {{ end -}} ;
-yay -Sy --noconfirm --needed {{ range .packages.aur -}} {{ . }} {{ end -}} ;
-{{ end -}}
-
+# All Linuxes
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y {{ range .packages.flatpaks -}} {{ . }} {{ end -}} ;
+flatpak install -y {{ range .packages.flatpak -}} {{ . }} {{ end -}} ;
 {{ end }}
 
 {{ if eq .chezmoi.os "android" -}}

@@ -1,8 +1,0 @@
-[Unit]
-Description=CapsLock to act as Esc and Ctrl
-
-[Service]
-ExecStart=xremap --watch /home/user/.config/xremap/caps_ctrl-esc.yml
-
-[Install]
-WantedBy=multi-user.target

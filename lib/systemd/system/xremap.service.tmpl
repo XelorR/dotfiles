@@ -1,9 +1,0 @@
-[Unit]
-Description=Run user-defined xremap config
-
-[Service]
-ExecStart={{ .chezmoi.homeDir }}/opt/xremap/xremap --watch {{ .chezmoi.homeDir }}/.config/xremap/config.yml
-
-[Install]
-WantedBy=multi-user.target
-

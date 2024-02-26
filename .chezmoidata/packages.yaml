@@ -1,9 +1,8 @@
 packages:
-  brews:
+  brew:
     - aria2
     - bat
     - borgbackup
-    # - cmacrae/formulae/spacebar
     - chezmoi
     - cmake
     - coreutils
@@ -19,8 +18,6 @@ packages:
     - hugo
     - imagemagick
     - jq
-    - koekeishiya/formulae/skhd
-    - koekeishiya/formulae/yabai
     - lazygit
     - lf
     - luajit
@@ -41,8 +38,7 @@ packages:
     - tmux
     - w3m
     - wget
-  casks:
-    - alacritty
+  cask:
     - displaylink
     - drawio
     - element
@@ -54,141 +50,50 @@ packages:
     - obs
     - pycharm-ce
     - qbittorrent
+    - rectangle
     - telegram
-    - termius
     - via
     - vial
-    - vimr
     - visual-studio-code
-    - vivaldi
     - vlc
     - vmware-horizon-client
     - warp
     - webex-meetings
     - wezterm
-    - xmind
-  pacmans:
+  zypper:
     - aria2
-    - bash-language-server
     - bat
-    - borg
-    - code
-    - curl
-    - doublecmd-qt5
-    - edk2-ovmf
-    - element-desktop
-    - fd
-    - ffmpeg
-    - fish
-    - flameshot
-    - foliate
-    - fzf
-    - gawk
-    - git
-    - gnu-netcat
-    - hugo
-    - imagemagick
-    - keepassxc
-    - kitty
-    - lf
-    - libheif
-    - libreoffice-fresh
-    - luajit
-    - magic-wormhole
-    - minetest
-    - mosh
-    - ncdu
-    - netcat
-    - npm
-    - p7zip
-    - pycharm-community-edition
-    - qbittorrent
-    - qemu-desktop
-    - qt5-wayland
-    - qt6-wayland
-    - ripgrep
-    - rsync
-    - rustup
-    - sddm
-    - syncthing
-    - telegram-desktop
-    - thefuck
-    - tmate
-    - vivaldi
-    - vivaldi-ffmpeg-codecs
-    - vlc
-    - wget
-    - xclip
-    - yay
-    - zsh
-    - w3m
-  aur:
-    - etcher-bin
-    - logseq-desktop-bin
-  apts:
-    #- kwin-bismuth
-    - aria2
     - borgbackup
-    - cargo
-    - cmake
-    - curl
-    - fd-find
-    - ffmpeg
-    - flameshot
+    - chezmoi
+    - emacs
+    - eza
+    - fd
+    - fish
     - fzf
-    - gawk
     - gcc
     - git
-    - heif-gdk-pixbuf
-    - hugo
-    - i3
-    - imagemagick
-    - jq
-    - kitty
     - luajit
-    - magic-wormhole
     - make
-    - mosh
     - ncdu
-    - netcat
-    - nmap
-    - ovmf
-    - p7zip-full
-    - python3-llfuse
+    - neovim
+    - npm
+    - opi
     - ripgrep
-    - rofi
     - rsync
-    - ssh
+    - syncthing
     - tmate
     - tmux
-    - vlc
     - w3m
-    - xclip
-    - zsh
-  snaps:
-    - element-desktop
-    - foliate
-    - logseq
-    - multipass
-    - telegram-desktop
-  snaps_classic:
-    - code
-    - pycharm-community
-  flatpaks:
+  opi:
+    - codecs
+    - vscode
+  flatpak:
     - chat.delta.desktop
-    - com.borgbase.Vorta
     - com.github.tchx84.Flatseal
     - com.logseq.Logseq
-    - com.microsoft.Edge
-    - com.obsproject.Studio
-    - com.visualstudio.code
-    - com.vivaldi.Vivaldi
     - im.riot.Riot
-    - io.github.Qalculate.qalculate-qt
+    - io.github.Qalculate
     - net.minetest.Minetest
-    - org.gnu.emacs
-    - org.kde.arianna
-    - org.kde.okular
     - org.keepassxc.KeePassXC
     - org.libreoffice.LibreOffice
     - org.mozilla.Thunderbird
@@ -199,17 +104,15 @@ packages:
   dnf:
     - aria2
     - bat
-    - bismuth
     - borgbackup
     - cmake
-    - doublecmd-qt
+    - eza
     - fd-find
     - fish
     - fzf
     - gcc
     - luajit
     - make
-    - mosh
     - ncdu
     - npm
     - python-pip
@@ -228,7 +131,7 @@ packages:
     - cmake
     - curl
     - emacs
-    - exa
+    - eza
     - fd
     - ffmpeg
     - fish
@@ -261,12 +164,6 @@ packages:
     - tmux
     - w3m
     - wget
-    - zsh
-  cargo:
-    #- '--git https://github.com/chmln/i3-auto-layout'
-  pip:
-  sudo_pip:
-    - autotiling
   scoops:
     - aria2
     - git
