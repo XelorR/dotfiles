@@ -1,4 +1,0 @@
-#!{{ lookPath "sh" }}
-
-{{ if eq .chezmoi.os "linux" }}systemctl enable --now syncthing@user{{ else if eq .chezmoi.os "darwin" }}brew services start syncthing{{ end }}
-

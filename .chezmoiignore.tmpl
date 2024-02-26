@@ -1,50 +1,17 @@
 README.md
-YABAI.md
 LICENSE
-etc
-scripts
-.oh-my-zsh/cache
-.oh-my-zsh/cache/**
-AppData/Local/nvim/*.json
-fish_variables
-.config/fish/fish_variables
-.config/user-dirs.locale
-.config/private_user-dirs.dirs
-scripts/install-starship.sh
-.config/fish/fish_plugins_list
 
-bashrc
-fishrc
-tmuxrc
-spacemacsrc
-powerlevel10k.zsh
+.config/systemd/user-dirs.locale
+AppData/Local/nvim/*.json
+scripts/linux/gnome-assign-shortcuts.sh
 
 {{ if ne .chezmoi.os "linux" }}
-lib/
-lib/**
-
-.local/bin/exa
-.local/bin/lf
-.local/bin/nvim
-.local/bin/lazygit
-.local/bin/run_xremap
 scripts/linux/**
-scripts/anaconda-install.sh
-
-.config/rofi/**
-.config/hypr/**
-.config/i3/**
-.config/xremap/**
 .config/systemd/**
-.local/share/konsole/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
 scripts/macos/**
-
-.config/yabai/**
-.config/skhd/**
-.config/spacebar/**
 {{ end }}
 
 {{ if ne .chezmoi.os "android" }}
@@ -55,42 +22,16 @@ scripts/macos/**
 {{ if ne .chezmoi.os "windows" }}
 scripts/windows/**
 Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-
-.glaze-wm/**
 AppData/Local/Microsoft/WindowsApps/**
 ahk
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
-.local/bin/starship
-.p10k.zsh
-.zshrc
-.bashrc
-.spacemacs
-.zprezto/**
-.oh-my-zsh/**
-.zlogin
-.zlogout
-.zpreztorc
-.zprofile
-.zshenv
 .config/nvim/**
 .config/fish/**
 .config/tmux/**
-.config/kitty/**
-.config/alacritty/**
-install-packages.sh
-scripts/enable_syncthing.sh
-scripts/configure-fish.fish
-{{ end }}
-
-{{ if eq .chezmoi.os "android" }}
-.local/bin/starship
-.zprezto
-.zprezto/**
-.zlogin
-.zlogout
-.zpreztorc
-.zprofile
-.zshenv
+.config/xremap/**
+.config/systemd/**
+scripts/install-packages.sh
+scripts/install-fish-plugins.sh
 {{ end }}

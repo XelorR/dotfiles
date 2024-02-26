@@ -1,8 +1,0 @@
-[Unit]
-Description=Making ctrls, alts, caps, space and return double purpose keys, depending on hold/tap
-
-[Service]
-ExecStart=xremap --watch /home/user/.config/xremap/better_modifiers.yml
-
-[Install]
-WantedBy=multi-user.target
