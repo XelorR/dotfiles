@@ -9,10 +9,12 @@ scripts/linux/gnome-assign-shortcuts.sh
 scripts/linux/**
 .config/systemd/**
 .config/xremap/**
+.local/share/warp-terminal/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
 scripts/macos/**
+.warp/**
 {{ end }}
 
 {{ if ne .chezmoi.os "android" }}
