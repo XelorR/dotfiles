@@ -3,6 +3,8 @@ local config = {}
 
 {{ if eq .chezmoi.os "windows" -}}
 config.default_prog = { "pwsh" }
+{{ else if eq .chezmoi.os "darwin" -}}
+config.default_prog = { "/opt/homebrew/bin/fish" }
 {{ else -}}
 config.default_prog = { "fish" }
 {{ end }}
