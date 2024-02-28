@@ -4,7 +4,6 @@ if status is-interactive
     set PATH ~/.local/bin $PATH
     switch (uname -o)
         case Darwin
-            # MAC AND HOMEBREW SPECIFIC CONFIG ------------------------------
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
             set PATH /opt/homebrew/bin $PATH
             set HOMEBREW_INSTALL_FROM_API 1
