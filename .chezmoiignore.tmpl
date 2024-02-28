@@ -8,6 +8,7 @@ scripts/linux/gnome-assign-shortcuts.sh
 {{ if ne .chezmoi.os "linux" }}
 scripts/linux/**
 .config/systemd/**
+.config/xremap/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
@@ -30,8 +31,6 @@ ahk
 .config/nvim/**
 .config/fish/**
 .config/tmux/**
-.config/xremap/**
-.config/systemd/**
 scripts/install-packages.sh
 scripts/install-fish-plugins.sh
 {{ end }}
