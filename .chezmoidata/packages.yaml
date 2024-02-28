@@ -116,7 +116,6 @@ packages:
     - python-pip
     - qemu-kvm
     - ripgrep
-    - rsync
     - sushi
     - syncthing
     - tmate
