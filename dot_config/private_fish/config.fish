@@ -1,4 +1,16 @@
 if status is-interactive
+
+    # path
+    set PATH ~/.local/bin $PATH
+    switch (uname -o)
+        case Darwin
+            # MAC AND HOMEBREW SPECIFIC CONFIG ------------------------------
+            alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+            set PATH /opt/homebrew/bin $PATH
+            set HOMEBREW_INSTALL_FROM_API 1
+    end
+
+    # prompt
     set fish_greeting
 
     set --global hydro_prefix_beginning \n
