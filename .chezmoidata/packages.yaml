@@ -113,6 +113,7 @@ packages:
     - ncdu
     - neovim
     - npm
+    - p7zip
     - python-pip
     - qemu-kvm
     - ripgrep
