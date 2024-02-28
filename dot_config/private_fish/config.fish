@@ -18,5 +18,8 @@ if status is-interactive
 
     set --global hydro_color_prompt 94e2d5
     set --global hydro_color_error f38ba8
+    set --global hydro_color_pwd b4befe
+    set --global hydro_color_git f9e2af
+    set --global hydro_color_duration 94e2d5
     set --global hydro_multiline true
 end
