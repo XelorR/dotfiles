@@ -18,7 +18,8 @@ EOF
 
 # Fedora
 {{ if eq .chezmoi.osRelease.id "fedora" }}
-{{ if eq .chezmoi.osRelease.variantID "kinoite" -}}
+{{ if eq .chezmoi.osRelease.variantID "kinoite" "silverblue" -}}
+# rpm-ostree cancel
 rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
 {{ else }}
 sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;

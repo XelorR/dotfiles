@@ -87,7 +87,6 @@ packages:
     - w3m
   opi:
     - codecs
-    - vscode
   flatpak:
     - chat.delta.desktop
     - com.github.tchx84.Flatseal
@@ -101,30 +100,33 @@ packages:
     - org.qbittorrent.qBittorrent
     - org.telegram.desktop
     - org.videolan.VLC
+    - com.visualstudio.code
     - org.wezfurlong.wezterm
   dnf:
     - aria2
     - bat
     - borgbackup
-    - cmake
+    - emacs
     - eza
     - fd-find
     - fish
     - fzf
     - gcc
+    - gnome-tweaks
     - luajit
     - make
     - ncdu
+    - neovim
     - npm
     - python-pip
     - qemu-kvm
     - ripgrep
+    - rsync
+    - sushi
     - syncthing
     - tmate
     - tmux
     - w3m
-    - xclip
-    - zsh
   termux:
     - aria2
     - bat
@@ -165,6 +167,6 @@ packages:
     - tmux
     - w3m
     - wget
-  scoops:
+  scoop:
     - aria2
     - git
