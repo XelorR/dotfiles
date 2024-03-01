@@ -1,3 +1,18 @@
-#!/usr/bin/env sh
+#!/usr/bin/env python3
 
-until $($@); do :; done
+import sys
+import subprocess
+
+
+def run_command(args):
+    while True:
+        try:
+            subprocess.run(args, check=True)
+        except (subprocess.CalledProcessError, FileNotFoundError) as e:
+            print(f"Command failed with error: {e}")
+        else:
+            break
+
+
+if __name__ == "__main__":
+    run_command(sys.argv[1:])
