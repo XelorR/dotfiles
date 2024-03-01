@@ -22,6 +22,10 @@ scripts/macos/**
 .hushlogin
 {{ end }}
 
+{{ if eq .chezmoi.os "android" }}
+.local/bin/ask*
+{{ end }}
+
 {{ if ne .chezmoi.os "windows" }}
 scripts/windows/**
 Documents/PowerShell/Microsoft.PowerShell_profile.ps1

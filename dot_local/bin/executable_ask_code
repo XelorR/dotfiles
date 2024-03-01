@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+ollama run gemma "$@.  Please answer with code block only. No need to explain or comment."
+
