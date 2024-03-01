@@ -1,3 +1,14 @@
+# BINARY ------------------------------
+{{ if eq .chezmoi.os "linux" -}}
+[".opt/Warp-x86_64.AppImage"]
+    type = "file"
+    executable = true
+    url = "https://app.warp.dev/download?package=appimage"
+[".local/bin/ollama"]
+    type = "file"
+    executable = true
+    url = "https://ollama.com/download/ollama-linux-amd64"
+{{ end -}}
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
 # plugin manager
