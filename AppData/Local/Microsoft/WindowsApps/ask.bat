@@ -1,3 +1,3 @@
 @echo off
 
-ollama run openhermes %*
+ollama run nous-hermes2 %*
