@@ -2,9 +2,11 @@
 
 import subprocess
 import sys
+import platform
 
 def main():
-    command = ["ollama", "run", "openhermes"] + sys.argv[1:]
+    hermes = "openhermes" if platform.system() == 'Darwin' else "nous-hermes2"
+    command = ["ollama", "run", hermes] + sys.argv[1:]
     subprocess.run(command)
 
 if __name__ == "__main__":
