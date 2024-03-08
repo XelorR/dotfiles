@@ -1,3 +1,11 @@
-#!/usr/bin/env sh
+#!/usr/bin/env python3
 
-ollama run deepseek-coder:6.7b-instruct "$@"
+import subprocess
+import sys
+
+def main():
+    command = ["ollama", "run", "deepseek-coder:6.7b-instruct"] + sys.argv[1:]
+    subprocess.run(command)
+
+if __name__ == "__main__":
+    main()
