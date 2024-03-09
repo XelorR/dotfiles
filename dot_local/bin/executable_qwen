@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-ollama run qwen:14b "$@"
