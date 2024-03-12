@@ -22,9 +22,8 @@ Available script options:
 -n          dry run
 
 --no-efi    run without OVMF
---vfat      add a FAT filesystem (provide path to folder)
 --help      display this help message"""
-options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "--vfat"]
+options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "-f"]
 
 if len(argv) < 2 or "--help" in argv:
     print(usage)
@@ -34,7 +33,7 @@ elif len(argv) == 2:
     other_params = []
 else:
     image = argv[1]
-    vfat_index = argv.index("--vfat") if "--vfat" in argv else None
+    vfat_index = argv.index("-f") if "-f" in argv else None
     other_params = [
         o
         for i, o in enumerate(argv[2:], start=2)
@@ -101,11 +100,10 @@ archs = {
     "aarch": "TODO",
 }
 arch = archs[architecture()[0]]
-# TODO detect on mac m1
+# TODO detect arm (use mac m1 as example)
 
 # TODO detect USB devices if -u arg, list and ask to select
 
-os_family = system().lower()
 if os_family == "linux":
     accel = ["-enable-kvm"]
     if os.path.isfile("/usr/share/ovmf/OVMF.fd"):
@@ -131,13 +129,13 @@ else:
 if "--no-efi" in argv:
     bios = []
 
-if "--vfat" in argv:
-    vfat_index = argv.index("--vfat")
+if "-f" in argv:
+    vfat_index = argv.index("-f")
     if vfat_index < len(argv) - 1:
         vfat_folder = os.path.abspath(argv[vfat_index + 1])
         vfat_drive = ["-drive", f"file=fat:rw:{vfat_folder},format=raw,media=disk"]
     else:
-        print("Missing folder path for --vfat option.")
+        print("Missing folder path for -f option.")
         exit()
 else:
     vfat_drive = []
