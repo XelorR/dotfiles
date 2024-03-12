@@ -10,12 +10,12 @@ os_family = system().lower()
 if os_family != "linux":
     from psutil import virtual_memory
 
-usage = """Wrapper for qemu-system_x86_64 to simplify VM launching from command line.
-It provides automatic image type detection, enables UEFI and acceleration if possible and provides some additional niceties, see below.
+usage = """Usage: qe [image] (script options) (other qemu params)
 
-Usage: qe [image] (script options) (other qemu params)
+Wrapper for qemu to simplify VM launching from command line
+It provides automatic image type detection, enables UEFI and acceleration if possible and provides some additional niceties, see below
 
-Available script options:
+Additional script parameters:
 
 -p          enable port forwarding
 -u          select USB device (not implemented yet, TODO)
@@ -23,7 +23,9 @@ Available script options:
 -n          dry run
 
 --no-efi    run without OVMF
---help      display this help message"""
+--help      display this help message
+
+You can also use all available qemu-system-x86_64 parameters"""
 options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "-f"]
 
 if len(argv) < 2 or "--help" in argv:
