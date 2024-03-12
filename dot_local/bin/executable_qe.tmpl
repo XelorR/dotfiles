@@ -10,8 +10,7 @@ os_family = system().lower()
 if os_family != "linux":
     from psutil import virtual_memory
 
-usage = """
-Wrapper for qemu-system_x86_64 to simplify VM launching from command line.
+usage = """Wrapper for qemu-system_x86_64 to simplify VM launching from command line.
 
 Usage: qe [image] (script options) (other qemu params)
 
@@ -24,8 +23,7 @@ Available script options:
 
 --no-efi    run without OVMF
 --vfat      add a FAT filesystem (provide path to folder)
---help      display this help message
-"""
+--help      display this help message"""
 options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "--vfat"]
 
 if len(argv) < 2 or "--help" in argv:
