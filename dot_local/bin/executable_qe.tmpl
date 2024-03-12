@@ -13,14 +13,17 @@ usage = """
 Usage: qe [image] (script options) (other qemu params)
 
 Available script options:
+
 -p          enable port forwarding
 -u          select USB device (TODO)
 -f          FAT folder (TODO)
---no-efi    run without OVMF
 -n          dry run
+
+--no-efi    run without OVMF
+--vfat      add a FAT filesystem (provide path to folder)
 --help      display this help message
 """
-options = ["-p", "-u", "-f", "--no-efi", "-n", "--help"]
+options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "--vfat"]
 
 if len(argv) < 2 or "--help" in argv:
     print(usage)
@@ -107,6 +110,17 @@ else:
 if "--no-efi" in argv:
     bios = []
 
+if "--vfat" in argv:
+    vfat_index = argv.index("--vfat")
+    if vfat_index < len(argv) - 1:
+        vfat_folder = os.path.abspath(argv[vfat_index + 1])
+        vfat_drive = ["-drive", f"file=fat:rw:{vfat_folder},format=raw,media=disk"]
+    else:
+        print("Missing folder path for --vfat option.")
+        exit()
+else:
+    vfat_drive = []
+
 command = (
     [f"qemu-system-{arch}"]
     + accel
@@ -117,6 +131,7 @@ command = (
     + drive
     + port_fwd
     + fat_folder
+    + vfat_drive
 )
 
 print(" ".join([c for c in command]))
