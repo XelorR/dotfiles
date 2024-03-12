@@ -7,7 +7,10 @@ from platform import architecture, system
 from subprocess import run
 from sys import argv
 from multiprocessing import cpu_count
-from psutil import virtual_memory
+
+os_family = system().lower()
+if os_family != "linux":
+    from psutil import virtual_memory
 
 usage = """
 Usage: qe [image] (script options) (other qemu params)
@@ -36,7 +39,23 @@ else:
     other_params = [o for o in argv[2:] if o not in options]
 
 if "-m" not in argv:
-    mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
+    if os_family == "windows":
+        mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
+    elif os_family == "linux":
+        with open("/proc/meminfo") as f:
+            mem = (
+                int(
+                    next(
+                        (
+                            int(line.split()[1])
+                            for line in f
+                            if line.startswith("MemTotal")
+                        )
+                    )
+                )
+                / 1024
+                / 1024
+            )
     mem = 4 if mem > 4 else mem
     mem_amount = ["-m", f"{mem}G"]
 else:
