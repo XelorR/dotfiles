@@ -5,7 +5,7 @@ import sys
 import platform
 
 def main():
-    hermes = "openhermes" if platform.system() == 'Darwin' else "nous-hermes2"
+    hermes = "openhermes" # if platform.system() == 'Darwin' else "nous-hermes2"
     command = ["ollama", "run", hermes] + sys.argv[1:]
     subprocess.run(command)
 
