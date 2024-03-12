@@ -13,16 +13,17 @@ usage = """
 Usage: qe [image] (script options) (other qemu params)
 
 Available script options:
--p enable port forwarding
--u select USB device (TODO)
--f FAT folder (TODO)
---no-efi run without OVMF
--n dry run
+-p          enable port forwarding
+-u          select USB device (TODO)
+-f          FAT folder (TODO)
+--no-efi    run without OVMF
+-n          dry run
+--help      display this help message
 """
-options = ["-p", "-u", "-f", "--no-efi", "-n"]
+options = ["-p", "-u", "-f", "--no-efi", "-n", "--help"]
 
-if len(argv) < 2:
-    print(usage, "\nYou should pass an image!")
+if len(argv) < 2 or "--help" in argv:
+    print(usage)
     exit()
 elif len(argv) == 2:
     image = argv[1]
