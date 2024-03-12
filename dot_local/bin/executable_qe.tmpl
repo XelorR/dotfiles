@@ -12,6 +12,8 @@ if os_family != "linux":
 
 usage = """Wrapper for qemu-system_x86_64 to simplify VM launching from command line.
 
+It provides automatic image type detection, enables UEFI and acceleration if possible and provides some additional niceties, see below.
+
 Usage: qe [image] (script options) (other qemu params)
 
 Available script options:
