@@ -1,7 +1,7 @@
 #!{{ lookPath "python3" }}
 
 import os
-from platform import architecture, system
+from platform import machine, system
 from subprocess import run
 from sys import argv
 from multiprocessing import cpu_count
@@ -97,14 +97,13 @@ if "-p" in argv:
 else:
     port_fwd = []
 
+# I assume you are using image with the same architecture as host
 archs = {
-    "64bit": "x86_64",
-    "aarch": "TODO",
+    "x86_64": "x86_64",
+    "arm64": "aarch64",
+    "i386": "i386",
 }
-arch = archs[architecture()[0]]
-# TODO detect arm (use mac m1 as example)
-
-# TODO detect USB devices if -u arg, list and ask to select
+arch = archs[machine()[0]]
 
 if os_family == "linux":
     accel = ["-enable-kvm"]
