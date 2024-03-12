@@ -103,7 +103,7 @@ archs = {
     "arm64": "aarch64",
     "i386": "i386",
 }
-arch = archs[machine()[0]]
+arch = archs[machine()]
 
 if os_family == "linux":
     accel = ["-enable-kvm"]
