@@ -1,7 +1,5 @@
 #!{{ lookPath "python3" }}
 
-# crossos alias for qemu
-
 import os
 from platform import architecture, system
 from subprocess import run
@@ -13,6 +11,8 @@ if os_family != "linux":
     from psutil import virtual_memory
 
 usage = """
+Wrapper for qemu-system_x86_64 to simplify VM launching from command line.
+
 Usage: qe [image] (script options) (other qemu params)
 
 Available script options:
