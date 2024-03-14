@@ -1,0 +1,11 @@
+[Unit]
+Description=Ollama, LLM local launcher
+
+[Service]
+Type=forking
+ExecStart={{ .chezmoi.homeDir }}/.local/bin/ollama serve
+ExecStop=/usr/bin/pkill ollama
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
