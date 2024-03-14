@@ -19,6 +19,9 @@ vim.keymap.set("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "B
 vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
 vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
 
+-- Gen.nvim
+vim.keymap.set({ "n", "v" }, "<leader>oo", ":Gen<CR>")
+
 -- Emacs-like --
 
 --- Navigation
@@ -42,21 +45,21 @@ vim.keymap.set("!", "<C-d>", "<Del>", { silent = true })
 vim.keymap.set("!", "<M-BS>", "<C-w>", { silent = true })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { silent = true })
 vim.keymap.set("i", "<C-k>", function()
-	local col = vim.api.nvim_win_get_cursor(0)[2]
-	local line = vim.api.nvim_get_current_line()
-	if #line <= col then
-		return "<Del><C-o>dw"
-	end
-	return "<C-o>dw"
+  local col = vim.api.nvim_win_get_cursor(0)[2]
+  local line = vim.api.nvim_get_current_line()
+  if #line <= col then
+    return "<Del><C-o>dw"
+  end
+  return "<C-o>dw"
 end, { silent = true, expr = true })
 vim.keymap.set("c", "<C-k>", "<C-f>d$<C-c><End>", { silent = true })
 vim.keymap.set("i", "<M-d>", function()
-	local col = vim.api.nvim_win_get_cursor(0)[2]
-	local line = vim.api.nvim_get_current_line()
-	if #line <= col then
-		return "<Del>"
-	end
-	return "<C-o>d$"
+  local col = vim.api.nvim_win_get_cursor(0)[2]
+  local line = vim.api.nvim_get_current_line()
+  if #line <= col then
+    return "<Del>"
+  end
+  return "<C-o>d$"
 end, { silent = true, expr = true })
 vim.keymap.set("i", "<M-k>", "<C-o>d)", { silent = true })
 --- Run command
