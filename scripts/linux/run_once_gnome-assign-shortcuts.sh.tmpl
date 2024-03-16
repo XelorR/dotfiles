@@ -2,6 +2,8 @@
 
 # gsettings list-recursively org.gnome.desktop.wm.keybindings | grep to-workspace
 
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+
 if command -v gsettings &>/dev/null; then
 	# keyboard shortcuts
 	for i in $(seq 9); do
