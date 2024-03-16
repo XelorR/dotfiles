@@ -19,7 +19,7 @@ Additional script parameters:
 
 -p          enable port forwarding
 -u          select USB device (not implemented yet, TODO)
--f          FAT folder (provide path to folder)
+-f          FAT folder, read only (provide path to folder)
 -n          dry run
 
 --no-efi    run without OVMF
@@ -142,7 +142,7 @@ if "-f" in argv:
         vfat_folder = os.path.abspath(argv[vfat_index + 1])
         vfat_drive = [
             "-drive",
-            f"file=fat:rw:{vfat_folder},index=9,format=raw,media=disk,if=virtio",
+            f"file=fat:ro:{vfat_folder},index=9,format=raw,media=disk,if=virtio",
         ]
     else:
         print("Missing folder path for -f option.")
