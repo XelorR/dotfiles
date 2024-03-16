@@ -40,7 +40,9 @@ else:
     other_params = [
         o
         for i, o in enumerate(argv[2:], start=2)
-        if o not in options and i != vfat_index and i != vfat_index + 1
+        if o not in options
+        and i != vfat_index
+        and i != (None if vfat_index is None else vfat_index + 1)
     ]
 
 if "-m" not in argv:
@@ -138,7 +140,10 @@ if "-f" in argv:
     vfat_index = argv.index("-f")
     if vfat_index < len(argv) - 1:
         vfat_folder = os.path.abspath(argv[vfat_index + 1])
-        vfat_drive = ["-drive", f"file=fat:rw:{vfat_folder},format=raw,media=disk"]
+        vfat_drive = [
+            "-drive",
+            f"file=fat:rw:{vfat_folder},index=9,format=raw,media=disk,if=virtio",
+        ]
     else:
         print("Missing folder path for -f option.")
         exit()
@@ -151,10 +156,10 @@ command = (
     + cpu_count
     + mem_amount
     + bios
-    + vfat_drive
     + other_params
     + drive
     + port_fwd
+    + vfat_drive
 )
 
 print(" ".join([c for c in command]))
