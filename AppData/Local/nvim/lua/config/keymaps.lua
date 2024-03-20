@@ -21,6 +21,7 @@ vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true,
 
 -- Gen.nvim
 vim.keymap.set({ "n", "v" }, "<leader>oo", ":Gen<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 
 -- Emacs-like --
 
