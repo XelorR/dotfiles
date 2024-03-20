@@ -38,3 +38,10 @@
 {{ end -}}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
+{{ if eq .chezmoi.os "darwin" -}}
+["Library/Fonts/hack"]
+{{ else -}}
+[".fonts/hack"]
+{{ end -}}
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz"
