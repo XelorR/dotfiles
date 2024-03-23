@@ -3,7 +3,7 @@ Description=Ollama Service
 After=network-online.target
 
 [Service]
-ExecStart={{ .chezmoi.homeDir }}/.local/bin/ollama serve
+ExecStart={{ lookPath "ollama" }} serve
 Restart=always
 RestartSec=3
 

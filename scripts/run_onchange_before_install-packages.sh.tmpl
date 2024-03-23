@@ -30,9 +30,11 @@ sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
 sudo zypper install --no-confirm {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
 {{ end }}
 
-# All Linuxes
+# All Linuxes except Arch-based
+{{ if ne .chezmoi.osRelease.idLike "arch" }}
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y {{ range .packages.flatpak -}} {{ . }} {{ end -}} ;
+{{ end }}
 {{ end }}
 
 {{ if eq .chezmoi.os "android" -}}
