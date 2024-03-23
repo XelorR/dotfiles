@@ -22,4 +22,18 @@ if status is-interactive
     set --global hydro_color_git f9e2af
     set --global hydro_color_duration 94e2d5
     set --global hydro_multiline true
+
+    # editor
+    if command -v emacs &>/dev/null
+        alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
+        alias macs="emacsclient -a '' -c -nw"
+    end
+    if command -v nvim &>/dev/null
+        set -gx VISUAL nvim
+        alias vi='nvim -u NONE'
+    end
+    set -gx EDITOR vi
+    if command -v fzf &>/dev/null
+        alias vf='vi $(fzf)'
+    end
 end
