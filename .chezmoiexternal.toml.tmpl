@@ -1,6 +1,6 @@
-{{ if ne .chezmoi.osRelease.idLike "arch" }}
 # BINARY ------------------------------
 {{ if eq .chezmoi.os "linux" -}}
+{{ if ne .chezmoi.osRelease.idLike "arch" -}}
 [".local/bin/ollama"]
     type = "file"
     executable = true
@@ -9,6 +9,7 @@
     type = "file"
     url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
     executable = true
+{{ end -}}
 {{ end -}}
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
@@ -54,4 +55,3 @@
 #     type = "archive"
 #     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/master.zip"
 #     stripComponents = 1
-{{ end }}
