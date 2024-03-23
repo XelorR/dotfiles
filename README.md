@@ -43,3 +43,10 @@ flatpak install -y chat.delta.desktop com.github.tchx84.Flatseal com.logseq.Logs
 opi vscode
 opi codecs
 ```
+
+Some experimental Garuda installation:
+```bash
+#!/usr/bin/env sh
+
+paru -Syu appimagelauncher aria2 bat borgbackup chezmoi dconf-editor debugedit doublecmd-gtk2 emacs extra/code eza fd fish foliate freerdp fzf gcc git gnome-shell-extension-{caffeine,appindicator} gnome-text-editor go jq keepassxc lazygit libheif libreoffice-fresh lf luajit make minetest neovim nerd-fonts-sf-mono npm ollama outline-client-appimage podman{,-compose,-docker} pycharm-community-edition python-llfuse qalculate-gtk qbittorrent remmina ripgrep rsync steam-native-runtime syncthing thunderbird tigervnc tmate tmux toolbox ttf-hack-nerd ttf-meslo-nerd virt-manager vlc w3m wezterm {element,telegram}-desktop chaotic-aur/brave-bin chaotic-aur/displaylink chaotic-aur/heroic-games-launcher-bin chaotic-aur/logseq-desktop-bin chaotic-aur/protonvpn-gui chaotic-aur/rpcs3-git chaotic-aur/ventoy-bin chaotic-aur/yaru-{gtk,gnome-shell,icon}-theme
+```

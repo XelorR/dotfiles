@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+{{ if eq .chezmoi.os "linux" -}}
+systemctl enable --now --user ollama
+{{ end -}}

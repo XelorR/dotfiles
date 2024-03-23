@@ -1,3 +1,4 @@
+{{ if ne .chezmoi.osRelease.idLike "arch" }}
 # BINARY ------------------------------
 {{ if eq .chezmoi.os "linux" -}}
 [".local/bin/ollama"]
@@ -53,3 +54,4 @@
 #     type = "archive"
 #     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/master.zip"
 #     stripComponents = 1
+{{ end }}
