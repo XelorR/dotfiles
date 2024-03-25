@@ -16,7 +16,16 @@ config.window_decorations = "RESIZE"
 
 -- font
 config.font_dirs = { ".fonts", "Library/Fonts" }
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font = wezterm.font_with_fallback{
+{{ if eq .chezmoi.os "darwin" -}}
+  "SF Mono",
+{{ else if eq .chezmoi.osRelease.idLike "arch" -}}
+  "SFMono Nerd Font Mono",
+{{ else -}}
+  "Liga SFMono Nerd Font",
+{{ end -}}
+  "MesloLGS Nerd Font Mono",
+}
 config.font_size = {{ if eq .chezmoi.os "darwin" }}14{{ else if eq .chezmoi.hostname "x270" }}8{{ else }}11.5{{ end }}
 
 -- disabling confirmation on exit
