@@ -31,9 +31,7 @@ sudo zypper install --no-confirm fish fzf ripgrep eza bat make luajit gcc npm sy
 fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
 if ! test -f "$HOME/.anaconda3/bin/activate"; then
-	aria2c https://repo.anaconda.com/archive/Anaconda3-$(curl -sL https://formulae.brew.sh/cask/anaconda | grep "Current version" | cut -d'>' -f3 | cut -d'<' -f1)-Linux-x86_64.sh
-	bash Anaconda3* -b -p ~/.anaconda3
-	rm Anaconda3*
+  aria2c https://repo.anaconda.com/archive/Anaconda3-$(curl -sL https://formulae.brew.sh/cask/anaconda | grep "Current version" | cut -d'>' -f3 | cut -d'<' -f1)-Linux-x86_64.sh && bash Anaconda3* -b -p ~/.anaconda3 && rm Anaconda3*
 fi
 
 flatpak remote-delete flathub
