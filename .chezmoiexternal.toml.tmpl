@@ -48,10 +48,10 @@
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz"
 {{ if eq .chezmoi.os "darwin" -}}
-# ["Library/Fonts/sanfrancisco"]
-# {{ else -}}
-# [".fonts/sanfrancisco"]
-# {{ end -}}
-#     type = "archive"
-#     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/master.zip"
-#     stripComponents = 1
+["Library/Fonts/sanfrancisco"]
+{{ else -}}
+[".fonts/sanfrancisco"]
+{{ end -}}
+    type = "archive"
+    url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.tar.gz"
+    stripComponents = 1

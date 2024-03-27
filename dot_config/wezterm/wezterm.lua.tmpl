@@ -19,8 +19,6 @@ config.font_dirs = { ".fonts", "Library/Fonts" }
 config.font = wezterm.font_with_fallback{
 {{ if eq .chezmoi.os "darwin" -}}
   "SF Mono",
-{{ else if eq .chezmoi.osRelease.idLike "arch" -}}
-  "SFMono Nerd Font Mono",
 {{ else -}}
   "Liga SFMono Nerd Font",
 {{ end -}}
