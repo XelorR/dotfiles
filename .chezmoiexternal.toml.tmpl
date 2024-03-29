@@ -33,25 +33,13 @@
     stripComponents = 1
 {{ end -}}
 # FONTS ------------------------------
-{{ if eq .chezmoi.os "darwin" -}}
-["Library/Fonts/meslo"]
-{{ else -}}
 [".fonts/meslo"]
-{{ end -}}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
-{{ if eq .chezmoi.os "darwin" -}}
-["Library/Fonts/hack"]
-{{ else -}}
 [".fonts/hack"]
-{{ end -}}
     type = "archive"
     url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz"
-{{ if eq .chezmoi.os "darwin" -}}
-["Library/Fonts/sanfrancisco"]
-{{ else -}}
 [".fonts/sanfrancisco"]
-{{ end -}}
     type = "archive"
     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.tar.gz"
     stripComponents = 1

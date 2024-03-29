@@ -20,6 +20,8 @@ scripts/linux/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
+Library
+Library/**
 scripts/macos/**
 .warp/**
 {{ end }}
