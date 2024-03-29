@@ -75,8 +75,12 @@ if "-smp" not in argv:
 else:
     cpu_count = []
 
+sudo = []
 if image.endswith(".iso"):
     drive = ["-cdrom", image, "-boot", "d"]
+elif image.startswith("/dev/"):
+    drive = ["-drive", f"file={image},format=raw,index=0,media=disk"]
+    sudo = ["sudo"]
 else:
     formats = {
         "qcow2": "qcow2",
@@ -151,7 +155,8 @@ else:
     vfat_drive = []
 
 command = (
-    [f"qemu-system-{arch}"]
+    sudo
+    + [f"qemu-system-{arch}"]
     + accel
     + cpu_count
     + mem_amount
