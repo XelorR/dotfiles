@@ -84,30 +84,43 @@ packages:
     - codecs
   flatpak:
     - chat.delta.desktop
+    - com.brave.Browser
     - com.github.tchx84.Flatseal
+    - com.heroicgameslauncher.hgl
     - com.logseq.Logseq
+    - com.valvesoftware.Steam
+    - com.visualstudio.code
     - im.riot.Riot
-    - io.github.Qalculate
+    - io.github.antimicrox.antimicrox
     - net.minetest.Minetest
+    - net.rpcs3.RPCS3
     - org.keepassxc.KeePassXC
     - org.libreoffice.LibreOffice
     - org.mozilla.Thunderbird
+    - org.ppsspp.PPSSPP
     - org.qbittorrent.qBittorrent
+    - org.remmina.Remmina
     - org.telegram.desktop
     - org.videolan.VLC
-    - com.visualstudio.code
     - org.wezfurlong.wezterm
   dnf:
     - aria2
     - bat
     - borgbackup
+    - docker
+    - docker-compose
+    - doublecmd-gtk
     - emacs
     - eza
     - fd-find
     - fish
     - fzf
     - gcc
+    - gnome-shell-extension-caffeine
     - gnome-tweaks
+    - golang
+    - jq
+    - libheif
     - luajit
     - make
     - ncdu
@@ -115,13 +128,22 @@ packages:
     - npm
     - p7zip
     - python-pip
+    - python3-llfuse
+    - qalculate-gtk
     - qemu-kvm
     - ripgrep
     - sushi
     - syncthing
     - tmate
     - tmux
+    - virt-manager
     - w3m
+    - yaru-gtk2-theme
+    - yaru-gtk3-theme
+    - yaru-gtk4-theme
+    - yaru-icon-theme
+    - yaru-sound-theme
+    - yaru-theme
   termux:
     - aria2
     - bat
