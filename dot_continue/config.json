@@ -28,13 +28,6 @@
       "provider": "ollama"
     },
     {
-      "model": "phind-codellama",
-      "title": "phind-codellama",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
       "model": "dolphincoder",
       "title": "dolphincoder",
       "completionOptions": {},
