@@ -21,106 +21,8 @@
       "model": "codellama-70b"
     },
     {
-      "model": "qwen:0.5b",
-      "title": "qwen:0.5b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "qwen:1.8b",
-      "title": "qwen:1.8b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "qwen:4b",
-      "title": "qwen:4b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "qwen:7b",
-      "title": "qwen:7b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "qwen:14b",
-      "title": "qwen:14b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
       "model": "openhermes",
       "title": "openhermes",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "nous-hermes2",
-      "title": "nous-hermes2",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "nous-hermes2:34b",
-      "title": "nous-hermes2:34b",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "nous-hermes2-mixtral:dpo",
-      "title": "nous-hermes2-mixtral:dpo",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "mistral:instruct",
-      "title": "mistral:instruct",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "mixtral:instruct",
-      "title": "mixtral:instruct",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "tinyllama",
-      "title": "tinyllama",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "tinydolphin",
-      "title": "tinydolphin",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "phi",
-      "title": "phi",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "dolphin-phi",
-      "title": "dolphin-phi",
       "completionOptions": {},
       "apiBase": "http://localhost:11434",
       "provider": "ollama"
@@ -133,8 +35,8 @@
       "provider": "ollama"
     },
     {
-      "model": "deepseek-coder:1.3b-instruct",
-      "title": "deepseek-coder:1.3b-instruct",
+      "model": "dolphincoder",
+      "title": "dolphincoder",
       "completionOptions": {},
       "apiBase": "http://localhost:11434",
       "provider": "ollama"
@@ -142,20 +44,6 @@
     {
       "model": "deepseek-coder:6.7b-instruct",
       "title": "deepseek-coder:6.7b-instruct",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "deepseek-coder:33b-instruct",
-      "title": "deepseek-coder:33b-instruct",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "sammcj/smaug:72b-q4_k_m",
-      "title": "sammcj/smaug:72b-q4_k_m",
       "completionOptions": {},
       "apiBase": "http://localhost:11434",
       "provider": "ollama"
