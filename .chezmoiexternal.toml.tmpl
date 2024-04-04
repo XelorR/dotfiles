@@ -1,6 +1,5 @@
 # BINARY ------------------------------
 {{ if eq .chezmoi.os "linux" -}}
-{{ if ne .chezmoi.osRelease.idLike "arch" -}}
 [".local/bin/ollama"]
     type = "file"
     executable = true
@@ -9,7 +8,6 @@
     type = "file"
     url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
     executable = true
-{{ end -}}
 {{ end -}}
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
@@ -33,12 +31,6 @@
     stripComponents = 1
 {{ end -}}
 # FONTS ------------------------------
-[".fonts/meslo"]
-    type = "archive"
-    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
-[".fonts/hack"]
-    type = "archive"
-    url = "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz"
 [".fonts/sanfrancisco"]
     type = "archive"
     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.tar.gz"
