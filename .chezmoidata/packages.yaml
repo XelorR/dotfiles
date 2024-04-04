@@ -119,8 +119,6 @@ packages:
     - gnome-shell-extension-caffeine
     - gnome-tweaks
     - golang
-    - jq
-    - libheif
     - luajit
     - make
     - ncdu

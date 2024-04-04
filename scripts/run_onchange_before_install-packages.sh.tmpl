@@ -20,24 +20,21 @@ EOF
 {{ if eq .chezmoi.osRelease.id "fedora" }}
 {{ if eq .chezmoi.osRelease.variantID "kinoite" "silverblue" -}}
 # rpm-ostree cancel
-rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end }}
 {{ else }}
-sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end }}
 {{ end }}
 
 # OpenSuse
 {{ else if eq .chezmoi.osRelease.id "opensuse-tumbleweed" }}
-sudo zypper install --no-confirm {{ range .packages.dnf -}} {{ . }} {{ end -}} ;
+sudo zypper install --no-confirm {{ range .packages.dnf -}} {{ . }} {{ end }}
 {{ end }}
 
-# All Linuxes except Arch-based
-{{ if ne .chezmoi.osRelease.idLike "arch" }}
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y {{ range .packages.flatpak -}} {{ . }} {{ end -}} ;
-{{ end }}
+flatpak install -y {{ range .packages.flatpak -}} {{ . }} {{ end }}
 {{ end }}
 
 {{ if eq .chezmoi.os "android" -}}
 # TERMUX ------------------------------
-pkg install {{ range .packages.termux -}} {{ . }} {{ end -}} ;
+pkg install {{ range .packages.termux -}} {{ . }} {{ end }}
 {{ end -}}
