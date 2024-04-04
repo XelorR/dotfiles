@@ -101,3 +101,20 @@
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
 {{ end -}}
+
+(setq org-roam-directory (file-truename org-directory))
+(setq org-roam-file-exclude-regexp (concat org-directory "logseq/.*"))
+(setq org-logseq-dir (file-truename org-directory))
+(setq org-agenda-files (append (list org-directory) (file-expand-wildcards (concat org-directory "*/*.org"))))
+(setq org-roam-dailies-directory "journals/")
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y_%m_%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
+(setq org-roam-capture-templates
+      '(("d" "default" plain
+         "%?"
+         :target (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
+                            "#+title: ${title}") :unnarrowed t)))
+(org-roam-db-autosync-mode)
