@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+for i in ~/org/*/*sync-conflict*; do echo ; echo $(echo $i | sed 's/sync-conflict.*/org/') "$i"; diff -y -W80 --suppress-common-lines $(echo $i | sed 's/sync-conflict.*/org/') $i; done
