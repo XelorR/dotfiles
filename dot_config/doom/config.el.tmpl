@@ -108,6 +108,7 @@
 (setq org-roam-file-exclude-regexp (concat org-directory "logseq/.*"))
 (setq org-logseq-dir (file-truename org-directory))
 (setq org-agenda-files (append (list org-directory) (file-expand-wildcards (concat org-directory "*/*.org"))))
+(setq org-download-image-dir (concat org-directory "assets/"))
 (setq org-roam-dailies-directory "journals/")
 (setq org-roam-dailies-capture-templates
       '(("d" "default" entry
