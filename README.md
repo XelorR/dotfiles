@@ -53,3 +53,8 @@ Note for myself, official fedora container:
 ```bash
 docker run -it --rm --name fedora registry.fedoraproject.org/fedora:40
 ```
+
+Note for myself, view logseq agenda with plain GNU Emacs:
+```bash
+emacs -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) (setq org-directory "~/org/") (setq org-agenda-files (append (list org-directory) (file-expand-wildcards (concat org-directory "*/*.org")))))'
+```
