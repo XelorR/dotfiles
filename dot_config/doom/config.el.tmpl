@@ -97,11 +97,6 @@
 
 (setq evil-split-window-below t)
 (setq evil-vsplit-window-right t)
-(map! :map evil-normal-state-map
-      "H" #'evil-window-left
-      "J" #'evil-window-down
-      "K" #'evil-window-up
-      "L" #'evil-window-right)
 
 {{ if eq .chezmoi.os "darwin" -}}
 (setq mac-option-modifier 'super)
