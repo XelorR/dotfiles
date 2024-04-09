@@ -89,11 +89,12 @@ packages:
     - com.heroicgameslauncher.hgl
     - com.logseq.Logseq
     - com.valvesoftware.Steam
-    - com.visualstudio.code
+    # - com.visualstudio.code
     - im.riot.Riot
     - io.github.antimicrox.antimicrox
     - net.minetest.Minetest
     - net.rpcs3.RPCS3
+    - org.gnome.World.PikaBackup
     - org.keepassxc.KeePassXC
     - org.libreoffice.LibreOffice
     - org.mozilla.Thunderbird
@@ -106,7 +107,6 @@ packages:
   dnf:
     - aria2
     - bat
-    - borgbackup
     - docker
     - docker-compose
     - doublecmd-gtk
@@ -122,7 +122,6 @@ packages:
     - luajit
     - make
     - ncdu
-    - neovim
     - npm
     - p7zip
     - python-pip
