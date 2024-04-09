@@ -1,0 +1,8 @@
+#+/usr/bin/env sh
+
+infile=$1
+outfile=${infile%.*}.gif
+
+flatpak run --command='ffmpeg' org.videolan.VLC -i $infile -r 1 -vf fps=1 out%03d.png
+convert out*.png -delay 50 -loop 0 $outfile
+rm out*.png
