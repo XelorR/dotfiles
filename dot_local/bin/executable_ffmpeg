@@ -1,0 +1,3 @@
+#+/usr/bin/env sh
+
+flatpak run --command='ffmpeg' org.videolan.VLC $@
