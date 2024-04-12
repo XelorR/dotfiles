@@ -6,7 +6,7 @@
     <value type="int" value="1"/>
     <value type="int" value="2"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=5;x=0;y=0"/>
+      <property name="position" type="string" value="p=6;x=960;y=14"/>
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="26"/>
@@ -35,6 +35,7 @@
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="icon-size" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-2" type="empty">
@@ -90,6 +91,7 @@
         <value type="string" value="clipman"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="example-simple-client"/>
         <value type="string" value="apt-notifier.py"/>
         <value type="string" value="mx-usb-unmounter"/>
       </property>
