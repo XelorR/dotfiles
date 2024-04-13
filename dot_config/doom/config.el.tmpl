@@ -120,3 +120,29 @@
          :target (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}") :unnarrowed t)))
 (org-roam-db-autosync-mode)
+
+; ----------------------------------------------------------------------
+; === Trying to handle LogSeq links ====================================
+; ----------------------------------------------------------------------
+
+;(require 'org-id)
+
+(defun my/org-logseq-id-follow (path)
+  "Follow a custom ID link specified by PATH."
+  (org-id-goto path))
+
+(org-link-set-parameters "logseq-id" :follow #'my/org-logseq-id-follow)
+
+;; Modify the link pattern to match the double parentheses
+(defun my/org-extract-logseq-id (link)
+  "Extract the custom ID from a LINK of the form [[((id))][desc]]."
+  (when (string-match "\\`\\(\\((\\(.*?\\))\\)\\)\\'" link)
+    (match-string 3 link)))
+
+;; Add advice to dwim-at-point to handle the custom link type
+(advice-add '+org/dwim-at-point :before-until
+            (lambda (link &rest args)
+              (let ((logseq-id (my/org-extract-logseq-id link)))
+                (when logseq-id
+                  (my/org-logseq-id-follow logseq-id)
+                  t)))) ;; Return t to indicate the link has been handled
