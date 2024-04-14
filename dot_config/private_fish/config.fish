@@ -30,7 +30,7 @@ if status is-interactive
     end
     if command -v nvim &>/dev/null
         set -gx VISUAL nvim
-        alias vi='nvim -u NONE'
+        alias vi='nvim --clean'
     end
     set -gx EDITOR vi
     if command -v fzf &>/dev/null
