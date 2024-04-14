@@ -4,10 +4,10 @@
     type = "file"
     executable = true
     url = "https://ollama.com/download/ollama-linux-amd64"
-[".opt/nvim.appimage"]
-    type = "file"
-    url = "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
-    executable = true
+[".opt/nvim"]
+    type = "archive"
+    url = "https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz"
+    stripComponents = 1
 {{ end -}}
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
