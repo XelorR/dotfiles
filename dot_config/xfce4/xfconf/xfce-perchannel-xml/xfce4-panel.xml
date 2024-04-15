@@ -11,7 +11,9 @@
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="2"/>
         <value type="int" value="9"/>
+        <value type="int" value="11"/>
         <value type="int" value="16"/>
         <value type="int" value="14"/>
         <value type="int" value="4"/>
@@ -87,10 +89,13 @@
         <value type="string" value="clipit"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="менеджер буфера обмена clipman"/>
+        <value type="string" value="аплет networkmanager"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="clipman"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="blueman"/>
         <value type="string" value="example-simple-client"/>
         <value type="string" value="apt-notifier.py"/>
         <value type="string" value="mx-usb-unmounter"/>
@@ -118,6 +123,7 @@
         <value type="string" value="-separator"/>
         <value type="string" value="+logout"/>
         <value type="string" value="-logout-dialog"/>
+        <value type="string" value="-hybrid-sleep"/>
       </property>
     </property>
     <property name="plugin-5" type="string" value="pulseaudio">
@@ -140,6 +146,12 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-16" type="string" value="xfce4-verve-plugin"/>
+    <property name="plugin-2" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
   </property>
   <property name="clipman" type="empty">
     <property name="tweaks" type="empty">
