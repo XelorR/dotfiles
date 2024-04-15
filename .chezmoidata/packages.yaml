@@ -4,10 +4,7 @@ packages:
     - bat
     - borgbackup
     - chezmoi
-    - cmake
-    - coreutils
-    - curl
-    - exa
+    - eza
     - fd
     - ffmpeg
     - fish
@@ -28,33 +25,25 @@ packages:
     - node
     - p7zip
     - ripgrep
-    - rsync
     - syncthing
     - tmate
     - tmux
     - w3m
     - wget
   cask:
-    - displaylink
-    - drawio
-    - element
-    - emacs-mac
     - keepassxc
-    - kitty
     - logseq
-    - microsoft-teams
     - obs
     - qbittorrent
     - rectangle
     - telegram
     - via
-    - vial
     - visual-studio-code
     - vlc
-    - vmware-horizon-client
-    - warp
-    - webex-meetings
+    - webex
     - wezterm
+  tap:
+    - emacs-mac
   zypper:
     - aria2
     - bat
