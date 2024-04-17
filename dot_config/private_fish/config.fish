@@ -1,7 +1,7 @@
 if status is-interactive
 
     # path
-    set PATH ~/.local/bin ~/.anaconda3/bin ~/.config/emacs/bin $PATH
+    set PATH ~/.local/bin ~/.anaconda3/bin ~/.config/emacs/bin /usr/local/bin $PATH
     switch (uname -o)
         case Darwin
             alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
