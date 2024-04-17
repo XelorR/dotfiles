@@ -1,0 +1,25 @@
+(setq make-backup-files nil)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+(setq-default inhibit-startup-screen t)
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+
+(global-auto-revert-mode t)
+(delete-selection-mode t)
+(global-visual-line-mode t)
+
+{{ if eq .chezmoi.os "darwin" -}}
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
+{{ end -}}
+
+(setq org-directory "~/org/")
+(setq org-agenda-files
+      (append (list org-directory)
+      (file-expand-wildcards (concat org-directory "*/*.org"))))
+(setq org-scheduled-past-days 0)
+
