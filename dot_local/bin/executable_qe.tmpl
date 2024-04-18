@@ -68,8 +68,9 @@ drive = []
 for i, image in enumerate(disk_images):
     if image.startswith("/dev/"):
         sudo = ["sudo"]
+    media = "cdrom" if image.endswith(".iso") else "disk"
     format = [e for k, e in formats.items() if image.endswith(k)][0]
-    drive += ["-drive", f"file={image},format={format},index={i},media=disk"]
+    drive += ["-drive", f"file={image},format={format},index={i},media={media}"]
 
 if "-m" not in argv:
     if os_family == "windows":
