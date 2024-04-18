@@ -61,8 +61,8 @@ def invert_bools(func):
 
 is_not_image = invert_bools(is_image)
 
-disk_images = list(filter(is_image, argv))
-other_args = list(filter(is_not_image, argv))
+disk_images = list(filter(is_image, argv[1:]))
+other_args = list(filter(is_not_image, argv[1:]))
 qemu_args = [e for e in other_args if e not in options]
 drive = []
 for i, image in enumerate(disk_images):
