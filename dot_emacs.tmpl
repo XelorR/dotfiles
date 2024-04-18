@@ -17,7 +17,7 @@
 (setq mac-command-modifier 'meta)
 {{ end -}}
 
-(setq org-directory "~/org/")
+(setq org-directory "{{ .chezmoi.homeDir }}/org/")
 (setq org-agenda-files
       (append (list org-directory)
       (file-expand-wildcards (concat org-directory "*/*.org"))))
