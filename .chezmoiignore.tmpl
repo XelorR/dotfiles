@@ -40,11 +40,12 @@ ahk
 {{ end }}
 
 {{ if eq .chezmoi.os "windows" }}
+.emacs
 .local/bin/**
 .config/nvim/**
 .config/fish/**
 .config/tmux/**
-.config/doom/**
+.config/doom
 scripts/install-packages.sh
 scripts/install-fish-plugins.sh
 {{ end }}
