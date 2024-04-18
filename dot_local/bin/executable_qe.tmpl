@@ -19,31 +19,57 @@ Additional script parameters:
 
 -p          enable port forwarding
 -u          select USB device (not implemented yet, TODO)
--f          FAT folder, read only (provide path to folder)
+-f          FAT folder, read only (not implemented yet, TODO)
 -n          dry run
 
 --no-efi    run without OVMF
 --help      display this help message
 
 You can also use all available qemu-system-x86_64 parameters"""
-options = ["-p", "-u", "-f", "--no-efi", "-n", "--help", "-f"]
+options = ["-p", "-u", "--no-efi", "-n", "--help", "-f"]
 
 if len(argv) < 2 or "--help" in argv:
     print(usage)
     exit()
-elif len(argv) == 2:
-    image = argv[1]
-    other_params = []
-else:
-    image = argv[1]
-    vfat_index = argv.index("-f") if "-f" in argv else None
-    other_params = [
-        o
-        for i, o in enumerate(argv[2:], start=2)
-        if o not in options
-        and i != vfat_index
-        and i != (None if vfat_index is None else vfat_index + 1)
-    ]
+
+sudo = []
+formats = {
+    "iso": "raw",
+    "qcow2": "qcow2",
+    "qed": "qed",
+    "raw ": "raw ",
+    "img": "raw",
+    "vdi": "vdi",
+    "vhd": "vpc",
+    "vhdx": "vhdx",
+    "vmdk": "vmdk",
+    "vdi.vtoy": "vdi",
+    "vhd.vtoy": "vpc",
+}
+
+
+def is_image(s):
+    return bool(sum((s.endswith(e) or s.startswith("/dev/")) for e in formats.keys()))
+
+
+def invert_bools(func):
+    def wrapper(*args, **kwargs):
+        return not func(*args, **kwargs)
+
+    return wrapper
+
+
+is_not_image = invert_bools(is_image)
+
+disk_images = list(filter(is_image, argv))
+other_args = list(filter(is_not_image, argv))
+qemu_args = [e for e in other_args if e not in options]
+drive = []
+for i, image in enumerate(disk_images):
+    if image.startswith("/dev/"):
+        sudo = ["sudo"]
+    format = [e for k, e in formats.items() if image.endswith(k)][0]
+    drive += ["-drive", f"file={image},format={format},index={i},media=disk"]
 
 if "-m" not in argv:
     if os_family == "windows":
@@ -74,28 +100,6 @@ if "-smp" not in argv:
     cpu_count = ["-smp", f"{cpus}"]
 else:
     cpu_count = []
-
-sudo = []
-if image.endswith(".iso"):
-    drive = ["-cdrom", image, "-boot", "d"]
-elif image.startswith("/dev/"):
-    drive = ["-drive", f"file={image},format=raw,index=0,media=disk"]
-    sudo = ["sudo"]
-else:
-    formats = {
-        "qcow2": "qcow2",
-        "qed": "qed",
-        "raw ": "raw ",
-        "img": "raw",
-        "vdi": "vdi",
-        "vhd": "vpc",
-        "vhdx": "vhdx",
-        "vmdk": "vmdk",
-        "vdi.vtoy": "vdi",
-        "vhd.vtoy": "vpc",
-    }
-    format = [e for k, e in formats.items() if image.endswith(k)][0]
-    drive = ["-drive", f"file={image},format={format},index=0,media=disk"]
 
 if "-p" in argv:
     port_ssh = 9922
@@ -161,7 +165,7 @@ command = (
     + cpu_count
     + mem_amount
     + bios
-    + other_params
+    + qemu_args
     + drive
     + port_fwd
     + vfat_drive
