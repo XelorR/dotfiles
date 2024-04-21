@@ -16,11 +16,6 @@
       "model": "gemini-pro"
     },
     {
-      "title": "Codellama 70b (Free Trial)",
-      "provider": "free-trial",
-      "model": "codellama-70b"
-    },
-    {
       "model": "openhermes",
       "title": "openhermes",
       "completionOptions": {},
@@ -28,15 +23,8 @@
       "provider": "ollama"
     },
     {
-      "model": "dolphincoder",
-      "title": "dolphincoder",
-      "completionOptions": {},
-      "apiBase": "http://localhost:11434",
-      "provider": "ollama"
-    },
-    {
-      "model": "deepseek-coder:6.7b-instruct",
-      "title": "deepseek-coder:6.7b-instruct",
+      "model": "codeqwen:chat",
+      "title": "codeqwen:chat",
       "completionOptions": {},
       "apiBase": "http://localhost:11434",
       "provider": "ollama"
