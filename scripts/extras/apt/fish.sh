@@ -24,6 +24,12 @@ elif [ "$ID" = "ubuntu" ]; then
         sudo apt update
         sudo apt install -y fish
     fi
-else
-    echo This script is for Ubuntu and Debian only.
+elif [ "$ID" = "fedora" ]; then
+    dnf check-update
+    sudo dnf install -y fish
+
+elif [ "$ID" = "opensuse" ]; then
+    sudo zypper refresh
+    sudo zypper install fish
+
 fi
