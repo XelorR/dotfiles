@@ -5,4 +5,4 @@ if "%~1" == "--help" (
     exit /b 0
 )
 
-ollama run nous-hermes2 %*
+ollama run openhermes %*
