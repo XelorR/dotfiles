@@ -16,3 +16,10 @@ Note for myself, official fedora container:
 ```bash
 docker run -it --rm --name fedora registry.fedoraproject.org/fedora:40
 ```
+
+Link Ollama with LM Studio
+
+```bash
+go install github.com/sammcj/llamalink@latest
+go run github.com/sammcj/llamalink@latest -a
+```
