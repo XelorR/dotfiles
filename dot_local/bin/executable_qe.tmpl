@@ -120,28 +120,33 @@ archs = {
 }
 arch = archs[machine()]
 
-if os_family == "linux":
-    accel = ["-enable-kvm"]
-    if os.path.isfile("/usr/share/ovmf/OVMF.fd"):
-        bios = ["-bios", "/usr/share/ovmf/OVMF.fd"]
-    elif os.path.isfile("/usr/share/ovmf/x64/OVMF.fd"):
-        bios = ["-bios", "/usr/share/ovmf/x64/OVMF.fd"]
-    elif os.path.isfile("/usr/share/edk2/ovmf/OVMF_CODE.fd"):
-        bios = ["-bios", "/usr/share/edk2/ovmf/OVMF_CODE.fd"]
-    elif os.path.isfile("./OVMF.fd"):
-        bios = ["-bios", "./OVMF.fd"]
-    else:
-        bios = []
-elif os_family == "windows":
-    accel = ["--accel", "whpx"]
-    if os.path.isfile("./OVMF.fd"):
-        bios = ["-bios", "./OVMF.fd"]
-    else:
-        bios = []
-elif os_family == "darwin":
+os_families = {
+    "linux": {
+        "accel": ["-enable-kvm"],
+        "bios_paths": [
+            "/usr/share/ovmf/OVMF.fd",
+            "/usr/share/ovmf/x64/OVMF.fd",
+            "/usr/share/edk2/ovmf/OVMF_CODE.fd",
+            "./OVMF.fd",
+        ],
+    },
+    "windows": {"accel": ["--accel", "whpx"], "bios_paths": ["./OVMF.fd"]},
+    "darwin": None,
+}
+
+default_bios = []
+
+os_family_info = os_families.get(os_family, default_bios)
+
+if not os_family_info:
     raise NotImplementedError
-else:
-    raise NotImplementedError
+
+accel = os_family_info["accel"]
+bios = next(
+    (path for path in os_family_info["bios_paths"] if os.path.isfile(path)),
+    default_bios,
+)
+
 if "--no-efi" in argv:
     bios = []
 
