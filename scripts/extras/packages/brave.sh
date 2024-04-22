@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
     sudo apt install -y curl
