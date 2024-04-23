@@ -75,6 +75,14 @@
     {
       "name": "codebase",
       "params": {}
+    },
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
     }
   ],
   "tabAutocompleteModel": {
