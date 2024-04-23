@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. /etc/os-release
+
 if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
     sudo apt-get install -y wget gpg
     wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. /etc/os-release
+
 if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
     sudo apt install -y curl
     sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
