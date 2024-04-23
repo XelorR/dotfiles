@@ -5,4 +5,4 @@ if "%~1" == "--help" (
     exit /b 0
 )
 
-ollama run openhermes %*
+ollama run dolphin-llama3 %*

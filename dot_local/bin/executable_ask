@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    hermes = "openhermes"
+    hermes = "dolphin-llama3"
     command = ["ollama", "run", hermes] + sys.argv[1:]
     subprocess.run(command)
 
