@@ -36,3 +36,13 @@ sudo apt install -y \
 	vlc \
 	vorta \
 	wget
+
+flatpak remote-add --user --if-not-exists \
+	flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y \
+	chat.delta.desktop \
+	com.logseq.Logseq \
+	im.riot.Riot \
+	net.minetest.Minetest \
+	org.telegram.desktop \
+	org.wezfurlong.wezterm
