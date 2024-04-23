@@ -14,27 +14,4 @@ cask {{ . | quote }}
 EOF
 
 {{ else if eq .chezmoi.os "linux" }}
-# LINUX ------------------------------
-
-# Fedora
-{{ if eq .chezmoi.osRelease.id "fedora" }}
-{{ if eq .chezmoi.osRelease.variantID "kinoite" "silverblue" -}}
-# rpm-ostree cancel
-rpm-ostree install --idempotent -y {{ range .packages.dnf -}} {{ . }} {{ end }}
-{{ else }}
-sudo dnf install -y {{ range .packages.dnf -}} {{ . }} {{ end }}
 {{ end }}
-
-# OpenSuse
-{{ else if eq .chezmoi.osRelease.id "opensuse-tumbleweed" }}
-sudo zypper install --no-confirm {{ range .packages.dnf -}} {{ . }} {{ end }}
-{{ end }}
-
-flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y {{ range .packages.flatpak -}} {{ . }} {{ end }}
-{{ end }}
-
-{{ if eq .chezmoi.os "android" -}}
-# TERMUX ------------------------------
-pkg install {{ range .packages.termux -}} {{ . }} {{ end }}
-{{ end -}}
