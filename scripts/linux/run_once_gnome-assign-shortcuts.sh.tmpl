@@ -2,22 +2,24 @@
 
 # gsettings list-recursively org.gnome.desktop.wm.keybindings | grep to-workspace
 
-if command -v gsettings &>/dev/null; then
-	gsettings set org.gnome.mutter dynamic-workspaces false
-	gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]; then
+	if command -v gsettings &>/dev/null; then
+		gsettings set org.gnome.mutter dynamic-workspaces false
+		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 
-	# keyboard shortcuts
-	for i in $(seq 9); do
-		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
-	done
-	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
-	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
+		# keyboard shortcuts
+		for i in $(seq 9); do
+			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
+			gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
+		done
+		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
 
-	gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']"
-	gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Alt>Tab']"
-	gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
-	gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Super>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Alt>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Super>Tab']"
 
-	gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
+		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
+	fi
 fi
