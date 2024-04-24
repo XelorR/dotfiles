@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-env HOME=$HOME/.opt/doom git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-env HOME=$HOME/.opt/doom ~/.config/emacs/bin/doom install --env -!
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.opt/doom/.config/emacs
+~/.opt/doom/.config/emacs/bin/doom install --env -! --emacsdir ~/.opt/doom/.config/emacs
 
 # then you can run Doom Emacs
 # without affecting your configuration,
