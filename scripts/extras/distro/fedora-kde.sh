@@ -9,6 +9,7 @@ sudo dnf install -y \
 	emacs \
 	eza \
 	fd-find \
+	fish \
 	fzf \
 	gcc \
 	git \
