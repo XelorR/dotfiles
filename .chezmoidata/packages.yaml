@@ -11,6 +11,7 @@ packages:
     - fzf
     - gawk
     - gcc
+    - gh
     - git
     - hugo
     - imagemagick

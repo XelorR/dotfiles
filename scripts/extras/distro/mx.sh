@@ -50,3 +50,4 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/fish.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/syncthing.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh

@@ -48,3 +48,4 @@ flatpak install -y \
 
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
