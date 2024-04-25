@@ -12,6 +12,9 @@
     type = "archive"
     url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
 {{ end -}}
+[".config/fish/completions/lf.fish"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.fish"
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
 # plugin manager
