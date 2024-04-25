@@ -30,6 +30,7 @@ sudo dnf install -y \
 	qemu-tools \
 	ripgrep \
 	rsync \
+	syncthing \
 	tmate \
 	tmux \
 	virt-manager \
