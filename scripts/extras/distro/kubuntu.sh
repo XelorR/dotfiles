@@ -46,3 +46,8 @@ flatpak install -y \
 	net.minetest.Minetest \
 	org.telegram.desktop \
 	org.wezfurlong.wezterm
+
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/fish.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/syncthing.sh
