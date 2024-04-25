@@ -36,4 +36,9 @@ if status is-interactive
     if command -v fzf &>/dev/null
         alias vf='vi $(fzf)'
     end
+
+    # terminal file manager
+    if command -v lf &>/dev/null
+        alias lf='cd "$(command lf -print-last-dir $argv)"'
+    end
 end
