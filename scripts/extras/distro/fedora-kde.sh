@@ -6,6 +6,7 @@ sudo dnf install -y \
 	borgbackup \
 	docker{,-compose} \
 	edk2-ovmf \
+	emacs \
 	eza \
 	fd-find \
 	fzf \
