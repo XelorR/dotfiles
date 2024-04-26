@@ -36,6 +36,7 @@ sudo dnf install -y \
 	virt-manager \
 	vlc \
 	vorta \
+	wl-clipboard \
 	ImageMagick
 
 flatpak remote-add --user --if-not-exists \
