@@ -87,8 +87,8 @@
   ],
   "tabAutocompleteModel": {
     "title": "Tab Autocomplete",
-    "provider": "free-trial",
-    "model": "starcoder-7b"
+    "provider": "ollama",
+    "model": "phi3"
   },
   "embeddingsProvider": {
     "provider": "free-trial"
