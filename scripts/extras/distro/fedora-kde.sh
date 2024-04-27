@@ -9,7 +9,6 @@ sudo dnf install -y \
 	emacs \
 	eza \
 	fd-find \
-	fish \
 	fzf \
 	gcc \
 	git \
@@ -53,3 +52,5 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/neovide.sh
+
+sudo chsh -s $(which zsh)

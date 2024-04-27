@@ -4,7 +4,7 @@ DimmValue=55
 Font=Liga SFMono Nerd Font,11,-1,5,50,0,0,0,0,0
 
 [General]
-Command=/bin/fish
+Command=/bin/zsh
 DimWhenInactive=true
 Name=catppuccin
 Parent=FALLBACK/

@@ -11,7 +11,7 @@ sudo btrfs filesystem defragment -rvf -czstd /
 sudo btrfs filesystem defragment -rvf -czstd /root
 sudo btrfs filesystem defragment -rvf -czstd /home
 
-sudo zypper install --no-confirm fish fzf ripgrep eza bat make luajit gcc npm syncthing tmux tmate w3m ncdu borgbackup rsync git aria2 emacs neovim opi fd chezmoi
+sudo zypper install --no-confirm zsh fzf ripgrep eza bat make luajit gcc npm syncthing tmux tmate w3m ncdu borgbackup rsync git aria2 emacs neovim opi fd chezmoi
 
 fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
