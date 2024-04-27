@@ -51,3 +51,4 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/fish.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/syncthing.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
