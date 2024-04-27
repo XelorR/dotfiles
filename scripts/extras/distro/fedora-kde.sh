@@ -11,6 +11,7 @@ sudo dnf install -y \
 	fd-find \
 	fzf \
 	gcc \
+	genisoimage \
 	git \
 	golang \
 	jq \
