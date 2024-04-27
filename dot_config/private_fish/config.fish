@@ -39,6 +39,8 @@ if status is-interactive
 
     # terminal file manager
     if command -v lf &>/dev/null
-        alias lf='cd "$(command lf -print-last-dir $argv)"'
+        function lf --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
+            cd "$(command lf -print-last-dir $argv)"
+        end
     end
 end
