@@ -48,13 +48,6 @@ scripts/macos/**
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
-.zshrc
-.zprezto
-.zlogin
-.zlogout
-.zpreztorc
-.zprofile
-.zshenv
 scripts/windows/**
 Documents/PowerShell/Microsoft.PowerShell_profile.ps1
 AppData/Local/Microsoft/WindowsApps/**
@@ -72,4 +65,11 @@ ahk
 .opt/**
 scripts/install-packages.sh
 scripts/install-fish-plugins.sh
+.zshrc
+.zprezto
+.zlogin
+.zlogout
+.zpreztorc
+.zprofile
+.zshenv
 {{ end }}
