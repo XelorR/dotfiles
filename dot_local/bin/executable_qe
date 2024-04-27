@@ -40,7 +40,7 @@ if argparsed.make_iso:
     to_mount = to_pack + ".iso"
     if not os.path.exists(to_mount):
         # depends on genisoimage package, make sure to install it first
-        run(["mkisofs", "-o", to_mount, to_pack])
+        run(["mkisofs", "-output-charset", "utf-8", "-o", to_mount, to_pack])
     not_argparsed += [to_mount]
 
 options = ["-p", "-u", "--no-efi", "-n", "--help", "-f"]
