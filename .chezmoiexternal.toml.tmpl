@@ -40,4 +40,77 @@
 [".fonts/sanfrancisco"]
     type = "archive"
     url = "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.zip"
+# ZSH --------------------------------
+{{ if ne .chezmoi.os "windows" -}}
+# prezto
+{{ if ne .chezmoi.os "android" -}}
+[".zprezto"]
+    type = "archive"
+    url = "https://github.com/sorin-ionescu/prezto/archive/master.tar.gz"
     stripComponents = 1
+    exclude = ["*/runcoms/zpreztorc"]
+[".zprezto/modules/autosuggestions/external"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/history-substring-search/external"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/syntax-highlighting/external"]
+    type = "archive"
+	  url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/completion/external"]
+    type = "archive"
+	  url = "https://github.com/zsh-users/zsh-completions/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/prompt/external/powerline"]
+    type = "archive"
+	  url = "https://github.com/davidjrice/prezto_powerline/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/prompt/external/agnoster"]
+    type = "archive"
+	  url = "https://github.com/agnoster/agnoster-zsh-theme/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/prompt/external/pure"]
+    type = "archive"
+	  url = "https://github.com/sindresorhus/pure/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/fasd/external"]
+    type = "archive"
+	  url = "https://github.com/clvv/fasd/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/prompt/external/async"]
+    type = "archive"
+	  url = "https://github.com/mafredri/zsh-async/archive/master.tar.gz"
+    stripComponents = 1
+[".zprezto/modules/prompt/external/powerlevel10k"]
+    type = "archive"
+	  url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
+	  stripComponents = 1
+{{ else -}}
+# oh-my-zsh
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    stripComponents = 1
+[".oh-my-zsh/custom/plugins/zsh-history-substring-search"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
+    stripComponents = 1
+[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
+    stripComponents = 1
+    include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]
+[".oh-my-zsh/custom/themes/powerlevel10k"]
+    type = "archive"
+    url = "https://github.com/romkatv/powerlevel10k/archive/v1.19.0.tar.gz"
+    stripComponents = 1
+[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+    stripComponents = 1
+{{ end -}}
+{{ end -}}
