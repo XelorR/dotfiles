@@ -3,7 +3,7 @@
 import os
 from platform import machine, system
 from subprocess import run
-from sys import argv
+import argparse
 from multiprocessing import cpu_count
 
 os_family = system().lower()
@@ -17,18 +17,35 @@ It provides automatic image type detection, enables UEFI and acceleration if pos
 
 Additional script parameters:
 
--p          enable port forwarding
--u          select USB device (not implemented yet, TODO)
--f          FAT folder, read only (not implemented yet, TODO)
--n          dry run
+-p               enable port forwarding
+-u               select USB device (not implemented yet, TODO)
+-f               FAT folder, read only (not implemented yet, TODO)
+-n               dry run
+-i --make-iso    Makes and mounts ISO from folder of file (not implemented yet, TODO)
 
---no-efi    run without OVMF
---help      display this help message
+--no-efi         run without OVMF
+--help           display this help message
 
 You can also use all available qemu-system-x86_64 parameters"""
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-i", "--make-iso", type=str, help="Makes and mounts ISO from folder of file"
+)
+argparsed, not_argparsed = parser.parse_known_args()
+not_argparsed = [parser.prog] + not_argparsed
+
+if argparsed.make_iso:
+    to_pack = argparsed.make_iso
+    to_mount = to_pack + ".iso"
+    if not os.path.exists(to_mount):
+        # depends on genisoimage package, make sure to install it first
+        run(["mkisofs", "-o", to_mount, to_pack])
+    not_argparsed += [to_mount]
+
 options = ["-p", "-u", "--no-efi", "-n", "--help", "-f"]
 
-if len(argv) < 2 or "--help" in argv:
+if len(not_argparsed) < 2 or "--help" in not_argparsed:
     print(usage)
     exit()
 
@@ -61,8 +78,8 @@ def invert_bools(func):
 
 is_not_image = invert_bools(is_image)
 
-disk_images = list(filter(is_image, argv[1:]))
-other_args = list(filter(is_not_image, argv[1:]))
+disk_images = list(filter(is_image, not_argparsed[1:]))
+other_args = list(filter(is_not_image, not_argparsed[1:]))
 qemu_args = [e for e in other_args if e not in options]
 drive = []
 for i, image in enumerate(disk_images):
@@ -72,7 +89,7 @@ for i, image in enumerate(disk_images):
     format = [e for k, e in formats.items() if image.endswith(k)][0]
     drive += ["-drive", f"file={image},format={format},index={i},media={media}"]
 
-if "-m" not in argv:
+if "-m" not in not_argparsed:
     if os_family == "windows":
         mem = int(virtual_memory()[0] / 1024 / 1024 / 1024 * 0.4)
     elif os_family == "linux":
@@ -95,14 +112,14 @@ if "-m" not in argv:
     mem_amount = ["-m", f"{mem}G"]
 else:
     mem_amount = []
-if "-smp" not in argv:
+if "-smp" not in not_argparsed:
     cpus = int(cpu_count() * 0.4)
     cpus = 2 if cpus > 2 else cpus
     cpu_count = ["-smp", f"{cpus}"]
 else:
     cpu_count = []
 
-if "-p" in argv:
+if "-p" in not_argparsed:
     port_ssh = 9922
     port_http = 9980
     port_fwd = [
@@ -146,13 +163,13 @@ bios = next(
     default_bios,
 )
 
-if "--no-efi" in argv:
+if "--no-efi" in not_argparsed:
     bios = None
 
-if "-f" in argv:
-    vfat_index = argv.index("-f")
-    if vfat_index < len(argv) - 1:
-        vfat_folder = os.path.abspath(argv[vfat_index + 1])
+if "-f" in not_argparsed:
+    vfat_index = not_argparsed.index("-f")
+    if vfat_index < len(not_argparsed) - 1:
+        vfat_folder = os.path.abspath(not_argparsed[vfat_index + 1])
         vfat_drive = [
             "-drive",
             f"file=fat:ro:{vfat_folder},index=9,format=raw,media=disk,if=virtio",
@@ -163,19 +180,21 @@ if "-f" in argv:
 else:
     vfat_drive = []
 
-command = (
-    sudo
-    + [f"qemu-system-{arch}"]
-    + accel
-    + cpu_count
-    + mem_amount
-    + [] if bios is None else ["-bios", bios]
-    + qemu_args
-    + drive
-    + port_fwd
-    + vfat_drive
-)
+command = [
+    sudo,
+    [f"qemu-system-{arch}"],
+    accel,
+    cpu_count,
+    mem_amount,
+    [] if bios is None else ["-bios", bios],
+    qemu_args,
+    drive,
+    port_fwd,
+    vfat_drive,
+]
 
-print(" ".join([c for c in command]))
-if "-n" not in argv:
+command = [item for sublist in command for item in sublist]
+
+print(*command)
+if "-n" not in not_argparsed:
     run(command)
