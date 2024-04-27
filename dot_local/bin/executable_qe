@@ -135,7 +135,6 @@ os_families = {
 }
 
 default_bios = []
-
 os_family_info = os_families.get(os_family, default_bios)
 
 if not os_family_info:
@@ -148,7 +147,7 @@ bios = next(
 )
 
 if "--no-efi" in argv:
-    bios = []
+    bios = None
 
 if "-f" in argv:
     vfat_index = argv.index("-f")
@@ -170,7 +169,7 @@ command = (
     + accel
     + cpu_count
     + mem_amount
-    + ["-bios", bios]
+    + [] if bios is None else ["-bios", bios]
     + qemu_args
     + drive
     + port_fwd
