@@ -37,6 +37,7 @@ sudo dnf install -y \
 	vlc \
 	vorta \
 	wl-clipboard \
+	yp-tools \
 	zsh \
 	ImageMagick
 
