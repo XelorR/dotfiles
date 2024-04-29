@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+
+import argparse
+from shutil import copy, move
+
+
+def has_extension(file_name: str) -> bool:
+    parts = file_name.split(".")
+    return len(parts) > 1
+
+
+def transform_filename(name: str) -> str:
+    # Remove all non-alphanumeric characters and convert to lowercase
+    name = "".join(e.lower() for e in name if e.isalnum() or e in ["_", " ", "."])
+
+    # Replace Cyrillic characters with ASCII analogs
+    replacements = {
+        "а": "a",
+        "б": "b",
+        "в": "v",
+        "г": "g",
+        "д": "d",
+        "е": "e",
+        "ё": "yo",
+        "ж": "j",
+        "з": "z",
+        "и": "i",
+        "й": "y",
+        "к": "k",
+        "л": "l",
+        "м": "m",
+        "н": "n",
+        "о": "o",
+        "п": "p",
+        "р": "r",
+        "с": "s",
+        "т": "t",
+        "у": "u",
+        "ф": "f",
+        "х": "h",
+        "ц": "c",
+        "ч": "ch",
+        "ш": "sh",
+        "щ": "sch",
+        "ъ": "",
+        "ы": "y",
+        "ь": "",
+        "э": "e",
+        "ю": "yu",
+        "я": "ya",
+        " ": "_",
+    }
+
+    for cyrillic, latin in replacements.items():
+        name = name.replace(cyrillic, latin)
+
+    return truncate_string(name)
+
+
+def truncate_string(name):
+    if "." in name:  # Check if there's a period in the string
+        parts = name.rsplit(
+            ".", 1
+        )  # Split the string by the last occurrence of the period
+        base, ext = parts[0], parts[1]  # Extract base and extension
+        if len(base) > 31:  # Check if base part is too long after truncation
+            return f"{base[:31]}.{ext}"  # Keep the original extension if it fits
+        else:
+            return name  # Return the original string if it fits
+    else:  # If there's no period, just truncate the whole string
+        return name[:31]
+
+
+# Test case
+print(truncate_string("myfile.txt"))  # Output: "myfil.txt"
+
+
+def main():
+    # parsing cli arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "fname",
+        type=str,
+        help="file or folder name",
+    )
+    parser.add_argument(
+        "-n", "--dry-run", action="store_true", help="show but not execute"
+    )
+    parser.add_argument(
+        "-c", "--copy", action="store_true", help="copy instead of move"
+    )
+    args = parser.parse_args()
+
+    # generating better name
+    better_name = transform_filename(args.fname)
+    command = [
+        "cp" if args.copy else "mv",
+        f"'{args.fname}'",
+        f"'{better_name}'",
+    ]
+    func = copy if args.copy else move
+
+    # running or printing
+    if args.dry_run:
+        print("Command generated but not run:")
+        print(*command)
+    else:
+        print("Command executed:")
+        print(*command)
+        func(args.fname, better_name)
+
+
+if __name__ == "__main__":
+    main()
