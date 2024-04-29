@@ -11,7 +11,7 @@ def has_extension(file_name: str) -> bool:
 
 def transform_filename(name: str) -> str:
     # Remove all non-alphanumeric characters and convert to lowercase
-    name = "".join(e.lower() for e in name if e.isalnum() or e in ["_", " ", "."])
+    name = "".join(e.lower() for e in name if e.isalnum() or e in ["_", " ", ".", "-"])
 
     # Replace Cyrillic characters with ASCII analogs
     replacements = {
