@@ -30,7 +30,10 @@ You can also use all available qemu-system-x86_64 parameters"""
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "-i", "--make-iso", type=str, help="Makes and mounts ISO from folder of file"
+    "-i",
+    "--make-iso",
+    type=str,
+    help="Makes and mounts ISO from folder of file",
 )
 argparsed, not_argparsed = parser.parse_known_args()
 not_argparsed = [parser.prog] + not_argparsed
