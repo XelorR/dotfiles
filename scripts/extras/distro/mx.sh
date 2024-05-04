@@ -55,4 +55,4 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/neovide.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
 
-sudo chsh -s $(which zsh)
+sudo chsh -s "$(which zsh)"

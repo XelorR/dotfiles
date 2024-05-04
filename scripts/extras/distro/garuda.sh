@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 paru -Syu \
 	appimagelauncher \
@@ -55,4 +55,4 @@ paru -Syu \
 	chaotic-aur/ventoy-bin \
 	chaotic-aur/xboxdrv
 
-sudo chsh -s $(which zsh)
+sudo chsh -s "$(which zsh)"
