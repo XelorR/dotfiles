@@ -24,4 +24,7 @@ elif [ "$ID" = "opensuse" ]; then
     sudo zypper refresh
     sudo zypper install syncthing
 
+elif [ "$ID_LIKE" = "arch" ]; then
+    sudo pacman -Sy syncthing
+
 fi

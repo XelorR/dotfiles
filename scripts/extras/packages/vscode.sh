@@ -26,4 +26,8 @@ elif [ "$ID" = "opensuse" ]; then
 
     sudo zypper refresh
     sudo zypper install code
+
+elif [ "$ID_LIKE" = "arch" ]; then
+    paru -Sy visual-studio-code-bin
+
 fi

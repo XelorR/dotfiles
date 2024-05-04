@@ -32,4 +32,7 @@ elif [ "$ID" = "opensuse" ]; then
     sudo zypper refresh
     sudo zypper install fish
 
+elif [ "$ID_LIKE" = "arch" ]; then
+    sudo pacman -Sy fish
+
 fi

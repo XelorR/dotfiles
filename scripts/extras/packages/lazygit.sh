@@ -10,4 +10,6 @@ if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
 elif [ "$ID" = "fedora" ]; then
 	sudo dnf copr enable atim/lazygit -y
 	sudo dnf install -y lazygit
+elif [ "$ID_LIKE" = "arch" ]; then
+    sudo pacman -Sy lazygit
 fi

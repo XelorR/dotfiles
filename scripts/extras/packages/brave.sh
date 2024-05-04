@@ -24,4 +24,7 @@ elif [ "$ID" = "opensuse" ]; then
 
     sudo zypper install brave-browser
 
+elif [ "$ID_LIKE" = "arch" ]; then
+    paru -Sy brave-bin
+
 fi
