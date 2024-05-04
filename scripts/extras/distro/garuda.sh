@@ -26,7 +26,6 @@ paru -Syu \
 	luajit \
 	make \
 	minetest \
-	mkisofs \
 	neovide \
 	neovim \
 	npm \
@@ -47,6 +46,7 @@ paru -Syu \
 	w3m \
 	wezterm \
 	zsh \
+	cdrkit \
 	{element,telegram}-desktop \
 	chaotic-aur/antimicrox \
 	chaotic-aur/brave-bin \
