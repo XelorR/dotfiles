@@ -8,7 +8,6 @@ paru -Syu \
 	chezmoi \
 	docker{,-compose} \
 	emacs \
-	extra/code \
 	eza \
 	fd \
 	ffmpeg \
@@ -56,4 +55,3 @@ paru -Syu \
 	chaotic-aur/xboxdrv
 
 sudo chsh -s $(which zsh)
-
