@@ -16,6 +16,7 @@ paru -Syu \
 	git \
 	github-cli \
 	go \
+	gwenview \
 	imagemagick \
 	jq \
 	keepassxc \
