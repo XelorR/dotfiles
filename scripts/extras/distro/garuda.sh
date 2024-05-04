@@ -15,6 +15,7 @@ paru -Syu \
 	gcc \
 	genisoimage \
 	git \
+	github-cli \
 	go \
 	imagemagick \
 	jq \
@@ -48,7 +49,6 @@ paru -Syu \
 	{element,telegram}-desktop \
 	chaotic-aur/antimicrox \
 	chaotic-aur/brave-bin \
-	chaotic-aur/github-cli \
 	chaotic-aur/logseq-desktop-bin \
 	chaotic-aur/rpcs3-git \
 	chaotic-aur/ventoy-bin \
