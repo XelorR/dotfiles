@@ -28,6 +28,7 @@ paru -Syu \
 	make \
 	minetest \
 	neovide \
+	neovim \
 	npm \
 	pycharm-community-edition \
 	python-llfuse \
