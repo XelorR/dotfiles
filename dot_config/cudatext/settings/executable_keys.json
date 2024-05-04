@@ -1,0 +1,287 @@
+{
+  "655460": {
+    "name": "caret line up",
+    "s1": [
+      "Ctrl+P"
+    ],
+    "s2": [
+      "Up"
+    ]
+  },
+  "2500": {
+    "name": "file: new file",
+    "s1": [
+      "Ctrl+T"
+    ]
+  },
+  "655461": {
+    "name": "caret line down",
+    "s1": [
+      "Ctrl+N"
+    ],
+    "s2": [
+      "Down"
+    ]
+  },
+  "655465": {
+    "name": "caret to line end",
+    "s1": [
+      "End"
+    ],
+    "s2": [
+      "Ctrl+E"
+    ]
+  },
+  "655620": {
+    "name": "selection: select all",
+    "s1": [
+    ]
+  },
+  "655464": {
+    "name": "caret to line begin",
+    "s1": [
+      "Home"
+    ],
+    "s2": [
+      "Ctrl+A"
+    ]
+  },
+  "2581": {
+    "name": "dialog: go to bookmark",
+    "s1": [
+    ]
+  },
+  "524390": {
+    "name": "caret char left",
+    "s1": [
+      "Left"
+    ],
+    "s2": [
+      "Ctrl+B"
+    ]
+  },
+  "2584": {
+    "name": "dialog: find: show dialog",
+    "s1": [
+      "Shift+Ctrl+F"
+    ]
+  },
+  "524391": {
+    "name": "caret char right",
+    "s1": [
+      "Right"
+    ],
+    "s2": [
+      "Ctrl+F"
+    ]
+  },
+  "655562": {
+    "name": "go to word next",
+    "s1": [
+    ]
+  },
+  "655563": {
+    "name": "go to word previous",
+    "s1": [
+      "Ctrl+Left"
+    ],
+    "s2": [
+      "Alt+B"
+    ]
+  },
+  "171": {
+    "name": "delete line(s)",
+    "s1": [
+    ]
+  },
+  "1000": {
+    "name": "clipboard: paste",
+    "s1": [
+      "Ctrl+V"
+    ],
+    "s2": [
+      "Ctrl+Y"
+    ]
+  },
+  "172": {
+    "name": "duplicate line(s)",
+    "s1": [
+    ]
+  },
+  "153": {
+    "name": "delete char right (delete)",
+    "s1": [
+      "Del"
+    ],
+    "s2": [
+      "Ctrl+D"
+    ]
+  },
+  "177": {
+    "name": "delete word previous",
+    "s1": [
+      "Ctrl+Backspace"
+    ],
+    "s2": [
+      "Alt+Backspace"
+    ]
+  },
+  "176": {
+    "name": "delete word next",
+    "s1": [
+      "Ctrl+Del"
+    ],
+    "s2": [
+      "Alt+D"
+    ]
+  },
+  "131245": {
+    "name": "delete to line begin",
+    "s1": [
+    ],
+    "s2": [
+      "Ctrl+U"
+    ]
+  },
+  "302": {
+    "name": "toggle word-wrap mode (off/window)",
+    "s1": [
+      "Alt+Z"
+    ]
+  },
+  "2606": {
+    "name": "selection: skip to next occurrence of selected word",
+    "s1": [
+      "Shift+Ctrl+U"
+    ]
+  },
+  "589928": {
+    "name": "caret to line begin + select",
+    "s1": [
+      "Shift+Home"
+    ],
+    "s2": [
+      "Shift+Ctrl+A"
+    ]
+  },
+  "589929": {
+    "name": "caret to line end + select",
+    "s1": [
+      "Shift+End"
+    ],
+    "s2": [
+      "Shift+Ctrl+E"
+    ]
+  },
+  "524554": {
+    "name": "selection: expand selection to line, down",
+    "s1": [
+      "Shift+Ctrl+Down"
+    ],
+    "s2": [
+      "Shift+Ctrl+N"
+    ]
+  },
+  "2582": {
+    "name": "dialog: command palette",
+    "s1": [
+      "Shift+Ctrl+P"
+    ],
+    "s2": [
+      "Alt+X"
+    ]
+  },
+  "524555": {
+    "name": "selection: expand selection to line, up",
+    "s1": [
+      "Shift+Ctrl+Up"
+    ]
+  },
+  "2610": {
+    "name": "ui: switch tab, to next",
+    "s1": [
+      "Ctrl+Tab"
+    ],
+    "s2": [
+      "Alt+Right"
+    ]
+  },
+  "2611": {
+    "name": "ui: switch tab, to previous",
+    "s1": [
+      "Shift+Ctrl+Tab"
+    ],
+    "s2": [
+      "Alt+Left"
+    ]
+  },
+  "655466": {
+    "name": "caret page up",
+    "s1": [
+      "PgUp"
+    ],
+    "s2": [
+      "Alt+V"
+    ]
+  },
+  "655467": {
+    "name": "caret page down",
+    "s1": [
+      "PgDown"
+    ]
+  },
+  "590027": {
+    "name": "go to word previous + select",
+    "s1": [
+      "Shift+Ctrl+Left"
+    ],
+    "s2": [
+      "Shift+Alt+B"
+    ]
+  },
+  "655564": {
+    "name": "go to word end",
+    "s1": [
+      "Ctrl+Right"
+    ],
+    "s2": [
+      "Alt+F"
+    ]
+  },
+  "590028": {
+    "name": "go to word end + select",
+    "s1": [
+      "Shift+Ctrl+Right"
+    ],
+    "s2": [
+      "Shift+Alt+F"
+    ]
+  },
+  "2585": {
+    "name": "dialog: replace: show dialog",
+    "s1": [
+      "Ctrl+R"
+    ],
+    "s2": [
+      "Shift+Ctrl+R"
+    ]
+  },
+  "2505": {
+    "name": "file: reload",
+    "s1": [
+      "Shift+Ctrl+O"
+    ]
+  },
+  "2010": {
+    "name": "carets extend: down a line",
+    "s1": [
+      "Ctrl+Alt+Down"
+    ]
+  },
+  "2013": {
+    "name": "carets extend: up a line",
+    "s1": [
+      "Ctrl+Alt+Up"
+    ]
+  }
+}
