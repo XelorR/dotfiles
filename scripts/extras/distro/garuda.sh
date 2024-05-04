@@ -55,3 +55,5 @@ paru -Syu \
 	chaotic-aur/visual-studio-code-bin \
 	chaotic-aur/xboxdrv
 
+sudo chsh -s $(which zsh)
+
