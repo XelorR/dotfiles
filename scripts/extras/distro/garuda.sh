@@ -13,7 +13,6 @@ paru -Syu \
 	ffmpeg \
 	fzf \
 	gcc \
-	genisoimage \
 	git \
 	github-cli \
 	go \
@@ -27,12 +26,13 @@ paru -Syu \
 	luajit \
 	make \
 	minetest \
+	mkisofs \
 	neovide \
 	neovim \
 	npm \
 	pycharm-community-edition \
 	python-llfuse \
-	qalculate \
+	qalculate-qt \
 	qbittorrent \
 	qemu-desktop \
 	ripgrep \
