@@ -39,6 +39,7 @@ paru -Syu \
 	tmate \
 	tmux \
 	virt-manager \
+	visual-studio-code-bin \
 	vlc \
 	vorta \
 	w3m \
@@ -51,7 +52,6 @@ paru -Syu \
 	chaotic-aur/logseq-desktop-bin \
 	chaotic-aur/rpcs3-git \
 	chaotic-aur/ventoy-bin \
-	chaotic-aur/visual-studio-code-bin \
 	chaotic-aur/xboxdrv
 
 sudo chsh -s $(which zsh)
