@@ -35,6 +35,7 @@
   "655620": {
     "name": "selection: select all",
     "s1": [
+      "Alt+A"
     ]
   },
   "655464": {
@@ -282,6 +283,30 @@
     "name": "carets extend: up a line",
     "s1": [
       "Ctrl+Alt+Up"
+    ]
+  },
+  "cuda_exterminal,toggle_focus": {
+    "name": "plugin: ExTerminal: Toggle focus terminal/editor",
+    "s1": [
+      "F4"
+    ]
+  },
+  "154": {
+    "name": "insert line-break (enter)",
+    "s1": [
+      "Enter"
+    ]
+  },
+  "cuda_exterminal,run_selection": {
+    "name": "plugin: ExTerminal: Run selection from editor",
+    "s1": [
+      "Shift+Enter"
+    ]
+  },
+  "2534": {
+    "name": "ui: toggle bottom panel",
+    "s1": [
+      "Ctrl+J"
     ]
   }
 }
