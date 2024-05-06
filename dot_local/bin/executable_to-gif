@@ -3,6 +3,8 @@
 infile=$1
 outfile=${infile%.*}.gif
 
-flatpak run --command='ffmpeg' org.videolan.VLC -i $infile -r 1 -vf fps=1 out%03d.png
-convert out*.png -delay 50 -loop 0 $outfile
-rm out*.png
+ffmpeg -i $infile \
+    -vf "fps=10,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+    -loop 0 $outfile
+
+mogrify -layers "optimize" -fuzz 5% $outfile
