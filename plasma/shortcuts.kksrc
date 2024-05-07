@@ -1,18 +1,21 @@
 [ActivityManager][Global Shortcuts]
+switch-to-activity-462f37c7-c874-4fa2-8a6d-5f2e479b21ce=
 switch-to-activity-8bd3433b-0fd1-4bdd-9158-5e747f42ad31=
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
+Switch keyboard layout to English (US)=
+Switch keyboard layout to Russian=
 Switch to Last-Used Keyboard Layout=Meta+Alt+L
 Switch to Next Keyboard Layout=Meta+Alt+K
 
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
 Activate Previous Tab=Ctrl+[; Ctrl+PgUp
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Alt+Left; Back
+Back=Back; Alt+Left
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
@@ -20,9 +23,9 @@ Clear=
 Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+C; Ctrl+Ins
+Copy=Ctrl+Ins; Ctrl+C
 CreateFolder=Ctrl+Shift+N
-Cut=Ctrl+X; Shift+Del
+Cut=Shift+Del; Ctrl+X
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
 DeleteWordForward=Ctrl+Del
@@ -39,14 +42,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Alt+Right; Forward
+Forward=Forward; Alt+Right
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Home Page; Alt+Home
+Home=Alt+Home; Home Page
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -141,7 +144,7 @@ MoveZoomDown=
 MoveZoomLeft=
 MoveZoomRight=
 MoveZoomUp=
-Overview=Meta+W
+Overview=Meta
 Setup Window Shortcut=
 Show Desktop=Meta+D
 Switch One Desktop Down=Meta+Ctrl+Down
@@ -152,7 +155,7 @@ Switch Window Down=Meta+Alt+Down
 Switch Window Left=Meta+Alt+Left
 Switch Window Right=Meta+Alt+Right
 Switch Window Up=Meta+Alt+Up
-Switch to Desktop 1=Ctrl+Alt+1; Ctrl+F1
+Switch to Desktop 1=Ctrl+F1; Ctrl+Alt+1
 Switch to Desktop 10=Ctrl+Alt+0
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -166,7 +169,7 @@ Switch to Desktop 19=
 Switch to Desktop 2=Ctrl+F2; Ctrl+Alt+2
 Switch to Desktop 20=
 Switch to Desktop 3=Ctrl+Alt+3; Ctrl+F3
-Switch to Desktop 4=Ctrl+F4; Ctrl+Alt+4
+Switch to Desktop 4=Ctrl+Alt+4; Ctrl+F4
 Switch to Desktop 5=Ctrl+Alt+5
 Switch to Desktop 6=Ctrl+Alt+6
 Switch to Desktop 7=Ctrl+Alt+7
@@ -205,7 +208,7 @@ Window Fullscreen=
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=Meta+Return; Meta+PgUp
+Window Maximize=Meta+PgUp; Meta+Return
 Window Maximize Horizontal=
 Window Maximize Vertical=
 Window Minimize=Meta+PgDown
@@ -254,7 +257,7 @@ Window to Desktop 2=Ctrl+Alt+@
 Window to Desktop 20=
 Window to Desktop 3=Ctrl+Alt+#
 Window to Desktop 4=Ctrl+Alt+$
-Window to Desktop 5=Meta
+Window to Desktop 5=
 Window to Desktop 6=Ctrl+Alt+^
 Window to Desktop 7=Ctrl+Alt+&
 Window to Desktop 8=Ctrl+Alt+*
@@ -294,11 +297,11 @@ _launch=Launch (1)
 [org.kde.konsole.desktop][Global Shortcuts]
 NewTab=
 NewWindow=
-_launch=
+_launch=Ctrl+Alt+T
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Search; Alt+F2; Alt+Space
+_launch=Search; Alt+Space; Alt+F2
 
 [org.kde.kscreen.desktop][Global Shortcuts]
 ShowOSD=Display; Meta+P
@@ -319,7 +322,7 @@ RecordScreen=Meta+Alt+R
 RecordWindow=Meta+Ctrl+R
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=Meta+Ctrl+Print
-_launch=Print; Meta+Shift+S
+_launch=Meta+Shift+S; Print
 
 [org.wezfurlong.wezterm.desktop][Global Shortcuts]
 _launch=
@@ -350,6 +353,7 @@ activate task manager entry 6=Meta+6
 activate task manager entry 7=Meta+7
 activate task manager entry 8=Meta+8
 activate task manager entry 9=Meta+9
+activate widget 30=Meta+S
 activate widget 32=Alt+F1
 clear-history=
 clipboard_action=Meta+Ctrl+X
@@ -363,7 +367,7 @@ repeat_action=
 show dashboard=Ctrl+F12
 show-barcode=
 show-on-mouse-pos=Meta+V
-stop current activity=Meta+S
+stop current activity=
 switch to next activity=
 switch to previous activity=
 toggle do not disturb=
