@@ -6,7 +6,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "black",
-        "ruff",
+        -- "ruff",
         -- "pyright",
       })
     end,
