@@ -16,9 +16,11 @@ if test -f "$HOME/.zprezto/init.zsh"; then
   source "$HOME/.zprezto/init.zsh"
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 elif test -f "$HOME/.oh-my-zsh/oh-my-zsh.sh"; then
+  ZSH_THEME="powerlevel10k/powerlevel10k"
   export ZSH="$HOME/.oh-my-zsh"
   plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
   source $ZSH/oh-my-zsh.sh
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 # editor
