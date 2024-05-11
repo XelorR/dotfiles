@@ -6,7 +6,11 @@
 #    stripComponents = 1
 [".opt/lf"]
     type = "archive"
+{{ if eq .chezmoi.arch "arm64" -}}
+    url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-arm64.tar.gz"
+{{ else -}}
     url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
+{{ end -}}
 {{ end -}}
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
