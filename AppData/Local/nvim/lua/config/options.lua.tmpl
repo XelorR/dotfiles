@@ -8,11 +8,13 @@ vim.opt.autoread = true
 vim.o.termguicolors = true
 vim.opt.rnu = false
 
-{{ if eq .chezmoi.os "linux" "windows"}}
+{{ if eq .chezmoi.os "linux" "windows" -}}
+{{ if ne .chezmoi.arch "arm64" -}}
 vim.cmd("language en_US.utf8")
-{{ else if eq .chezmoi.os "darwin" }}
+{{ end -}}
+{{ else if eq .chezmoi.os "darwin" -}}
 vim.cmd("language en_US.UTF-8")
-{{ end }}
+{{ end -}}
 
 if vim.g.neovide then
 {{ if eq .chezmoi.os "darwin" }}
