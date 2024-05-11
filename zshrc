@@ -13,6 +13,7 @@ fi
 
 # prompt
 if test -f "$HOME/.zprezto/init.zsh"; then
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
   source "$HOME/.zprezto/init.zsh"
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 elif test -f "$HOME/.oh-my-zsh/oh-my-zsh.sh"; then
