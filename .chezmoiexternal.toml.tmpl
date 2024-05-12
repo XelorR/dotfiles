@@ -12,6 +12,10 @@
     url = "https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
 {{ end -}}
 {{ end -}}
+[".local/bin/qe"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/XelorR/qe/main/qe"
+    executable = true
 # TMUX ------------------------------
 {{ if ne .chezmoi.os "windows" -}}
 # plugin manager
