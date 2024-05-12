@@ -53,6 +53,12 @@ parser.add_argument(
     action="store_true",
     help="Generate and show qemu command without running",
 )
+parser.add_argument(
+    "-s",
+    "--snapshot",
+    action="store_true",
+    help="Run VM in without saving any changes",
+)
 argparsed, not_argparsed = parser.parse_known_args()
 not_argparsed = [parser.prog] + not_argparsed
 
@@ -223,6 +229,7 @@ command = [
     drive,
     port_fwd,
     vfat_drive,
+    ["-snapshot"] if argparsed.snapshot else [],
 ]
 
 command = [item for sublist in command for item in sublist]
