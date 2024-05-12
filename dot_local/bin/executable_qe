@@ -21,9 +21,8 @@ Additional script parameters:
 -u               select USB device (not implemented yet, TODO)
 -f               FAT folder, read only (not implemented yet, TODO)
 -n               dry run
--i --make-iso    Makes and mounts ISO from folder of file (not implemented yet, TODO)
-
---no-efi         run without OVMF
+-i --make-iso    Makes and mounts ISO from folder of file
+-l --no-efi      run without OVMF
 --help           display this help message
 
 You can also use all available qemu-system-x86_64 parameters"""
@@ -34,6 +33,25 @@ parser.add_argument(
     "--make-iso",
     type=str,
     help="Makes and mounts ISO from folder of file",
+)
+parser.add_argument(
+    "-p",
+    "--ports-passthrough",
+    action="store_true",
+    help="Enables port forwarding for ssh and http",
+)
+parser.add_argument(
+    "-l",
+    "--no-efi",
+    "--legacy",
+    action="store_true",
+    help="Boot in legacy mode",
+)
+parser.add_argument(
+    "-n",
+    "--dry-run",
+    action="store_true",
+    help="Generate and show qemu command without running",
 )
 argparsed, not_argparsed = parser.parse_known_args()
 not_argparsed = [parser.prog] + not_argparsed
@@ -57,7 +75,7 @@ if argparsed.make_iso:
         )
     not_argparsed += [to_mount]
 
-options = ["-p", "-u", "--no-efi", "-n", "--help", "-f"]
+options = ["-u", "-f"]
 
 if len(not_argparsed) < 2 or "--help" in not_argparsed:
     print(usage)
@@ -133,7 +151,7 @@ if "-smp" not in not_argparsed:
 else:
     cpu_count = []
 
-if "-p" in not_argparsed:
+if argparsed.ports_passthrough:
     port_ssh = 9922
     port_http = 9980
     port_fwd = [
@@ -177,7 +195,7 @@ bios = next(
     default_bios,
 )
 
-if "--no-efi" in not_argparsed:
+if argparsed.no_efi:
     bios = None
 
 if "-f" in not_argparsed:
@@ -210,5 +228,5 @@ command = [
 command = [item for sublist in command for item in sublist]
 
 print(*command)
-if "-n" not in not_argparsed:
+if not argparsed.dry_run:
     run(command)
