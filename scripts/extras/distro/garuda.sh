@@ -40,6 +40,7 @@ paru -Syu \
 	syncthing \
 	tmate \
 	tmux \
+	unzip \
 	virt-manager \
 	visual-studio-code-bin \
 	vlc \

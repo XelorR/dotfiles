@@ -29,6 +29,7 @@ pacman -Syu \
 	rsync \
 	tmate \
 	tmux \
+	unzip \
 	vlc \
 	w3m \
 	zsh
