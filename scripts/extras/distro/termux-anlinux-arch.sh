@@ -6,6 +6,7 @@ pacman -Syu \
 	borgbackup \
 	cdrkit \
 	chezmoi \
+	curl \
 	emacs \
 	eza \
 	fd \
@@ -32,4 +33,5 @@ pacman -Syu \
 	unzip \
 	vlc \
 	w3m \
+	wget \
 	zsh
