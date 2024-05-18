@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]; then
+	echo "Create .tar.xz archive with max compression"
+	echo
+	echo "Usage: compress <archive_name> <files...>"
+	exit 1
+fi
+
+XZ_OPT=-9 tar cJf $@
