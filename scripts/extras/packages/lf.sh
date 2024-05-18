@@ -2,7 +2,7 @@
 
 if [[ "$(uname -m)" == "x86_64" ]]; then
 	url="https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz"
-elif [[ "$(uname -m)" == "arm64" ]]; then
+elif [[ "$(uname -m)" == "aarch64" ]]; then
 	url="https://github.com/gokcehan/lf/releases/latest/download/lf-linux-arm64.tar.gz"
 fi
 archiveName="$(echo $url | cut -d'/' -f9)"
