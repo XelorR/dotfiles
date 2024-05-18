@@ -61,6 +61,7 @@ flatpak install -y \
 
 opi codecs
 
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/lf.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 # bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
