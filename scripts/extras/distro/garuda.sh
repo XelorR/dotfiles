@@ -27,7 +27,6 @@ paru -Syu \
 	luajit \
 	make \
 	minetest \
-	neovide \
 	neovim \
 	npm \
 	pycharm-community-edition \
