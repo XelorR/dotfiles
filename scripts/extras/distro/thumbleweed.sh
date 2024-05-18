@@ -59,7 +59,12 @@ flatpak install -y \
 	org.videolan.VLC \
 	org.wezfurlong.wezterm
 
-opi vscode
 opi codecs
+
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
+# bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
+# bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
 
 chsh -s "$(which zsh)"
