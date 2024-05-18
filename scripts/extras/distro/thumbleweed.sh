@@ -49,4 +49,4 @@ flatpak install -y chat.delta.desktop com.github.tchx84.Flatseal com.logseq.Logs
 opi vscode
 opi codecs
 
-sudo chsh -s "$(which zsh)"
+chsh -s "$(which zsh)"

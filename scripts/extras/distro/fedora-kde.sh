@@ -57,7 +57,7 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/neovide.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
 
-sudo chsh -s "$(which zsh)"
+chsh -s "$(which zsh)"
 
 # kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
 # qdbus org.kde.KWin /KWin reconfigure
