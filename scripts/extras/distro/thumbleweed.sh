@@ -44,7 +44,20 @@ sudo zypper install --no-confirm \
 
 flatpak remote-delete flathub
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y chat.delta.desktop com.github.tchx84.Flatseal com.logseq.Logseq im.riot.Riot net.minetest.Minetest org.keepassxc.KeePassXC org.libreoffice.LibreOffice org.mozilla.Thunderbird org.qbittorrent.qBittorrent org.telegram.desktop org.videolan.VLC org.wezfurlong.wezterm io.github.Qalculate zsh
+flatpak install -y \
+	chat.delta.desktop \
+	com.github.tchx84.Flatseal \
+	com.logseq.Logseq \
+	im.riot.Riot \
+	io.github.Qalculate \
+	net.minetest.Minetest \
+	org.keepassxc.KeePassXC \
+	org.libreoffice.LibreOffice \
+	org.mozilla.Thunderbird \
+	org.qbittorrent.qBittorrent \
+	org.telegram.desktop \
+	org.videolan.VLC \
+	org.wezfurlong.wezterm
 
 opi vscode
 opi codecs
