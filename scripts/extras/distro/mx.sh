@@ -47,6 +47,7 @@ flatpak install -y \
 	org.telegram.desktop \
 	org.wezfurlong.wezterm
 
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/neovim.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/syncthing.sh
