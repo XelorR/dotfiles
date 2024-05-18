@@ -59,5 +59,5 @@ paru -Syu \
 
 sudo chsh -s "$(which zsh)"
 
-kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
-qdbus org.kde.KWin /KWin reconfigure
+# kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
+# qdbus org.kde.KWin /KWin reconfigure
