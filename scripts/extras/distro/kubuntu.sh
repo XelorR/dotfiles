@@ -55,5 +55,6 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/syncthing.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/qe.sh
 
 chsh -s "$(which zsh)"

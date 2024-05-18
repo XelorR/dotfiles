@@ -26,8 +26,7 @@ sudo dnf install -y \
 	python-pip \
 	qalc \
 	qbittorrent \
-	qemu-kvm \
-	qemu-tools \
+	qemu-{kvm,tools} \
 	qt \
 	ripgrep \
 	rsync \
@@ -55,6 +54,7 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/qe.sh
 
 chsh -s "$(which zsh)"
 

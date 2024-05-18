@@ -15,8 +15,10 @@ sudo apt install -y \
 	qemu-{user,system{,-gui},utils} \
 	aria2 \
 	gcc \
+	git \
 	npm \
 	borgbackup \
+	genisoimage \
 	golang \
 	make \
 	ncdu \
@@ -29,7 +31,7 @@ sudo apt install -y \
 	imagemagick \
 	jq \
 	virt-manager \
-	qbittorrent-enhanced \
+	qbittorrent \
 	keepassxc \
 	remmina{,-plugin-{rdp,vnc}} \
 	exa \
