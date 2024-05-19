@@ -8,6 +8,8 @@ Command=/bin/zsh
 DimWhenInactive=true
 Name=catppuccin
 Parent=FALLBACK/
+TerminalColumns=88
+TerminalRows=44
 
 [Scrolling]
 HistoryMode=1
