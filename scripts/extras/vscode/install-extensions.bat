@@ -12,6 +12,7 @@ code --install-extension github.remotehub
 code --install-extension grapecity.gc-excelviewer
 code --install-extension hediet.vscode-drawio
 code --install-extension ionide.ionide-fsharp
+code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-dotnettools.csharp
 code --install-extension ms-dotnettools.dotnet-interactive-vscode
 code --install-extension ms-dotnettools.vscode-dotnet-pack
