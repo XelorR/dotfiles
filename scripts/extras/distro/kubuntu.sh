@@ -24,7 +24,7 @@ sudo apt install -y \
 	ncdu \
 	npm \
 	p7zip-full \
-	python3-{pip,llfuse} \
+	python3-{pip,llfuse,venv} \
 	qalc \
 	qbittorrent \
 	qemu-kvm \
