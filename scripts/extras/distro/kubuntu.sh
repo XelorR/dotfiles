@@ -36,6 +36,7 @@ sudo apt install -y \
 	vlc \
 	vorta \
 	wget \
+	xclip \
 	zsh
 
 flatpak remote-add --user --if-not-exists \
