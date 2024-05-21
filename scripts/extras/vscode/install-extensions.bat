@@ -40,10 +40,10 @@ code --install-extension ms-vscode.remote-server
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension nilssoderman.batch-runner
 code --install-extension pomdtr.excalidraw-editor
+code --install-extension rangav.vscode-thunder-client
 code --install-extension redhat.java
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension theumletteam.umlet
 code --install-extension tomoki1207.pdf
 code --install-extension visualstudioexptteam.intellicode-api-usage-examples
 code --install-extension visualstudioexptteam.vscodeintellicode
-
