@@ -38,6 +38,7 @@ code --install-extension ms-vscode.remote-explorer
 code --install-extension ms-vscode.remote-repositories
 code --install-extension ms-vscode.remote-server
 code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension mushan.vscode-paste-image
 code --install-extension nilssoderman.batch-runner
 code --install-extension pomdtr.excalidraw-editor
 code --install-extension rangav.vscode-thunder-client
