@@ -107,6 +107,8 @@ CapsLock::Escape
 ^!+n::^!+n
 ^!+o::^!+o
 ^!+p::^!+p
+; lock screen (doesn't work by some reason)
+; ^!+q::DllCall("LockWorkStation")
 ^!+q::^!+q
 ^!+r::^!+r
 ^!+s::^!+s
@@ -185,6 +187,3 @@ CapsLock::Escape
 
 ; DELETION
 !Backspace::Send("+{Home}{Backspace}")
-
-; LOCK SCREEN
-^!q:#l
