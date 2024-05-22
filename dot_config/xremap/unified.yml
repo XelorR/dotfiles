@@ -260,3 +260,23 @@ keymap:
       Alt-w: Ctrl-Shift-w
       Alt-Shift-rightbrace: Control-Shift-tab
       Alt-Shift-leftbrace: Control-tab
+  # TEXT EDITORS
+  - name: vscodes
+    application:
+      only: [Code]
+    remap:
+      Ctrl-up: Alt-up
+      Ctrl-Alt-up: Ctrl-Alt-up
+      Ctrl-Shift-up: Ctrl-Shift-up
+      Ctrl-down: Alt-down
+      Ctrl-Alt-down: Ctrl-Alt-down
+      Ctrl-Shift-down: Ctrl-Shift-down
+      Alt-comma: Ctrl-Shift-comma
+  - name: notepads
+    application:
+      only: [kate]
+    remap:
+      Ctrl-p: up
+      Ctrl-n: down
+      Ctrl-a: home
+      Ctrl-e: end

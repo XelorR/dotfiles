@@ -209,3 +209,26 @@ GroupAdd "firefoxes", "ahk_exe firefox.exe"
   !,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
 }
 
+; TEXT EDITORS
+
+GroupAdd "vscodes", "ahk_exe Code.exe"
+#HotIf WinActive("ahk_group vscodes")
+{
+  ^up::!up
+  ^!up::^!up
+  ^+up::^+up
+  ^down::!down
+  ^!down::^!down
+  ^+down::^+down
+  ^,::^!,
+}
+
+GroupAdd "notepads", "ahk_exe notepad.exe"
+GroupAdd "notepads", "ahk_exe Code.exe"
+#HotIf WinActive("ahk_group notepads")
+{
+  ^p::up
+  ^n::down
+  ^a::home
+  ^e::end
+}
