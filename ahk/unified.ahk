@@ -191,8 +191,21 @@ CapsLock::Escape
 !Down::^end
 ^p::up
 ^n::down
+^f::right
+^b::left
 ^a::home
 ^e::end
+
+; WINDOW MANAGEMENT
+#Enter::WinMaximize "A"
+#h::WinMinimize "A"
+;hide all windows except curren t
+!#h::
+{
+  active_id := WinGetID("A")
+  WinMinimizeAll
+  WinActivate active_id
+}
 
 ; LAUNCHER
 !Space::#s
@@ -215,12 +228,13 @@ GroupAdd "firefoxes", "ahk_exe firefox.exe"
 GroupAdd "vscodes", "ahk_exe Code.exe"
 #HotIf WinActive("ahk_group vscodes")
 {
-  ^up::!up
-  ^!up::^!up
-  ^+up::^+up
-  ^down::!down
-  ^!down::^!down
-  ^+down::^+down
+  #up::!up
+  #!up::#!up
+  #+up::#+up
+  #down::!down
+  #!down::#!down
+  #+down::#+down
+  #z::!z
   !Enter::^Enter
   !,::^,
 }
