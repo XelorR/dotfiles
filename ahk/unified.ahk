@@ -182,12 +182,17 @@ CapsLock::Escape
 
 ; DELETION
 !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
+^k::Send("{Shift Down}{End}{Shift Up}{Delete}")
 
 ; ARROWS
 !Left::Home
 !Right::End
 !Up::^home
 !Down::^end
+^p::up
+^n::down
+^a::home
+^e::end
 
 ; LAUNCHER
 !Space::#s
@@ -222,14 +227,4 @@ GroupAdd "vscodes", "ahk_exe Code.exe"
   ^+down::^+down
   !Enter::^Enter
   !,::^,
-}
-
-GroupAdd "notepads", "ahk_exe notepad.exe"
-GroupAdd "notepads", "ahk_exe Code.exe"
-#HotIf WinActive("ahk_group notepads")
-{
-  ^p::up
-  ^n::down
-  ^a::home
-  ^e::end
 }

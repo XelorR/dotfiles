@@ -186,12 +186,17 @@ keymap:
 
       # DELETION
       Alt-Backspace: [Shift-Home, Backspace]
+      Ctrl-k: [Shift-end, Delete]
 
       # ARROWS
       Alt-left: home
       Alt-right: end
       Alt-up: Control-home
       Alt-down: Control-end
+      Ctrl-p: up
+      Ctrl-n: down
+      Ctrl-a: home
+      Ctrl-e: end
 
   # OPEN SETTINGS
   - name: chromes
@@ -273,11 +278,3 @@ keymap:
       Ctrl-Shift-down: Ctrl-Shift-down
       Alt-Enter: Ctrl-Enter
       Alt-comma: Ctrl-comma
-  - name: notepads
-    application:
-      only: [kate]
-    remap:
-      Ctrl-p: up
-      Ctrl-n: down
-      Ctrl-a: home
-      Ctrl-e: end
