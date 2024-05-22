@@ -61,8 +61,8 @@ CapsLock::Escape
 !+w:!+w
 !+x:!+x
 !+y:!+y
-; back
-!+z:^z
+; redo
+!+z:^y
 
 ^!a:^!a
 ^!b:^!b
