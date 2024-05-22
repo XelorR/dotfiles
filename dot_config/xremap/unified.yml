@@ -186,10 +186,11 @@ keymap:
       Alt-leftbrace: Alt-left
 
       # DELETION
-      Alt-Backspace: [Shift-Home, Backspace]
-      Ctrl-k: [Shift-end, Delete]
+      Alt-Backspace: [Shift-Home, Backspace]    
 
       # ARROWS
+      Super-Right: Control-right
+      Super-Left: Control-left
       Alt-left: home
       Alt-right: end
       Alt-up: Control-home
@@ -278,12 +279,20 @@ keymap:
     application:
       only: [Code]
     remap:
+      # opt-arrows
       Super-up: Alt-up
-      Super-Alt-up: Super-Alt-up
-      Super-Shift-up: Super-Shift-up
       Super-down: Alt-down
-      Super-Alt-down: Super-Alt-down
-      Super-Shift-down: Super-Shift-down
+      # cursors
+      Super-Shift-up: Ctrl-Shift-up
+      Super-Shift-down: Ctrl-Shift-down
+      # toggles
+      Alt-Shift-d: Ctrl-Shift-d
+      Alt-e: Ctrl-Shift-e
+      Alt-Shift-f: Ctrl-Shift-f
+      Alt-g: [Ctrl-Shift-g, g]
+      Alt-Shift-x: Ctrl-Shift-x
+      # other
       Super-z: Alt-z
+      Super-Shift-f: Ctrl-Shift-i
       Alt-Enter: Ctrl-Enter
       Alt-comma: Ctrl-comma

@@ -182,9 +182,10 @@ CapsLock::Escape
 
 ; DELETION
 !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
-^k::Send("{Shift Down}{End}{Shift Up}{Delete}")
 
 ; ARROWS
+#right::^right
+#left::^left
 !Left::Home
 !Right::End
 !Up::^home
@@ -201,11 +202,11 @@ CapsLock::Escape
 #h::WinMinimize "A"
 ;hide all windows except curren t
 !#h::
-{
-  active_id := WinGetID("A")
-  WinMinimizeAll
-  WinActivate active_id
-}
+  {
+    active_id := WinGetID("A")
+    WinMinimizeAll
+    WinActivate active_id
+  }
 
 ; LAUNCHER
 !Space::#s
@@ -214,11 +215,11 @@ CapsLock::Escape
 GroupAdd "chromes", "ahk_exe brave.exe"
 GroupAdd "chromes", "ahk_exe chrome.exe"
 GroupAdd "chromes", "ahk_exe msedge.exe"
-GroupAdd "firefoxes", "ahk_exe firefox.exe"
 #HotIf WinActive("ahk_group chromes")
 {
   !,::Send "{Ctrl Down}{t}{Ctrl Up}chrome://settings{Enter}"
 }
+GroupAdd "firefoxes", "ahk_exe firefox.exe"
 #HotIf WinActive("ahk_group firefoxes")
 {
   !,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
@@ -228,13 +229,24 @@ GroupAdd "firefoxes", "ahk_exe firefox.exe"
 GroupAdd "vscodes", "ahk_exe Code.exe"
 #HotIf WinActive("ahk_group vscodes")
 {
+  ; opt-arrows
   #up::!up
-  #!up::#!up
-  #+up::#+up
   #down::!down
-  #!down::#!down
-  #+down::#+down
+  ; cursors
+  ^+up::^!up
+  ^+down::^!down
+  ^#up::^!up
+  ^#down::^!down
+  ; toggles
+  !+d::Send("^+{p}run and debug{Enter}")
+  !e::^+e
+  !+f::^+f
+  !g::Send("^+{g}g")
+  !+x::Send("^+{p}view show extensions{Enter}")
+  ; other
   #z::!z
+  #+f::!+f
   !Enter::^Enter
   !,::^,
+  !/::^/
 }
