@@ -193,7 +193,7 @@ keymap:
       Alt-up: Control-home
       Alt-down: Control-end
 
-      # OPEN SETTINGS
+  # OPEN SETTINGS
   - name: chromes
     application:
       only: [Brave-browser, Microsoft-edge, Google-chrome]
@@ -246,3 +246,17 @@ keymap:
           s,
           Enter,
         ]
+  # TERMINALS
+  - name: terminals
+    application:
+      only: [konsole, Gnome-terminal, kitty, wezterm]
+    remap:
+      Alt-n: Ctrl-Shift-n
+      Alt-p: Ctrl-Shift-p
+      Alt-q: Alt-F4
+      Alt-t: Ctrl-Shift-t
+      Ctrl-Alt-t: Ctrl-Alt-t
+      Alt-v: Ctrl-Shift-v
+      Alt-w: Ctrl-Shift-w
+      Alt-Shift-rightbrace: Control-Shift-tab
+      Alt-Shift-leftbrace: Control-tab
