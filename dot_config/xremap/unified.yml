@@ -33,13 +33,146 @@ keymap:
       Alt-y: Ctrl-y
       Alt-z: Ctrl-z
 
+      Alt-Shift-a: Alt-Shift-a
+      Alt-Shift-b: Alt-Shift-b
+      Alt-Shift-c: Alt-Shift-c
+      Alt-Shift-d: Alt-Shift-d
+      Alt-Shift-e: Alt-Shift-e
+      Alt-Shift-f: Alt-Shift-f
+      Alt-Shift-g: Alt-Shift-g
+      Alt-Shift-h: Alt-Shift-h
+      Alt-Shift-i: Alt-Shift-i
+      Alt-Shift-j: Alt-Shift-j
+      Alt-Shift-k: Alt-Shift-k
+      Alt-Shift-l: Alt-Shift-l
+      Alt-Shift-m: Alt-Shift-m
+      # new
       Alt-Shift-n: Ctrl-Shift-n
+      # optional open
       Alt-Shift-o: Ctrl-Shift-o
+      # cmd-shift-p
       Alt-Shift-p: Ctrl-Shift-p
+      Alt-Shift-q: Alt-Shift-q
+      # refresh
       Alt-Shift-r: Ctrl-Shift-r
+      # save as
       Alt-Shift-s: Ctrl-Shift-s
+      # restore tab
       Alt-Shift-t: Ctrl-Shift-t
+      Alt-Shift-u: Alt-Shift-u
+      Alt-Shift-v: Alt-Shift-v
+      Alt-Shift-w: Alt-Shift-w
+      Alt-Shift-x: Alt-Shift-x
+      Alt-Shift-y: Alt-Shift-y
       Alt-Shift-z: Ctrl-y
+
+      Ctrl-Alt-a: Ctrl-Alt-a
+      Ctrl-Alt-b: Ctrl-Alt-b
+      Ctrl-Alt-c: Ctrl-Alt-c
+      Ctrl-Alt-d: Ctrl-Alt-d
+      Ctrl-Alt-e: Ctrl-Alt-e
+      Ctrl-Alt-f: Ctrl-Alt-f
+      Ctrl-Alt-g: Ctrl-Alt-g
+      Ctrl-Alt-h: Ctrl-Alt-h
+      Ctrl-Alt-i: Ctrl-Alt-i
+      Ctrl-Alt-j: Ctrl-Alt-j
+      Ctrl-Alt-k: Ctrl-Alt-k
+      Ctrl-Alt-l: Ctrl-Alt-l
+      Ctrl-Alt-m: Ctrl-Alt-m
+      Ctrl-Alt-n: Ctrl-Alt-n
+      Ctrl-Alt-o: Ctrl-Alt-o
+      Ctrl-Alt-p: Ctrl-Alt-p
+      Ctrl-Alt-q: Ctrl-Alt-q
+      Ctrl-Alt-r: Ctrl-Alt-r
+      Ctrl-Alt-s: Ctrl-Alt-s
+      Ctrl-Alt-t: Ctrl-Alt-t
+      Ctrl-Alt-u: Ctrl-Alt-u
+      Ctrl-Alt-v: Ctrl-Alt-v
+      Ctrl-Alt-w: Ctrl-Alt-w
+      Ctrl-Alt-x: Ctrl-Alt-x
+      Ctrl-Alt-y: Ctrl-Alt-y
+      Ctrl-Alt-z: Ctrl-Alt-z
+
+      Ctrl-Alt-Shift-a: Ctrl-Alt-Shift-a
+      Ctrl-Alt-Shift-b: Ctrl-Alt-Shift-b
+      Ctrl-Alt-Shift-c: Ctrl-Alt-Shift-c
+      Ctrl-Alt-Shift-d: Ctrl-Alt-Shift-d
+      Ctrl-Alt-Shift-e: Ctrl-Alt-Shift-e
+      Ctrl-Alt-Shift-f: Ctrl-Alt-Shift-f
+      Ctrl-Alt-Shift-g: Ctrl-Alt-Shift-g
+      Ctrl-Alt-Shift-h: Ctrl-Alt-Shift-h
+      Ctrl-Alt-Shift-i: Ctrl-Alt-Shift-i
+      Ctrl-Alt-Shift-j: Ctrl-Alt-Shift-j
+      Ctrl-Alt-Shift-k: Ctrl-Alt-Shift-k
+      Ctrl-Alt-Shift-l: Ctrl-Alt-Shift-l
+      Ctrl-Alt-Shift-m: Ctrl-Alt-Shift-m
+      Ctrl-Alt-Shift-n: Ctrl-Alt-Shift-n
+      Ctrl-Alt-Shift-o: Ctrl-Alt-Shift-o
+      Ctrl-Alt-Shift-p: Ctrl-Alt-Shift-p
+      Ctrl-Alt-Shift-q: Ctrl-Alt-Shift-q
+      Ctrl-Alt-Shift-r: Ctrl-Alt-Shift-r
+      Ctrl-Alt-Shift-s: Ctrl-Alt-Shift-s
+      Ctrl-Alt-Shift-t: Ctrl-Alt-Shift-t
+      Ctrl-Alt-Shift-u: Ctrl-Alt-Shift-u
+      Ctrl-Alt-Shift-v: Ctrl-Alt-Shift-v
+      Ctrl-Alt-Shift-w: Ctrl-Alt-Shift-w
+      Ctrl-Alt-Shift-x: Ctrl-Alt-Shift-x
+      Ctrl-Alt-Shift-y: Ctrl-Alt-Shift-y
+      Ctrl-Alt-Shift-z: Ctrl-Alt-Shift-z
+
+      Ctrl-Super-Alt-a: Ctrl-Super-Alt-a
+      Ctrl-Super-Alt-b: Ctrl-Super-Alt-b
+      Ctrl-Super-Alt-c: Ctrl-Super-Alt-c
+      Ctrl-Super-Alt-d: Ctrl-Super-Alt-d
+      Ctrl-Super-Alt-e: Ctrl-Super-Alt-e
+      Ctrl-Super-Alt-f: Ctrl-Super-Alt-f
+      Ctrl-Super-Alt-g: Ctrl-Super-Alt-g
+      Ctrl-Super-Alt-h: Ctrl-Super-Alt-h
+      Ctrl-Super-Alt-i: Ctrl-Super-Alt-i
+      Ctrl-Super-Alt-j: Ctrl-Super-Alt-j
+      Ctrl-Super-Alt-k: Ctrl-Super-Alt-k
+      Ctrl-Super-Alt-l: Ctrl-Super-Alt-l
+      Ctrl-Super-Alt-m: Ctrl-Super-Alt-m
+      Ctrl-Super-Alt-n: Ctrl-Super-Alt-n
+      Ctrl-Super-Alt-o: Ctrl-Super-Alt-o
+      Ctrl-Super-Alt-p: Ctrl-Super-Alt-p
+      Ctrl-Super-Alt-q: Ctrl-Super-Alt-q
+      Ctrl-Super-Alt-r: Ctrl-Super-Alt-r
+      Ctrl-Super-Alt-s: Ctrl-Super-Alt-s
+      Ctrl-Super-Alt-t: Ctrl-Super-Alt-t
+      Ctrl-Super-Alt-u: Ctrl-Super-Alt-u
+      Ctrl-Super-Alt-v: Ctrl-Super-Alt-v
+      Ctrl-Super-Alt-w: Ctrl-Super-Alt-w
+      Ctrl-Super-Alt-x: Ctrl-Super-Alt-x
+      Ctrl-Super-Alt-y: Ctrl-Super-Alt-y
+      Ctrl-Super-Alt-z: Ctrl-Super-Alt-z
+
+      Ctrl-Super-Alt-Shift-a: Ctrl-Super-Alt-Shift-a
+      Ctrl-Super-Alt-Shift-b: Ctrl-Super-Alt-Shift-b
+      Ctrl-Super-Alt-Shift-c: Ctrl-Super-Alt-Shift-c
+      Ctrl-Super-Alt-Shift-d: Ctrl-Super-Alt-Shift-d
+      Ctrl-Super-Alt-Shift-e: Ctrl-Super-Alt-Shift-e
+      Ctrl-Super-Alt-Shift-f: Ctrl-Super-Alt-Shift-f
+      Ctrl-Super-Alt-Shift-g: Ctrl-Super-Alt-Shift-g
+      Ctrl-Super-Alt-Shift-h: Ctrl-Super-Alt-Shift-h
+      Ctrl-Super-Alt-Shift-i: Ctrl-Super-Alt-Shift-i
+      Ctrl-Super-Alt-Shift-j: Ctrl-Super-Alt-Shift-j
+      Ctrl-Super-Alt-Shift-k: Ctrl-Super-Alt-Shift-k
+      Ctrl-Super-Alt-Shift-l: Ctrl-Super-Alt-Shift-l
+      Ctrl-Super-Alt-Shift-m: Ctrl-Super-Alt-Shift-m
+      Ctrl-Super-Alt-Shift-n: Ctrl-Super-Alt-Shift-n
+      Ctrl-Super-Alt-Shift-o: Ctrl-Super-Alt-Shift-o
+      Ctrl-Super-Alt-Shift-p: Ctrl-Super-Alt-Shift-p
+      Ctrl-Super-Alt-Shift-q: Ctrl-Super-Alt-Shift-q
+      Ctrl-Super-Alt-Shift-r: Ctrl-Super-Alt-Shift-r
+      Ctrl-Super-Alt-Shift-s: Ctrl-Super-Alt-Shift-s
+      Ctrl-Super-Alt-Shift-t: Ctrl-Super-Alt-Shift-t
+      Ctrl-Super-Alt-Shift-u: Ctrl-Super-Alt-Shift-u
+      Ctrl-Super-Alt-Shift-v: Ctrl-Super-Alt-Shift-v
+      Ctrl-Super-Alt-Shift-w: Ctrl-Super-Alt-Shift-w
+      Ctrl-Super-Alt-Shift-x: Ctrl-Super-Alt-Shift-x
+      Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
+      Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
 
       # TABS
       Alt-Shift-rightbrace: Control-pagedown
@@ -53,5 +186,7 @@ keymap:
       Alt-Backspace: [Shift-Home, Backspace]
 
       # ARROWS
-      Alt-left: Home
-      Alt-right: End
+      Alt-left: home
+      Alt-right: end
+      Alt-up: Control-home
+      Alt-down: Control-end

@@ -186,3 +186,8 @@ CapsLock::Escape
 ; ARROWS
 !Left::Home
 !Right::End
+!Up::^home
+!Down::^end
+
+; LAUNCHER
+!Space::#s
