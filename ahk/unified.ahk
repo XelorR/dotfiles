@@ -173,7 +173,7 @@ CapsLock::Escape
 ^#!+z:^#!+z
 
 ; LAUNCHER
-^Space::Send("{LWin}")
+!Space::Send("{LWin}")
 
 ; TABS
 !+sc01B::^PgDn
