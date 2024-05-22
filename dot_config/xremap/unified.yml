@@ -287,6 +287,8 @@ keymap:
       # cursors
       Ctrl-Super-up: Ctrl-Shift-up
       Ctrl-Super-down: Ctrl-Shift-down
+      Ctrl-Alt-up: Ctrl-Shift-up
+      Ctrl-Alt-down: Ctrl-Shift-down
       # toggles
       # Alt-Shift-d: Ctrl-Shift-d
       # Alt-e: Ctrl-Shift-e
