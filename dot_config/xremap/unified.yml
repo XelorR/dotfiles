@@ -3,7 +3,9 @@ modmap:
     remap:
       CapsLock: Esc
 keymap:
-  - name: Combos
+  - name: "Global combos"
+    application:
+      not: [konsole, Gnome-terminal, kitty, wezterm]
     remap:
       # LETTERS
       Alt-a: Ctrl-a
@@ -196,8 +198,51 @@ keymap:
     application:
       only: [Brave-browser, Microsoft-edge, Google-chrome]
     remap:
-      Alt-comma: [Control-t, c, h, r, o, m, e, Shift-semicolon, slash, slash, s, e, t, t, i, n, g, s, Enter]
+      Alt-comma:
+        [
+          Control-t,
+          c,
+          h,
+          r,
+          o,
+          m,
+          e,
+          Shift-semicolon,
+          slash,
+          slash,
+          s,
+          e,
+          t,
+          t,
+          i,
+          n,
+          g,
+          s,
+          Enter,
+        ]
   - name: firefoxes
     application:
-      only: [Firefox-browser]
-      Alt-comma: [Control-t, a, b, o, u, t, Shift-semicolon, p, r, e, f, e, r, e, n, c, e, s, Enter]
+      only: [firefox]
+    remap:
+      Alt-comma:
+        [
+          Control-t,
+          a,
+          b,
+          o,
+          u,
+          t,
+          Shift-semicolon,
+          p,
+          r,
+          e,
+          f,
+          e,
+          r,
+          e,
+          n,
+          c,
+          e,
+          s,
+          Enter,
+        ]
