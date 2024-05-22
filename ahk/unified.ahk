@@ -220,6 +220,7 @@ GroupAdd "vscodes", "ahk_exe Code.exe"
   ^down::!down
   ^!down::^!down
   ^+down::^+down
+  !Enter::^Enter
   !,::^,
 }
 
