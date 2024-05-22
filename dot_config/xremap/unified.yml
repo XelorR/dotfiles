@@ -187,6 +187,8 @@ keymap:
 
       # DELETION
       Alt-Backspace: [Shift-Home, Backspace]    
+      Super-backspace: Ctrl-backspace
+      Super-delete: Ctrl-delete
 
       # ARROWS
       Super-Right: Control-right
