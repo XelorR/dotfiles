@@ -7,6 +7,7 @@ keymap:
     application:
       not: [konsole, Gnome-terminal, kitty, wezterm]
     remap:
+
       # LETTERS
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
@@ -251,6 +252,7 @@ keymap:
           s,
           Enter,
         ]
+
   # TERMINALS
   - name: terminals
     application:
@@ -265,6 +267,7 @@ keymap:
       Alt-w: Ctrl-Shift-w
       Alt-Shift-rightbrace: Control-Shift-tab
       Alt-Shift-leftbrace: Control-tab
+
   # TEXT EDITORS
   - name: vscodes
     application:
