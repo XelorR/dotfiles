@@ -181,7 +181,7 @@ CapsLock::Escape
 !sc01A::!Left
 
 ; DELETION
-!Backspace::Send("+{Home}{Backspace}")
+!Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
 
 ; ARROWS
 !Left::Home
