@@ -5,6 +5,7 @@ modmap:
 keymap:
   - name: Combos
     remap:
+      # LETTERS
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
       Alt-c: Ctrl-c
@@ -31,3 +32,26 @@ keymap:
       Alt-x: Ctrl-x
       Alt-y: Ctrl-y
       Alt-z: Ctrl-z
+
+      Alt-Shift-n: Ctrl-Shift-n
+      Alt-Shift-o: Ctrl-Shift-o
+      Alt-Shift-p: Ctrl-Shift-p
+      Alt-Shift-r: Ctrl-Shift-r
+      Alt-Shift-s: Ctrl-Shift-s
+      Alt-Shift-t: Ctrl-Shift-t
+      Alt-Shift-z: Ctrl-y
+
+      # TABS
+      Alt-Shift-rightbrace: Control-pagedown
+      Alt-Shift-leftbrace: Control-pageup
+
+      # HISTORY
+      Alt-rightbrace: Alt-right
+      Alt-leftbrace: Alt-left
+
+      # DELETION
+      Alt-Backspace: [Shift-Home, Backspace]
+
+      # ARROWS
+      Alt-left: Home
+      Alt-right: End

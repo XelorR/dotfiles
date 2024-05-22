@@ -107,8 +107,6 @@ CapsLock::Escape
 ^!+n::^!+n
 ^!+o::^!+o
 ^!+p::^!+p
-; lock screen (doesn't work by some reason)
-; ^!+q::DllCall("LockWorkStation")
 ^!+q::^!+q
 ^!+r::^!+r
 ^!+s::^!+s
@@ -174,9 +172,6 @@ CapsLock::Escape
 ^#!+y::^#!+y
 ^#!+z::^#!+z
 
-; LAUNCHER
-!Space::Send("{LWin}")
-
 ; TABS
 !+sc01B::^PgDn
 !+sc01A::^PgUp
@@ -187,3 +182,7 @@ CapsLock::Escape
 
 ; DELETION
 !Backspace::Send("+{Home}{Backspace}")
+
+; ARROWS
+!Left::Home
+!Right:End
