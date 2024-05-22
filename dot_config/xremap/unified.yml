@@ -296,4 +296,4 @@ keymap:
       Super-Shift-f: Ctrl-Shift-i
       Alt-Enter: Ctrl-Enter
       Alt-comma: Ctrl-comma
-      # Alt-/
+      Alt-slash: Ctrl-slash
