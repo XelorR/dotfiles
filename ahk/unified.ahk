@@ -220,7 +220,7 @@ GroupAdd "vscodes", "ahk_exe Code.exe"
   ^down::!down
   ^!down::^!down
   ^+down::^+down
-  ^,::^!,
+  !,::^,
 }
 
 GroupAdd "notepads", "ahk_exe notepad.exe"
