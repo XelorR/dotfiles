@@ -271,7 +271,7 @@ keymap:
       Ctrl-down: Alt-down
       Ctrl-Alt-down: Ctrl-Alt-down
       Ctrl-Shift-down: Ctrl-Shift-down
-      Alt-comma: Ctrl-Shift-comma
+      Alt-comma: Ctrl-comma
   - name: notepads
     application:
       only: [kate]
