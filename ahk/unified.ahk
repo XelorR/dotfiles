@@ -188,6 +188,8 @@ CapsLock::Escape
 ; ARROWS
 #right::^right
 #left::^left
+^#right::^#right
+^#left::^#left
 !Left::Home
 !Right::End
 !Up::^home
