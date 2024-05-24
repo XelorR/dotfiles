@@ -237,6 +237,10 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
     WinMinimizeAll
     WinActivate active_id
   }
+; WORKSPACE MANAGEMENT
+  ^up::#tab
+  ^left::^#left
+  ^right::^#right
 
 ; LAUNCHER
   !Space::#s
