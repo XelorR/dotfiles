@@ -274,8 +274,8 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 }
 #HotIf WinActive("ahk_group tabsCTab")
 {
-  !+sc01B::^+Tab
-  !+sc01A::^Tab
+  !+sc01B::^Tab
+  !+sc01A::^+Tab
 }
 
 ; HISTORY
