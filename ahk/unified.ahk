@@ -1,6 +1,12 @@
 SetCapsLockState "AlwaysOff"
 CapsLock::Escape
 
+GroupAdd "vscodes", "ahk_exe Code.exe"
+GroupAdd "firefoxes", "ahk_exe firefox.exe"
+GroupAdd "chromes", "ahk_exe chrome.exe"
+GroupAdd "chromes", "ahk_exe brave.exe"
+GroupAdd "chromes", "ahk_exe msedge.exe"
+
 ; LETTERS
 !a::^a
 !b::^b
@@ -216,21 +222,16 @@ CapsLock::Escape
 !Space::#s
 
 ; OPEN SETTINGS
-GroupAdd "chromes", "ahk_exe brave.exe"
-GroupAdd "chromes", "ahk_exe chrome.exe"
-GroupAdd "chromes", "ahk_exe msedge.exe"
 #HotIf WinActive("ahk_group chromes")
 {
   !,::Send "{Ctrl Down}{t}{Ctrl Up}chrome://settings{Enter}"
 }
-GroupAdd "firefoxes", "ahk_exe firefox.exe"
 #HotIf WinActive("ahk_group firefoxes")
 {
   !,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
 }
 
 ; TEXT EDITORS
-GroupAdd "vscodes", "ahk_exe Code.exe"
 #HotIf WinActive("ahk_group vscodes")
 {
   ; opt-arrows
