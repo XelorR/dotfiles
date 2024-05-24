@@ -49,7 +49,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !d::^d
   !e::^e
   !f::^f
-  !g::^g
+  ; !g::^g ; defined with vscodes exclusion
   !h::^h
   ; !i::^i ; defined with explorer exclusion
   !j::^j
@@ -77,7 +77,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !+d::!+d
   !+e::!+e
   ; !+f::!+f ; defined with vscodes exclusion
-  !+g::!+g
+  ; !+g::!+g ; defined with vscodes exclusion
   !+h::!+h
   !+i::!+i
   !+j::!+j
@@ -322,6 +322,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 {
   !+f::!+f
   !+l::!+l
+  !g::!g
+  !+g::!+g
   #up::!up
   #down::!down
 }
@@ -350,17 +352,26 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   #+i::!+i ; add cursors to the end of each line selected
   !F2::^F2 ; select all occurencies of selected word
   !+l::^+l ; select all occurencies of current selection
+  ; selection
   !^+right::!+right ; expand selection
   !^+left::!+left ; shrink selection
+  ; !#+left::!^+left ;    | doesn't work by some reason
+  ; !#+right::!^+right ;  | doesn't work by some reason
+  ; !#+up::!^+up ;        | doesn't work by some reason
+  ; !#+down::!^+down ;    | doesn't work by some reason
   ; toggles
   !+d::Send("^+{p}run and debug{Enter}")
   !+e::Send("^+{p}focus on file explorer{Enter}")
-  !+f::^+f
-  !g::Send("^+{g}g")
+  !+f::^+f ; find dialog
+  ^+g::Send("^+{g}g")
   !+x::Send("^+{p}view show extensions{Enter}")
   ; other
+  !#f::^h ; replace
   #z::!z ; wrap
   #+f::!+f ; format
+  !g::F3 ; find next
+  !+g::+F3 ; find previous
+  #F12::!F12 ; peek definition
   !Enter::^Enter ; Commit button in Source Control / insert line below
   ; !+Enter::^+Enter ; insert line above | doesn't work by some reason
   !,::^, ; open settings
