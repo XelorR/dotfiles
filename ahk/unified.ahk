@@ -117,7 +117,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^!q::^!q
   ^!r::^!r
   ^!s::^!s
-  ^!t::Run A_ComSpec
+  ^!t::Run A_ComSpec, A_MyDocuments
   ^!u::^!u
   ^!v::^!v
   ^!w::^!w
