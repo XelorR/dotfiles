@@ -320,6 +320,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 ; VSCODES
 #HotIf WinActive("ahk_group vscodes")
 {
+  ; mouse
+  ; #+LButton::!+LButton ; box selection | doesn't work by some reason
   ; move line up/down
   #up::!up
   #down::!down
