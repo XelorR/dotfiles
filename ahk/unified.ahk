@@ -350,6 +350,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   #+i::!+i ; add cursors to the end of each line selected
   !F2::^F2 ; select all occurencies of selected word
   !+l::^+l ; select all occurencies of current selection
+  !^+right::!+right ; expand selection
+  !^+left::!+left ; shrink selection
   ; toggles
   !+d::Send("^+{p}run and debug{Enter}")
   !+e::Send("^+{p}focus on file explorer{Enter}")
