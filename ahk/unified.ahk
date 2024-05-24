@@ -29,6 +29,7 @@ GroupAdd "tabsCPgUp", "ahk_group office"
 ; group used to exclude functionality
 GroupAdd "completelyExclude", "ahk_class Emacs"
 GroupAdd "explorerAndExlist", "ahk_group explorer"
+GroupAdd "explorerAndExlist", "ahk_group desktop"
 GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 
 #HotIf not WinActive("ahk_group completelyExclude")
