@@ -17,13 +17,13 @@ keymap:
       Alt-f: Ctrl-f
       Alt-g: Ctrl-g
       Alt-h: Ctrl-h
-      Alt-i: Ctrl-i
+      # Alt-i: Ctrl-i # defined with file manager exclusion
       Alt-j: Ctrl-j
       Alt-k: Ctrl-k
       Alt-l: Ctrl-l
       Alt-m: Ctrl-m
       Alt-n: Ctrl-n
-      Alt-o: Ctrl-o
+      # Alt-o: Ctrl-o # defined with file manager exclusion
       Alt-p: Ctrl-p
       Alt-q: Ctrl-q
       Alt-r: Ctrl-r
@@ -185,11 +185,6 @@ keymap:
       Alt-rightbrace: Alt-right
       Alt-leftbrace: Alt-left
 
-      # DELETION
-      Alt-Backspace: [Shift-Home, Backspace]    
-      Super-backspace: Ctrl-backspace
-      Super-delete: Ctrl-delete
-
       # ARROWS
       Super-Right: Control-right
       Super-Left: Control-left
@@ -206,6 +201,31 @@ keymap:
 
       # WINDOW MANAGEMENT
       # Super-Enter: Super-up
+
+  # FILE MANAGER
+  - name: "not file manager"
+    application:
+      not: [dolphin]
+    remap:
+      # DELETION
+      Alt-Backspace: [Shift-Home, Backspace]    
+      Super-backspace: Ctrl-backspace
+      Super-delete: Ctrl-delete
+      # GENERAL
+      Alt-i: Ctrl-i
+      Alt-o: Ctrl-o
+  - name: "file manager"
+    application:
+      not: [dolphin]
+    remap:
+      Enter: F2
+      Alt-down: Enter
+      Alt-1: Ctrl-2
+      Alt-2: Ctrl-1
+      Alt-3: Ctrl-3
+      Alt-o: Enter
+      Alt-i: Alt-Enter
+      Alt-Backspace: Delete
 
   # OPEN SETTINGS
   - name: chromes
