@@ -74,7 +74,7 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
   !+c::!+c
   !+d::!+d
   !+e::!+e
-  !+f::!+f
+  ; !+f::!+f ; defined with vscodes exclusion
   !+g::!+g
   !+h::!+h
   !+i::!+i
@@ -305,7 +305,13 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
   !,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
 }
 
-; TEXT EDITORS
+; EXCLUDED FROM VSCODES
+#HotIf not WinActive("ahk_group terminalsAndExlist")
+{
+  !+f::!+f
+}
+
+; VSCODES
 #HotIf WinActive("ahk_group vscodes")
 {
   ; opt-arrows
