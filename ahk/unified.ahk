@@ -103,7 +103,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^!c::^!c
   ^!d::^!d
   ^!e::^!e
-  ^!f::^!f
+  ^!f::F11 ; toggle maximize (macos vscode-like)
   ^!g::^!g
   ^!h::^!h
   ^!i::^!i
@@ -219,7 +219,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^e::end
 
 ; WINDOW MANAGEMENT
-  #Enter::WinMaximize "A"
+  ^#Enter::F11
   #h::WinMinimize "A"
   ;hide all windows except curren t
   !#h::
