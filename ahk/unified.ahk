@@ -202,10 +202,6 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   ^#!+y::^#!+y
   ^#!+z::^#!+z
 
-  ; TABS
-  !+sc01B::^PgDn
-  !+sc01A::^PgUp
-
   ; HISTORY
   !sc01B::!Right
   !sc01A::!Left
@@ -247,6 +243,18 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
   #Backspace::^Backspace
   #Delete::^Delete
+}
+
+; TABS
+#HotIf WinActive("ahk_group tabsCPgUp")
+{
+  !+sc01B::^PgDn
+  !+sc01A::^PgUp
+}
+#HotIf WinActive("ahk_group tabsCTab")
+{
+  !+sc01B::^+Tab
+  !+sc01A::^Tab
 }
 
 ; OPEN SETTINGS
