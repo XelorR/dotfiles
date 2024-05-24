@@ -338,7 +338,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^#down::^!down
   ; toggles
   !+d::Send("^+{p}run and debug{Enter}")
-  !e::^+e
+  !+e::Send("^+{p}focus on file explorer{Enter}")
   !+f::^+f
   !g::Send("^+{g}g")
   !+x::Send("^+{p}view show extensions{Enter}")
