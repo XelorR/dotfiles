@@ -266,6 +266,11 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !Down::Enter
   !o::Enter
   !i::!Enter
+  !1::^+2 ; Cmd+1: View as Icons
+  !2::^+6 ; Cmd+2: View as List (Detailed)
+  !3::^+5 ; Cmd+3: View as List (Compact)
+  !4::^+1 ; Cmd+4: View as Gallery
+  !Backspace::Delete
 }
 
 ; EXCLUDED FROM TERMINALS
