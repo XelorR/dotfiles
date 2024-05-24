@@ -350,6 +350,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !,::^, ; open settings
   !.::^. ; quick fix
   !/::^/ ; comment
+  !\::^\ ; split editor
   ; braces
   !sc01B::^sc01B ; indent
   !sc01A::^sc01A ; unindent
