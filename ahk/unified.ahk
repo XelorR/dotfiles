@@ -255,6 +255,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !Right::End
   !Up::^home
   !Down::^end
+  !o::^o
+  !i::^i
 }
 
 ; FILE MANAGER
