@@ -82,26 +82,19 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
   !+k::!+k
   !+l::!+l
   !+m::!+m
-  ; new
-  !+n::^+n
-  ; optional open
-  !+o::^+o
-  ; cmd-shift-p
-  !+p::^+p
+  !+n::^+n ; new
+  !+o::^+o ; optional open
+  !+p::^+p ; cmd-shift-p
   !+q::!+q
-  ; refresh
-  !+r::^+r
-  ; save as
-  !+s::^+s
-  ; restore tab
-  !+t::^+t
+  !+r::^+r ; refresh
+  !+s::^+s ; save as
+  !+t::^+t ; restore tab
   !+u::!+u
   !+v::!+v
   !+w::!+w
   !+x::!+x
   !+y::!+y
-  ; redo
-  !+z::^y
+  !+z::^y  ; redo
 
   ^!a::^!a
   ^!b::^!b
