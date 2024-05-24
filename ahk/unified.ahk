@@ -359,4 +359,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !#sc01B::^+sc01B ; collapse
   !#sc01A::^+sc01A ; expand
   #+a::!+a ; block comment
+  ; focus into editor groups
+  !1::^1
+  !2::^2
+  !3::^3
 }
