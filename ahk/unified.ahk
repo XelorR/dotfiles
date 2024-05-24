@@ -34,11 +34,11 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 
 #HotIf not WinActive("ahk_group completelyExclude")
 {
-  ; MOUSE
+; MOUSE
   !LButton::^LButton
   ^LButton::!LButton
 
-  ; LETTERS
+; LETTERS
   !a::^a
   !b::^b
   !c::^c
@@ -209,7 +209,7 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   ^#!+y::^#!+y
   ^#!+z::^#!+z
 
-  ; ARROWS
+; ARROWS
   #right::^right
   #left::^left
   #up::!up
@@ -237,6 +237,7 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
     WinMinimizeAll
     WinActivate active_id
   }
+
 ; WORKSPACE MANAGEMENT
   ^up::#tab
   ^left::^#left
@@ -246,9 +247,9 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !Space::#s
 }
 
+; DELETION
 #HotIf not WinActive("ahk_group explorerAndExlist")
 {
-; DELETION
   !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
   #Backspace::^Backspace
   #Delete::^Delete
