@@ -209,8 +209,6 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 ; ARROWS
   #right::^right
   #left::^left
-  #up::!up
-  #down::!down
   ^#right::^#right
   ^#left::^#left
   ^p::up
@@ -235,6 +233,10 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^up::#tab
   ^left::^#left
   ^right::^#right
+  ^!up::^!up
+  ^!down::^!down
+  ^!left::^!left
+  ^!right::^!right
 
 ; LAUNCHER
   !Space::#s
@@ -311,19 +313,27 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 #HotIf not WinActive("ahk_group vscodesAndExlist")
 {
   !+f::!+f
+  #up::!up
+  #down::!down
 }
 
 ; VSCODES
 #HotIf WinActive("ahk_group vscodes")
 {
-  ; opt-arrows
+  ; move line up/down
   #up::!up
   #down::!down
-  #+up::^+up
-  #+down::^+down
-  ; cursors
+  ; copy line up/down
+  #+up::!+up
+  #+down::!+down
+  ; cursors spawn up/down, works all 3 OS variants
+  ;    linux
   ^+up::^!up
   ^+down::^!down
+  ;    windows
+  ^!up::!^up
+  ^!down::!^down
+  ;    macos
   ^#up::^!up
   ^#down::^!down
   ; toggles
