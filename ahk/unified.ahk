@@ -32,6 +32,8 @@ GroupAdd "explorerAndExlist", "ahk_group explorer"
 GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 GroupAdd "terminalsAndExlist", "ahk_group terminals"
 GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
+GroupAdd "vscodesAndExlist", "ahk_group vscodes"
+GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 
 ; GENERAL USAGE KEYS
 #HotIf not WinActive("ahk_group completelyExclude")
@@ -306,7 +308,7 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
 }
 
 ; EXCLUDED FROM VSCODES
-#HotIf not WinActive("ahk_group terminalsAndExlist")
+#HotIf not WinActive("ahk_group vscodesAndExlist")
 {
   !+f::!+f
 }
