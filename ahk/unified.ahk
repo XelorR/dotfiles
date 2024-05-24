@@ -344,8 +344,9 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^!up::!^up
   ^!down::!^down
   ;    macos
-  ^#up::^!up
-  ^#down::^!down
+  !#up::^!up
+  !#down::^!down
+  #+i::!+i ; add cursors to the end of each line selected
   ; toggles
   !+d::Send("^+{p}run and debug{Enter}")
   !+e::Send("^+{p}focus on file explorer{Enter}")
