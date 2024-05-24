@@ -331,6 +331,7 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
   !,::^,
   !.::^.
   !/::^/
+  ; braces
   !sc01B::^sc01B
   !sc01A::^sc01A
   !#sc01B::^+sc01B
