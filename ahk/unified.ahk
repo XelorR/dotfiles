@@ -33,6 +33,7 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 GroupAdd "terminalsAndExlist", "ahk_group terminals"
 GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
 
+; GENERAL USAGE KEYS
 #HotIf not WinActive("ahk_group completelyExclude")
 {
 ; MOUSE
