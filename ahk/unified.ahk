@@ -303,4 +303,8 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !Enter::^Enter
   !,::^,
   !/::^/
+  !sc01B::^sc01B
+  !sc01A::^sc01A
+  !#sc01B::^+sc01B
+  !#sc01A::^+sc01A
 }
