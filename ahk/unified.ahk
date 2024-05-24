@@ -30,6 +30,8 @@ GroupAdd "tabsCPgUp", "ahk_group office"
 GroupAdd "completelyExclude", "ahk_class Emacs"
 GroupAdd "explorerAndExlist", "ahk_group explorer"
 GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
+GroupAdd "terminalsAndExlist", "ahk_group terminals"
+GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
 
 #HotIf not WinActive("ahk_group completelyExclude")
 {
@@ -58,10 +60,10 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !q::!F4
   !r::^r
   !s::^s
-  !t::^t
+  ; !t::^t ; defined with terminals exclusion
   !u::^u
   !v::^v
-  !w::^w
+  ; !w::^w ; defined with terminals exclusion
   !x::^x
   !y::^y
   !z::^z
@@ -264,6 +266,20 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !Down::Enter
   !o::Enter
   !i::!Enter
+}
+
+; EXCLUDED FROM TERMINALS
+#HotIf not WinActive("ahk_group terminalsAndExlist")
+{
+  !t::^t
+  !w::^w
+}
+
+; TERMINALS
+#HotIf WinActive("ahk_group terminals")
+{
+  !t::^+t
+  !w::^+w
 }
 
 ; TABS
