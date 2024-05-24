@@ -343,15 +343,15 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !g::Send("^+{g}g")
   !+x::Send("^+{p}view show extensions{Enter}")
   ; other
-  #z::!z
-  #+f::!+f
-  !Enter::^Enter
-  !,::^,
-  !.::^.
-  !/::^/
+  #z::!z ; wrap
+  #+f::!+f ; format
+  !Enter::^Enter ; Commit button in Source Control
+  !,::^, ; open settings
+  !.::^. ; quick fix
+  !/::^/ ; comment
   ; braces
-  !sc01B::^sc01B
-  !sc01A::^sc01A
-  !#sc01B::^+sc01B
-  !#sc01A::^+sc01A
+  !sc01B::^sc01B ; indent
+  !sc01A::^sc01A ; unindent
+  !#sc01B::^+sc01B ; collapse
+  !#sc01A::^+sc01A ; expand
 }
