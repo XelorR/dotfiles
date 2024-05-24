@@ -9,16 +9,16 @@ if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]; then
 
 		# keyboard shortcuts
 		for i in $(seq 9); do
-			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
-			gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
+			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Super><Shift>$i']"
+			gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Super>$i']"
 		done
-		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
+		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Super><Shift>0']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Super>0']"
 
-		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Alt>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Super>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 
 		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
 	fi
