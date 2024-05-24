@@ -31,6 +31,10 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 
 #HotIf not WinActive("ahk_group completelyExclude")
 {
+  ; MOUSE
+  !LButton::^LButton
+  ^LButton::!LButton
+
   ; LETTERS
   !a::^a
   !b::^b
