@@ -286,6 +286,8 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   ; opt-arrows
   #up::!up
   #down::!down
+  #+up::^+up
+  #+down::^+down
   ; cursors
   ^+up::^!up
   ^+down::^!down
