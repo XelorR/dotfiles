@@ -345,7 +345,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ; other
   #z::!z ; wrap
   #+f::!+f ; format
-  !Enter::^Enter ; Commit button in Source Control
+  !Enter::^Enter ; Commit button in Source Control / insert line below
+  ; !+Enter::^+Enter ; insert line above | doesn't work by some reason
   !,::^, ; open settings
   !.::^. ; quick fix
   !/::^/ ; comment
@@ -354,4 +355,5 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !sc01A::^sc01A ; unindent
   !#sc01B::^+sc01B ; collapse
   !#sc01A::^+sc01A ; expand
+  #+a::!+a ; block comment
 }
