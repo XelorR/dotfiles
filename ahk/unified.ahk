@@ -82,7 +82,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !+i::!+i
   !+j::!+j
   !+k::!+k
-  !+l::!+l
+  ; !+l::!+l ; defined with vscodes exclusion
   !+m::!+m
   !+n::^+n ; new
   !+o::^+o ; optional open
@@ -321,6 +321,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 #HotIf not WinActive("ahk_group vscodesAndExlist")
 {
   !+f::!+f
+  !+l::!+l
   #up::!up
   #down::!down
 }
@@ -336,17 +337,19 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ; copy line up/down
   #+up::!+up
   #+down::!+down
-  ; cursors spawn up/down, works all 3 OS variants
-  ;    linux
+  ; multiple cursors
+  ; spawn up/down, linux-like
   ^+up::^!up
   ^+down::^!down
-  ;    windows
+  ; spawn up/down, windows-like
   ^!up::!^up
   ^!down::!^down
-  ;    macos
+  ; spawn up/down, macos-like
   !#up::^!up
   !#down::^!down
   #+i::!+i ; add cursors to the end of each line selected
+  !F2::^F2 ; select all occurencies of selected word
+  !+l::^+l ; select all occurencies of current selection
   ; toggles
   !+d::Send("^+{p}run and debug{Enter}")
   !+e::Send("^+{p}focus on file explorer{Enter}")
