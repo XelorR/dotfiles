@@ -202,10 +202,6 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   ^#!+y::^#!+y
   ^#!+z::^#!+z
 
-  ; HISTORY
-  !sc01B::!Right
-  !sc01A::!Left
-
   ; ARROWS
   #right::^right
   #left::^left
@@ -255,6 +251,13 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 {
   !+sc01B::^+Tab
   !+sc01A::^Tab
+}
+
+; HISTORY
+#HotIf WinActive("ahk_group history")
+{
+  !sc01B::!Right
+  !sc01A::!Left
 }
 
 ; OPEN SETTINGS
