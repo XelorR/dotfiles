@@ -219,7 +219,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^e::end
 
 ; WINDOW MANAGEMENT
-  ^#Enter::F11
+  ^#Enter::WinMaximize "A"
   #h::WinMinimize "A"
   ;hide all windows except curren t
   !#h::
@@ -388,4 +388,6 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !1::^1
   !2::^2
   !3::^3
+  ; layout
+  #+0::!+0 ; vertical / horisontal
 }
