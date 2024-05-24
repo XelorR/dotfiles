@@ -12,7 +12,7 @@ GroupAdd "office", "ahk_exe excel.exe"
 GroupAdd "browsers", "ahk_group chromes"
 GroupAdd "browsers", "ahk_group firefoxes"
 GroupAdd "explorer", "ahk_class CabinetWClass ahk_exe explorer.exe"
-GroupAdd "desktop", "ahk_class WorkerW ahk_exe explorer.exe"
+GroupAdd "explorer", "ahk_class WorkerW ahk_exe explorer.exe"
 GroupAdd "terminals", "ahk_exe WindowsTerminal.exe"
 GroupAdd "notepads", "ahk_exe notepad.exe"
 
@@ -29,7 +29,6 @@ GroupAdd "tabsCPgUp", "ahk_group office"
 ; group used to exclude functionality
 GroupAdd "completelyExclude", "ahk_class Emacs"
 GroupAdd "explorerAndExlist", "ahk_group explorer"
-GroupAdd "explorerAndExlist", "ahk_group desktop"
 GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 
 #HotIf not WinActive("ahk_group completelyExclude")
@@ -47,13 +46,13 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !f::^f
   !g::^g
   !h::^h
-  !i::^i
+  ; !i::^i ; defined with explorer exclusion
   !j::^j
   !k::^k
   !l::^l
   !m::^m
   !n::^n
-  !o::^o
+  ; !o::^o ; defined with explorer exclusion
   !p::^p
   ; close window
   !q::!F4
@@ -216,10 +215,6 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   #down::!down
   ^#right::^#right
   ^#left::^#left
-  !Left::Home
-  !Right::End
-  !Up::^home
-  !Down::^end
   ^p::up
   ^n::down
   ^f::right
@@ -254,6 +249,21 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   #Backspace::^Backspace
   #Delete::^Delete
   ^d::Delete
+
+; EXCLUDED FROM FILE MANAGER
+  !Left::Home
+  !Right::End
+  !Up::^home
+  !Down::^end
+}
+
+; FILE MANAGER
+#HotIf WinActive("ahk_group explorer")
+{
+  Enter::F2
+  !Down::Enter
+  !o::Enter
+  !i::!Enter
 }
 
 ; TABS
