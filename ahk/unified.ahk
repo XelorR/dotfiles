@@ -74,11 +74,11 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !+a::!+a
   !+b::!+b
   !+c::!+c
-  !+d::!+d
-  !+e::!+e
+  ; !+d::!+d ; defined with vscodes exclusion
+  ; !+e::!+e ; defined with vscodes exclusion
   ; !+f::!+f ; defined with vscodes exclusion
   ; !+g::!+g ; defined with vscodes exclusion
-  !+h::!+h
+  ; !+h::!+h ; defined with vscodes exclusion
   !+i::!+i
   !+j::!+j
   !+k::!+k
@@ -94,7 +94,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !+u::!+u
   !+v::!+v
   !+w::!+w
-  !+x::!+x
+  ; !+x::!+x ; defined with vscodes exclusion
   !+y::!+y
   !+z::^y  ; redo
 
@@ -321,6 +321,10 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 #HotIf not WinActive("ahk_group vscodesAndExlist")
 {
   !+f::!+f
+  !+h::!+h
+  !+d::!+d
+  !+e::!+e
+  !+x::!+x
   !+l::!+l
   !g::!g
   !+g::!+g
@@ -360,8 +364,9 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ; !#+up::!^+up ;        | doesn't work by some reason
   ; !#+down::!^+down ;    | doesn't work by some reason
   ; toggles
-  !+d::Send("^+{p}run and debug{Enter}")
-  !+e::Send("^+{p}focus on file explorer{Enter}")
+  !+h::^+h ; replace dialog
+  !+d::Send("^+{p}show run and debug{Enter}")
+  !+e::^+e ; file explorer
   !+f::^+f ; find dialog
   ^+g::Send("^+{g}g")
   !+x::Send("^+{p}view show extensions{Enter}")
