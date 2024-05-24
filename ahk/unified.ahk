@@ -243,6 +243,7 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
   #Backspace::^Backspace
   #Delete::^Delete
+  ^d::Delete
 }
 
 ; TABS
