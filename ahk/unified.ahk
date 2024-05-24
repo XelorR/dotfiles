@@ -1,217 +1,236 @@
 SetCapsLockState "AlwaysOff"
 CapsLock::Escape
 
+; define application groups
 GroupAdd "vscodes", "ahk_exe Code.exe"
+GroupAdd "vscodes", "ahk_exe VSCodium.exe"
 GroupAdd "firefoxes", "ahk_exe firefox.exe"
 GroupAdd "chromes", "ahk_exe chrome.exe"
 GroupAdd "chromes", "ahk_exe brave.exe"
 GroupAdd "chromes", "ahk_exe msedge.exe"
+GroupAdd "browsers", "ahk_group chromes"
+GroupAdd "browsers", "ahk_group firefoxes"
+GroupAdd "explorer", "ahk_class CabinetWClass ahk_exe explorer.exe"
+GroupAdd "desktop", "ahk_class WorkerW ahk_exe explorer.exe"
+GroupAdd "terminals", "ahk_exe WindowsTerminal.exe"
+GroupAdd "notepads", "ahk_exe notepad.exe"
 
-; LETTERS
-!a::^a
-!b::^b
-!c::^c
-!d::^d
-!e::^e
-!f::^f
-!g::^g
-!h::^h
-!i::^i
-!j::^j
-!k::^k
-!l::^l
-!m::^m
-!n::^n
-!o::^o
-!p::^p
-; close window
-!q::!F4
-!r::^r
-!s::^s
-!t::^t
-!u::^u
-!v::^v
-!w::^w
-!x::^x
-!y::^y
-!z::^z
+; define functionality groups
+GroupAdd "history", "ahk_group browsers"
+GroupAdd "history", "ahk_group explorer"
+GroupAdd "tabsCTab", "ahk_group terminals"
+GroupAdd "tabsCTab", "ahk_group notepads"
+GroupAdd "tabsCTab", "ahk_group explorer"
+GroupAdd "tabsCPgUp", "ahk_group vscodes"
+GroupAdd "tabsCPgUp", "ahk_group browsers"
 
-!+a::!+a
-!+b::!+b
-!+c::!+c
-!+d::!+d
-!+e::!+e
-!+f::!+f
-!+g::!+g
-!+h::!+h
-!+i::!+i
-!+j::!+j
-!+k::!+k
-!+l::!+l
-!+m::!+m
-; new
-!+n::^+n
-; optional open
-!+o::^+o
-; cmd-shift-p
-!+p::^+p
-!+q::!+q
-; refresh
-!+r::^+r
-; save as
-!+s::^+s
-; restore tab
-!+t::^+t
-!+u::!+u
-!+v::!+v
-!+w::!+w
-!+x::!+x
-!+y::!+y
-; redo
-!+z::^y
+; group used to exclude functionality
+GroupAdd "completelyExclude", "ahk_class Emacs"
+GroupAdd "explorerAndExlist", "ahk_group explorer"
+GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
 
-^!a::^!a
-^!b::^!b
-^!c::^!c
-^!d::^!d
-^!e::^!e
-^!f::^!f
-^!g::^!g
-^!h::^!h
-^!i::^!i
-^!j::^!j
-^!k::^!k
-^!l::^!l
-^!m::^!m
-^!n::^!n
-^!o::^!o
-^!p::^!p
-^!q::^!q
-^!r::^!r
-^!s::^!s
-^!t::^!t
-^!u::^!u
-^!v::^!v
-^!w::^!w
-^!x::^!x
-^!y::^!y
-^!z::^!z
+#HotIf not WinActive("ahk_group completelyExclude")
+{
+  ; LETTERS
+  !a::^a
+  !b::^b
+  !c::^c
+  !d::^d
+  !e::^e
+  !f::^f
+  !g::^g
+  !h::^h
+  !i::^i
+  !j::^j
+  !k::^k
+  !l::^l
+  !m::^m
+  !n::^n
+  !o::^o
+  !p::^p
+  ; close window
+  !q::!F4
+  !r::^r
+  !s::^s
+  !t::^t
+  !u::^u
+  !v::^v
+  !w::^w
+  !x::^x
+  !y::^y
+  !z::^z
 
-^!+a::^!+a
-^!+b::^!+b
-^!+c::^!+c
-^!+d::^!+d
-^!+e::^!+e
-^!+f::^!+f
-^!+g::^!+g
-^!+h::^!+h
-^!+i::^!+i
-^!+j::^!+j
-^!+k::^!+k
-^!+l::^!+l
-^!+m::^!+m
-^!+n::^!+n
-^!+o::^!+o
-^!+p::^!+p
-^!+q::^!+q
-^!+r::^!+r
-^!+s::^!+s
-^!+t::^!+t
-^!+u::^!+u
-^!+v::^!+v
-^!+w::^!+w
-^!+x::^!+x
-^!+y::^!+y
-^!+z::^!+z
+  !+a::!+a
+  !+b::!+b
+  !+c::!+c
+  !+d::!+d
+  !+e::!+e
+  !+f::!+f
+  !+g::!+g
+  !+h::!+h
+  !+i::!+i
+  !+j::!+j
+  !+k::!+k
+  !+l::!+l
+  !+m::!+m
+  ; new
+  !+n::^+n
+  ; optional open
+  !+o::^+o
+  ; cmd-shift-p
+  !+p::^+p
+  !+q::!+q
+  ; refresh
+  !+r::^+r
+  ; save as
+  !+s::^+s
+  ; restore tab
+  !+t::^+t
+  !+u::!+u
+  !+v::!+v
+  !+w::!+w
+  !+x::!+x
+  !+y::!+y
+  ; redo
+  !+z::^y
 
-^#!a::^#!a
-^#!b::^#!b
-^#!c::^#!c
-^#!d::^#!d
-^#!e::^#!e
-^#!f::^#!f
-^#!g::^#!g
-^#!h::^#!h
-^#!i::^#!i
-^#!j::^#!j
-^#!k::^#!k
-^#!l::^#!l
-^#!m::^#!m
-^#!n::^#!n
-^#!o::^#!o
-^#!p::^#!p
-^#!q::^#!q
-^#!r::^#!r
-^#!s::^#!s
-^#!t::^#!t
-^#!u::^#!u
-^#!v::^#!v
-^#!w::^#!w
-^#!x::^#!x
-^#!y::^#!y
-^#!z::^#!z
+  ^!a::^!a
+  ^!b::^!b
+  ^!c::^!c
+  ^!d::^!d
+  ^!e::^!e
+  ^!f::^!f
+  ^!g::^!g
+  ^!h::^!h
+  ^!i::^!i
+  ^!j::^!j
+  ^!k::^!k
+  ^!l::^!l
+  ^!m::^!m
+  ^!n::^!n
+  ^!o::^!o
+  ^!p::^!p
+  ^!q::^!q
+  ^!r::^!r
+  ^!s::^!s
+  ^!t::^!t
+  ^!u::^!u
+  ^!v::^!v
+  ^!w::^!w
+  ^!x::^!x
+  ^!y::^!y
+  ^!z::^!z
 
-^#!+a::^#!+a
-^#!+b::^#!+b
-^#!+c::^#!+c
-^#!+d::^#!+d
-^#!+e::^#!+e
-^#!+f::^#!+f
-^#!+g::^#!+g
-^#!+h::^#!+h
-^#!+i::^#!+i
-^#!+j::^#!+j
-^#!+k::^#!+k
-^#!+l::^#!+l
-^#!+m::^#!+m
-^#!+n::^#!+n
-^#!+o::^#!+o
-^#!+p::^#!+p
-^#!+q::^#!+q
-^#!+r::^#!+r
-^#!+s::^#!+s
-^#!+t::^#!+t
-^#!+u::^#!+u
-^#!+v::^#!+v
-^#!+w::^#!+w
-^#!+x::^#!+x
-^#!+y::^#!+y
-^#!+z::^#!+z
+  ^!+a::^!+a
+  ^!+b::^!+b
+  ^!+c::^!+c
+  ^!+d::^!+d
+  ^!+e::^!+e
+  ^!+f::^!+f
+  ^!+g::^!+g
+  ^!+h::^!+h
+  ^!+i::^!+i
+  ^!+j::^!+j
+  ^!+k::^!+k
+  ^!+l::^!+l
+  ^!+m::^!+m
+  ^!+n::^!+n
+  ^!+o::^!+o
+  ^!+p::^!+p
+  ^!+q::^!+q
+  ^!+r::^!+r
+  ^!+s::^!+s
+  ^!+t::^!+t
+  ^!+u::^!+u
+  ^!+v::^!+v
+  ^!+w::^!+w
+  ^!+x::^!+x
+  ^!+y::^!+y
+  ^!+z::^!+z
 
-; TABS
-!+sc01B::^PgDn
-!+sc01A::^PgUp
+  ^#!a::^#!a
+  ^#!b::^#!b
+  ^#!c::^#!c
+  ^#!d::^#!d
+  ^#!e::^#!e
+  ^#!f::^#!f
+  ^#!g::^#!g
+  ^#!h::^#!h
+  ^#!i::^#!i
+  ^#!j::^#!j
+  ^#!k::^#!k
+  ^#!l::^#!l
+  ^#!m::^#!m
+  ^#!n::^#!n
+  ^#!o::^#!o
+  ^#!p::^#!p
+  ^#!q::^#!q
+  ^#!r::^#!r
+  ^#!s::^#!s
+  ^#!t::^#!t
+  ^#!u::^#!u
+  ^#!v::^#!v
+  ^#!w::^#!w
+  ^#!x::^#!x
+  ^#!y::^#!y
+  ^#!z::^#!z
 
-; HISTORY
-!sc01B::!Right
-!sc01A::!Left
+  ^#!+a::^#!+a
+  ^#!+b::^#!+b
+  ^#!+c::^#!+c
+  ^#!+d::^#!+d
+  ^#!+e::^#!+e
+  ^#!+f::^#!+f
+  ^#!+g::^#!+g
+  ^#!+h::^#!+h
+  ^#!+i::^#!+i
+  ^#!+j::^#!+j
+  ^#!+k::^#!+k
+  ^#!+l::^#!+l
+  ^#!+m::^#!+m
+  ^#!+n::^#!+n
+  ^#!+o::^#!+o
+  ^#!+p::^#!+p
+  ^#!+q::^#!+q
+  ^#!+r::^#!+r
+  ^#!+s::^#!+s
+  ^#!+t::^#!+t
+  ^#!+u::^#!+u
+  ^#!+v::^#!+v
+  ^#!+w::^#!+w
+  ^#!+x::^#!+x
+  ^#!+y::^#!+y
+  ^#!+z::^#!+z
 
-; DELETION
-!Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
-#Backspace::^Backspace
-#Delete::^Delete
+  ; TABS
+  !+sc01B::^PgDn
+  !+sc01A::^PgUp
 
-; ARROWS
-#right::^right
-#left::^left
-^#right::^#right
-^#left::^#left
-!Left::Home
-!Right::End
-!Up::^home
-!Down::^end
-^p::up
-^n::down
-^f::right
-^b::left
-^a::home
-^e::end
+  ; HISTORY
+  !sc01B::!Right
+  !sc01A::!Left
+
+  ; ARROWS
+  #right::^right
+  #left::^left
+  ^#right::^#right
+  ^#left::^#left
+  !Left::Home
+  !Right::End
+  !Up::^home
+  !Down::^end
+  ^p::up
+  ^n::down
+  ^f::right
+  ^b::left
+  ^a::home
+  ^e::end
 
 ; WINDOW MANAGEMENT
-#Enter::WinMaximize "A"
-#h::WinMinimize "A"
-;hide all windows except curren t
-!#h::
+  #Enter::WinMaximize "A"
+  #h::WinMinimize "A"
+  ;hide all windows except curren t
+  !#h::
   {
     active_id := WinGetID("A")
     WinMinimizeAll
@@ -219,7 +238,16 @@ GroupAdd "chromes", "ahk_exe msedge.exe"
   }
 
 ; LAUNCHER
-!Space::#s
+  !Space::#s
+}
+
+#HotIf not WinActive("ahk_group explorerAndExlist")
+{
+; DELETION
+  !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
+  #Backspace::^Backspace
+  #Delete::^Delete
+}
 
 ; OPEN SETTINGS
 #HotIf WinActive("ahk_group chromes")
