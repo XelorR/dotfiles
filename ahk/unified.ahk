@@ -212,6 +212,8 @@ GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
   ; ARROWS
   #right::^right
   #left::^left
+  #up::!up
+  #down::!down
   ^#right::^#right
   ^#left::^#left
   !Left::Home
