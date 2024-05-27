@@ -279,6 +279,7 @@ keymap:
       Alt-y: Ctrl-y
       Alt-z: Ctrl-z
       Alt-Backspace: Delete
+      Alt-Shift-Backspace: Shift-Delete
 
   # TABS
   - name: "tabs c-pgup"
