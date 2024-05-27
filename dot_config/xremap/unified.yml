@@ -6,7 +6,8 @@ keymap:
   # ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "workspace management"
     remap:
-      #Ctrl-up: Super-s
+      Ctrl-up: [Super]
+      Alt-space [Super]
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
       #Ctrl-down: Alt-backtrick
