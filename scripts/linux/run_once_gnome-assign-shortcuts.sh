@@ -6,11 +6,14 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 	echo GNOME detected!
 	if command -v gsettings &>/dev/null; then
 		echo gsettings available!
+		echo Configuring some system wide settings...
 		# gsettings set gsettings set org.gnome.mutter overlay-key ''
 		gsettings set org.gnome.mutter dynamic-workspaces false
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+		gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 
 		# keyboard shortcuts
+		echo Ensuring Ctrl-Alt-left/rigth cycle windows...
 		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left', '<Control><Alt>Left']"
 		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right']"
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left', '<Control><Shift><Alt>Left']"
