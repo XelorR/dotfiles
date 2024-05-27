@@ -226,7 +226,7 @@ keymap:
   # TABS
   - name: "tabs c-pgup"
     application:
-      only: [Gnome-terminal, gnome-terminal-server, Brave-browser, Microsoft-edge, Google-chrome]
+      only: [Gnome-terminal, gnome-terminal-server, firefox, Brave-browser, Microsoft-edge, Google-chrome]
     remap:
       Alt-Shift-rightbrace: Control-pagedown
       Alt-Shift-leftbrace: Control-pageup
@@ -240,7 +240,7 @@ keymap:
   # HISTORY
   - name: "history"
     application:
-      only: [Nautilus, dolphin, Brave-browser, Microsoft-edge, Google-chrome]
+      only: [Nautilus, dolphin, firefox, Brave-browser, Microsoft-edge, Google-chrome]
     remap:
       Alt-rightbrace: Alt-right
       Alt-leftbrace: Alt-left
