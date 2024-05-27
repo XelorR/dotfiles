@@ -5,7 +5,7 @@ modmap:
 keymap:
   - name: "Global combos"
     application:
-      not: [konsole, Gnome-terminal, kitty, wezterm]
+      not: [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm]
     remap:
       # LETTERS
       Alt-a: Ctrl-a
@@ -176,10 +176,6 @@ keymap:
       Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
       Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
 
-      # TABS
-      Alt-Shift-rightbrace: Control-pagedown
-      Alt-Shift-leftbrace: Control-pageup
-
       # HISTORY
       Alt-rightbrace: Alt-right
       Alt-leftbrace: Alt-left
@@ -231,6 +227,14 @@ keymap:
       Alt-i: Alt-Enter
       Alt-Backspace: Delete
 
+  # TABS
+  - name: "tabs c-pgup"
+    application:
+      only: [Gnome-terminal, gnome-terminal-server]
+      Alt-Shift-rightbrace: Control-pagedown
+      Alt-Shift-leftbrace: Control-pageup
+
+    remap:
   # OPEN SETTINGS
   - name: chromes
     application:
