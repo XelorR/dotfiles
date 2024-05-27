@@ -306,6 +306,7 @@ keymap:
       Alt-z: Ctrl-z
       Alt-Backspace: Delete
       Alt-Shift-Backspace: Shift-Delete
+      Ctrl-Alt-f: F11
 
   # TABS
   - name: "tabs c-pgup"
@@ -413,6 +414,7 @@ keymap:
       Ctrl-Alt-t: Ctrl-Alt-t
       Alt-v: Ctrl-Shift-v
       Alt-w: Ctrl-Shift-w
+      Ctrl-Alt-f: F11
 
   # EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # TEXT EDITORS
@@ -498,6 +500,7 @@ keymap:
       Alt-Shift-z: Ctrl-y
 
       Ctrl-Shift-g: [Ctrl-Shift-g, g]
+      Ctrl-Alt-f: F11
 
       Alt-1: Ctrl-1
       Alt-2: Ctrl-2
