@@ -399,15 +399,73 @@ keymap:
       Ctrl-Super-down: Ctrl-Shift-down
       Ctrl-Alt-up: Ctrl-Shift-up
       Ctrl-Alt-down: Ctrl-Shift-down
-      # toggles
-      # Alt-Shift-d: Ctrl-Shift-d
-      # Alt-e: Ctrl-Shift-e
-      # Alt-Shift-f: Ctrl-Shift-f
-      # Alt-g: [Ctrl-Shift-g, g]
-      # Alt-Shift-x: Ctrl-Shift-x
-      # other
+
       Super-z: Alt-z
       Super-Shift-f: Ctrl-Shift-i
+
       Alt-Enter: Ctrl-Enter
       Alt-comma: Ctrl-comma
       Alt-slash: Ctrl-slash
+
+      Alt-a: Ctrl-a
+      Alt-b: Ctrl-b
+      Alt-c: Ctrl-c
+      Alt-d: Ctrl-d
+      Alt-e: Ctrl-e
+      Alt-f: Ctrl-f
+      Alt-g: Ctrl-g
+      Alt-h: Ctrl-h
+      Alt-i: Ctrl-i
+      Alt-j: Ctrl-j
+      Alt-k: Ctrl-k
+      Alt-l: Ctrl-l
+      Alt-m: Ctrl-m
+      Alt-n: Ctrl-n
+      Alt-o: Ctrl-o
+      Alt-p: Ctrl-p
+      Alt-q: Ctrl-q
+      Alt-r: Ctrl-r
+      Alt-s: Ctrl-s
+      Alt-t: Ctrl-t
+      Alt-u: Ctrl-u
+      Alt-v: Ctrl-v
+      Alt-w: Ctrl-w
+      Alt-x: Ctrl-x
+      Alt-y: Ctrl-y
+      Alt-z: Ctrl-z
+
+      Alt-Shift-a: Alt-Shift-a
+      Alt-Shift-b: Alt-Shift-b
+      Alt-Shift-c: Alt-Shift-c
+      Alt-Shift-d: Ctrl-Shift-d
+      Alt-Shift-e: Ctrl-Shift-e
+      Alt-Shift-f: Ctrl-Shift-f
+      Alt-Shift-g: Alt-Shift-g
+      Alt-Shift-h: Alt-Shift-h
+      Alt-Shift-i: Alt-Shift-i
+      Alt-Shift-j: Alt-Shift-j
+      Alt-Shift-k: Alt-Shift-k
+      Alt-Shift-l: Alt-Shift-l
+      Alt-Shift-m: Alt-Shift-m
+      # new
+      Alt-Shift-n: Ctrl-Shift-n
+      # optional open
+      Alt-Shift-o: Ctrl-Shift-o
+      # cmd-shift-p
+      Alt-Shift-p: Ctrl-Shift-p
+      Alt-Shift-q: Alt-Shift-q
+      # refresh
+      Alt-Shift-r: Ctrl-Shift-r
+      # save as
+      Alt-Shift-s: Ctrl-Shift-s
+      # restore tab
+      Alt-Shift-t: Ctrl-Shift-t
+      Alt-Shift-u: Alt-Shift-u
+      Alt-Shift-v: Alt-Shift-v
+      Alt-Shift-w: Alt-Shift-w
+      Alt-Shift-x: Ctrl-Shift-x
+      Alt-Shift-y: Alt-Shift-y
+      # redo
+      Alt-Shift-z: Ctrl-y
+
+      Ctrl-Shift-g: [Ctrl-Shift-g, g]
