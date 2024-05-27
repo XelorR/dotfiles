@@ -199,7 +199,7 @@ keymap:
           wezterm,
         ]
     remap:
-      # ARROWS
+      # TEXT EDITING / ARROWS
       Super-Right: Control-right
       Super-Left: Control-left
       Alt-left: home
@@ -212,6 +212,21 @@ keymap:
       Ctrl-b: left
       Ctrl-a: home
       Ctrl-e: end
+      Ctrl-d: delete
+  - name: "deletion"
+    application:
+      not:
+        [
+          konsole,
+          Gnome-terminal,
+          gnome-terminal-server,
+          kitty,
+          wezterm,
+          dolphin,
+          Nautilus
+        ]
+    remap:
+      Alt-Backspace: [Shift-home, Backspace]
 
   - name: "workspace management"
     remap:
