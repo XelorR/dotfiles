@@ -35,7 +35,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Control><Alt>t', '<Super>t']"
 		gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 
-		echo Configuring Super-Shift-s ta make a screenshot...
+		echo Configuring Super-Shift-s to make a screenshot...
 		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
 		echo Done!
 	fi
