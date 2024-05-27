@@ -300,6 +300,8 @@ keymap:
     application:
       only: [konsole]
     remap:
+      Control-pagedown: Control-tab
+      Control-pageup: Control-Shift-tab
       Alt-Shift-rightbrace: Control-tab
       Alt-Shift-leftbrace: Control-Shift-tab
 
