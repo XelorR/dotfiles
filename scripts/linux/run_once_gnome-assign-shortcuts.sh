@@ -8,10 +8,11 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		echo gsettings available!
 		echo Configuring some system wide settings...
 		# gsettings set gsettings set org.gnome.mutter overlay-key ''
+		gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>w']"
 		gsettings set org.gnome.mutter dynamic-workspaces false
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 		gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
-		gsettings set org.gnome.gnome-screenshot auto-save-directory file://$HOME/Desktop
+		# gsettings set org.gnome.gnome-screenshot auto-save-directory file://$HOME/Desktop
 
 		# keyboard shortcuts
 		echo Ensuring to have 'toggle-maximized' configured...
