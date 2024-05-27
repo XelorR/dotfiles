@@ -7,7 +7,6 @@ keymap:
     application:
       not: [konsole, Gnome-terminal, kitty, wezterm]
     remap:
-
       # LETTERS
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
@@ -205,10 +204,10 @@ keymap:
   # FILE MANAGER
   - name: "not file manager"
     application:
-      not: [dolphin]
+      not: [dolphin, Nautilus]
     remap:
       # DELETION
-      Alt-Backspace: [Shift-Home, Backspace]    
+      Alt-Backspace: [Shift-Home, Backspace]
       Super-backspace: Ctrl-backspace
       Super-delete: Ctrl-delete
       # GENERAL
@@ -216,7 +215,7 @@ keymap:
       Alt-o: Ctrl-o
   - name: "file manager"
     application:
-      not: [dolphin]
+      not: [dolphin, Nautilus]
     remap:
       Enter: F2
       Alt-down: Enter
