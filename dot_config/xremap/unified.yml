@@ -375,7 +375,7 @@ keymap:
   # TERMINALS
   - name: terminals
     application:
-      only: [konsole, Gnome-terminal, kitty, wezterm]
+      only: [konsole, gnome-terminal-server, Gnome-terminal, kitty, wezterm]
     remap:
       Alt-n: Ctrl-Shift-n
       Alt-p: Ctrl-Shift-p
