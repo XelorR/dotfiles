@@ -495,3 +495,7 @@ keymap:
       Alt-Shift-z: Ctrl-y
 
       Ctrl-Shift-g: [Ctrl-Shift-g, g]
+
+      Alt-1: Ctrl-1
+      Alt-2: Ctrl-2
+      Alt-3: Ctrl-3
