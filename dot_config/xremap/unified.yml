@@ -176,10 +176,6 @@ keymap:
       Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
       Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
 
-      # HISTORY
-      Alt-rightbrace: Alt-right
-      Alt-leftbrace: Alt-left
-
       # ARROWS
       Super-Right: Control-right
       Super-Left: Control-left
@@ -230,10 +226,24 @@ keymap:
   # TABS
   - name: "tabs c-pgup"
     application:
-      only: [Gnome-terminal, gnome-terminal-server]
+      only: [Gnome-terminal, gnome-terminal-server, Brave-browser, Microsoft-edge, Google-chrome]
     remap:
       Alt-Shift-rightbrace: Control-pagedown
       Alt-Shift-leftbrace: Control-pageup
+  - name: "tabs c-tab"
+    application:
+      only: [konsole]
+    remap:
+      Alt-Shift-rightbrace: Control-tab
+      Alt-Shift-leftbrace: Control-Shift-tab
+
+  # HISTORY
+  - name: "history"
+    application:
+      only: [Nautilus, dolphin, Brave-browser, Microsoft-edge, Google-chrome]
+    remap:
+      Alt-rightbrace: Alt-right
+      Alt-leftbrace: Alt-left
 
     remap:
   # OPEN SETTINGS
