@@ -33,6 +33,8 @@ keymap:
       Ctrl-Shift-0: Ctrl-Alt-Shift-0
       # WINDOW MANAGEMENT
       Super-Enter: Shift-F10
+      Ctrl-Super-left: Super-left
+      Ctrl-Super-right: Super-right
 
   # GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "Global non-specific letters"
