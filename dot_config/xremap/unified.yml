@@ -5,7 +5,17 @@ modmap:
 keymap:
   - name: "Global non-specific letters"
     application:
-      not: [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm, Code, dolphin, Nautilus]
+      not:
+        [
+          konsole,
+          Gnome-terminal,
+          gnome-terminal-server,
+          kitty,
+          wezterm,
+          Code,
+          dolphin,
+          Nautilus,
+        ]
     remap:
       # LETTERS
       Alt-a: Ctrl-a
@@ -231,7 +241,15 @@ keymap:
   # TABS
   - name: "tabs c-pgup"
     application:
-      only: [Gnome-terminal, gnome-terminal-server, firefox, Brave-browser, Microsoft-edge, Google-chrome]
+      only:
+        [
+          Gnome-terminal,
+          gnome-terminal-server,
+          firefox,
+          Brave-browser,
+          Microsoft-edge,
+          Google-chrome,
+        ]
     remap:
       Alt-Shift-rightbrace: Control-pagedown
       Alt-Shift-leftbrace: Control-pageup
@@ -245,12 +263,19 @@ keymap:
   # HISTORY
   - name: "history"
     application:
-      only: [Nautilus, dolphin, firefox, Brave-browser, Microsoft-edge, Google-chrome]
+      only:
+        [
+          Nautilus,
+          dolphin,
+          firefox,
+          Brave-browser,
+          Microsoft-edge,
+          Google-chrome,
+        ]
     remap:
       Alt-rightbrace: Alt-right
       Alt-leftbrace: Alt-left
 
-    remap:
   # OPEN SETTINGS
   - name: chromes
     application:
