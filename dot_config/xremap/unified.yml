@@ -231,6 +231,7 @@ keymap:
   - name: "tabs c-pgup"
     application:
       only: [Gnome-terminal, gnome-terminal-server]
+    remap:
       Alt-Shift-rightbrace: Control-pagedown
       Alt-Shift-leftbrace: Control-pageup
 
