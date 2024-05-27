@@ -188,6 +188,17 @@ keymap:
       Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
       Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
 
+  - name: "arrows"
+    application:
+      not:
+        [
+          konsole,
+          Gnome-terminal,
+          gnome-terminal-server,
+          kitty,
+          wezterm,
+        ]
+    remap:
       # ARROWS
       Super-Right: Control-right
       Super-Left: Control-left
@@ -201,19 +212,20 @@ keymap:
       Ctrl-b: left
       Ctrl-a: home
       Ctrl-e: end
-      # WINDOW MANAGEMENT
-      Super-Enter: Shift-F10
+
   - name: "workspace management"
     remap:
       #Ctrl-up: Super-s
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
       #Ctrl-down: Alt-backtrick
+      # WINDOW MANAGEMENT
+      Super-Enter: Shift-F10
 
   # FILE MANAGER
   - name: "file manager"
     application:
-      not: [dolphin, Nautilus]
+      only: [dolphin, Nautilus]
     remap:
       Enter: F2
       Alt-down: Enter
@@ -354,8 +366,6 @@ keymap:
       Ctrl-Alt-t: Ctrl-Alt-t
       Alt-v: Ctrl-Shift-v
       Alt-w: Ctrl-Shift-w
-      Alt-Shift-rightbrace: Control-Shift-tab
-      Alt-Shift-leftbrace: Control-tab
 
   # TEXT EDITORS
   - name: vscodes
