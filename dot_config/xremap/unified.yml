@@ -197,14 +197,14 @@ keymap:
       Ctrl-b: left
       Ctrl-a: home
       Ctrl-e: end
-  # WINDOW MANAGEMENT
+      # WINDOW MANAGEMENT
       Super-Enter: Super-up
   - name: "workspace management"
     remap:
-      Ctrl-up: Super-s
+      #Ctrl-up: Super-s
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
-      Ctrl-down: Alt-backtrick
+      #Ctrl-down: Alt-backtrick
 
   # FILE MANAGER
   - name: "not file manager"
