@@ -211,14 +211,6 @@ keymap:
       #Ctrl-down: Alt-backtrick
 
   # FILE MANAGER
-  - name: "not file manager"
-    application:
-      not: [dolphin, Nautilus]
-    remap:
-      # DELETION
-      Alt-Backspace: [Shift-Home, Backspace]
-      Super-backspace: Ctrl-backspace
-      Super-delete: Ctrl-delete
   - name: "file manager"
     application:
       not: [dolphin, Nautilus]
@@ -228,14 +220,34 @@ keymap:
       Alt-1: Ctrl-2
       Alt-2: Ctrl-1
       Alt-3: Ctrl-3
-      Alt-o: Enter
-      Alt-i: Alt-Enter
-      Alt-z: Ctrl-z
-      Alt-x: Ctrl-x
-      Alt-c: Ctrl-c
-      Alt-v: Ctrl-v
       Alt-Shift-n: Ctrl-Shift-n
       Alt-Shift-z: Ctrl-y
+      Alt-a: Ctrl-a
+      Alt-b: Ctrl-b
+      Alt-c: Ctrl-c
+      Alt-d: Ctrl-d
+      Alt-e: Ctrl-e
+      Alt-f: Ctrl-f
+      Alt-g: Ctrl-g
+      Alt-h: Ctrl-h
+      Alt-i: Alt-Enter
+      Alt-j: Ctrl-j
+      Alt-k: Ctrl-k
+      Alt-l: Ctrl-l
+      Alt-m: Ctrl-m
+      Alt-n: Ctrl-n
+      Alt-o: Enter
+      Alt-p: Ctrl-p
+      Alt-q: Ctrl-q
+      Alt-r: Ctrl-r
+      Alt-s: Ctrl-s
+      Alt-t: Ctrl-t
+      Alt-u: Ctrl-u
+      Alt-v: Ctrl-v
+      Alt-w: Ctrl-w
+      Alt-x: Ctrl-x
+      Alt-y: Ctrl-y
+      Alt-z: Ctrl-z
       Alt-Backspace: Delete
 
   # TABS
