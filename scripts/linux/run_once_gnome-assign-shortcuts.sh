@@ -6,6 +6,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 	echo GNOME detected!
 	if command -v gsettings &>/dev/null; then
 		echo gsettings available!
+		# gsettings set gsettings set org.gnome.mutter overlay-key ''
 		gsettings set org.gnome.mutter dynamic-workspaces false
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 
