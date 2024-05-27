@@ -192,7 +192,7 @@ keymap:
       Ctrl-a: home
       Ctrl-e: end
       # WINDOW MANAGEMENT
-      Super-Enter: Super-up
+      Super-Enter: Shift-F10
   - name: "workspace management"
     remap:
       #Ctrl-up: Super-s
