@@ -10,7 +10,7 @@ keymap:
       Alt-space: [Super]
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
-      #Ctrl-down: Alt-backtrick
+      Ctrl-down: Alt-grave
       Ctrl-1: Ctrl-Alt-1
       Ctrl-2: Ctrl-Alt-2
       Ctrl-3: Ctrl-Alt-3
