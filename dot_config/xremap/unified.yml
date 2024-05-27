@@ -9,6 +9,7 @@ keymap:
       # MISSION CONTROL
       Ctrl-up: [Super]
       Alt-space: [Super]
+      F3: [Super]
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
       Ctrl-down: Alt-grave
