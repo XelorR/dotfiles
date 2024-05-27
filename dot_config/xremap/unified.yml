@@ -209,9 +209,6 @@ keymap:
       Alt-Backspace: [Shift-Home, Backspace]
       Super-backspace: Ctrl-backspace
       Super-delete: Ctrl-delete
-      # GENERAL
-      Alt-i: Ctrl-i
-      Alt-o: Ctrl-o
   - name: "file manager"
     application:
       not: [dolphin, Nautilus]
@@ -223,6 +220,12 @@ keymap:
       Alt-3: Ctrl-3
       Alt-o: Enter
       Alt-i: Alt-Enter
+      Alt-z: Ctrl-z
+      Alt-x: Ctrl-x
+      Alt-c: Ctrl-c
+      Alt-v: Ctrl-v
+      Alt-Shift-n: Ctrl-Shift-n
+      Alt-Shift-z: Ctrl-y
       Alt-Backspace: Delete
 
   # TABS
