@@ -3,6 +3,17 @@ modmap:
     remap:
       CapsLock: Esc
 keymap:
+  # ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  - name: "workspace management"
+    remap:
+      #Ctrl-up: Super-s
+      Ctrl-left: Ctrl-Alt-left
+      Ctrl-right: Ctrl-Alt-right
+      #Ctrl-down: Alt-backtrick
+      # WINDOW MANAGEMENT
+      Super-Enter: Shift-F10
+
+  # GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "Global non-specific letters"
     application:
       not:
@@ -228,15 +239,7 @@ keymap:
     remap:
       Alt-Backspace: [Shift-home, Backspace]
 
-  - name: "workspace management"
-    remap:
-      #Ctrl-up: Super-s
-      Ctrl-left: Ctrl-Alt-left
-      Ctrl-right: Ctrl-Alt-right
-      #Ctrl-down: Alt-backtrick
-      # WINDOW MANAGEMENT
-      Super-Enter: Shift-F10
-
+  # EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # FILE MANAGER
   - name: "file manager"
     application:
@@ -382,6 +385,7 @@ keymap:
       Alt-v: Ctrl-Shift-v
       Alt-w: Ctrl-Shift-w
 
+  # EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # TEXT EDITORS
   - name: vscodes
     application:
