@@ -199,6 +199,7 @@ keymap:
       Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
       Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
 
+    # TEXT EDITING / ARROWS
   - name: "arrows"
     application:
       not:
@@ -210,7 +211,6 @@ keymap:
           wezterm,
         ]
     remap:
-      # TEXT EDITING / ARROWS
       Super-Right: Control-right
       Super-Left: Control-left
       Alt-left: home
