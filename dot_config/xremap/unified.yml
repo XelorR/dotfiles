@@ -6,6 +6,7 @@ keymap:
   # ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "workspace management"
     remap:
+      # MISSION CONTROL
       Ctrl-up: [Super]
       Alt-space: [Super]
       Ctrl-left: Ctrl-Alt-left
@@ -33,6 +34,7 @@ keymap:
       Ctrl-Shift-0: Ctrl-Alt-Shift-0
       # WINDOW MANAGEMENT
       Super-Enter: Shift-F10
+      Ctrl-Super-Enter: Shift-F10
       Ctrl-Super-left: Super-left
       Ctrl-Super-right: Super-right
 
