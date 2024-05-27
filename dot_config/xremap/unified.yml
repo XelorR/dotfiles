@@ -7,7 +7,7 @@ keymap:
   - name: "workspace management"
     remap:
       Ctrl-up: [Super]
-      Alt-space [Super]
+      Alt-space: [Super]
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
       #Ctrl-down: Alt-backtrick
