@@ -10,6 +10,9 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 
 		# keyboard shortcuts
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left', '<Control><Alt>Left']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right']"
+
 		for i in $(seq 9); do
 			echo Configuring desktop $i...
 			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
