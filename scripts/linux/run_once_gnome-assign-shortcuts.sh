@@ -11,6 +11,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		gsettings set org.gnome.mutter dynamic-workspaces false
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 		gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
+		gsettings set org.gnome.gnome-screenshot auto-save-directory file://$HOME/Desktop
 
 		# keyboard shortcuts
 		echo Ensuring Ctrl-Alt-left/rigth cycle windows...
