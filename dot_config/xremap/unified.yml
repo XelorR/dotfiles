@@ -3,9 +3,9 @@ modmap:
     remap:
       CapsLock: Esc
 keymap:
-  - name: "Global combos"
+  - name: "Global non-specific letters"
     application:
-      not: [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm]
+      not: [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm, Code, dolphin, Nautilus]
     remap:
       # LETTERS
       Alt-a: Ctrl-a
@@ -16,13 +16,13 @@ keymap:
       Alt-f: Ctrl-f
       Alt-g: Ctrl-g
       Alt-h: Ctrl-h
-      # Alt-i: Ctrl-i # defined with file manager exclusion
+      Alt-i: Ctrl-i
       Alt-j: Ctrl-j
       Alt-k: Ctrl-k
       Alt-l: Ctrl-l
       Alt-m: Ctrl-m
       Alt-n: Ctrl-n
-      # Alt-o: Ctrl-o # defined with file manager exclusion
+      Alt-o: Ctrl-o
       Alt-p: Ctrl-p
       Alt-q: Ctrl-q
       Alt-r: Ctrl-r
@@ -66,6 +66,7 @@ keymap:
       Alt-Shift-w: Alt-Shift-w
       Alt-Shift-x: Alt-Shift-x
       Alt-Shift-y: Alt-Shift-y
+      # redo
       Alt-Shift-z: Ctrl-y
 
       Ctrl-Alt-a: Ctrl-Alt-a
@@ -73,6 +74,7 @@ keymap:
       Ctrl-Alt-c: Ctrl-Alt-c
       Ctrl-Alt-d: Ctrl-Alt-d
       Ctrl-Alt-e: Ctrl-Alt-e
+      # fullscreen
       Ctrl-Alt-f: F11
       Ctrl-Alt-g: Ctrl-Alt-g
       Ctrl-Alt-h: Ctrl-Alt-h
