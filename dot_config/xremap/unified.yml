@@ -73,7 +73,7 @@ keymap:
       Ctrl-Alt-c: Ctrl-Alt-c
       Ctrl-Alt-d: Ctrl-Alt-d
       Ctrl-Alt-e: Ctrl-Alt-e
-      Ctrl-Alt-f: Ctrl-Alt-f
+      Ctrl-Alt-f: F11
       Ctrl-Alt-g: Ctrl-Alt-g
       Ctrl-Alt-h: Ctrl-Alt-h
       Ctrl-Alt-i: Ctrl-Alt-i
@@ -197,9 +197,14 @@ keymap:
       Ctrl-b: left
       Ctrl-a: home
       Ctrl-e: end
-
-      # WINDOW MANAGEMENT
-      # Super-Enter: Super-up
+  # WINDOW MANAGEMENT
+      Super-Enter: Super-up
+  - name: "workspace management"
+    remap:
+      Ctrl-up: Super-s
+      Ctrl-left: Ctrl-Alt-left
+      Ctrl-right: Ctrl-Alt-right
+      Ctrl-down: Alt-backtrick
 
   # FILE MANAGER
   - name: "not file manager"
