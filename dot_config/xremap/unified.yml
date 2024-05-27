@@ -8,7 +8,6 @@ keymap:
     remap:
       # MISSION CONTROL
       Ctrl-up: Super-w
-      Alt-space: Super-w
       F3: Super-w
       Ctrl-left: Ctrl-Alt-left
       Ctrl-right: Ctrl-Alt-right
