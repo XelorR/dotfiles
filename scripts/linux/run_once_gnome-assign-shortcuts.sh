@@ -15,7 +15,8 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		# keyboard shortcuts
 		echo Ensuring to have 'toggle-maximized' configured...
 		gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['<Alt>F10']"
-		echo Ensuring Ctrl-Alt-left/rigth cycle windows...
+
+		echo Ensuring Ctrl-Alt-left/right cycle windows...
 		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left', '<Control><Alt>Left']"
 		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right']"
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left', '<Control><Shift><Alt>Left']"
