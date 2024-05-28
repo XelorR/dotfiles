@@ -493,7 +493,7 @@ keymap:
 
   - name: notepads
     application:
-      only: [TextEditor]
+      only: [TextEditor, kate]
     remap:
       Super-f: Ctrl-right
       Super-b: Ctrl-left
