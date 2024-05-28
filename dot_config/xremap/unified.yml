@@ -411,6 +411,8 @@ keymap:
       Super-f: Alt-f
       Super-b: Alt-b
       Super-Backspace: Alt-Backspace
+      Super-Delete: Alt-d
+      Super-d: Alt-d
 
   # EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # TEXT EDITORS
