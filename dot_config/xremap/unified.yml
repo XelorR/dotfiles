@@ -498,6 +498,14 @@ keymap:
       Alt-2: Ctrl-2
       Alt-3: Ctrl-3
 
+      # indent/unindent
+      Alt-leftbrace: Ctrl-leftbrace
+      Alt-rightbrace: Ctrl-rightbrace
+
+      # collapse/expand
+      Alt-Super-leftbrace: Ctrl-Shift-leftbrace
+      Alt-Super-rightbrace: Ctrl-Shift-rightbrace
+
   - name: notepads
     application:
       # only simple text editors/notepads
