@@ -429,6 +429,7 @@ keymap:
       Alt-Enter: Ctrl-Enter
       Alt-comma: Ctrl-comma
       Alt-slash: Ctrl-slash
+      Alt-backslash: Ctrl-backslash
 
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
