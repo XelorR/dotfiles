@@ -43,6 +43,7 @@ keymap:
   # GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "Global non-specific letters"
     application:
+      # exclude terminals, filemanagers and cpecificly binded apps
       not:
         [
           konsole,
@@ -231,6 +232,7 @@ keymap:
     # TEXT EDITING / ARROWS
   - name: "arrows"
     application:
+      # exclude terminals, filemanagers and Emacs
       not:
         [
           konsole,
@@ -258,6 +260,7 @@ keymap:
       Ctrl-d: delete
   - name: "deletion"
     application:
+      # exclude terminals, filemanagers and Emacs
       not:
         [
           konsole,
@@ -318,6 +321,7 @@ keymap:
   # TABS
   - name: "tabs c-pgup"
     application:
+      # only applications with Ctrl-PgUp/Ctrl-PgDn for tab switching
       only:
         [
           Gnome-terminal,
@@ -334,6 +338,7 @@ keymap:
       Alt-Shift-leftbrace: Control-pageup
   - name: "tabs c-tab"
     application:
+      # only applications with Ctrl-Tab/Ctrl-Shift-Tab for tab switching
       only: [konsole, Nautilus, dolphin]
     remap:
       Control-pagedown: Control-tab
@@ -360,6 +365,7 @@ keymap:
   # OPEN SETTINGS
   - name: chromes
     application:
+      # only Chrome-based web browsers
       only: [Brave-browser, Microsoft-edge, Google-chrome]
     remap:
       Alt-comma:
@@ -494,6 +500,7 @@ keymap:
 
   - name: notepads
     application:
+      # only simple text editors/notepads
       only: [TextEditor, kate]
     remap:
       Super-f: Ctrl-right
