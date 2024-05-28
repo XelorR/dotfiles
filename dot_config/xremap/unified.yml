@@ -262,6 +262,7 @@ keymap:
         ]
     remap:
       Alt-Backspace: [Shift-home, Backspace]
+      Super-Backspace: Ctrl-Backspace
 
   # EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # FILE MANAGER
@@ -387,6 +388,9 @@ keymap:
       Alt-v: Ctrl-Shift-v
       Ctrl-Alt-t: Ctrl-Alt-t
       Ctrl-Alt-f: F11
+      Super-f: Alt-f
+      Super-b: Alt-b
+      Super-Backspace: Alt-Backspace
 
   # EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # TEXT EDITORS
@@ -477,3 +481,10 @@ keymap:
       Alt-1: Ctrl-1
       Alt-2: Ctrl-2
       Alt-3: Ctrl-3
+
+  - name: notepads
+    application:
+      only: [TextEditor]
+    remap:
+      Super-f: Ctrl-right
+      Super-b: Ctrl-left
