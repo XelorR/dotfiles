@@ -414,14 +414,26 @@ keymap:
     application:
       only: [Code]
     remap:
-      # opt-arrows
+      # move line up/down
       Super-up: Alt-up
       Super-down: Alt-down
-      # cursors
-      Ctrl-Super-up: Ctrl-Shift-up
-      Ctrl-Super-down: Ctrl-Shift-down
+      # copy line up/down
+      Super-Shift-up: Alt-Shift-up
+      Super-Shift-down: Alt-Shift-down
+      # multiple cursors
+      # spawn up/down, linux-like
+      Ctrl-Shift-up: Ctrl-Shift-up
+      Ctrl-Shift-down: Ctrl-Shift-down
+      # spawn up/down, macos-like
+      Alt-Super-up: Ctrl-Shift-up
+      Alt-Super-down: Ctrl-Shift-down
+      # spawn up/down, windows-like
       Ctrl-Alt-up: Ctrl-Shift-up
       Ctrl-Alt-down: Ctrl-Shift-down
+      # add cursors to the end of each line selected
+      Super-Shift-i: Alt-Shift-i
+      # select all occurencies of selected word
+      Alt-F2: Ctrl-F2
 
       Super-z: Alt-z
       Super-Shift-f: Ctrl-Shift-i
@@ -437,7 +449,7 @@ keymap:
       Alt-d: Ctrl-d
       Alt-e: Ctrl-e
       Alt-f: Ctrl-f
-      Alt-g: Ctrl-g
+      Alt-g: F3
       Alt-h: Ctrl-h
       Alt-i: Ctrl-i
       Alt-j: Ctrl-j
@@ -464,11 +476,12 @@ keymap:
       Alt-Shift-d: Ctrl-Shift-d
       Alt-Shift-e: Ctrl-Shift-e
       Alt-Shift-f: Ctrl-Shift-f
-      Alt-Shift-g: Alt-Shift-g
+      Alt-Shift-g: Shift-F3
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
       Alt-Shift-k: Alt-Shift-k
+      # select all occurencies of current selection
       Alt-Shift-l: Alt-Shift-l
       Alt-Shift-m: Alt-Shift-m
       # new
