@@ -448,7 +448,10 @@ keymap:
       # find and replace
       Super-Alt-f: Ctrl-h
 
+      # insert line below
       Alt-Enter: Ctrl-Enter
+      # insert line above
+      Alt-Shift-Enter: Ctrl-Shift-Enter
       Alt-dot: Ctrl-dot
       Alt-comma: Ctrl-comma
       Alt-slash: Ctrl-slash
