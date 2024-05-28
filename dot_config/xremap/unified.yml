@@ -441,8 +441,11 @@ keymap:
       Ctrl-Alt-Shift-left: Alt-Shift-left
       Ctrl-Alt-Shift-right: Alt-Shift-right
 
+      # wrap text
       Super-z: Alt-z
+      # format document
       Super-Shift-f: Ctrl-Shift-i
+      # find and replace
       Super-Alt-f: Ctrl-h
 
       Alt-Enter: Ctrl-Enter
