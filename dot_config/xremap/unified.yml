@@ -511,10 +511,14 @@ keymap:
 
       Ctrl-Shift-g: [Ctrl-Shift-g, g]
       Ctrl-Alt-f: F11
+      Super-F12: Alt-F12
 
+      # focus into editor groups
       Alt-1: Ctrl-1
       Alt-2: Ctrl-2
       Alt-3: Ctrl-3
+      # vertical/horisontal layout
+      Super-Shift-0: Alt-Shift-0
 
       # indent/unindent
       Alt-leftbrace: Ctrl-leftbrace
