@@ -333,7 +333,7 @@ keymap:
       Alt-Shift-leftbrace: Control-pageup
   - name: "tabs c-tab"
     application:
-      only: [konsole, Nautilus]
+      only: [konsole, Nautilus, dolphin]
     remap:
       Control-pagedown: Control-tab
       Control-pageup: Control-Shift-tab
