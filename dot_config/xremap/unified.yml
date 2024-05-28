@@ -245,6 +245,7 @@ keymap:
           Emacs,
           Nautilus,
           dolphin,
+          Logseq,
         ]
     remap:
       Super-Right: Control-right
@@ -564,7 +565,7 @@ keymap:
   - name: "extended editing capabilities"
     application:
       # only simple text editors/notepads
-      only: [TextEditor, kate]
+      only: [TextEditor, kate, Logseq]
     remap:
       Super-f: Ctrl-right
       Super-b: Ctrl-left
