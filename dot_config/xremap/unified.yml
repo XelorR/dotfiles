@@ -327,6 +327,7 @@ keymap:
           Brave-browser,
           Microsoft-edge,
           Google-chrome,
+          KeePassXC,
         ]
     remap:
       Alt-Shift-rightbrace: Control-pagedown
