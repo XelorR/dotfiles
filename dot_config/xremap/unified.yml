@@ -373,32 +373,6 @@ keymap:
           s,
           Enter,
         ]
-  - name: firefoxes
-    application:
-      only: [firefox]
-    remap:
-      Alt-comma:
-        [
-          Control-t,
-          a,
-          b,
-          o,
-          u,
-          t,
-          Shift-semicolon,
-          p,
-          r,
-          e,
-          f,
-          e,
-          r,
-          e,
-          n,
-          c,
-          e,
-          s,
-          Enter,
-        ]
 
   # TERMINALS
   - name: terminals
