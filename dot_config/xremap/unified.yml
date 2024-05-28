@@ -232,7 +232,16 @@ keymap:
   - name: "arrows"
     application:
       not:
-        [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm, Emacs]
+        [
+          konsole,
+          Gnome-terminal,
+          gnome-terminal-server,
+          kitty,
+          wezterm,
+          Emacs,
+          Nautilus,
+          dolphin,
+        ]
     remap:
       Super-Right: Control-right
       Super-Left: Control-left
