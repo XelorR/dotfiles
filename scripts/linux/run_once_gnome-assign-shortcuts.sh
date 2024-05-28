@@ -11,6 +11,8 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 		gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 		# gsettings set org.gnome.gnome-screenshot auto-save-directory file://$HOME/Desktop
+		gsettings set org.gnome.eog.ui disable-close-confirmation true
+		gsettings set org.gnome.eog.ui disable-trash-confirmation true
 
 		# keyboard shortcuts
 		echo Ensuring to have 'toggle-maximized' configured...
