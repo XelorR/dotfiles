@@ -245,7 +245,6 @@ keymap:
           Emacs,
           Nautilus,
           dolphin,
-          Logseq,
         ]
     remap:
       Super-Right: Control-right
