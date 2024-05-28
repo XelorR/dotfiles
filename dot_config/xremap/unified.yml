@@ -441,6 +441,7 @@ keymap:
 
       Super-z: Alt-z
       Super-Shift-f: Ctrl-Shift-i
+      Super-Alt-f: Ctrl-h
 
       Alt-Enter: Ctrl-Enter
       Alt-dot: Ctrl-dot
@@ -480,6 +481,7 @@ keymap:
       Alt-Shift-c: Alt-Shift-c
       Alt-Shift-d: Ctrl-Shift-d
       Alt-Shift-e: Ctrl-Shift-e
+      # find dialig
       Alt-Shift-f: Ctrl-Shift-f
       Alt-Shift-g: Shift-F3
       Alt-Shift-h: Alt-Shift-h
