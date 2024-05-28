@@ -37,6 +37,8 @@ keymap:
       Ctrl-Super-Enter: Alt-F10
       Ctrl-Super-left: Super-left
       Ctrl-Super-right: Super-right
+      # LOCK SCREEN
+      Ctrl-Alt-q: Super-l
 
   # GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "Global non-specific letters"
@@ -133,7 +135,8 @@ keymap:
       Ctrl-Alt-n: Ctrl-Alt-n
       Ctrl-Alt-o: Ctrl-Alt-o
       Ctrl-Alt-p: Ctrl-Alt-p
-      Ctrl-Alt-q: Ctrl-Alt-q
+      # lock screen
+      Ctrl-Alt-q: Super-l
       Ctrl-Alt-r: Ctrl-Alt-r
       Ctrl-Alt-s: Ctrl-Alt-s
       Ctrl-Alt-t: Ctrl-Alt-t
