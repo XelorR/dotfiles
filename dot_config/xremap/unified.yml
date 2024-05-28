@@ -285,7 +285,6 @@ keymap:
       Alt-2: Ctrl-1
       Alt-3: Ctrl-3
       Alt-Shift-n: Ctrl-Shift-n
-      Alt-Shift-z: Ctrl-y
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
       Alt-c: Ctrl-c
