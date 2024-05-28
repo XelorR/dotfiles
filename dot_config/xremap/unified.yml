@@ -443,6 +443,7 @@ keymap:
       Super-Shift-f: Ctrl-Shift-i
 
       Alt-Enter: Ctrl-Enter
+      Alt-dot: Ctrl-dot
       Alt-comma: Ctrl-comma
       Alt-slash: Ctrl-slash
       Alt-backslash: Ctrl-backslash
