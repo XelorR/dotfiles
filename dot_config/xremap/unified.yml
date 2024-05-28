@@ -404,6 +404,8 @@ keymap:
       Alt-v: Ctrl-Shift-v
       Ctrl-Alt-t: Ctrl-Alt-t
       Ctrl-Alt-f: F11
+      Super-right: Alt-f
+      Super-left: Alt-b
       Super-f: Alt-f
       Super-b: Alt-b
       Super-Backspace: Alt-Backspace
