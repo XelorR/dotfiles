@@ -450,6 +450,8 @@ keymap:
       Alt-comma: Ctrl-comma
       Alt-slash: Ctrl-slash
       Alt-backslash: Ctrl-backslash
+      # block comment
+      Super-Shift-a: Alt-Shift-a
 
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
@@ -457,6 +459,7 @@ keymap:
       Alt-d: Ctrl-d
       Alt-e: Ctrl-e
       Alt-f: Ctrl-f
+      # find next
       Alt-g: F3
       Alt-h: Ctrl-h
       Alt-i: Ctrl-i
@@ -481,10 +484,13 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
+      # focus run and debug
       Alt-Shift-d: Ctrl-Shift-d
+      # focus file explorer
       Alt-Shift-e: Ctrl-Shift-e
-      # find dialig
+      # focus find dialig
       Alt-Shift-f: Ctrl-Shift-f
+      # find frevious
       Alt-Shift-g: Shift-F3
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
@@ -509,11 +515,13 @@ keymap:
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
+      # focus extensions
       Alt-Shift-x: Ctrl-Shift-x
       Alt-Shift-y: Alt-Shift-y
       # redo
       Alt-Shift-z: Ctrl-y
 
+      # focus version control
       Ctrl-Shift-g: [Ctrl-Shift-g, g]
       Ctrl-Alt-f: F11
       Super-F12: Alt-F12
