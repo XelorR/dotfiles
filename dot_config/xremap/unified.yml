@@ -559,12 +559,13 @@ keymap:
       Alt-Super-leftbrace: Ctrl-Shift-leftbrace
       Alt-Super-rightbrace: Ctrl-Shift-rightbrace
 
-  - name: notepads
+  - name: "extended editing capabilities"
     application:
       # only simple text editors/notepads
       only: [TextEditor, kate]
     remap:
       Super-f: Ctrl-right
       Super-b: Ctrl-left
+      Super-d: Ctrl-Delete
       Ctrl-k: [Shift-end, Delete]
       Ctrl-u: [Shift-home, Backspace]
