@@ -452,9 +452,13 @@ keymap:
       Alt-Enter: Ctrl-Enter
       # insert line above
       Alt-Shift-Enter: Ctrl-Shift-Enter
+      # quick fix
       Alt-dot: Ctrl-dot
+      # open settings
       Alt-comma: Ctrl-comma
+      # comment
       Alt-slash: Ctrl-slash
+      # split editor
       Alt-backslash: Ctrl-backslash
       # block comment
       Super-Shift-a: Alt-Shift-a
