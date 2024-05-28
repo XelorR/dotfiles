@@ -379,13 +379,13 @@ keymap:
     application:
       only: [konsole, gnome-terminal-server, Gnome-terminal, kitty, wezterm]
     remap:
-      Alt-n: Ctrl-Shift-n
-      Alt-p: Ctrl-Shift-p
       Alt-q: Alt-F4
+      Alt-n: Ctrl-Shift-n
       Alt-t: Ctrl-Shift-t
-      Ctrl-Alt-t: Ctrl-Alt-t
-      Alt-v: Ctrl-Shift-v
       Alt-w: Ctrl-Shift-w
+      Alt-c: Ctrl-Shift-c
+      Alt-v: Ctrl-Shift-v
+      Ctrl-Alt-t: Ctrl-Alt-t
       Ctrl-Alt-f: F11
 
   # EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
