@@ -435,6 +435,10 @@ keymap:
       # select all occurencies of selected word
       Alt-F2: Ctrl-F2
 
+      # expand/shrink selection
+      Ctrl-Alt-Shift-left: Alt-Shift-left
+      Ctrl-Alt-Shift-right: Alt-Shift-right
+
       Super-z: Alt-z
       Super-Shift-f: Ctrl-Shift-i
 
