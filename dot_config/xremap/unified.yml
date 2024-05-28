@@ -513,3 +513,5 @@ keymap:
     remap:
       Super-f: Ctrl-right
       Super-b: Ctrl-left
+      Ctrl-k: [Shift-end, Delete]
+      Ctrl-u: [Shift-home, Backspace]
