@@ -9,8 +9,10 @@ keymap:
       # MISSION CONTROL
       Ctrl-up: Super-w
       F3: Super-w
-      Ctrl-left: Ctrl-Alt-left
-      Ctrl-right: Ctrl-Alt-right
+      Ctrl-left: Super-pageup
+      Ctrl-right: Super-pagedown
+      Ctrl-Shift-left: Super-Shift-pageup
+      Ctrl-Shift-right: Super-Shift-pagedown
       # Ctrl-down: Super-grave
       Ctrl-1: Ctrl-Alt-1
       Ctrl-2: Ctrl-Alt-2
@@ -440,6 +442,12 @@ keymap:
       # expand/shrink selection
       Ctrl-Alt-Shift-left: Alt-Shift-left
       Ctrl-Alt-Shift-right: Alt-Shift-right
+
+      # box selection
+      Super-Alt-Shift-left: Alt-Ctrl-left
+      Super-Alt-Shift-right: Alt-Ctrl-right
+      Super-Alt-Shift-up: Alt-Ctrl-up
+      Super-Alt-Shift-down: Alt-Ctrl-down
 
       # wrap text
       Super-z: Alt-z
