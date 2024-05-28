@@ -323,6 +323,7 @@ keymap:
         [
           Gnome-terminal,
           gnome-terminal-server,
+          Code,
           firefox,
           Brave-browser,
           Microsoft-edge,
