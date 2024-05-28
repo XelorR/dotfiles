@@ -49,6 +49,7 @@ keymap:
           kitty,
           wezterm,
           Code,
+          Emacs,
           dolphin,
           Nautilus,
         ]
@@ -227,7 +228,8 @@ keymap:
     # TEXT EDITING / ARROWS
   - name: "arrows"
     application:
-      not: [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm]
+      not:
+        [konsole, Gnome-terminal, gnome-terminal-server, kitty, wezterm, Emacs]
     remap:
       Super-Right: Control-right
       Super-Left: Control-left
@@ -253,6 +255,7 @@ keymap:
           wezterm,
           dolphin,
           Nautilus,
+          Emacs,
         ]
     remap:
       Alt-Backspace: [Shift-home, Backspace]
