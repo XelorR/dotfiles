@@ -519,11 +519,11 @@ keymap:
 
       ## MULTI-CURSOR AND SELECTION
       # to be implemented   (linux: alt-click)         | ⌥click  | Insert cursor
-      Control-Shift-up: Control-Shift-up # Linux       | ⌃⇧↑     | Insert cursor above
+      Control-Shift-up: Control-Shift-up #       Linux | ⌃⇧↑     | Insert cursor above
       Control-Shift-down: Control-Shift-down #         | ⌃⇧↓     | Insert cursor below
-      Alt-Super-up: Control-Shift-up # MacOS           | ⌥⌘↑     | Insert cursor above
+      Alt-Super-up: Control-Shift-up #           MacOS | ⌥⌘↑     | Insert cursor above
       Alt-Super-down: Control-Shift-down #             | ⌥⌘↓     | Insert cursor below
-      Control-Alt-up: Control-Shift-up # Windows       | ⌃⌘↑     | Insert cursor above
+      Control-Alt-up: Control-Shift-up #       Windows | ⌃⌘↑     | Insert cursor above
       Control-Alt-down: Control-Shift-down #           | ⌃⌘↓     | Insert cursor below
       # implemented in VSCODE LETTERS subsection       | ⌘u      | Undo last cursor operation
       Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i     | Add cursors to the end of each line selected
