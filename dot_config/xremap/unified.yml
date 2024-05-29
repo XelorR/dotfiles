@@ -592,6 +592,22 @@ keymap:
       # implemented in VSCODE LETTERS subsection #     | ⌘k ←/→  | Move active editor group
 
       ## FILE MANAGEMENT
+      # implemented in VSCODE LETTERS subsection #     | ⌘n      | New File
+      # implemented in VSCODE LETTERS subsection #     | ⌘o      | Open File...
+      # implemented in VSCODE LETTERS subsection #     | ⌘s      | Save
+      # implemented in VSCODE LETTERS subsection #     | ⇧⌘s     | Save As...
+      # to be implemented                              | ⌥⌘s     | Save All
+      # implemented in VSCODE LETTERS subsection #     | ⌘w      | Close
+      # implemented in VSCODE LETTERS subsection #     | ⌘k ⌘w   | Close All
+      # implemented in VSCODE LETTERS subsection #     | ⇧⌘t     | Reopen closed editor
+      # implemented in VSCODE LETTERS subsection #     | ⌘k enter| Keep preview mode editor open
+      # implemented in VSCODE LETTERS subsection #     | ⌃tab    | Open next
+      # implemented in VSCODE LETTERS subsection #     | ⌃⇧tab   | Open previous
+      # implemented in VSCODE LETTERS subsection #     | ⌘k p    | Copy path to active file
+      # implemented in VSCODE LETTERS subsection #     | ⌘k r    | Reveal active file in file manager
+      # implemented in VSCODE LETTERS subsection #     | ⌘k o    | Show active file in new window/instance
+
+      ## DISPLAY
 
       Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
 
