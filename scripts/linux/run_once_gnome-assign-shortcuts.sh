@@ -24,6 +24,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left']"
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right']"
 
+		gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Super><Alt>F8']" # to solve conflict with workspace 8
 		for i in $(seq 9); do
 			echo Configuring desktop $i...
 			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Alt><Shift>$i']"
