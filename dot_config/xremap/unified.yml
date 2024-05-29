@@ -521,16 +521,15 @@ keymap:
       ## MULTI-CURSOR AND SELECTION
       # to be implemented
       #   opt-mouse_l (linux: alt-mouse_l)                    | Insert cursor
-      # multiple cursors
-      # spawn up/down, linux-like
-      Ctrl-Shift-up: Ctrl-Shift-up
-      Ctrl-Shift-down: Ctrl-Shift-down
-      # spawn up/down, macos-like
-      Alt-Super-up: Ctrl-Shift-up
-      Alt-Super-down: Ctrl-Shift-down
-      # spawn up/down, windows-like
-      Ctrl-Alt-up: Ctrl-Shift-up
-      Ctrl-Alt-down: Ctrl-Shift-down
+      # linux-like:
+      Ctrl-Shift-up: Ctrl-Shift-up # control-shift-up         | Insert cursor above
+      Ctrl-Shift-down: Ctrl-Shift-down # control-shift-down   | Insert cursor below
+      # macos-like:
+      Alt-Super-up: Ctrl-Shift-up # opt-cmd-up                | Insert cursor above
+      Alt-Super-down: Ctrl-Shift-down # opt-cmd-down          | Insert cursor below
+      # windows-like:
+      Ctrl-Alt-up: Ctrl-Shift-up # ctrl-alt-up                | Insert cursor above
+      Ctrl-Alt-down: Ctrl-Shift-down # ctrl-alt-down          | Insert cursor below
 
       Super-Shift-i: Alt-Shift-i # add cursors to the end of each line selected
       Alt-F2: Ctrl-F2 # select all occurencies of selected word
