@@ -541,7 +541,7 @@ keymap:
       Super-Alt-Shift-pagedown: Alt-Control-pagedown # | ⇧⌥⌘pgup | Column (box) selection page down
 
       ## SEARCH AND REPLACE
-      # implemented in VSCODE LETTERS subsection     # | ⌘f      | find
+      # implemented in VSCODE LETTERS subsection #     | ⌘f      | find
 
       Super-Shift-f: Control-Shift-i # format document
       Super-Alt-f: Control-h # find and replace
