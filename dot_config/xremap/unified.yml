@@ -420,67 +420,14 @@ keymap:
     application:
       only: [Code]
     remap:
-      # move line up/down
-      Super-up: Alt-up
-      Super-down: Alt-down
-      # copy line up/down
-      Super-Shift-up: Alt-Shift-up
-      Super-Shift-down: Alt-Shift-down
-      # multiple cursors
-      # spawn up/down, linux-like
-      Ctrl-Shift-up: Ctrl-Shift-up
-      Ctrl-Shift-down: Ctrl-Shift-down
-      # spawn up/down, macos-like
-      Alt-Super-up: Ctrl-Shift-up
-      Alt-Super-down: Ctrl-Shift-down
-      # spawn up/down, windows-like
-      Ctrl-Alt-up: Ctrl-Shift-up
-      Ctrl-Alt-down: Ctrl-Shift-down
-      # add cursors to the end of each line selected
-      Super-Shift-i: Alt-Shift-i
-      # select all occurencies of selected word
-      Alt-F2: Ctrl-F2
-
-      # expand/shrink selection
-      Ctrl-Alt-Shift-left: Alt-Shift-left
-      Ctrl-Alt-Shift-right: Alt-Shift-right
-
-      # box selection
-      Super-Alt-Shift-left: Alt-Ctrl-left
-      Super-Alt-Shift-right: Alt-Ctrl-right
-      Super-Alt-Shift-up: Alt-Ctrl-up
-      Super-Alt-Shift-down: Alt-Ctrl-down
-
-      # wrap text
-      Super-z: Alt-z
-      # format document
-      Super-Shift-f: Ctrl-Shift-i
-      # find and replace
-      Super-Alt-f: Ctrl-h
-
-      # insert line below
-      Alt-Enter: Ctrl-Enter
-      # insert line above
-      Alt-Shift-Enter: Ctrl-Shift-Enter
-      # quick fix
-      Alt-dot: Ctrl-dot
-      # open settings
-      Alt-comma: Ctrl-comma
-      # comment
-      Alt-slash: Ctrl-slash
-      # split editor
-      Alt-backslash: Ctrl-backslash
-      # block comment
-      Super-Shift-a: Alt-Shift-a
-
+      # LETTERS
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
       Alt-c: Ctrl-c
       Alt-d: Ctrl-d
       Alt-e: Ctrl-e
       Alt-f: Ctrl-f
-      # find next
-      Alt-g: F3
+      Alt-g: F3 # find next
       Alt-h: Ctrl-h
       Alt-i: Ctrl-i
       Alt-j: Ctrl-j
@@ -504,45 +451,81 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      # focus run and debug
-      Alt-Shift-d: Ctrl-Shift-d
-      # focus file explorer
-      Alt-Shift-e: Ctrl-Shift-e
-      # focus find dialig
-      Alt-Shift-f: Ctrl-Shift-f
-      # find frevious
-      Alt-Shift-g: Shift-F3
+      Alt-Shift-d: Ctrl-Shift-d # focus run and debug
+      Alt-Shift-e: Ctrl-Shift-e # focus file explorer
+      Alt-Shift-f: Ctrl-Shift-f # focus find dialig
+      Alt-Shift-g: Shift-F3 # find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
       Alt-Shift-k: Alt-Shift-k
-      # select all occurencies of current selection
-      Alt-Shift-l: Alt-Shift-l
+      Alt-Shift-l: Alt-Shift-l # select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
-      # new
-      Alt-Shift-n: Ctrl-Shift-n
-      # optional open
-      Alt-Shift-o: Ctrl-Shift-o
-      # cmd-shift-p
-      Alt-Shift-p: Ctrl-Shift-p
+      Alt-Shift-n: Ctrl-Shift-n # new
+      Alt-Shift-o: Ctrl-Shift-o # optional open
+      Alt-Shift-p: Ctrl-Shift-p # cmd-shift-p
       Alt-Shift-q: Alt-Shift-q
-      # refresh
-      Alt-Shift-r: Ctrl-Shift-r
-      # save as
-      Alt-Shift-s: Ctrl-Shift-s
-      # restore tab
-      Alt-Shift-t: Ctrl-Shift-t
+      Alt-Shift-r: Ctrl-Shift-r # refresh
+      Alt-Shift-s: Ctrl-Shift-s # save as
+      Alt-Shift-t: Ctrl-Shift-t # restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
-      # focus extensions
-      Alt-Shift-x: Ctrl-Shift-x
+      Alt-Shift-x: Ctrl-Shift-x # focus extensions
       Alt-Shift-y: Alt-Shift-y
-      # redo
-      Alt-Shift-z: Ctrl-y
+      Alt-Shift-z: Ctrl-y # redo
 
-      # focus version control
-      Ctrl-Shift-g: [Ctrl-Shift-g, g]
+      # GENERAL
+      # following keys are in LETTERS section:
+      #   F1 / cmd-shift-p          | Command palette
+      #   cmd-p                     | Go to file
+      #   cmd-shift-n               | New window/instance
+      #   cmd-w                     | Close window/instance
+      #   cmd-k, cmd-s              | Keyboard shortcuts
+      Alt-comma: Ctrl-comma # cmd-, | User settings
+
+      # BASIC EDITING
+
+      Super-up: Alt-up # move line up
+      Super-down: Alt-down # move line down
+      Super-Shift-up: Alt-Shift-up # copy line up
+      Super-Shift-down: Alt-Shift-down # copy line down
+      # multiple cursors
+      # spawn up/down, linux-like
+      Ctrl-Shift-up: Ctrl-Shift-up
+      Ctrl-Shift-down: Ctrl-Shift-down
+      # spawn up/down, macos-like
+      Alt-Super-up: Ctrl-Shift-up
+      Alt-Super-down: Ctrl-Shift-down
+      # spawn up/down, windows-like
+      Ctrl-Alt-up: Ctrl-Shift-up
+      Ctrl-Alt-down: Ctrl-Shift-down
+
+      Super-Shift-i: Alt-Shift-i # add cursors to the end of each line selected
+      Alt-F2: Ctrl-F2 # select all occurencies of selected word
+
+      # expand/shrink selection
+      Ctrl-Alt-Shift-left: Alt-Shift-left
+      Ctrl-Alt-Shift-right: Alt-Shift-right
+
+      # box selection
+      Super-Alt-Shift-left: Alt-Ctrl-left
+      Super-Alt-Shift-right: Alt-Ctrl-right
+      Super-Alt-Shift-up: Alt-Ctrl-up
+      Super-Alt-Shift-down: Alt-Ctrl-down
+
+      Super-z: Alt-z # wrap text
+      Super-Shift-f: Ctrl-Shift-i # format document
+      Super-Alt-f: Ctrl-h # find and replace
+
+      Alt-Enter: Ctrl-Enter # insert line below
+      Alt-Shift-Enter: Ctrl-Shift-Enter # insert line above
+      Alt-dot: Ctrl-dot # quick fix
+      Alt-slash: Ctrl-slash # comment
+      Alt-backslash: Ctrl-backslash # split editor
+      Super-Shift-a: Alt-Shift-a # block comment
+
+      Ctrl-Shift-g: [Ctrl-Shift-g, g] # focus version control
       Ctrl-Alt-f: F11
       Super-F12: Alt-F12
 
