@@ -579,18 +579,26 @@ keymap:
       Control-Shift-m: [Control-k, m] #                | ⌃⇧m     | Toggle Tab moves focus
 
       ## EDITOR MANAGEMENT
+      # implemented in VSCODE LETTERS subsection #     | ⌘w      | Close editor
+      # implemented in VSCODE LETTERS subsection #     | ⌘k f    | Close folder
+      Alt-backslash: Control-backslash #               | ⌘\      | Split editor
+      Alt-1: Control-1 #                               | ⌘1      | Focus into 1st editor group
+      Alt-2: Control-2 #                               | ⌘2      | Focus into 2nd editor group
+      Alt-3: Control-3 #                               | ⌘3      | Focus into 3rd editor group
+      # to be implemented                              | ⌘k ⌘←   | Focus into previous editor group
+      # to be implemented                              | ⌘k ⌘→   | Focus into next editor group
+      # to be implemented                              | ⌘⇧k ⌘⇧← | Move editor left
+      # to be implemented                              | ⌘⇧k ⌘⇧→ | Move editor right
+      # implemented in VSCODE LETTERS subsection #     | ⌘k ←/→  | Move active editor group
+
+      ## FILE MANAGEMENT
 
       Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
-
-      Alt-backslash: Control-backslash # split editor
 
       Control-Shift-g: [Control-Shift-g, g] # focus version control
       Control-Alt-f: F11
 
       # focus into editor groups
-      Alt-1: Control-1
-      Alt-2: Control-2
-      Alt-3: Control-3
       # vertical/horisontal layout
       Super-Shift-0: Alt-Shift-0
 
