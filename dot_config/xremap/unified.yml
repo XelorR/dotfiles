@@ -519,6 +519,8 @@ keymap:
       Alt-Super-rightbrace: Ctrl-Shift-rightbrace # opt-cmd-] | Unfold region
 
       ## MULTI-CURSOR AND SELECTION
+      # to be implemented
+      #   opt-mouse_l (linux: alt-mouse_l)                    | Insert cursor
       # multiple cursors
       # spawn up/down, linux-like
       Ctrl-Shift-up: Ctrl-Shift-up
