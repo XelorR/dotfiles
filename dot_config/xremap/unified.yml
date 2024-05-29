@@ -7,40 +7,40 @@ keymap:
   - name: "workspace management"
     remap:
       # MISSION CONTROL
-      Ctrl-up: Super-w
+      Control-up: Super-w
       F3: Super-w
-      Ctrl-left: Super-pageup
-      Ctrl-right: Super-pagedown
-      Ctrl-Shift-left: Super-Shift-pageup
-      Ctrl-Shift-right: Super-Shift-pagedown
-      # Ctrl-down: Super-grave
-      Ctrl-1: Super-Alt-1
-      Ctrl-2: Super-Alt-2
-      Ctrl-3: Super-Alt-3
-      Ctrl-4: Super-Alt-4
-      Ctrl-5: Super-Alt-5
-      Ctrl-6: Super-Alt-6
-      Ctrl-7: Super-Alt-7
-      Ctrl-8: Super-Alt-8
-      Ctrl-9: Super-Alt-9
-      Ctrl-0: Super-Alt-0
-      Ctrl-Shift-1: Super-Alt-Shift-1
-      Ctrl-Shift-2: Super-Alt-Shift-2
-      Ctrl-Shift-3: Super-Alt-Shift-3
-      Ctrl-Shift-4: Super-Alt-Shift-4
-      Ctrl-Shift-5: Super-Alt-Shift-5
-      Ctrl-Shift-6: Super-Alt-Shift-6
-      Ctrl-Shift-7: Super-Alt-Shift-7
-      Ctrl-Shift-8: Super-Alt-Shift-8
-      Ctrl-Shift-9: Super-Alt-Shift-9
-      Ctrl-Shift-0: Super-Alt-Shift-0
+      Control-left: Super-pageup
+      Control-right: Super-pagedown
+      Control-Shift-left: Super-Shift-pageup
+      Control-Shift-right: Super-Shift-pagedown
+      # Control-down: Super-grave
+      Control-1: Super-Alt-1
+      Control-2: Super-Alt-2
+      Control-3: Super-Alt-3
+      Control-4: Super-Alt-4
+      Control-5: Super-Alt-5
+      Control-6: Super-Alt-6
+      Control-7: Super-Alt-7
+      Control-8: Super-Alt-8
+      Control-9: Super-Alt-9
+      Control-0: Super-Alt-0
+      Control-Shift-1: Super-Alt-Shift-1
+      Control-Shift-2: Super-Alt-Shift-2
+      Control-Shift-3: Super-Alt-Shift-3
+      Control-Shift-4: Super-Alt-Shift-4
+      Control-Shift-5: Super-Alt-Shift-5
+      Control-Shift-6: Super-Alt-Shift-6
+      Control-Shift-7: Super-Alt-Shift-7
+      Control-Shift-8: Super-Alt-Shift-8
+      Control-Shift-9: Super-Alt-Shift-9
+      Control-Shift-0: Super-Alt-Shift-0
       # WINDOW MANAGEMENT
       Super-Enter: Alt-F10
-      Ctrl-Super-Enter: Alt-F10
-      Ctrl-Super-left: Super-left
-      Ctrl-Super-right: Super-right
+      Control-Super-Enter: Alt-F10
+      Control-Super-left: Super-left
+      Control-Super-right: Super-right
       # LOCK SCREEN
-      Ctrl-Alt-q: Super-l
+      Control-Alt-q: Super-l
 
   # GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   - name: "Global non-specific letters"
@@ -60,32 +60,32 @@ keymap:
         ]
     remap:
       # LETTERS
-      Alt-a: Ctrl-a
-      Alt-b: Ctrl-b
-      Alt-c: Ctrl-c
-      Alt-d: Ctrl-d
-      Alt-e: Ctrl-e
-      Alt-f: Ctrl-f
-      Alt-g: Ctrl-g
-      Alt-h: Ctrl-h
-      Alt-i: Ctrl-i
-      Alt-j: Ctrl-j
-      Alt-k: Ctrl-k
-      Alt-l: Ctrl-l
-      Alt-m: Ctrl-m
-      Alt-n: Ctrl-n
-      Alt-o: Ctrl-o
-      Alt-p: Ctrl-p
-      Alt-q: Ctrl-q
-      Alt-r: Ctrl-r
-      Alt-s: Ctrl-s
-      Alt-t: Ctrl-t
-      Alt-u: Ctrl-u
-      Alt-v: Ctrl-v
-      Alt-w: Ctrl-w
-      Alt-x: Ctrl-x
-      Alt-y: Ctrl-y
-      Alt-z: Ctrl-z
+      Alt-a: Control-a
+      Alt-b: Control-b
+      Alt-c: Control-c
+      Alt-d: Control-d
+      Alt-e: Control-e
+      Alt-f: Control-f
+      Alt-g: Control-g
+      Alt-h: Control-h
+      Alt-i: Control-i
+      Alt-j: Control-j
+      Alt-k: Control-k
+      Alt-l: Control-l
+      Alt-m: Control-m
+      Alt-n: Control-n
+      Alt-o: Control-o
+      Alt-p: Control-p
+      Alt-q: Control-q
+      Alt-r: Control-r
+      Alt-s: Control-s
+      Alt-t: Control-t
+      Alt-u: Control-u
+      Alt-v: Control-v
+      Alt-w: Control-w
+      Alt-x: Control-x
+      Alt-y: Control-y
+      Alt-z: Control-z
 
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
@@ -101,135 +101,135 @@ keymap:
       Alt-Shift-l: Alt-Shift-l
       Alt-Shift-m: Alt-Shift-m
       # new
-      Alt-Shift-n: Ctrl-Shift-n
+      Alt-Shift-n: Control-Shift-n
       # optional open
-      Alt-Shift-o: Ctrl-Shift-o
+      Alt-Shift-o: Control-Shift-o
       # cmd-shift-p
-      Alt-Shift-p: Ctrl-Shift-p
+      Alt-Shift-p: Control-Shift-p
       Alt-Shift-q: Alt-Shift-q
       # refresh
-      Alt-Shift-r: Ctrl-Shift-r
+      Alt-Shift-r: Control-Shift-r
       # save as
-      Alt-Shift-s: Ctrl-Shift-s
+      Alt-Shift-s: Control-Shift-s
       # restore tab
-      Alt-Shift-t: Ctrl-Shift-t
+      Alt-Shift-t: Control-Shift-t
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
       Alt-Shift-x: Alt-Shift-x
       Alt-Shift-y: Alt-Shift-y
       # redo
-      Alt-Shift-z: Ctrl-y
+      Alt-Shift-z: Control-y
 
-      Ctrl-Alt-a: Ctrl-Alt-a
-      Ctrl-Alt-b: Ctrl-Alt-b
-      Ctrl-Alt-c: Ctrl-Alt-c
-      Ctrl-Alt-d: Ctrl-Alt-d
-      Ctrl-Alt-e: Ctrl-Alt-e
+      Control-Alt-a: Control-Alt-a
+      Control-Alt-b: Control-Alt-b
+      Control-Alt-c: Control-Alt-c
+      Control-Alt-d: Control-Alt-d
+      Control-Alt-e: Control-Alt-e
       # fullscreen
-      Ctrl-Alt-f: F11
-      Ctrl-Alt-g: Ctrl-Alt-g
-      Ctrl-Alt-h: Ctrl-Alt-h
-      Ctrl-Alt-i: Ctrl-Alt-i
-      Ctrl-Alt-j: Ctrl-Alt-j
-      Ctrl-Alt-k: Ctrl-Alt-k
-      Ctrl-Alt-l: Ctrl-Alt-l
-      Ctrl-Alt-m: Ctrl-Alt-m
-      Ctrl-Alt-n: Ctrl-Alt-n
-      Ctrl-Alt-o: Ctrl-Alt-o
-      Ctrl-Alt-p: Ctrl-Alt-p
+      Control-Alt-f: F11
+      Control-Alt-g: Control-Alt-g
+      Control-Alt-h: Control-Alt-h
+      Control-Alt-i: Control-Alt-i
+      Control-Alt-j: Control-Alt-j
+      Control-Alt-k: Control-Alt-k
+      Control-Alt-l: Control-Alt-l
+      Control-Alt-m: Control-Alt-m
+      Control-Alt-n: Control-Alt-n
+      Control-Alt-o: Control-Alt-o
+      Control-Alt-p: Control-Alt-p
       # lock screen
-      Ctrl-Alt-q: Super-l
-      Ctrl-Alt-r: Ctrl-Alt-r
-      Ctrl-Alt-s: Ctrl-Alt-s
-      Ctrl-Alt-t: Ctrl-Alt-t
-      Ctrl-Alt-u: Ctrl-Alt-u
-      Ctrl-Alt-v: Ctrl-Alt-v
-      Ctrl-Alt-w: Ctrl-Alt-w
-      Ctrl-Alt-x: Ctrl-Alt-x
-      Ctrl-Alt-y: Ctrl-Alt-y
-      Ctrl-Alt-z: Ctrl-Alt-z
+      Control-Alt-q: Super-l
+      Control-Alt-r: Control-Alt-r
+      Control-Alt-s: Control-Alt-s
+      Control-Alt-t: Control-Alt-t
+      Control-Alt-u: Control-Alt-u
+      Control-Alt-v: Control-Alt-v
+      Control-Alt-w: Control-Alt-w
+      Control-Alt-x: Control-Alt-x
+      Control-Alt-y: Control-Alt-y
+      Control-Alt-z: Control-Alt-z
 
-      Ctrl-Alt-Shift-a: Ctrl-Alt-Shift-a
-      Ctrl-Alt-Shift-b: Ctrl-Alt-Shift-b
-      Ctrl-Alt-Shift-c: Ctrl-Alt-Shift-c
-      Ctrl-Alt-Shift-d: Ctrl-Alt-Shift-d
-      Ctrl-Alt-Shift-e: Ctrl-Alt-Shift-e
-      Ctrl-Alt-Shift-f: Ctrl-Alt-Shift-f
-      Ctrl-Alt-Shift-g: Ctrl-Alt-Shift-g
-      Ctrl-Alt-Shift-h: Ctrl-Alt-Shift-h
-      Ctrl-Alt-Shift-i: Ctrl-Alt-Shift-i
-      Ctrl-Alt-Shift-j: Ctrl-Alt-Shift-j
-      Ctrl-Alt-Shift-k: Ctrl-Alt-Shift-k
-      Ctrl-Alt-Shift-l: Ctrl-Alt-Shift-l
-      Ctrl-Alt-Shift-m: Ctrl-Alt-Shift-m
-      Ctrl-Alt-Shift-n: Ctrl-Alt-Shift-n
-      Ctrl-Alt-Shift-o: Ctrl-Alt-Shift-o
-      Ctrl-Alt-Shift-p: Ctrl-Alt-Shift-p
-      Ctrl-Alt-Shift-q: Ctrl-Alt-Shift-q
-      Ctrl-Alt-Shift-r: Ctrl-Alt-Shift-r
-      Ctrl-Alt-Shift-s: Ctrl-Alt-Shift-s
-      Ctrl-Alt-Shift-t: Ctrl-Alt-Shift-t
-      Ctrl-Alt-Shift-u: Ctrl-Alt-Shift-u
-      Ctrl-Alt-Shift-v: Ctrl-Alt-Shift-v
-      Ctrl-Alt-Shift-w: Ctrl-Alt-Shift-w
-      Ctrl-Alt-Shift-x: Ctrl-Alt-Shift-x
-      Ctrl-Alt-Shift-y: Ctrl-Alt-Shift-y
-      Ctrl-Alt-Shift-z: Ctrl-Alt-Shift-z
+      Control-Alt-Shift-a: Control-Alt-Shift-a
+      Control-Alt-Shift-b: Control-Alt-Shift-b
+      Control-Alt-Shift-c: Control-Alt-Shift-c
+      Control-Alt-Shift-d: Control-Alt-Shift-d
+      Control-Alt-Shift-e: Control-Alt-Shift-e
+      Control-Alt-Shift-f: Control-Alt-Shift-f
+      Control-Alt-Shift-g: Control-Alt-Shift-g
+      Control-Alt-Shift-h: Control-Alt-Shift-h
+      Control-Alt-Shift-i: Control-Alt-Shift-i
+      Control-Alt-Shift-j: Control-Alt-Shift-j
+      Control-Alt-Shift-k: Control-Alt-Shift-k
+      Control-Alt-Shift-l: Control-Alt-Shift-l
+      Control-Alt-Shift-m: Control-Alt-Shift-m
+      Control-Alt-Shift-n: Control-Alt-Shift-n
+      Control-Alt-Shift-o: Control-Alt-Shift-o
+      Control-Alt-Shift-p: Control-Alt-Shift-p
+      Control-Alt-Shift-q: Control-Alt-Shift-q
+      Control-Alt-Shift-r: Control-Alt-Shift-r
+      Control-Alt-Shift-s: Control-Alt-Shift-s
+      Control-Alt-Shift-t: Control-Alt-Shift-t
+      Control-Alt-Shift-u: Control-Alt-Shift-u
+      Control-Alt-Shift-v: Control-Alt-Shift-v
+      Control-Alt-Shift-w: Control-Alt-Shift-w
+      Control-Alt-Shift-x: Control-Alt-Shift-x
+      Control-Alt-Shift-y: Control-Alt-Shift-y
+      Control-Alt-Shift-z: Control-Alt-Shift-z
 
-      Ctrl-Super-Alt-a: Ctrl-Super-Alt-a
-      Ctrl-Super-Alt-b: Ctrl-Super-Alt-b
-      Ctrl-Super-Alt-c: Ctrl-Super-Alt-c
-      Ctrl-Super-Alt-d: Ctrl-Super-Alt-d
-      Ctrl-Super-Alt-e: Ctrl-Super-Alt-e
-      Ctrl-Super-Alt-f: Ctrl-Super-Alt-f
-      Ctrl-Super-Alt-g: Ctrl-Super-Alt-g
-      Ctrl-Super-Alt-h: Ctrl-Super-Alt-h
-      Ctrl-Super-Alt-i: Ctrl-Super-Alt-i
-      Ctrl-Super-Alt-j: Ctrl-Super-Alt-j
-      Ctrl-Super-Alt-k: Ctrl-Super-Alt-k
-      Ctrl-Super-Alt-l: Ctrl-Super-Alt-l
-      Ctrl-Super-Alt-m: Ctrl-Super-Alt-m
-      Ctrl-Super-Alt-n: Ctrl-Super-Alt-n
-      Ctrl-Super-Alt-o: Ctrl-Super-Alt-o
-      Ctrl-Super-Alt-p: Ctrl-Super-Alt-p
-      Ctrl-Super-Alt-q: Ctrl-Super-Alt-q
-      Ctrl-Super-Alt-r: Ctrl-Super-Alt-r
-      Ctrl-Super-Alt-s: Ctrl-Super-Alt-s
-      Ctrl-Super-Alt-t: Ctrl-Super-Alt-t
-      Ctrl-Super-Alt-u: Ctrl-Super-Alt-u
-      Ctrl-Super-Alt-v: Ctrl-Super-Alt-v
-      Ctrl-Super-Alt-w: Ctrl-Super-Alt-w
-      Ctrl-Super-Alt-x: Ctrl-Super-Alt-x
-      Ctrl-Super-Alt-y: Ctrl-Super-Alt-y
-      Ctrl-Super-Alt-z: Ctrl-Super-Alt-z
+      Control-Super-Alt-a: Control-Super-Alt-a
+      Control-Super-Alt-b: Control-Super-Alt-b
+      Control-Super-Alt-c: Control-Super-Alt-c
+      Control-Super-Alt-d: Control-Super-Alt-d
+      Control-Super-Alt-e: Control-Super-Alt-e
+      Control-Super-Alt-f: Control-Super-Alt-f
+      Control-Super-Alt-g: Control-Super-Alt-g
+      Control-Super-Alt-h: Control-Super-Alt-h
+      Control-Super-Alt-i: Control-Super-Alt-i
+      Control-Super-Alt-j: Control-Super-Alt-j
+      Control-Super-Alt-k: Control-Super-Alt-k
+      Control-Super-Alt-l: Control-Super-Alt-l
+      Control-Super-Alt-m: Control-Super-Alt-m
+      Control-Super-Alt-n: Control-Super-Alt-n
+      Control-Super-Alt-o: Control-Super-Alt-o
+      Control-Super-Alt-p: Control-Super-Alt-p
+      Control-Super-Alt-q: Control-Super-Alt-q
+      Control-Super-Alt-r: Control-Super-Alt-r
+      Control-Super-Alt-s: Control-Super-Alt-s
+      Control-Super-Alt-t: Control-Super-Alt-t
+      Control-Super-Alt-u: Control-Super-Alt-u
+      Control-Super-Alt-v: Control-Super-Alt-v
+      Control-Super-Alt-w: Control-Super-Alt-w
+      Control-Super-Alt-x: Control-Super-Alt-x
+      Control-Super-Alt-y: Control-Super-Alt-y
+      Control-Super-Alt-z: Control-Super-Alt-z
 
-      Ctrl-Super-Alt-Shift-a: Ctrl-Super-Alt-Shift-a
-      Ctrl-Super-Alt-Shift-b: Ctrl-Super-Alt-Shift-b
-      Ctrl-Super-Alt-Shift-c: Ctrl-Super-Alt-Shift-c
-      Ctrl-Super-Alt-Shift-d: Ctrl-Super-Alt-Shift-d
-      Ctrl-Super-Alt-Shift-e: Ctrl-Super-Alt-Shift-e
-      Ctrl-Super-Alt-Shift-f: Ctrl-Super-Alt-Shift-f
-      Ctrl-Super-Alt-Shift-g: Ctrl-Super-Alt-Shift-g
-      Ctrl-Super-Alt-Shift-h: Ctrl-Super-Alt-Shift-h
-      Ctrl-Super-Alt-Shift-i: Ctrl-Super-Alt-Shift-i
-      Ctrl-Super-Alt-Shift-j: Ctrl-Super-Alt-Shift-j
-      Ctrl-Super-Alt-Shift-k: Ctrl-Super-Alt-Shift-k
-      Ctrl-Super-Alt-Shift-l: Ctrl-Super-Alt-Shift-l
-      Ctrl-Super-Alt-Shift-m: Ctrl-Super-Alt-Shift-m
-      Ctrl-Super-Alt-Shift-n: Ctrl-Super-Alt-Shift-n
-      Ctrl-Super-Alt-Shift-o: Ctrl-Super-Alt-Shift-o
-      Ctrl-Super-Alt-Shift-p: Ctrl-Super-Alt-Shift-p
-      Ctrl-Super-Alt-Shift-q: Ctrl-Super-Alt-Shift-q
-      Ctrl-Super-Alt-Shift-r: Ctrl-Super-Alt-Shift-r
-      Ctrl-Super-Alt-Shift-s: Ctrl-Super-Alt-Shift-s
-      Ctrl-Super-Alt-Shift-t: Ctrl-Super-Alt-Shift-t
-      Ctrl-Super-Alt-Shift-u: Ctrl-Super-Alt-Shift-u
-      Ctrl-Super-Alt-Shift-v: Ctrl-Super-Alt-Shift-v
-      Ctrl-Super-Alt-Shift-w: Ctrl-Super-Alt-Shift-w
-      Ctrl-Super-Alt-Shift-x: Ctrl-Super-Alt-Shift-x
-      Ctrl-Super-Alt-Shift-y: Ctrl-Super-Alt-Shift-y
-      Ctrl-Super-Alt-Shift-z: Ctrl-Super-Alt-Shift-z
+      Control-Super-Alt-Shift-a: Control-Super-Alt-Shift-a
+      Control-Super-Alt-Shift-b: Control-Super-Alt-Shift-b
+      Control-Super-Alt-Shift-c: Control-Super-Alt-Shift-c
+      Control-Super-Alt-Shift-d: Control-Super-Alt-Shift-d
+      Control-Super-Alt-Shift-e: Control-Super-Alt-Shift-e
+      Control-Super-Alt-Shift-f: Control-Super-Alt-Shift-f
+      Control-Super-Alt-Shift-g: Control-Super-Alt-Shift-g
+      Control-Super-Alt-Shift-h: Control-Super-Alt-Shift-h
+      Control-Super-Alt-Shift-i: Control-Super-Alt-Shift-i
+      Control-Super-Alt-Shift-j: Control-Super-Alt-Shift-j
+      Control-Super-Alt-Shift-k: Control-Super-Alt-Shift-k
+      Control-Super-Alt-Shift-l: Control-Super-Alt-Shift-l
+      Control-Super-Alt-Shift-m: Control-Super-Alt-Shift-m
+      Control-Super-Alt-Shift-n: Control-Super-Alt-Shift-n
+      Control-Super-Alt-Shift-o: Control-Super-Alt-Shift-o
+      Control-Super-Alt-Shift-p: Control-Super-Alt-Shift-p
+      Control-Super-Alt-Shift-q: Control-Super-Alt-Shift-q
+      Control-Super-Alt-Shift-r: Control-Super-Alt-Shift-r
+      Control-Super-Alt-Shift-s: Control-Super-Alt-Shift-s
+      Control-Super-Alt-Shift-t: Control-Super-Alt-Shift-t
+      Control-Super-Alt-Shift-u: Control-Super-Alt-Shift-u
+      Control-Super-Alt-Shift-v: Control-Super-Alt-Shift-v
+      Control-Super-Alt-Shift-w: Control-Super-Alt-Shift-w
+      Control-Super-Alt-Shift-x: Control-Super-Alt-Shift-x
+      Control-Super-Alt-Shift-y: Control-Super-Alt-Shift-y
+      Control-Super-Alt-Shift-z: Control-Super-Alt-Shift-z
 
     # TEXT EDITING / ARROWS
   - name: "arrows"
@@ -253,13 +253,13 @@ keymap:
       Alt-right: end
       Alt-up: Control-home # cmd-up    | go to beginning of file
       Alt-down: Control-end # cmd-down | go to end of file
-      Ctrl-p: up
-      Ctrl-n: down
-      Ctrl-f: right
-      Ctrl-b: left
-      Ctrl-a: home
-      Ctrl-e: end
-      Ctrl-d: delete
+      Control-p: up
+      Control-n: down
+      Control-f: right
+      Control-b: left
+      Control-a: home
+      Control-e: end
+      Control-d: delete
   - name: "deletion"
     application:
       # exclude terminals, filemanagers and Emacs
@@ -276,7 +276,7 @@ keymap:
         ]
     remap:
       Alt-Backspace: [Shift-home, Backspace]
-      Super-Backspace: Ctrl-Backspace
+      Super-Backspace: Control-Backspace
 
   # EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   # FILE MANAGER
@@ -286,44 +286,44 @@ keymap:
     remap:
       Enter: F2
       Alt-down: Enter
-      Alt-1: Ctrl-2
-      Alt-2: Ctrl-1
-      Alt-3: Ctrl-3
-      Alt-Shift-n: Ctrl-Shift-n
-      Alt-a: Ctrl-a
-      Alt-b: Ctrl-b
-      Alt-c: Ctrl-c
-      Alt-d: Ctrl-d
-      Alt-e: Ctrl-e
-      Alt-f: Ctrl-f
-      Alt-g: Ctrl-g
-      Alt-h: Ctrl-h
+      Alt-1: Control-2
+      Alt-2: Control-1
+      Alt-3: Control-3
+      Alt-Shift-n: Control-Shift-n
+      Alt-a: Control-a
+      Alt-b: Control-b
+      Alt-c: Control-c
+      Alt-d: Control-d
+      Alt-e: Control-e
+      Alt-f: Control-f
+      Alt-g: Control-g
+      Alt-h: Control-h
       Alt-i: Alt-Enter
-      Alt-j: Ctrl-j
-      Alt-k: Ctrl-k
-      Alt-l: Ctrl-l
-      Alt-m: Ctrl-m
-      Alt-n: Ctrl-n
+      Alt-j: Control-j
+      Alt-k: Control-k
+      Alt-l: Control-l
+      Alt-m: Control-m
+      Alt-n: Control-n
       Alt-o: Enter
-      Alt-p: Ctrl-p
-      Alt-q: Ctrl-q
-      Alt-r: Ctrl-r
-      Alt-s: Ctrl-s
-      Alt-t: Ctrl-t
-      Alt-u: Ctrl-u
-      Alt-v: Ctrl-v
-      Alt-w: Ctrl-w
-      Alt-x: Ctrl-x
-      Alt-y: Ctrl-y
-      Alt-z: Ctrl-z
+      Alt-p: Control-p
+      Alt-q: Control-q
+      Alt-r: Control-r
+      Alt-s: Control-s
+      Alt-t: Control-t
+      Alt-u: Control-u
+      Alt-v: Control-v
+      Alt-w: Control-w
+      Alt-x: Control-x
+      Alt-y: Control-y
+      Alt-z: Control-z
       Alt-Backspace: Delete
       Alt-Shift-Backspace: Shift-Delete
-      Ctrl-Alt-f: F11
+      Control-Alt-f: F11
 
   # TABS
   - name: "tabs c-pgup"
     application:
-      # only applications with Ctrl-PgUp/Ctrl-PgDn for tab switching
+      # only applications with Control-PgUp/Control-PgDn for tab switching
       only:
         [
           Gnome-terminal,
@@ -340,7 +340,7 @@ keymap:
       Alt-Shift-leftbrace: Control-pageup
   - name: "tabs c-tab"
     application:
-      # only applications with Ctrl-Tab/Ctrl-Shift-Tab for tab switching
+      # only applications with Control-Tab/Control-Shift-Tab for tab switching
       only: [konsole, Nautilus, dolphin]
     remap:
       Control-pagedown: Control-tab
@@ -399,13 +399,13 @@ keymap:
       only: [konsole, gnome-terminal-server, Gnome-terminal, kitty, wezterm]
     remap:
       Alt-q: Alt-F4
-      Alt-n: Ctrl-Shift-n
-      Alt-t: Ctrl-Shift-t
-      Alt-w: Ctrl-Shift-w
-      Alt-c: Ctrl-Shift-c
-      Alt-v: Ctrl-Shift-v
-      Ctrl-Alt-t: Ctrl-Alt-t
-      Ctrl-Alt-f: F11
+      Alt-n: Control-Shift-n
+      Alt-t: Control-Shift-t
+      Alt-w: Control-Shift-w
+      Alt-c: Control-Shift-c
+      Alt-v: Control-Shift-v
+      Control-Alt-t: Control-Alt-t
+      Control-Alt-f: F11
       Super-right: Alt-f
       Super-left: Alt-b
       Super-f: Alt-f
@@ -421,59 +421,59 @@ keymap:
       only: [Code]
     remap:
       ## LETTERS
-      Alt-a: Ctrl-a
-      Alt-b: Ctrl-b
-      Alt-c: Ctrl-c
-      Alt-d: Ctrl-d
-      Alt-e: Ctrl-e
-      Alt-f: Ctrl-f
+      Alt-a: Control-a
+      Alt-b: Control-b
+      Alt-c: Control-c
+      Alt-d: Control-d
+      Alt-e: Control-e
+      Alt-f: Control-f
       Alt-g: F3 # cmd-g | find next
-      Alt-h: Ctrl-h
-      Alt-i: Ctrl-i
-      Alt-j: Ctrl-j
-      Alt-k: Ctrl-k
-      Alt-l: Ctrl-l
-      Alt-m: Ctrl-m
-      Alt-n: Ctrl-n
-      Alt-o: Ctrl-o
-      Alt-p: Ctrl-p
-      Alt-q: Ctrl-q
-      Alt-r: Ctrl-r
-      Alt-s: Ctrl-s
-      Alt-t: Ctrl-t
-      Alt-u: Ctrl-u
-      Alt-v: Ctrl-v
-      Alt-w: Ctrl-w
-      Alt-x: Ctrl-x
-      Alt-y: Ctrl-y
-      Alt-z: Ctrl-z
+      Alt-h: Control-h
+      Alt-i: Control-i
+      Alt-j: Control-j
+      Alt-k: Control-k
+      Alt-l: Control-l
+      Alt-m: Control-m
+      Alt-n: Control-n
+      Alt-o: Control-o
+      Alt-p: Control-p
+      Alt-q: Control-q
+      Alt-r: Control-r
+      Alt-s: Control-s
+      Alt-t: Control-t
+      Alt-u: Control-u
+      Alt-v: Control-v
+      Alt-w: Control-w
+      Alt-x: Control-x
+      Alt-y: Control-y
+      Alt-z: Control-z
 
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      Alt-Shift-d: Ctrl-Shift-d # cmd-shift-d | focus run and debug
-      Alt-Shift-e: Ctrl-Shift-e # cmd-shift-e | focus file explorer
-      Alt-Shift-f: Ctrl-Shift-f # cmd-shift-f | focus find dialig
+      Alt-Shift-d: Control-Shift-d # cmd-shift-d | focus run and debug
+      Alt-Shift-e: Control-Shift-e # cmd-shift-e | focus file explorer
+      Alt-Shift-f: Control-Shift-f # cmd-shift-f | focus find dialig
       Alt-Shift-g: Shift-F3 # cmd-shift-g     | find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Ctrl-Shift-k # cmd-shift-k | Delete line
+      Alt-Shift-k: Control-Shift-k # cmd-shift-k | Delete line
       Alt-Shift-l: Alt-Shift-l # cmd-shift-l | select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
-      Alt-Shift-n: Ctrl-Shift-n # cmd-shift-n | new
-      Alt-Shift-o: Ctrl-Shift-o # cmd-shift-o | optional open
-      Alt-Shift-p: Ctrl-Shift-p # cmd-shift-p | Command palette
+      Alt-Shift-n: Control-Shift-n # cmd-shift-n | new
+      Alt-Shift-o: Control-Shift-o # cmd-shift-o | optional open
+      Alt-Shift-p: Control-Shift-p # cmd-shift-p | Command palette
       Alt-Shift-q: Alt-Shift-q
-      Alt-Shift-r: Ctrl-Shift-r # cmd-shift-r | refresh
-      Alt-Shift-s: Ctrl-Shift-s # cmd-shift-s | save as
-      Alt-Shift-t: Ctrl-Shift-t # cmd-shift-t | restore tab
+      Alt-Shift-r: Control-Shift-r # cmd-shift-r | refresh
+      Alt-Shift-s: Control-Shift-s # cmd-shift-s | save as
+      Alt-Shift-t: Control-Shift-t # cmd-shift-t | restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
-      Alt-Shift-x: Ctrl-Shift-x # cmd-shift-x | focus extensions
+      Alt-Shift-x: Control-Shift-x # cmd-shift-x | focus extensions
       Alt-Shift-y: Alt-Shift-y
-      Alt-Shift-z: Ctrl-y # cmd-shift-z | redo
+      Alt-Shift-z: Control-y # cmd-shift-z | redo
 
       ## GENERAL
       # similar on GNU Linux / MacOS, no need to remap
@@ -484,7 +484,7 @@ keymap:
       #   cmd-shift-n                                         | New window/instance
       #   cmd-w                                               | Close window/instance
       #   cmd-k, cmd-s                                        | Keyboard shortcuts
-      Alt-comma: Ctrl-comma # cmd-,                           | User settings
+      Alt-comma: Control-comma # cmd-,                           | User settings
 
       ## BASIC EDITING
       # following keys set in LETTERS section:
@@ -501,63 +501,63 @@ keymap:
       #   cmd-k, cmd-]/[                                      | Fold/unfold all subregions
       #   cmd-k, cmd-o/j                                      | Fold/unfold all regions
       #   cmd-k, cmd-c/u                                      | Add/remove line comment
-      Alt-slash: Ctrl-slash # cmd-/                           | Toggle line comment
+      Alt-slash: Control-slash # cmd-/                           | Toggle line comment
       Super-Shift-a: Alt-Shift-a # shift-opt-a                | Toggle block comment
       Super-z: Alt-z # opt-z                                  | Toggle wrap text
       Super-up: Alt-up # cmd-up                               | Move line up
       Super-down: Alt-down # cmd-down                         | Move line down
       Super-Shift-up: Alt-Shift-up # cmd-shift-up             | Copy line up
       Super-Shift-down: Alt-Shift-down # cmd-shift-down       | Copy line down
-      Alt-Enter: Ctrl-Enter # cmd-enter                       | Insert line below
-      Alt-Shift-Enter: Ctrl-Shift-Enter # cmd-shift-enter     | Insert line above
-      Alt-Shift-backslash: Ctrl-Shift-backslash # cmd-shift-\ | Jump to matching bracket
-      Alt-rightbrace: Ctrl-rightbrace # cmd-]                 | Indent line
-      Alt-leftbrace: Ctrl-leftbrace # cmd-[                   | Unindent line
-      Control-pageup: Ctrl-up # control-pgup                  | Scroll line up
-      Control-pagedown: Ctrl-down # control-pgdown            | Scroll line down
-      Alt-Super-leftbrace: Ctrl-Shift-leftbrace # opt-cmd-[   | Fold region
-      Alt-Super-rightbrace: Ctrl-Shift-rightbrace # opt-cmd-] | Unfold region
+      Alt-Enter: Control-Enter # cmd-enter                       | Insert line below
+      Alt-Shift-Enter: Control-Shift-Enter # cmd-shift-enter     | Insert line above
+      Alt-Shift-backslash: Control-Shift-backslash # cmd-shift-\ | Jump to matching bracket
+      Alt-rightbrace: Control-rightbrace # cmd-]                 | Indent line
+      Alt-leftbrace: Control-leftbrace # cmd-[                   | Unindent line
+      Control-pageup: Control-up # control-pgup                  | Scroll line up
+      Control-pagedown: Control-down # control-pgdown            | Scroll line down
+      Alt-Super-leftbrace: Control-Shift-leftbrace # opt-cmd-[   | Fold region
+      Alt-Super-rightbrace: Control-Shift-rightbrace # opt-cmd-] | Unfold region
 
       ## MULTI-CURSOR AND SELECTION
       # to be implemented
       #   opt-mouse_l (linux: alt-mouse_l)                    | Insert cursor
       # linux-like:
-      Ctrl-Shift-up: Ctrl-Shift-up # control-shift-up         | Insert cursor above
-      Ctrl-Shift-down: Ctrl-Shift-down # control-shift-down   | Insert cursor below
+      Control-Shift-up: Control-Shift-up # control-shift-up         | Insert cursor above
+      Control-Shift-down: Control-Shift-down # control-shift-down   | Insert cursor below
       # macos-like:
-      Alt-Super-up: Ctrl-Shift-up # opt-cmd-up                | Insert cursor above
-      Alt-Super-down: Ctrl-Shift-down # opt-cmd-down          | Insert cursor below
+      Alt-Super-up: Control-Shift-up # opt-cmd-up                | Insert cursor above
+      Alt-Super-down: Control-Shift-down # opt-cmd-down          | Insert cursor below
       # windows-like:
-      Ctrl-Alt-up: Ctrl-Shift-up # ctrl-alt-up                | Insert cursor above
-      Ctrl-Alt-down: Ctrl-Shift-down # ctrl-alt-down          | Insert cursor below
+      Control-Alt-up: Control-Shift-up # ctrl-alt-up                | Insert cursor above
+      Control-Alt-down: Control-Shift-down # ctrl-alt-down          | Insert cursor below
 
       Super-Shift-i: Alt-Shift-i # add cursors to the end of each line selected
-      Alt-F2: Ctrl-F2 # select all occurencies of selected word
+      Alt-F2: Control-F2 # select all occurencies of selected word
 
       # expand/shrink selection
-      Ctrl-Alt-Shift-left: Alt-Shift-left
-      Ctrl-Alt-Shift-right: Alt-Shift-right
+      Control-Alt-Shift-left: Alt-Shift-left
+      Control-Alt-Shift-right: Alt-Shift-right
 
       # box selection
-      Super-Alt-Shift-left: Alt-Ctrl-left
-      Super-Alt-Shift-right: Alt-Ctrl-right
-      Super-Alt-Shift-up: Alt-Ctrl-up
-      Super-Alt-Shift-down: Alt-Ctrl-down
+      Super-Alt-Shift-left: Alt-Control-left
+      Super-Alt-Shift-right: Alt-Control-right
+      Super-Alt-Shift-up: Alt-Control-up
+      Super-Alt-Shift-down: Alt-Control-down
 
-      Super-Shift-f: Ctrl-Shift-i # format document
-      Super-Alt-f: Ctrl-h # find and replace
+      Super-Shift-f: Control-Shift-i # format document
+      Super-Alt-f: Control-h # find and replace
 
-      Alt-dot: Ctrl-dot # quick fix
-      Alt-backslash: Ctrl-backslash # split editor
+      Alt-dot: Control-dot # quick fix
+      Alt-backslash: Control-backslash # split editor
 
-      Ctrl-Shift-g: [Ctrl-Shift-g, g] # focus version control
-      Ctrl-Alt-f: F11
+      Control-Shift-g: [Control-Shift-g, g] # focus version control
+      Control-Alt-f: F11
       Super-F12: Alt-F12
 
       # focus into editor groups
-      Alt-1: Ctrl-1
-      Alt-2: Ctrl-2
-      Alt-3: Ctrl-3
+      Alt-1: Control-1
+      Alt-2: Control-2
+      Alt-3: Control-3
       # vertical/horisontal layout
       Super-Shift-0: Alt-Shift-0
 
@@ -566,8 +566,8 @@ keymap:
       # only simple text editors/notepads
       only: [TextEditor, kate, Logseq]
     remap:
-      Super-f: Ctrl-right
-      Super-b: Ctrl-left
-      Super-d: Ctrl-Delete
-      Ctrl-k: [Shift-end, Delete]
-      Ctrl-u: [Shift-home, Backspace]
+      Super-f: Control-right
+      Super-b: Control-left
+      Super-d: Control-Delete
+      Control-k: [Shift-end, Delete]
+      Control-u: [Shift-home, Backspace]
