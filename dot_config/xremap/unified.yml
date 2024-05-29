@@ -427,7 +427,7 @@ keymap:
       Alt-d: Ctrl-d
       Alt-e: Ctrl-e
       Alt-f: Ctrl-f
-      Alt-g: F3 # find next
+      Alt-g: F3 # cmd-g | find next
       Alt-h: Ctrl-h
       Alt-i: Ctrl-i
       Alt-j: Ctrl-j
@@ -451,29 +451,29 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      Alt-Shift-d: Ctrl-Shift-d # focus run and debug
-      Alt-Shift-e: Ctrl-Shift-e # focus file explorer
-      Alt-Shift-f: Ctrl-Shift-f # focus find dialig
-      Alt-Shift-g: Shift-F3 # find frevious
+      Alt-Shift-d: Ctrl-Shift-d # cmd-shift-d | focus run and debug
+      Alt-Shift-e: Ctrl-Shift-e # cmd-shift-e | focus file explorer
+      Alt-Shift-f: Ctrl-Shift-f # cmd-shift-f | focus find dialig
+      Alt-Shift-g: Shift-F3 # cmd-shift-g     | find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
       Alt-Shift-k: Alt-Shift-k
-      Alt-Shift-l: Alt-Shift-l # select all occurencies of current selection
+      Alt-Shift-l: Alt-Shift-l # cmd-shift-l | select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
-      Alt-Shift-n: Ctrl-Shift-n # new
-      Alt-Shift-o: Ctrl-Shift-o # optional open
-      Alt-Shift-p: Ctrl-Shift-p # cmd-shift-p
+      Alt-Shift-n: Ctrl-Shift-n # cmd-shift-n | new
+      Alt-Shift-o: Ctrl-Shift-o # cmd-shift-o | optional open
+      Alt-Shift-p: Ctrl-Shift-p # cmd-shift-p | Command palette
       Alt-Shift-q: Alt-Shift-q
-      Alt-Shift-r: Ctrl-Shift-r # refresh
-      Alt-Shift-s: Ctrl-Shift-s # save as
-      Alt-Shift-t: Ctrl-Shift-t # restore tab
+      Alt-Shift-r: Ctrl-Shift-r # cmd-shift-r | refresh
+      Alt-Shift-s: Ctrl-Shift-s # cmd-shift-s | save as
+      Alt-Shift-t: Ctrl-Shift-t # cmd-shift-t | restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
-      Alt-Shift-x: Ctrl-Shift-x # focus extensions
+      Alt-Shift-x: Ctrl-Shift-x # cmd-shift-x | focus extensions
       Alt-Shift-y: Alt-Shift-y
-      Alt-Shift-z: Ctrl-y # redo
+      Alt-Shift-z: Ctrl-y # cmd-shift-z | redo
 
       # GENERAL
       # following keys are in LETTERS section:
