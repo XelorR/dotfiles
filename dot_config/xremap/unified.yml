@@ -485,10 +485,9 @@ keymap:
       Alt-comma: Control-comma #                       | ⌘,      | User settings
 
       ## BASIC EDITING
-      # following keys set in LETTERS section:
-      # implemented in VSCODE LETTERS subsection                                               | ⌘x      | Cut line (empty selection)
-      # implemented in VSCODE LETTERS subsection                                               | ⌘c      | Copy line (empty selection)
-      # implemented in VSCODE LETTERS subsection                                               | ⌘⇧k     | Delete line
+      # implemented in VSCODE LETTERS subsection       | ⌘x      | Cut line (empty selection)
+      # implemented in VSCODE LETTERS subsection       | ⌘c      | Copy line (empty selection)
+      # implemented in VSCODE LETTERS subsection       | ⌘⇧k     | Delete line
       # implemented in GLOBAL ARROWS section           | ⌘↑      | Go to beginning of file
       # implemented in GLOBAL ARROWS section           | ⌘↓      | Go to end of file
       # similar on GNU Linux / MacOS, no need to remap | home    | Go to beginning of line
