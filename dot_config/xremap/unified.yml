@@ -484,7 +484,7 @@ keymap:
       # implemented in VSCODE LETTERS subsection       | ⌘⇧n     | New window/instance
       # implemented in VSCODE LETTERS subsection       | ⌘w      | Close window/instance
       Alt-comma: Control-comma #                       | ⌘,      | User settings
-      # implemented in VSCODE LETTERS subsection       | ⌘k , ⌘s | Keyboard shortcuts
+      # implemented in VSCODE LETTERS subsection       | ⌘k ⌘s   | Keyboard shortcuts
 
       ## BASIC EDITING
       # implemented in VSCODE LETTERS subsection       | ⌘x      | Cut line (empty selection)
@@ -509,12 +509,12 @@ keymap:
       # similar on GNU Linux / MacOS, no need to remap | ⌘pgdn   | Scroll page /down
       Alt-Super-leftbrace: Control-Shift-leftbrace #   | ⌥⌘[     | Fold region
       Alt-Super-rightbrace: Control-Shift-rightbrace # | ⌥⌘]     | Unfold region
-      # just works because of other mapped keys        | ⌘k , ⌘] | Fold all subregions
-      # just works because of other mapped keys        | ⌘k , ⌘[ | Unfold all subregions
-      # just works because of other mapped keys        | ⌘k , ⌘o | Fold all regions
-      # just works because of other mapped keys        | ⌘k , ⌘j | Unfold all regions
-      # just works because of other mapped keys        | ⌘k , ⌘c | Add line comment
-      # just works because of other mapped keys        | ⌘k , ⌘u | Remove line comment
+      # just works because of other mapped keys        | ⌘k ⌘]   | Fold all subregions
+      # just works because of other mapped keys        | ⌘k ⌘[   | Unfold all subregions
+      # just works because of other mapped keys        | ⌘k ⌘o   | Fold all regions
+      # just works because of other mapped keys        | ⌘k ⌘j   | Unfold all regions
+      # just works because of other mapped keys        | ⌘k ⌘c   | Add line comment
+      # just works because of other mapped keys        | ⌘k ⌘u   | Remove line comment
       Alt-slash: Control-slash #                       | ⌘/      | Toggle line comment
       Super-Shift-a: Alt-Shift-a #                     | ⇧⌥a     | Toggle block comment
       Super-z: Alt-z #                                 | ⌥z      | Toggle wrap text
@@ -549,19 +549,31 @@ keymap:
       # implemented in VSCODE LETTERS subsection #     | ⇧⌘g     | Find previous
       Super-Enter: Control-Shift-l #                   | ⌥enter  | Select all occurences of Find match
       # implemented in VSCODE LETTERS subsection #     | ⌘d      | Add selection to next Find match
-      # implemented in VSCODE LETTERS subsection #     | ⌘k , ⌘d | Move selection to next Find match
+      # implemented in VSCODE LETTERS subsection #     | ⌘k ⌘d   | Move selection to next Find match
 
       ## RICH LAUGUAGES EDITING
+      # implemented in VSCODE LETTERS subsection #     | ⌃space  | Trigger suggestion
+      # similar on GNU Linux / MacOS, no need to remap | ⌘i      | Trigger suggestion
+      Control-Super-space: Shift-Alt-space #           | ⇧⌘space | Trigger parameter hints
+      Super-Shift-f: Control-Shift-i #                 | ⇧⌥f     | Format document
+      # implemented in VSCODE LETTERS subsection #     | ⌘k ⌘f   | Format selection
+      # similar on GNU Linux / MacOS, no need to remap | F12     | Go to Definition
+      Super-F12: Control-Shift-F10 #                   | ⌥F12    | Peek Definition
+      # implemented in VSCODE LETTERS subsection #     | ⌘k F12  | Open Definition to the side
+      Alt-dot: Control-dot #                           | ⌘.      | Quick Fix
+      # similar on GNU Linux / MacOS, no need to remap | ⇧F12    | Show References
+      # similar on GNU Linux / MacOS, no need to remap | F2      | Rename Symbol
+      # implemented in VSCODE LETTERS subsection #     | ⌘k ⌘x   | Trim trailing whitespace
+      # implemented in VSCODE LETTERS subsection #     | ⌘k m    | Change file language
 
-      Super-Shift-f: Control-Shift-i # format document
-      Super-Alt-f: Control-h # find and replace
+      ## NAVIGATION
 
-      Alt-dot: Control-dot # quick fix
+      Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
+
       Alt-backslash: Control-backslash # split editor
 
       Control-Shift-g: [Control-Shift-g, g] # focus version control
       Control-Alt-f: F11
-      Super-F12: Alt-F12
 
       # focus into editor groups
       Alt-1: Control-1
