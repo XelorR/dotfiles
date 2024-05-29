@@ -26,12 +26,12 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 
 		for i in $(seq 9); do
 			echo Configuring desktop $i...
-			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
-			gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
+			gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Alt><Shift>$i']"
+			gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super><Alt>$i']"
 		done
 		echo Configuring desktop 10...
-		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
+		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Alt><Shift>0']"
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super><Alt>0']"
 
 		echo Configuring Alt-tab, Super-grave and Super-tab...
 		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"

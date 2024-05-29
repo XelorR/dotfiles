@@ -14,26 +14,26 @@ keymap:
       Ctrl-Shift-left: Super-Shift-pageup
       Ctrl-Shift-right: Super-Shift-pagedown
       # Ctrl-down: Super-grave
-      Ctrl-1: Ctrl-Alt-1
-      Ctrl-2: Ctrl-Alt-2
-      Ctrl-3: Ctrl-Alt-3
-      Ctrl-4: Ctrl-Alt-4
-      Ctrl-5: Ctrl-Alt-5
-      Ctrl-6: Ctrl-Alt-6
-      Ctrl-7: Ctrl-Alt-7
-      Ctrl-8: Ctrl-Alt-8
-      Ctrl-9: Ctrl-Alt-9
-      Ctrl-0: Ctrl-Alt-0
-      Ctrl-Shift-1: Ctrl-Alt-Shift-1
-      Ctrl-Shift-2: Ctrl-Alt-Shift-2
-      Ctrl-Shift-3: Ctrl-Alt-Shift-3
-      Ctrl-Shift-4: Ctrl-Alt-Shift-4
-      Ctrl-Shift-5: Ctrl-Alt-Shift-5
-      Ctrl-Shift-6: Ctrl-Alt-Shift-6
-      Ctrl-Shift-7: Ctrl-Alt-Shift-7
-      Ctrl-Shift-8: Ctrl-Alt-Shift-8
-      Ctrl-Shift-9: Ctrl-Alt-Shift-9
-      Ctrl-Shift-0: Ctrl-Alt-Shift-0
+      Ctrl-1: Super-Alt-1
+      Ctrl-2: Super-Alt-2
+      Ctrl-3: Super-Alt-3
+      Ctrl-4: Super-Alt-4
+      Ctrl-5: Super-Alt-5
+      Ctrl-6: Super-Alt-6
+      Ctrl-7: Super-Alt-7
+      Ctrl-8: Super-Alt-8
+      Ctrl-9: Super-Alt-9
+      Ctrl-0: Super-Alt-0
+      Ctrl-Shift-1: Super-Alt-Shift-1
+      Ctrl-Shift-2: Super-Alt-Shift-2
+      Ctrl-Shift-3: Super-Alt-Shift-3
+      Ctrl-Shift-4: Super-Alt-Shift-4
+      Ctrl-Shift-5: Super-Alt-Shift-5
+      Ctrl-Shift-6: Super-Alt-Shift-6
+      Ctrl-Shift-7: Super-Alt-Shift-7
+      Ctrl-Shift-8: Super-Alt-Shift-8
+      Ctrl-Shift-9: Super-Alt-Shift-9
+      Ctrl-Shift-0: Super-Alt-Shift-0
       # WINDOW MANAGEMENT
       Super-Enter: Alt-F10
       Ctrl-Super-Enter: Alt-F10
