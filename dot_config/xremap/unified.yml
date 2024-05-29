@@ -427,7 +427,7 @@ keymap:
       Alt-d: Control-d
       Alt-e: Control-e
       Alt-f: Control-f
-      Alt-g: F3 # cmd-g | find next
+      Alt-g: F3 # cmd-g                                           | Find next
       Alt-h: Control-h
       Alt-i: Control-i
       Alt-j: Control-j
@@ -451,85 +451,85 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      Alt-Shift-d: Control-Shift-d # cmd-shift-d | focus run and debug
-      Alt-Shift-e: Control-Shift-e # cmd-shift-e | focus file explorer
-      Alt-Shift-f: Control-Shift-f # cmd-shift-f | focus find dialig
-      Alt-Shift-g: Shift-F3 # cmd-shift-g     | find frevious
+      Alt-Shift-d: Control-Shift-d # cmd-shift-d                  | Focus run and debug
+      Alt-Shift-e: Control-Shift-e # cmd-shift-e                  | Focus file explorer
+      Alt-Shift-f: Control-Shift-f # cmd-shift-f                  | Focus find dialig
+      Alt-Shift-g: Shift-F3 # cmd-shift-g                         | Find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Control-Shift-k # cmd-shift-k | Delete line
-      Alt-Shift-l: Alt-Shift-l # cmd-shift-l | select all occurencies of current selection
+      Alt-Shift-k: Control-Shift-k # cmd-shift-k                  | Delete line
+      Alt-Shift-l: Alt-Shift-l # cmd-shift-l                      | Select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
-      Alt-Shift-n: Control-Shift-n # cmd-shift-n | new
-      Alt-Shift-o: Control-Shift-o # cmd-shift-o | optional open
-      Alt-Shift-p: Control-Shift-p # cmd-shift-p | Command palette
+      Alt-Shift-n: Control-Shift-n # cmd-shift-n                  | New
+      Alt-Shift-o: Control-Shift-o # cmd-shift-o                  | Optional open
+      Alt-Shift-p: Control-Shift-p # cmd-shift-p                  | Command palette
       Alt-Shift-q: Alt-Shift-q
-      Alt-Shift-r: Control-Shift-r # cmd-shift-r | refresh
-      Alt-Shift-s: Control-Shift-s # cmd-shift-s | save as
-      Alt-Shift-t: Control-Shift-t # cmd-shift-t | restore tab
+      Alt-Shift-r: Control-Shift-r # cmd-shift-r                  | Refresh
+      Alt-Shift-s: Control-Shift-s # cmd-shift-s                  | Save as
+      Alt-Shift-t: Control-Shift-t # cmd-shift-t                  | Restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
-      Alt-Shift-x: Control-Shift-x # cmd-shift-x | focus extensions
+      Alt-Shift-x: Control-Shift-x # cmd-shift-x                  | Focus extensions
       Alt-Shift-y: Alt-Shift-y
-      Alt-Shift-z: Control-y # cmd-shift-z | redo
+      Alt-Shift-z: Control-y # cmd-shift-z                        | Redo
 
       ## GENERAL
       # similar on GNU Linux / MacOS, no need to remap
-      #   F1                                                  | Command palette
+      #   F1                                                      | Command palette
       # following keys set in LETTERS section:
-      #   cmd-shift-p                                         | Command palette
-      #   cmd-p                                               | Go to file
-      #   cmd-shift-n                                         | New window/instance
-      #   cmd-w                                               | Close window/instance
-      #   cmd-k, cmd-s                                        | Keyboard shortcuts
-      Alt-comma: Control-comma # cmd-,                           | User settings
+      #   cmd-shift-p                                             | Command palette
+      #   cmd-p                                                   | Go to file
+      #   cmd-shift-n                                             | New window/instance
+      #   cmd-w                                                   | Close window/instance
+      #   cmd-k, cmd-s                                            | Keyboard shortcuts
+      Alt-comma: Control-comma # cmd-,                            | User settings
 
       ## BASIC EDITING
       # following keys set in LETTERS section:
-      #   cmd-x                                               | Cut line (empty selection)
-      #   cmd-c                                               | Copy line (empty selection)
-      #   cmd-shift-k                                         | Delete line
+      #   cmd-x                                                   | Cut line (empty selection)
+      #   cmd-c                                                   | Copy line (empty selection)
+      #   cmd-shift-k                                             | Delete line
       # following keys are defined in ARROWS section globally
-      #   cmd-up                                              | Go to beginning of file
-      #   cmd-down                                            | Go to end of file
+      #   cmd-up                                                  | Go to beginning of file
+      #   cmd-down                                                | Go to end of file
       # similar on GNU Linux / MacOS, no need to remap
-      #   home/end                                            | Go to beginning/end of line
-      #   cmd-pgup/pgdown                                     | Scroll page up/down
+      #   home/end                                                | Go to beginning/end of line
+      #   cmd-pgup/pgdown                                         | Scroll page up/down
       # just works because of other mapped keys
-      #   cmd-k, cmd-]/[                                      | Fold/unfold all subregions
-      #   cmd-k, cmd-o/j                                      | Fold/unfold all regions
-      #   cmd-k, cmd-c/u                                      | Add/remove line comment
-      Alt-slash: Control-slash # cmd-/                           | Toggle line comment
-      Super-Shift-a: Alt-Shift-a # shift-opt-a                | Toggle block comment
-      Super-z: Alt-z # opt-z                                  | Toggle wrap text
-      Super-up: Alt-up # cmd-up                               | Move line up
-      Super-down: Alt-down # cmd-down                         | Move line down
-      Super-Shift-up: Alt-Shift-up # cmd-shift-up             | Copy line up
-      Super-Shift-down: Alt-Shift-down # cmd-shift-down       | Copy line down
-      Alt-Enter: Control-Enter # cmd-enter                       | Insert line below
-      Alt-Shift-Enter: Control-Shift-Enter # cmd-shift-enter     | Insert line above
-      Alt-Shift-backslash: Control-Shift-backslash # cmd-shift-\ | Jump to matching bracket
-      Alt-rightbrace: Control-rightbrace # cmd-]                 | Indent line
-      Alt-leftbrace: Control-leftbrace # cmd-[                   | Unindent line
-      Control-pageup: Control-up # control-pgup                  | Scroll line up
-      Control-pagedown: Control-down # control-pgdown            | Scroll line down
-      Alt-Super-leftbrace: Control-Shift-leftbrace # opt-cmd-[   | Fold region
-      Alt-Super-rightbrace: Control-Shift-rightbrace # opt-cmd-] | Unfold region
+      #   cmd-k, cmd-]/[                                          | Fold/unfold all subregions
+      #   cmd-k, cmd-o/j                                          | Fold/unfold all regions
+      #   cmd-k, cmd-c/u                                          | Add/remove line comment
+      Alt-slash: Control-slash # cmd-/                            | Toggle line comment
+      Super-Shift-a: Alt-Shift-a # shift-opt-a                    | Toggle block comment
+      Super-z: Alt-z # opt-z                                      | Toggle wrap text
+      Super-up: Alt-up # cmd-up                                   | Move line up
+      Super-down: Alt-down # cmd-down                             | Move line down
+      Super-Shift-up: Alt-Shift-up # cmd-shift-up                 | Copy line up
+      Super-Shift-down: Alt-Shift-down # cmd-shift-down           | Copy line down
+      Alt-Enter: Control-Enter # cmd-enter                        | Insert line below
+      Alt-Shift-Enter: Control-Shift-Enter # cmd-shift-enter      | Insert line above
+      Alt-Shift-backslash: Control-Shift-backslash # cmd-shift-\  | Jump to matching bracket
+      Alt-rightbrace: Control-rightbrace # cmd-]                  | Indent line
+      Alt-leftbrace: Control-leftbrace # cmd-[                    | Unindent line
+      Control-pageup: Control-up # control-pgup                   | Scroll line up
+      Control-pagedown: Control-down # control-pgdown             | Scroll line down
+      Alt-Super-leftbrace: Control-Shift-leftbrace # opt-cmd-[    | Fold region
+      Alt-Super-rightbrace: Control-Shift-rightbrace # opt-cmd-]  | Unfold region
 
       ## MULTI-CURSOR AND SELECTION
       # to be implemented
-      #   opt-mouse_l (linux: alt-mouse_l)                    | Insert cursor
+      #   opt-mouse_l (linux: alt-mouse_l)                        | Insert cursor
       # linux-like:
-      Control-Shift-up: Control-Shift-up # control-shift-up         | Insert cursor above
-      Control-Shift-down: Control-Shift-down # control-shift-down   | Insert cursor below
+      Control-Shift-up: Control-Shift-up # control-shift-up       | Insert cursor above
+      Control-Shift-down: Control-Shift-down # control-shift-down | Insert cursor below
       # macos-like:
-      Alt-Super-up: Control-Shift-up # opt-cmd-up                | Insert cursor above
-      Alt-Super-down: Control-Shift-down # opt-cmd-down          | Insert cursor below
+      Alt-Super-up: Control-Shift-up # opt-cmd-up                 | Insert cursor above
+      Alt-Super-down: Control-Shift-down # opt-cmd-down           | Insert cursor below
       # windows-like:
-      Control-Alt-up: Control-Shift-up # ctrl-alt-up                | Insert cursor above
-      Control-Alt-down: Control-Shift-down # ctrl-alt-down          | Insert cursor below
+      Control-Alt-up: Control-Shift-up # ctrl-alt-up              | Insert cursor above
+      Control-Alt-down: Control-Shift-down # ctrl-alt-down        | Insert cursor below
 
       Super-Shift-i: Alt-Shift-i # add cursors to the end of each line selected
       Alt-F2: Control-F2 # select all occurencies of selected word
