@@ -427,7 +427,7 @@ keymap:
       Alt-d: Control-d
       Alt-e: Control-e
       Alt-f: Control-f
-      Alt-g: F3 # ⌘g                                       | Find next
+      Alt-g: F3 #                                      | ⌘g                 | Find next
       Alt-h: Control-h
       Alt-i: Control-i
       Alt-j: Control-j
@@ -441,7 +441,7 @@ keymap:
       Alt-r: Control-r
       Alt-s: Control-s
       Alt-t: Control-t
-      Alt-u: Control-u # ⌘u                                | Undo last cursor operation
+      Alt-u: Control-u #                               | ⌘u                 | Undo last cursor operation
       Alt-v: Control-v
       Alt-w: Control-w
       Alt-x: Control-x
@@ -451,93 +451,93 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      Alt-Shift-d: Control-Shift-d # ⌘⇧d                   | Focus run and debug
-      Alt-Shift-e: Control-Shift-e # ⌘⇧e                   | Focus file explorer
-      Alt-Shift-f: Control-Shift-f # ⌘⇧f                   | Focus find dialig
-      Alt-Shift-g: Shift-F3 # ⌘⇧g                          | Find frevious
+      Alt-Shift-d: Control-Shift-d #                   | ⌘⇧d                | Focus run and debug
+      Alt-Shift-e: Control-Shift-e #                   | ⌘⇧e                | Focus file explorer
+      Alt-Shift-f: Control-Shift-f #                   | ⌘⇧f                | Focus find dialig
+      Alt-Shift-g: Shift-F3 #                          | ⌘⇧g                | Find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Control-Shift-k # ⌘⇧k                   | Delete line
-      Alt-Shift-l: Alt-Shift-l # ⌘⇧l                       | Select all occurencies of current selection
+      Alt-Shift-k: Control-Shift-k #                   | ⌘⇧k                | Delete line
+      Alt-Shift-l: Alt-Shift-l #                       | ⌘⇧l                | Select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
-      Alt-Shift-n: Control-Shift-n # ⌘⇧n                   | New
-      Alt-Shift-o: Control-Shift-o # ⌘⇧o                   | Optional open
-      Alt-Shift-p: Control-Shift-p # ⌘⇧p                   | Command palette
+      Alt-Shift-n: Control-Shift-n #                   | ⌘⇧n                | New
+      Alt-Shift-o: Control-Shift-o #                   | ⌘⇧o                | Optional open
+      Alt-Shift-p: Control-Shift-p #                   | ⌘⇧p                | Command palette
       Alt-Shift-q: Alt-Shift-q
-      Alt-Shift-r: Control-Shift-r # ⌘⇧r                   | Refresh
-      Alt-Shift-s: Control-Shift-s # ⌘⇧s                   | Save as
-      Alt-Shift-t: Control-Shift-t # ⌘⇧t                   | Restore tab
+      Alt-Shift-r: Control-Shift-r #                   | ⌘⇧r                | Refresh
+      Alt-Shift-s: Control-Shift-s #                   | ⌘⇧s                | Save as
+      Alt-Shift-t: Control-Shift-t #                   | ⌘⇧t                | Restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
-      Alt-Shift-x: Control-Shift-x # ⌘⇧x                   | Focus extensions
+      Alt-Shift-x: Control-Shift-x #                   | ⌘⇧x                | Focus extensions
       Alt-Shift-y: Alt-Shift-y
-      Alt-Shift-z: Control-y # ⌘⇧z                         | Redo
+      Alt-Shift-z: Control-y #                         | ⌘⇧z                | Redo
 
       ## GENERAL
       # similar on GNU Linux / MacOS, no need to remap
-      #   F1                                               | Command palette
+      #                                                |  F1                | Command palette
       # following keys set in LETTERS section:
-      #   ⌘⇧p                                              | Command palette
-      #   ⌘p                                               | Go to file
-      #   ⌘⇧n                                              | New window/instance
-      #   ⌘w                                               | Close window/instance
-      #   ⌘k , ⌘s                                          | Keyboard shortcuts
-      Alt-comma: Control-comma # ⌘,                        | User settings
+      #                                                | ⌘⇧p                | Command palette
+      #                                                | ⌘p                 | Go to file
+      #                                                | ⌘⇧n                | New window/instance
+      #                                                | ⌘w                 | Close window/instance
+      #                                                | ⌘k , ⌘s            | Keyboard shortcuts
+      Alt-comma: Control-comma #                       | ⌘,                 | User settings
 
       ## BASIC EDITING
       # following keys set in LETTERS section:
-      #   ⌘x                                               | Cut line (empty selection)
-      #   ⌘c                                               | Copy line (empty selection)
-      #   ⌘⇧k                                              | Delete line
-      # following keys are defined in ARROWS section globa lly
-      #   ⌘up                                              | Go to beginning of file
-      #   ⌘down                                            | Go to end of file
+      #                                                | ⌘x                 | Cut line (empty selection)
+      #                                                | ⌘c                 | Copy line (empty selection)
+      #                                                | ⌘⇧k                | Delete line
+      # following keys are defined in ARROWS section globally
+      #                                                | ⌘up                | Go to beginning of file
+      #                                                | ⌘down              | Go to end of file
       # similar on GNU Linux / MacOS, no need to remap
-      #   home / end                                       | Go to beginning/end of line
-      #   ⌘pgup / ⌘pgdown                                  | Scroll page up/down
+      #                                                | home / end         | Go to beginning/end of line
+      #                                                | ⌘pgup / ⌘pgdown    | Scroll page up/down
       # just works because of other mapped keys
-      #   ⌘k , ⌘] / ⌘k , ⌘[                                | Fold/unfold all subregions
-      #   ⌘k , ⌘o / ⌘k , ⌘j                                | Fold/unfold all regions
-      #   ⌘k , ⌘c / ⌘k , ⌘u                                | Add/remove line comment
-      Alt-slash: Control-slash # ⌘/                        | Toggle line comment
-      Super-Shift-a: Alt-Shift-a # ⇧⌥a                     | Toggle block comment
-      Super-z: Alt-z # ⌥z                                  | Toggle wrap text
-      Super-up: Alt-up # ⌘-up                              | Move line up
-      Super-down: Alt-down # ⌘down                         | Move line down
-      Super-Shift-up: Alt-Shift-up # ⌘⇧up                  | Copy line up
-      Super-Shift-down: Alt-Shift-down # ⌘⇧down            | Copy line down
-      Alt-Enter: Control-Enter # ⌘enter                    | Insert line below
-      Alt-Shift-Enter: Control-Shift-Enter # ⌘⇧enter       | Insert line above
-      Alt-Shift-backslash: Control-Shift-backslash # ⌘⇧\   | Jump to matching bracket
-      Alt-rightbrace: Control-rightbrace # ⌘]              | Indent line
-      Alt-leftbrace: Control-leftbrace # ⌘[                | Unindent line
-      Control-pageup: Control-up # ⌃pgup                   | Scroll line up
-      Control-pagedown: Control-down # ⌃pgdown             | Scroll line down
-      Alt-Super-leftbrace: Control-Shift-leftbrace # ⌥⌘[   | Fold region
-      Alt-Super-rightbrace: Control-Shift-rightbrace # ⌥⌘] | Unfold region
+      #                                                |  ⌘k , ⌘] / ⌘k , ⌘[ | Fold/unfold all subregions
+      #                                                |  ⌘k , ⌘o / ⌘k , ⌘j | Fold/unfold all regions
+      #                                                |  ⌘k , ⌘c / ⌘k , ⌘u | Add/remove line comment
+      Alt-slash: Control-slash #                       | ⌘/                 | Toggle line comment
+      Super-Shift-a: Alt-Shift-a #                     | ⇧⌥a                | Toggle block comment
+      Super-z: Alt-z #                                 | ⌥z                 | Toggle wrap text
+      Super-up: Alt-up #                               | ⌘up                | Move line up
+      Super-down: Alt-down #                           | ⌘down              | Move line down
+      Super-Shift-up: Alt-Shift-up #                   | ⌘⇧up               | Copy line up
+      Super-Shift-down: Alt-Shift-down #               | ⌘⇧down             | Copy line down
+      Alt-Enter: Control-Enter #                       | ⌘enter             | Insert line below
+      Alt-Shift-Enter: Control-Shift-Enter #           | ⌘⇧enter            | Insert line above
+      Alt-Shift-backslash: Control-Shift-backslash #   | ⌘⇧\                | Jump to matching bracket
+      Alt-rightbrace: Control-rightbrace #             | ⌘]                 | Indent line
+      Alt-leftbrace: Control-leftbrace #               | ⌘[                 | Unindent line
+      Control-pageup: Control-up #                     | ⌃pgup              | Scroll line up
+      Control-pagedown: Control-down #                 | ⌃pgdown            | Scroll line down
+      Alt-Super-leftbrace: Control-Shift-leftbrace #   | ⌥⌘[                | Fold region
+      Alt-Super-rightbrace: Control-Shift-rightbrace # | ⌥⌘]                | Unfold region
 
       ## MULTI-CURSOR AND SELECTION
       # to be implemented
-      #   ⌥mouse_l (linux: alt-mouse_l)                    | Insert cursor
+      #                     (linux: alt-mouse_l)       | ⌥mouse_l           | Insert cursor
       # linux-like:
-      Control-Shift-up: Control-Shift-up # ⌃⇧up            | Insert cursor above
-      Control-Shift-down: Control-Shift-down # ⌃⇧down      | Insert cursor below
+      Control-Shift-up: Control-Shift-up #             | ⌃⇧up               | Insert cursor above
+      Control-Shift-down: Control-Shift-down #         | ⌃⇧down             | Insert cursor below
       # macos-like:
-      Alt-Super-up: Control-Shift-up # ⌥⌘up                | Insert cursor above
-      Alt-Super-down: Control-Shift-down # ⌥⌘down          | Insert cursor below
+      Alt-Super-up: Control-Shift-up #                 | ⌥⌘up               | Insert cursor above
+      Alt-Super-down: Control-Shift-down #             | ⌥⌘down             | Insert cursor below
       # windows-like:
-      Control-Alt-up: Control-Shift-up # ⌃⌘up              | Insert cursor above
-      Control-Alt-down: Control-Shift-down # ⌃⌘down        | Insert cursor below
+      Control-Alt-up: Control-Shift-up #               | ⌃⌘up               | Insert cursor above
+      Control-Alt-down: Control-Shift-down #           | ⌃⌘down             | Insert cursor below
       # following keys set in LETTERS section:
-      #   ⌘u                                               | Undo last cursor operation
-      #   ⌘l                                               | Select current line
-      #   ⌘⇧l                                              | Select all occurencies of current selection
-      Alt-F2: Control-F2 # ⌘F2                             | Select all occurencies of selected word
-      Super-Shift-i: Alt-Shift-i # ⇧⌥i                     | Add cursors to the end of each line selected
-      Control-Alt-Shift-right: Alt-Shift-right # ⌃⇧⌥right  | Expand selection
-      Control-Alt-Shift-left: Alt-Shift-left # ⌃⇧⌥left     | Shrink selection
+      #                                                | ⌘u                 | Undo last cursor operation
+      #                                                | ⌘l                 | Select current line
+      #                                                | ⌘⇧l                | Select all occurencies of current selection
+      Alt-F2: Control-F2 #                             | ⌘F2                | Select all occurencies of selected word
+      Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i                | Add cursors to the end of each line selected
+      Control-Alt-Shift-right: Alt-Shift-right #       | ⌃⇧⌥right           | Expand selection
+      Control-Alt-Shift-left: Alt-Shift-left #         | ⌃⇧⌥left            | Shrink selection
 
       # box selection
       Super-Alt-left: Alt-Control-left
