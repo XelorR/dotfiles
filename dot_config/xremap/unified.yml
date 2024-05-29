@@ -475,6 +475,8 @@ keymap:
       Alt-Shift-y: Alt-Shift-y
       Alt-Shift-z: Control-y #                         | ⌘⇧z     | Redo
 
+      Control-Alt-t: Control-Alt-t
+
       ## GENERAL
       # similar on GNU Linux / MacOS, no need to remap | F1      | Command palette
       # implemented in VSCODE LETTERS subsection       | ⌘⇧p     | Command palette
