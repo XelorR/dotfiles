@@ -616,9 +616,6 @@ keymap:
       Control-Shift-g: [Control-Shift-g, g] # focus version control
       Control-Alt-f: F11
 
-      # focus into editor groups
-      # vertical/horisontal layout
-
   - name: "extended editing capabilities"
     application:
       # only simple text editors/notepads
