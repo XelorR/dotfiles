@@ -251,8 +251,8 @@ keymap:
       Super-Left: Control-left
       Alt-left: home
       Alt-right: end
-      Alt-up: Control-home
-      Alt-down: Control-end
+      Alt-up: Control-home # cmd-up    | go to beginning of file
+      Alt-down: Control-end # cmd-down | go to end of file
       Ctrl-p: up
       Ctrl-n: down
       Ctrl-f: right
@@ -458,7 +458,7 @@ keymap:
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Alt-Shift-k
+      Alt-Shift-k: Ctrl-Shift-k # cmd-shift-k | Delete line
       Alt-Shift-l: Alt-Shift-l # cmd-shift-l | select all occurencies of current selection
       Alt-Shift-m: Alt-Shift-m
       Alt-Shift-n: Ctrl-Shift-n # cmd-shift-n | new
@@ -476,20 +476,39 @@ keymap:
       Alt-Shift-z: Ctrl-y # cmd-shift-z | redo
 
       # GENERAL
-      # following keys are in LETTERS section:
-      #   F1 / cmd-shift-p          | Command palette
-      #   cmd-p                     | Go to file
-      #   cmd-shift-n               | New window/instance
-      #   cmd-w                     | Close window/instance
-      #   cmd-k, cmd-s              | Keyboard shortcuts
-      Alt-comma: Ctrl-comma # cmd-, | User settings
+      # following keys set in LETTERS section:
+      #   F1 / cmd-shift-p                                    | Command palette
+      #   cmd-p                                               | Go to file
+      #   cmd-shift-n                                         | New window/instance
+      #   cmd-w                                               | Close window/instance
+      #   cmd-k, cmd-s                                        | Keyboard shortcuts
+      Alt-comma: Ctrl-comma # cmd-,                           | User settings
 
       # BASIC EDITING
+      # following keys set in LETTERS section:
+      #   cmd-x                                               | Cut line (empty selection)
+      #   cmd-c                                               | Copy line (empty selection)
+      #   cmd-shift-k                                         | Delete line
+      # following keys are defined in ARROWS section globally
+      #   cmd-up                                              | Go to beginning of file
+      #   cmd-down                                            | Go to end of file
+      # similar on GNU Linux / MacOS, no need to remap
+      #   home/end                                            | Go to beginning/end of line
+      #   cmd-pgup/pgdown                                     | Scroll page up/down
+      Super-up: Alt-up # cmd-up                               | Move line up
+      Super-down: Alt-down # cmd-down                         | Move line down
+      Super-Shift-up: Alt-Shift-up # cmd-shift-up             | Copy line up
+      Super-Shift-down: Alt-Shift-down # cmd-shift-down       | Copy line down
+      Alt-Enter: Ctrl-Enter # cmd-enter                       | Insert line below
+      Alt-Shift-Enter: Ctrl-Shift-Enter # cmd-shift-enter     | Insert line above
+      Alt-Shift-backslash: Ctrl-Shift-backslash # cmd-shift-\ | Jump to matching bracket
+      Alt-rightbrace: Ctrl-rightbrace # cmd-]                 | Indent line
+      Alt-leftbrace: Ctrl-leftbrace # cmd-[                   | Unindent line
+      Control-pageup: Ctrl-up # control-pgup                  | Scroll line up
+      Control-pagedown: Ctrl-down # control-pgdown            | Scroll line down
+      Alt-Super-leftbrace: Ctrl-Shift-leftbrace # opt-cmd-[   | Fold region
+      Alt-Super-rightbrace: Ctrl-Shift-rightbrace # opt-cmd-] | Unfold region
 
-      Super-up: Alt-up # move line up
-      Super-down: Alt-down # move line down
-      Super-Shift-up: Alt-Shift-up # copy line up
-      Super-Shift-down: Alt-Shift-down # copy line down
       # multiple cursors
       # spawn up/down, linux-like
       Ctrl-Shift-up: Ctrl-Shift-up
@@ -518,8 +537,6 @@ keymap:
       Super-Shift-f: Ctrl-Shift-i # format document
       Super-Alt-f: Ctrl-h # find and replace
 
-      Alt-Enter: Ctrl-Enter # insert line below
-      Alt-Shift-Enter: Ctrl-Shift-Enter # insert line above
       Alt-dot: Ctrl-dot # quick fix
       Alt-slash: Ctrl-slash # comment
       Alt-backslash: Ctrl-backslash # split editor
@@ -535,14 +552,6 @@ keymap:
       Alt-3: Ctrl-3
       # vertical/horisontal layout
       Super-Shift-0: Alt-Shift-0
-
-      # indent/unindent
-      Alt-leftbrace: Ctrl-leftbrace
-      Alt-rightbrace: Ctrl-rightbrace
-
-      # collapse/expand
-      Alt-Super-leftbrace: Ctrl-Shift-leftbrace
-      Alt-Super-rightbrace: Ctrl-Shift-rightbrace
 
   - name: "extended editing capabilities"
     application:
