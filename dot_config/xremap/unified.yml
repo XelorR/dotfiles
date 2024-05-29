@@ -608,6 +608,7 @@ keymap:
       # implemented in VSCODE LETTERS subsection #     | ⌘k o    | Show active file in new window/instance
 
       ## DISPLAY
+      # implemented in GLOBAL LETTERS subsection #     | ⌃⌘f     | Toggle full screen
 
       Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
 
