@@ -609,6 +609,7 @@ keymap:
 
       ## DISPLAY
       # implemented in GLOBAL LETTERS subsection #     | ⌃⌘f     | Toggle full screen
+      Super-Alt-0: Alt-Shift-0 #                       | ⌥⌘0     | Toggle editor layout (vertical/horisontal)
 
       Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
 
@@ -617,7 +618,6 @@ keymap:
 
       # focus into editor groups
       # vertical/horisontal layout
-      Super-Shift-0: Alt-Shift-0
 
   - name: "extended editing capabilities"
     application:
