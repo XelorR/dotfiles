@@ -526,18 +526,17 @@ keymap:
       Control-Alt-up: Control-Shift-up # Windows       | ⌃⌘↑     | Insert cursor above
       Control-Alt-down: Control-Shift-down #           | ⌃⌘↓     | Insert cursor below
       # implemented in VSCODE LETTERS subsection       | ⌘u      | Undo last cursor operation
+      Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i     | Add cursors to the end of each line selected
       # implemented in VSCODE LETTERS subsection       | ⌘l      | Select current line
       # implemented in VSCODE LETTERS subsection       | ⌘⇧l     | Select all occurencies of current selection
       Alt-F2: Control-F2 #                             | ⌘F2     | Select all occurencies of selected word
-      Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i     | Add cursors to the end of each line selected
       Control-Alt-Shift-right: Alt-Shift-right #       | ⌃⇧⌥→    | Expand selection
       Control-Alt-Shift-left: Alt-Shift-left #         | ⌃⇧⌥←    | Shrink selection
-
-      # box selection
-      Super-Alt-left: Alt-Control-left
-      Super-Alt-Shift-right: Alt-Control-right
-      Super-Alt-Shift-up: Alt-Control-up
-      Super-Alt-Shift-down: Alt-Control-down
+      # to be implemented                              | ⇧⌥ + drag mouse | Column (box) selection
+      Super-Alt-left: Alt-Control-left #               |         |
+      Super-Alt-Shift-right: Alt-Control-right #       |         |
+      Super-Alt-Shift-up: Alt-Control-up #             |         |
+      Super-Alt-Shift-down: Alt-Control-down #         |         |
 
       Super-Shift-f: Control-Shift-i # format document
       Super-Alt-f: Control-h # find and replace
