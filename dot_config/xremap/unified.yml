@@ -476,36 +476,31 @@ keymap:
       Alt-Shift-z: Control-y #                         | ⌘⇧z     | Redo
 
       ## GENERAL
-      # similar on GNU Linux / MacOS, no need to remap
-      #                                                |  F1     | Command palette
-      # following keys set in LETTERS section:
-      #                                                | ⌘⇧p     | Command palette
-      #                                                | ⌘p      | Go to file
-      #                                                | ⌘⇧n     | New window/instance
-      #                                                | ⌘w      | Close window/instance
-      #                                                | ⌘k , ⌘s | Keyboard shortcuts
+      # similar on GNU Linux / MacOS, no need to remap |  F1     | Command palette
+      # implemented in VSCODE LETTERS subsection       | ⌘⇧p     | Command palette
+      # implemented in VSCODE LETTERS subsection       | ⌘p      | Go to file
+      # implemented in VSCODE LETTERS subsection       | ⌘⇧n     | New window/instance
+      # implemented in VSCODE LETTERS subsection       | ⌘w      | Close window/instance
+      # implemented in VSCODE LETTERS subsection       | ⌘k , ⌘s | Keyboard shortcuts
       Alt-comma: Control-comma #                       | ⌘,      | User settings
 
       ## BASIC EDITING
       # following keys set in LETTERS section:
-      #                                                | ⌘x      | Cut line (empty selection)
-      #                                                | ⌘c      | Copy line (empty selection)
-      #                                                | ⌘⇧k     | Delete line
-      # following keys are defined in ARROWS section globally
-      #                                                | ⌘↑      | Go to beginning of file
-      #                                                | ⌘↓      | Go to end of file
-      # similar on GNU Linux / MacOS, no need to remap
-      #                                                | home    | Go to beginning of line
-      #                                                | end     | Go to end of line
-      #                                                | ⌘pgup   | Scroll page up
-      #                                                | ⌘pgdn   | Scroll page /down
-      # just works because of other mapped keys
-      #                                                | ⌘k , ⌘] | Fold all subregions
-      #                                                | ⌘k , ⌘[ | Unfold all subregions
-      #                                                | ⌘k , ⌘o | Fold all regions
-      #                                                | ⌘k , ⌘j | Unfold all regions
-      #                                                | ⌘k , ⌘c | Addline comment
-      #                                                | ⌘k , ⌘u | Remove line comment
+      # implemented in VSCODE LETTERS subsection                                               | ⌘x      | Cut line (empty selection)
+      # implemented in VSCODE LETTERS subsection                                               | ⌘c      | Copy line (empty selection)
+      # implemented in VSCODE LETTERS subsection                                               | ⌘⇧k     | Delete line
+      # implemented in GLOBAL ARROWS section           | ⌘↑      | Go to beginning of file
+      # implemented in GLOBAL ARROWS section           | ⌘↓      | Go to end of file
+      # similar on GNU Linux / MacOS, no need to remap | home    | Go to beginning of line
+      # similar on GNU Linux / MacOS, no need to remap | end     | Go to end of line
+      # similar on GNU Linux / MacOS, no need to remap | ⌘pgup   | Scroll page up
+      # similar on GNU Linux / MacOS, no need to remap | ⌘pgdn   | Scroll page /down
+      # just works because of other mapped keys        | ⌘k , ⌘] | Fold all subregions
+      # just works because of other mapped keys        | ⌘k , ⌘[ | Unfold all subregions
+      # just works because of other mapped keys        | ⌘k , ⌘o | Fold all regions
+      # just works because of other mapped keys        | ⌘k , ⌘j | Unfold all regions
+      # just works because of other mapped keys        | ⌘k , ⌘c | Addline comment
+      # just works because of other mapped keys        | ⌘k , ⌘u | Remove line comment
       Alt-slash: Control-slash #                       | ⌘/      | Toggle line comment
       Super-Shift-a: Alt-Shift-a #                     | ⇧⌥a     | Toggle block comment
       Super-z: Alt-z #                                 | ⌥z      | Toggle wrap text
@@ -524,21 +519,16 @@ keymap:
       Alt-Super-rightbrace: Control-Shift-rightbrace # | ⌥⌘]     | Unfold region
 
       ## MULTI-CURSOR AND SELECTION
-      # to be implemented
-      #                     (linux: alt-click)         | ⌥click  | Insert cursor
-      # linux-like:
-      Control-Shift-up: Control-Shift-up #             | ⌃⇧↑     | Insert cursor above
+      # to be implemented   (linux: alt-click)         | ⌥click  | Insert cursor
+      Control-Shift-up: Control-Shift-up # Linux       | ⌃⇧↑     | Insert cursor above
       Control-Shift-down: Control-Shift-down #         | ⌃⇧↓     | Insert cursor below
-      # macos-like:
-      Alt-Super-up: Control-Shift-up #                 | ⌥⌘↑     | Insert cursor above
+      Alt-Super-up: Control-Shift-up # MacOS           | ⌥⌘↑     | Insert cursor above
       Alt-Super-down: Control-Shift-down #             | ⌥⌘↓     | Insert cursor below
-      # windows-like:
-      Control-Alt-up: Control-Shift-up #               | ⌃⌘↑     | Insert cursor above
+      Control-Alt-up: Control-Shift-up # Windows       | ⌃⌘↑     | Insert cursor above
       Control-Alt-down: Control-Shift-down #           | ⌃⌘↓     | Insert cursor below
-      # following keys set in LETTERS section:
-      #                                                | ⌘u      | Undo last cursor operation
-      #                                                | ⌘l      | Select current line
-      #                                                | ⌘⇧l     | Select all occurencies of current selection
+      # implemented in VSCODE LETTERS subsection       | ⌘u      | Undo last cursor operation
+      # implemented in VSCODE LETTERS subsection       | ⌘l      | Select current line
+      # implemented in VSCODE LETTERS subsection       | ⌘⇧l     | Select all occurencies of current selection
       Alt-F2: Control-F2 #                             | ⌘F2     | Select all occurencies of selected word
       Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i     | Add cursors to the end of each line selected
       Control-Alt-Shift-right: Alt-Shift-right #       | ⌃⇧⌥→    | Expand selection
