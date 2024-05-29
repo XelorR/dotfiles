@@ -476,8 +476,10 @@ keymap:
       Alt-Shift-z: Ctrl-y # cmd-shift-z | redo
 
       # GENERAL
+      # similar on GNU Linux / MacOS, no need to remap
+      #   F1                                                   | Command palette
       # following keys set in LETTERS section:
-      #   F1 / cmd-shift-p                                    | Command palette
+      #   cmd-shift-p                                           | Command palette
       #   cmd-p                                               | Go to file
       #   cmd-shift-n                                         | New window/instance
       #   cmd-w                                               | Close window/instance
