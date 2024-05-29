@@ -451,23 +451,23 @@ keymap:
       Alt-Shift-a: Alt-Shift-a
       Alt-Shift-b: Alt-Shift-b
       Alt-Shift-c: Alt-Shift-c
-      Alt-Shift-d: Control-Shift-d #                   | ⌘⇧d     | Focus run and debug
-      Alt-Shift-e: Control-Shift-e #                   | ⌘⇧e     | Focus file explorer
-      Alt-Shift-f: Control-Shift-f #                   | ⌘⇧f     | Focus find dialig
-      Alt-Shift-g: Shift-F3 #                          | ⌘⇧g     | Find frevious
+      Alt-Shift-d: Control-Shift-d #                   | ⇧⌘d     | Focus run and debug
+      Alt-Shift-e: Control-Shift-e #                   | ⇧⌘e     | Focus file explorer
+      Alt-Shift-f: Control-Shift-f #                   | ⇧⌘f     | Focus find dialig
+      Alt-Shift-g: Shift-F3 #                          | ⇧⌘g     | Find frevious
       Alt-Shift-h: Alt-Shift-h
       Alt-Shift-i: Alt-Shift-i
       Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Control-Shift-k #                   | ⌘⇧k     | Delete line
-      Alt-Shift-l: Alt-Shift-l #                       | ⌘⇧l     | Select all occurencies of current selection
-      Alt-Shift-m: Alt-Shift-m
-      Alt-Shift-n: Control-Shift-n #                   | ⌘⇧n     | New
-      Alt-Shift-o: Control-Shift-o #                   | ⌘⇧o     | Optional open
-      Alt-Shift-p: Control-Shift-p #                   | ⌘⇧p     | Command palette
+      Alt-Shift-k: Control-Shift-k #                   | ⇧⌘k     | Delete line
+      Alt-Shift-l: Alt-Shift-l #                       | ⇧⌘l     | Select all occurencies of current selection
+      Alt-Shift-m: Control-Shift-m #                   | ⇧⌘m     | Show Problems panel
+      Alt-Shift-n: Control-Shift-n #                   | ⇧⌘n     | New
+      Alt-Shift-o: Control-Shift-o #                   | ⇧⌘o     | Go to Symbol
+      Alt-Shift-p: Control-Shift-p #                   | ⇧⌘p     | Command palette
       Alt-Shift-q: Alt-Shift-q
-      Alt-Shift-r: Control-Shift-r #                   | ⌘⇧r     | Refresh
-      Alt-Shift-s: Control-Shift-s #                   | ⌘⇧s     | Save as
-      Alt-Shift-t: Control-Shift-t #                   | ⌘⇧t     | Restore tab
+      Alt-Shift-r: Control-Shift-r #                   | ⇧⌘r     | Refresh
+      Alt-Shift-s: Control-Shift-s #                   | ⇧⌘s     | Save as
+      Alt-Shift-t: Control-Shift-t #                   | ⇧⌘t     | Restore tab
       Alt-Shift-u: Alt-Shift-u
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
@@ -520,7 +520,7 @@ keymap:
       Super-z: Alt-z #                                 | ⌥z      | Toggle wrap text
 
       ## MULTI-CURSOR AND SELECTION
-      # to be implemented   (linux: alt-click)         | ⌥click  | Insert cursor
+      # Super-BTN_LEFT: Alt-BTN_LEFT #                 | ⌥click  | Insert cursor (doesn't work by some reason)
       Control-Shift-up: Control-Shift-up #       Linux | ⌃⇧↑     | Insert cursor above
       Control-Shift-down: Control-Shift-down #         | ⌃⇧↓     | Insert cursor below
       Alt-Super-up: Control-Shift-up #           MacOS | ⌥⌘↑     | Insert cursor above
@@ -567,6 +567,18 @@ keymap:
       # implemented in VSCODE LETTERS subsection #     | ⌘k m    | Change file language
 
       ## NAVIGATION
+      # implemented in VSCODE LETTERS subsection #     | ⌘t      | Show all Symbols
+      # similar on GNU Linux / MacOS, no need to remap | ⌃g      | Go to Line
+      # implemented in VSCODE LETTERS subsection #     | ⌘p      | Go to File
+      # implemented in VSCODE LETTERS subsection #     | ⇧⌘o     | Go to Symbol
+      # implemented in VSCODE LETTERS subsection #     | ⇧⌘m     | Show Problems panel
+      # similar on GNU Linux / MacOS, no need to remap | F8/⇧F8  | Go to next/previous error or warning
+      # similar on GNU Linux / MacOS, no need to remap | ⌃⇧tab   | Navigate editor group history
+      Control-minus: Control-Alt-minus #               | ⌃-      | Go back
+      # similar on GNU Linux / MacOS, no need to remap | ⌃⇧-     | Go forward
+      Control-Shift-m: [Control-k, m] #                | ⌃⇧m     | Toggle Tab moves focus
+
+      ## EDITOR MANAGEMENT
 
       Super-Alt-f: Control-h #                         | ⇧⌥f     | Find and replace
 
