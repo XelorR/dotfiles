@@ -35,7 +35,7 @@ keymap:
       Control-Shift-9: Super-Alt-Shift-9
       Control-Shift-0: Super-Alt-Shift-0
       # WINDOW MANAGEMENT
-      Super-Enter: Alt-F10
+      # Super-Enter: Alt-F10
       Control-Super-Enter: Alt-F10
       Control-Super-left: Super-left
       Control-Super-right: Super-right
@@ -424,7 +424,7 @@ keymap:
       Alt-a: Control-a
       Alt-b: Control-b
       Alt-c: Control-c
-      Alt-d: Control-d
+      Alt-d: Control-d #                               | ⌘d      | Add selection to next find match
       Alt-e: Control-e
       Alt-f: Control-f
       Alt-g: F3 #                                      | ⌘g      | Find next
@@ -489,8 +489,8 @@ keymap:
       # implemented in VSCODE LETTERS subsection       | ⌘c      | Copy line (empty selection)
       Super-down: Alt-down #                           | ⌥↓      | Move line down
       Super-up: Alt-up #                               | ⌥↑      | Move line up
-      Super-Shift-down: Alt-Shift-down #               | ⌥⇧↓     | Copy line down
-      Super-Shift-up: Alt-Shift-up #                   | ⌥⇧↑     | Copy line up
+      Super-Shift-down: Control-Shift-Alt-down #       | ⌥⇧↓     | Copy line down
+      Super-Shift-up: Control-Shift-Alt-up #           | ⌥⇧↑     | Copy line up
       # implemented in VSCODE LETTERS subsection       | ⌘⇧k     | Delete line
       Alt-Enter: Control-Enter #                       | ⌘enter  | Insert line below
       Alt-Shift-Enter: Control-Shift-Enter #           | ⌘⇧enter | Insert line above
@@ -525,8 +525,8 @@ keymap:
       Alt-Super-down: Control-Shift-down #             | ⌥⌘↓     | Insert cursor below
       Control-Alt-up: Control-Shift-up #       Windows | ⌃⌘↑     | Insert cursor above
       Control-Alt-down: Control-Shift-down #           | ⌃⌘↓     | Insert cursor below
-      # implemented in VSCODE LETTERS subsection       | ⌘u      | Undo last cursor operation
       Super-Shift-i: Alt-Shift-i #                     | ⇧⌥i     | Add cursors to the end of each line selected
+      # implemented in VSCODE LETTERS subsection       | ⌘u      | Undo last cursor operation
       # implemented in VSCODE LETTERS subsection       | ⌘l      | Select current line
       # implemented in VSCODE LETTERS subsection       | ⌘⇧l     | Select all occurencies of current selection
       Alt-F2: Control-F2 #                             | ⌘F2     | Select all occurencies of selected word
@@ -541,7 +541,15 @@ keymap:
       Super-Alt-Shift-pagedown: Alt-Control-pagedown # | ⇧⌥⌘pgup | Column (box) selection page down
 
       ## SEARCH AND REPLACE
-      # implemented in VSCODE LETTERS subsection #     | ⌘f      | find
+      # implemented in VSCODE LETTERS subsection #     | ⌘f      | Find
+      # implemented in VSCODE LETTERS subsection #     | ⌥⌘f     | Replace
+      # implemented in VSCODE LETTERS subsection #     | ⌘g      | Find next
+      # implemented in VSCODE LETTERS subsection #     | ⇧⌘g     | Find previous
+      Super-Enter: Control-Shift-l #                   | ⌥enter  | Select all occurences of Find match
+      # implemented in VSCODE LETTERS subsection #     | ⌘d      | Add selection to next Find match
+      # implemented in VSCODE LETTERS subsection #     | ⌘k , ⌘d | Move selection to next Find match
+
+      ## RICH LAUGUAGES EDITING
 
       Super-Shift-f: Control-Shift-i # format document
       Super-Alt-f: Control-h # find and replace
