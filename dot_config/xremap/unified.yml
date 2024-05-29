@@ -420,7 +420,7 @@ keymap:
     application:
       only: [Code]
     remap:
-      # LETTERS
+      ## LETTERS
       Alt-a: Ctrl-a
       Alt-b: Ctrl-b
       Alt-c: Ctrl-c
@@ -475,7 +475,7 @@ keymap:
       Alt-Shift-y: Alt-Shift-y
       Alt-Shift-z: Ctrl-y # cmd-shift-z | redo
 
-      # GENERAL
+      ## GENERAL
       # similar on GNU Linux / MacOS, no need to remap
       #   F1                                                  | Command palette
       # following keys set in LETTERS section:
@@ -486,7 +486,7 @@ keymap:
       #   cmd-k, cmd-s                                        | Keyboard shortcuts
       Alt-comma: Ctrl-comma # cmd-,                           | User settings
 
-      # BASIC EDITING
+      ## BASIC EDITING
       # following keys set in LETTERS section:
       #   cmd-x                                               | Cut line (empty selection)
       #   cmd-c                                               | Copy line (empty selection)
@@ -497,6 +497,13 @@ keymap:
       # similar on GNU Linux / MacOS, no need to remap
       #   home/end                                            | Go to beginning/end of line
       #   cmd-pgup/pgdown                                     | Scroll page up/down
+      # just works because of other mapped keys
+      #   cmd-k, cmd-]/[                                      | Fold/unfold all subregions
+      #   cmd-k, cmd-o/j                                      | Fold/unfold all regions
+      #   cmd-k, cmd-c/u                                      | Add/remove line comment
+      Alt-slash: Ctrl-slash # cmd-/                           | Toggle line comment
+      Super-Shift-a: Alt-Shift-a # shift-opt-a                | Toggle block comment
+      Super-z: Alt-z # opt-z                                  | Toggle wrap text
       Super-up: Alt-up # cmd-up                               | Move line up
       Super-down: Alt-down # cmd-down                         | Move line down
       Super-Shift-up: Alt-Shift-up # cmd-shift-up             | Copy line up
@@ -511,6 +518,7 @@ keymap:
       Alt-Super-leftbrace: Ctrl-Shift-leftbrace # opt-cmd-[   | Fold region
       Alt-Super-rightbrace: Ctrl-Shift-rightbrace # opt-cmd-] | Unfold region
 
+      ## MULTI-CURSOR AND SELECTION
       # multiple cursors
       # spawn up/down, linux-like
       Ctrl-Shift-up: Ctrl-Shift-up
@@ -535,14 +543,11 @@ keymap:
       Super-Alt-Shift-up: Alt-Ctrl-up
       Super-Alt-Shift-down: Alt-Ctrl-down
 
-      Super-z: Alt-z # wrap text
       Super-Shift-f: Ctrl-Shift-i # format document
       Super-Alt-f: Ctrl-h # find and replace
 
       Alt-dot: Ctrl-dot # quick fix
-      Alt-slash: Ctrl-slash # comment
       Alt-backslash: Ctrl-backslash # split editor
-      Super-Shift-a: Alt-Shift-a # block comment
 
       Ctrl-Shift-g: [Ctrl-Shift-g, g] # focus version control
       Ctrl-Alt-f: F11
