@@ -102,34 +102,26 @@ keymap:
       Alt-Shift-k: Alt-Shift-k
       Alt-Shift-l: Alt-Shift-l
       Alt-Shift-m: Alt-Shift-m
-      # new
-      Alt-Shift-n: Control-Shift-n
-      # optional open
-      Alt-Shift-o: Control-Shift-o
-      # cmd-shift-p
-      Alt-Shift-p: Control-Shift-p
+      Alt-Shift-n: Control-Shift-n # new
+      Alt-Shift-o: Control-Shift-o # optional open
+      Alt-Shift-p: Control-Shift-p # cmd-shift-p
       Alt-Shift-q: Alt-Shift-q
-      # refresh
-      Alt-Shift-r: Control-Shift-r
-      # save as
-      Alt-Shift-s: Control-Shift-s
-      # restore tab
-      Alt-Shift-t: Control-Shift-t
-      Alt-Shift-u: Alt-Shift-u
+      Alt-Shift-r: Control-Shift-r # refresh
+      Alt-Shift-s: Control-Shift-s # save as
+      Alt-Shift-t: Control-Shift-t # restore tab
+      Alt-Shift-u: Control-Shift-u # keepassxc open link
       Alt-Shift-v: Alt-Shift-v
       Alt-Shift-w: Alt-Shift-w
       Alt-Shift-x: Alt-Shift-x
       Alt-Shift-y: Alt-Shift-y
-      # redo
-      Alt-Shift-z: Control-y
+      Alt-Shift-z: Control-y # redo
 
       Control-Alt-a: Control-Alt-a
       Control-Alt-b: Control-Alt-b
       Control-Alt-c: Control-Alt-c
       Control-Alt-d: Control-Alt-d
       Control-Alt-e: Control-Alt-e
-      # fullscreen
-      Control-Alt-f: F11
+      Control-Alt-f: F11 # fullscreen
       Control-Alt-g: Control-Alt-g
       Control-Alt-h: Control-Alt-h
       Control-Alt-i: Control-Alt-i
@@ -140,8 +132,7 @@ keymap:
       Control-Alt-n: Control-Alt-n
       Control-Alt-o: Control-Alt-o
       Control-Alt-p: Control-Alt-p
-      # lock screen
-      Control-Alt-q: Super-l
+      Control-Alt-q: Super-l # lock screen
       Control-Alt-r: Control-Alt-r
       Control-Alt-s: Control-Alt-s
       Control-Alt-t: Control-Alt-t
