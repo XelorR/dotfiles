@@ -17,6 +17,8 @@ GroupAdd "terminals", "ahk_exe WindowsTerminal.exe"
 GroupAdd "notepads", "ahk_exe notepad.exe"
 
 ; define functionality groups
+GroupAdd "extendedEditingCapabilities", "ahk_group notepads"
+GroupAdd "extendedEditingCapabilities", "ahk_group terminals"
 GroupAdd "history", "ahk_group browsers"
 GroupAdd "history", "ahk_group explorer"
 GroupAdd "tabsCTab", "ahk_group terminals"
@@ -26,19 +28,18 @@ GroupAdd "tabsCTab", "ahk_exe KeePass.exe"
 GroupAdd "tabsCPgUp", "ahk_group vscodes"
 GroupAdd "tabsCPgUp", "ahk_group browsers"
 GroupAdd "tabsCPgUp", "ahk_group office"
-GroupAdd "extended_editing_capabilities", "ahk_groups notepads"
 
 ; group used to exclude functionality
 GroupAdd "completelyExclude", "ahk_class Emacs"
 
-GroupAdd "exclude_terminals_filemanagers", "ahk_group terminals"
-GroupAdd "exclude_terminals_filemanagers", "ahk_group explorer"
-GroupAdd "exclude_terminals_filemanagers", "ahk_group completelyExclude"
+GroupAdd "excludeTerminalsFilemanagers", "ahk_group terminals"
+GroupAdd "excludeTerminalsFilemanagers", "ahk_group explorer"
+GroupAdd "excludeTerminalsFilemanagers", "ahk_group completelyExclude"
 
-GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group terminals"
-GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group explorer"
-GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group completelyExclude"
-GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group vscodes"
+GroupAdd "excludeTerminalsFilemanagers_binds", "ahk_group terminals"
+GroupAdd "excludeTerminalsFilemanagers_binds", "ahk_group explorer"
+GroupAdd "excludeTerminalsFilemanagers_binds", "ahk_group completelyExclude"
+GroupAdd "excludeTerminalsFilemanagers_binds", "ahk_group vscodes"
 
 ; ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ; MISSION CONTROL
@@ -66,7 +67,7 @@ F3::#Tab
 ; GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ; LETTERS
 ; exclude terminals, filemanagers and cpecificly binded apps
-#HotIf not WinActive("ahk_group exclude_terminals_filemanagers_binds")
+#HotIf not WinActive("ahk_group excludeTerminalsFilemanagers_binds")
 {
   !a::^a
   !b::^b
@@ -231,8 +232,8 @@ F3::#Tab
   ^#!+z::^#!+z
 }
 ; ARROWS
-; exclude terminals and filemanagers
-#HotIf not WinActive("ahk_group exclude_terminals_filemanagers")
+; exclude file managers
+#HotIf not WinActive("ahk_group explorer")
 {
   #Right::^Right
   #Left::^Left
@@ -249,11 +250,13 @@ F3::#Tab
   ^d::Delete
 }
 ; DELETION
-; exclude terminals and filemanagers
-#HotIf not WinActive("ahk_group exclude_terminals_filemanagers")
+; exclude file managers
+#HotIf not WinActive("ahk_group explorer")
 {
   !BackSpace::Send "+{Home}{BackSpace}"
-  #BackSpace::^BackSpace
+  !Delete::Send "+{End}{Delete}"
+  #BackSpace::Send "^+{Left}{BackSpace}"
+  #Delete::Send "^+{Right}{Delete}"
 }
 
 ; EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -342,17 +345,7 @@ F3::#Tab
   ^!f::F11
   !Left::Home
   !Right::End
-  !Up::^Home
-  !Down::^End
-  #Right::^Right
-  #Left::^Left
-  #Right::^f
-  #Left::^b
   !BackSpace::Send "+{Home}{BackSpace}"
-  #BackSpace::^BackSpace
-  #Delete::^Delete
-  #d::^Delete
-  ^w::^Delete
   ^p::Up
   ^n::Down
   ^f::Right
@@ -361,8 +354,12 @@ F3::#Tab
   ^e::End
   ^d::Delete
   !,::^,
-  !+9::!+=
-  !+0::!+-
+  ^+9::!+=
+  ^+0::!+-
+  ^+Left::!Left
+  ^+Right::!Right
+  ^+Up::!Up
+  ^+Down::!Down
 }
 
 ; EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -511,11 +508,12 @@ F3::#Tab
 }
 
 ; NOTEPADS
-#HotIf WinActive("ahk_group extended_editing_capabilities")
+#HotIf WinActive("ahk_group extendedEditingCapabilities")
 {
   #f::^Right
   #b::^Left
-  #d::^Delete
+  #d::Send "^+{Right}{Delete}"
+  ^w::Send "^+{Right}{Delete}"
   ^k::Send "+{End}{Delete}"
   ^u::Send "+{Home}{BackSpace}"
 }
