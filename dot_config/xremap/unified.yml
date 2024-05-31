@@ -58,6 +58,7 @@ keymap:
           dolphin,
           Nautilus,
           qemu-system-x86_64,
+          Warp,
         ]
     remap:
       # LETTERS
@@ -247,6 +248,7 @@ keymap:
           Nautilus,
           dolphin,
           qemu-system-x86_64,
+          Warp,
         ]
     remap:
       Super-Right: Control-right
@@ -276,6 +278,7 @@ keymap:
           Nautilus,
           Emacs,
           qemu-system-x86_64,
+          Warp,
         ]
     remap:
       Alt-Backspace: [Shift-home, Backspace]
@@ -344,7 +347,7 @@ keymap:
   - name: "tabs c-tab"
     application:
       # only applications with Control-Tab/Control-Shift-Tab for tab switching
-      only: [konsole, Nautilus, dolphin]
+      only: [konsole, Nautilus, dolphin, Warp]
     remap:
       Control-pagedown: Control-tab
       Control-pageup: Control-Shift-tab
@@ -399,7 +402,8 @@ keymap:
   # TERMINALS
   - name: terminals
     application:
-      only: [konsole, gnome-terminal-server, Gnome-terminal, kitty, wezterm]
+      only:
+        [konsole, gnome-terminal-server, Gnome-terminal, kitty, wezterm, Warp]
     remap:
       Alt-q: Alt-F4
       Alt-n: Control-Shift-n
