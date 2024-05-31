@@ -26,52 +26,71 @@ GroupAdd "tabsCTab", "ahk_exe KeePass.exe"
 GroupAdd "tabsCPgUp", "ahk_group vscodes"
 GroupAdd "tabsCPgUp", "ahk_group browsers"
 GroupAdd "tabsCPgUp", "ahk_group office"
+GroupAdd "extended_editing_capabilities", "ahk_groups notepads"
 
 ; group used to exclude functionality
 GroupAdd "completelyExclude", "ahk_class Emacs"
-GroupAdd "explorerAndExlist", "ahk_group explorer"
-GroupAdd "explorerAndExlist", "ahk_group completelyExclude"
-GroupAdd "terminalsAndExlist", "ahk_group terminals"
-GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
-GroupAdd "vscodesAndExlist", "ahk_group vscodes"
-GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
+
+GroupAdd "exclude_terminals_filemanagers", "ahk_group terminals"
+GroupAdd "exclude_terminals_filemanagers", "ahk_group explorer"
+GroupAdd "exclude_terminals_filemanagers", "ahk_group completelyExclude"
+
+GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group terminals"
+GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group explorer"
+GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group completelyExclude"
+GroupAdd "exclude_terminals_filemanagers_binds", "ahk_group vscodes"
 
 ; ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-; GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-; EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-; EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-#HotIf not WinActive("ahk_group completelyExclude")
+; MISSION CONTROL
+^Up::#Tab
+F3::#Tab
+^Left::^#Left
+^Right::^#Right
+; WINDOW MANAGEMENT
+^#Left::#Left
+^#Right::#Right
+^#Enter::WinMaximize "A"
+#h::WinMinimize "A"
+!#h::
 {
-; MOUSE
-  !LButton::^LButton
-  ^LButton::!LButton
+  active_id := WinGetID("A")
+  WinMinimizeAll
+  WinActivate active_id
+}
+; LAUNCHERS
+!Enter::#s
+^!t::Run A_ComSpec, A_MyDocuments
+; LOCK
+^!q::DllCall("LockWorkStation")
 
+; GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ; LETTERS
+; exclude terminals, filemanagers and cpecificly binded apps
+#HotIf not WinActive("ahk_group exclude_terminals_filemanagers_binds")
+{
   !a::^a
   !b::^b
   !c::^c
   !d::^d
   !e::^e
   !f::^f
-  ; !g::^g ; defined with vscodes exclusion
+  !g::^g
   !h::^h
-  ; !i::^i ; defined with explorer exclusion
+  !i::^i
   !j::^j
   !k::^k
   !l::^l
   !m::^m
   !n::^n
-  ; !o::^o ; defined with explorer exclusion
+  !o::^o
   !p::^p
-  ; close window
   !q::!F4
   !r::^r
   !s::^s
-  ; !t::^t ; defined with terminals exclusion
+  !t::^t
   !u::^u
   !v::^v
-  ; !w::^w ; defined with terminals exclusion
+  !w::^w
   !x::^x
   !y::^y
   !z::^z
@@ -79,36 +98,36 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !+a::!+a
   !+b::!+b
   !+c::!+c
-  ; !+d::!+d ; defined with vscodes exclusion
-  ; !+e::!+e ; defined with vscodes exclusion
-  ; !+f::!+f ; defined with vscodes exclusion
-  ; !+g::!+g ; defined with vscodes exclusion
-  ; !+h::!+h ; defined with vscodes exclusion
+  !+d::!+d
+  !+e::!+e
+  !+f::!+f
+  !+g::!+g
+  !+h::!+h
   !+i::!+i
   !+j::!+j
   !+k::!+k
-  ; !+l::!+l ; defined with vscodes exclusion
+  !+l::!+l
   !+m::!+m
   !+n::^+n ; new
-  !+o::^+o ; optional open
+  !+o::^+o ; optional openn
   !+p::^+p ; cmd-shift-p
   !+q::!+q
   !+r::^+r ; refresh
   !+s::^+s ; save as
   !+t::^+t ; restore tab
-  !+u::!+u
+  !+u::^+u ; keepassxc open link
   !+v::!+v
   !+w::!+w
-  ; !+x::!+x ; defined with vscodes exclusion
+  !+x::!+x
   !+y::!+y
-  !+z::^y  ; redo
+  !+z::^y ; redo
 
   ^!a::^!a
   ^!b::^!b
   ^!c::^!c
   ^!d::^!d
   ^!e::^!e
-  ^!f::F11 ; toggle maximize (macos vscode-like)
+  ^!f::F11 ; fullscreen
   ^!g::^!g
   ^!h::^!h
   ^!i::^!i
@@ -119,7 +138,7 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^!n::^!n
   ^!o::^!o
   ^!p::^!p
-  ^!q::^!q
+  ^!q::DllCall("LockWorkStation") ; lock screen
   ^!r::^!r
   ^!s::^!s
   ^!t::Run A_ComSpec, A_MyDocuments
@@ -210,87 +229,74 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ^#!+x::^#!+x
   ^#!+y::^#!+y
   ^#!+z::^#!+z
-
-; ARROWS
-  #right::^right
-  #left::^left
-  ^#right::^#right
-  ^#left::^#left
-  ^p::up
-  ^n::down
-  ^f::right
-  ^b::left
-  ^a::home
-  ^e::end
-
-; WINDOW MANAGEMENT
-  ^#Enter::WinMaximize "A"
-  #h::WinMinimize "A"
-  ;hide all windows except curren t
-  !#h::
-  {
-    active_id := WinGetID("A")
-    WinMinimizeAll
-    WinActivate active_id
-  }
-
-; WORKSPACE MANAGEMENT
-  ^up::#tab
-  ^left::^#left
-  ^right::^#right
-  ^!up::^!up
-  ^!down::^!down
-  ^!left::^!left
-  ^!right::^!right
-
-; LAUNCHER
-  !Space::#s
 }
-
-; DELETION
-#HotIf not WinActive("ahk_group explorerAndExlist")
+; ARROWS
+; exclude terminals and filemanagers
+#HotIf not WinActive("ahk_group exclude_terminals_filemanagers")
 {
-  !Backspace::Send("{Shift Down}{Home}{Shift Up}{Backspace}")
-  #Backspace::^Backspace
-  #Delete::^Delete
-  ^d::Delete
-
-; EXCLUDED FROM FILE MANAGER
+  #Right::^Right
+  #Left::^Left
   !Left::Home
   !Right::End
-  !Up::^home
-  !Down::^end
-  !o::^o
-  !i::^i
+  !Up::^Home
+  !Down::^End
+  ^p::Up
+  ^n::Down
+  ^f::Right
+  ^b::Left
+  ^a::Home
+  ^e::End
+  ^d::Delete
+}
+; DELETION
+; exclude terminals and filemanagers
+#HotIf not WinActive("ahk_group exclude_terminals_filemanagers")
+{
+  !BackSpace::Send "+{Home}{BackSpace}"
+  #BackSpace::^BackSpace
 }
 
+; EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ; FILE MANAGER
 #HotIf WinActive("ahk_group explorer")
 {
   Enter::F2
   !Down::Enter
-  !o::Enter
-  !i::!Enter
   !1::^+2 ; Cmd+1: View as Icons
   !2::^+6 ; Cmd+2: View as List (Detailed)
   !3::^+5 ; Cmd+3: View as List (Compact)
   !4::^+1 ; Cmd+4: View as Gallery
   !5::^+7 ; Cmd+5: Back to windows default view
-  !Backspace::Delete
-}
-
-; EXCLUDED FROM TERMINALS
-#HotIf not WinActive("ahk_group terminalsAndExlist")
-{
+  !+n::^+n
+  !a::^a
+  !b::^b
+  !c::^c
+  !d::^d
+  !e::^e
+  !f::^f
+  !g::^g
+  !h::^h
+  !i::!Enter
+  !j::^j
+  !k::^k
+  !l::^l
+  !m::^m
+  !n::^n
+  !o::Enter
+  !p::^p
+  !q::^q
+  !r::^r
+  !s::^s
   !t::^t
+  !u::^u
+  !v::^v
   !w::^w
-}
-
-; TERMINALS
-#HotIf WinActive("ahk_group terminals")
-{
-  !t::^+t
-  !w::^+w
+  !x::^x
+  !y::^y
+  !z::^z
+  !Backspace::Delete
+  !+BackSpace::+Delete
+  ^!f::F11
 }
 
 ; TABS
@@ -301,6 +307,8 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 }
 #HotIf WinActive("ahk_group tabsCTab")
 {
+  ^PgDn::^Tab
+  ^PgUp::^+Tab
   !+sc01B::^Tab
   !+sc01A::^+Tab
 }
@@ -322,32 +330,126 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   !,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
 }
 
-; EXCLUDED FROM VSCODES
-#HotIf not WinActive("ahk_group vscodesAndExlist")
+; TERMINALS
+#HotIf WinActive("ahk_group terminals")
 {
-  !+f::!+f
-  !+h::!+h
-  !+d::!+d
-  !+e::!+e
-  !+x::!+x
-  !+l::!+l
-  !g::!g
-  !+g::!+g
-  #up::!up
-  #down::!down
+  ^!q::DllCall("LockWorkStation")
+  !q::!F4
+  !n::^+n
+  !t::^+t
+  ^!t::Run A_ComSpec, A_MyDocuments
+  !w::^+w
+  ^!f::F11
+  !Left::Home
+  !Right::End
+  !Up::^Home
+  !Down::^End
+  #Right::^Right
+  #Left::^Left
+  #Right::^f
+  #Left::^b
+  !BackSpace::Send "+{Home}{BackSpace}"
+  #BackSpace::^BackSpace
+  #Delete::^Delete
+  #d::^Delete
+  ^w::^Delete
+  ^p::Up
+  ^n::Down
+  ^f::Right
+  ^b::Left
+  ^a::Home
+  ^e::End
+  ^d::Delete
+  !,::^,
+  !+9::!+=
+  !+0::!+-
 }
 
+; EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ; VSCODES
 #HotIf WinActive("ahk_group vscodes")
 {
-  ; mouse
-  ; #+LButton::!+LButton ; box selection | doesn't work by some reason
-  ; move line up/down
+  ;; LETTERS
+  !a::^a
+  !b::^b
+  !c::^c
+  !d::^d
+  !e::^e
+  !f::^f
+  !g::^F3
+  !h::^h
+  !i::^i
+  !j::^j
+  !k::^k
+  !l::^l
+  !m::^m
+  !n::^n
+  !o::^o
+  !p::^p
+  !q::!F4
+  !r::^r
+  !s::^s
+  !t::^t
+  !u::^u
+  !v::^v
+  !w::^w
+  !x::^x
+  !y::^y
+  !z::^z
+
+  !+a::!+a
+  !+b::!+b
+  !+c::!+c
+  !+d::^+d
+  !+e::^+e
+  !+f::^+f
+  !+g::^+F3
+  !+h::!+h
+  !+i::!+i
+  !+j::!+j
+  !+k::^+k
+  !+l::!+l
+  !+m::^+m
+  !+n::^+n
+  !+o::^+o
+  !+p::^+p
+  !+q::!+q
+  !+r::^+r
+  !+s::^+s
+  !+t::^+t
+  !+u::!+u
+  !+v::!+v
+  !+w::!+w
+  !+x::^+x
+  !+y::!+y
+  !+z::^y
+
+  !^t::!^t
+
+  ;; GENERAL
+  !,::^, ; open settings
+
+  ;; BASIC EDITING
   #up::!up
   #down::!down
-  ; copy line up/down
   #+up::!+up
   #+down::!+down
+  !Enter::^Enter
+  !+Enter::^+Enter
+  !+\::^+\
+  !sc01B::^sc01B ; indent
+  !sc01A::^sc01A ; unindent
+  ^PgUp::^!PgUp
+  ^PgDn::^!PgDn
+  !PgUp::+PgUp
+  !PgDn::+PgDn
+  !#sc01B::^+sc01B ; collapse
+  !#sc01A::^+sc01A ; expand
+  !/::^/ ; comment
+  #+a::!+a ; block comment
+  #z::!z ; wrap
+
+  ;; MULTI-CURSOR AND SELECTION
   ; multiple cursors
   ; spawn up/down, linux-like
   ^+up::^!up
@@ -358,46 +460,80 @@ GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
   ; spawn up/down, macos-like
   !#up::^!up
   !#down::^!down
-  #+i::!+i ; add cursors to the end of each line selected
-  !F2::^F2 ; select all occurencies of selected word
-  !+l::^+l ; select all occurencies of current selection
-  ; selection
-  !^+right::!+right ; expand selection
-  !^+left::!+left ; shrink selection
-  ; !#+left::!^+left ;    | doesn't work by some reason
-  ; !#+right::!^+right ;  | doesn't work by some reason
-  ; !#+up::!^+up ;        | doesn't work by some reason
-  ; !#+down::!^+down ;    | doesn't work by some reason
-  ; toggles
-  !+h::^+h ; replace dialog
-  !+d::Send("^+{p}show run and debug{Enter}")
-  !+e::^+e ; file explorer
-  !+f::^+f ; find dialog
-  ^+g::Send("^+{g}g")
-  !+x::Send("^+{p}view show extensions{Enter}")
-  ; other
-  !#f::^h ; replace
-  #z::!z ; wrap
-  #+f::!+f ; format
-  !g::F3 ; find next
-  !+g::+F3 ; find previous
-  #F12::!F12 ; peek definition
-  !Enter::^Enter ; Commit button in Source Control / insert line below
-  ; !+Enter::^+Enter ; insert line above | doesn't work by some reason
-  !,::^, ; open settings
+  #+i::!+i
+  !F2::^F2
+  ^!+Right::!+Right
+  ^!+Left::!+Left
+  !#+left::!^+left
+  !#+right::!^+right
+  !#+up::!^+up
+  !#+down::!^+down
+  !#+pgup::!^+pgup
+  !#+pgdn::!^+pgdn
+
+  ;; SEARCH AND REPLACE
+  #Enter::^+l
+
+  ;; RICH LANGUAGES EDITING
+  ^#Space::^+Space
+  #+f::!+f
+  #F12::!F12
   !.::^. ; quick fix
-  !/::^/ ; comment
-  !\::^\ ; split editor
-  ; braces
-  !sc01B::^sc01B ; indent
-  !sc01A::^sc01A ; unindent
-  !#sc01B::^+sc01B ; collapse
-  !#sc01A::^+sc01A ; expand
-  #+a::!+a ; block comment
-  ; focus into editor groups
+
+  ;; NAVIGATION
+  +F8::!F8
+  ^-::!Left
+  ^+-::!Right
+  ^+m::^m
+
+  ;; EDITOR MANAGEMENT
+  !\::^\
   !1::^1
   !2::^2
   !3::^3
-  ; layout
+  !4::^4
+  !5::^5
+  !6::^6
+  !7::^7
+  !8::^8
+  !9::^9
+  !0::^0
+
+  ;; FILE MANAGEMENT
+
+  ;; DISPLAY
   #+0::!+0 ; vertical / horisontal
+  #!f::^h
+  ^+g::Send("^+{g}g")
+  ^!f::F11
+  !=::^=
+  !-::^-
+}
+
+; NOTEPADS
+#HotIf WinActive("ahk_group extended_editing_capabilities")
+{
+  #f::^Right
+  #b::^Left
+  #d::^Delete
+  ^k::Send "+{End}{Delete}"
+  ^u::Send "+{Home}{BackSpace}"
+}
+
+; OUTLOOK
+#HotIf WinActive("ahk_exe outlook.exe")
+{
+  !Enter::^Enter
+  !1::^1
+  !2::^2
+  !3::^3
+  !4::^4
+  !5::^5
+  !6::^6
+  !7::^7
+  !8::^8
+  !9::^9
+  !0::^0
+  !=::^=
+  !-::^-
 }
