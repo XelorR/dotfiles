@@ -58,7 +58,7 @@ F3::#Tab
   WinActivate active_id
 }
 ; LAUNCHERS
-!Enter::#s
+!Space::#s
 ^!t::Run A_ComSpec, A_MyDocuments
 ; LOCK
 ^!q::DllCall("LockWorkStation")
