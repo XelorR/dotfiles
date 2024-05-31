@@ -14,13 +14,20 @@ sudo apt install -y \
 	fzf \
 	gcc \
 	git \
+	gnome-shell-extension-manager \
+	gnome-sushi \
+	gnome-tweaks \
 	golang \
 	heif-{gdk-pixbuf,thumbnailer} \
 	imagemagick \
 	jq \
 	keepassxc \
 	luajit \
+	magic-wormhole \
 	make \
+	nautilus-gtkhash \
+	nautilus-image-converter \
+	nautilus-wipe \
 	ncdu \
 	npm \
 	p7zip-full \
@@ -32,6 +39,7 @@ sudo apt install -y \
 	rsync \
 	tmate \
 	tmux \
+	ubuntu-desktop \
 	virt-manager \
 	vlc \
 	vorta \
