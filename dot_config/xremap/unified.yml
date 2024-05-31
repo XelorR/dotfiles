@@ -416,7 +416,7 @@ keymap:
   # TEXT EDITORS
   - name: vscodes
     application:
-      only: [Code]
+      only: [Code, VSCodium]
     remap:
       ## LETTERS
       Alt-a: Control-a
