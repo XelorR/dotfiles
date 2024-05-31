@@ -36,7 +36,11 @@ GroupAdd "terminalsAndExlist", "ahk_group completelyExclude"
 GroupAdd "vscodesAndExlist", "ahk_group vscodes"
 GroupAdd "vscodesAndExlist", "ahk_group completelyExclude"
 
-; GENERAL USAGE KEYS
+; ABSOLUTE GLOBAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+; GLOBAL -- EVERYTHING WITH EXCEPTIONS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+; EXCEPTIONS ONLY -- FUNCTIONALITY -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+; EXCEPTIONS ONLY -- VERY APP SPECIFIC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 #HotIf not WinActive("ahk_group completelyExclude")
 {
 ; MOUSE
