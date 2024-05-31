@@ -58,6 +58,9 @@ paru -Syu \
 
 chsh -s "$(which zsh)"
 
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
 # kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
 # qdbus org.kde.KWin /KWin reconfigure
 

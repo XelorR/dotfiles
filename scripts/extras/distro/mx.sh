@@ -59,3 +59,6 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
 
 chsh -s "$(which zsh)"
+
+sudo groupadd docker
+sudo usermod -aG docker $USER

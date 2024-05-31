@@ -70,3 +70,6 @@ bash $HOME/.local/share/chezmoi/scripts/extras/packages/ollama.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/qe.sh
 
 chsh -s "$(which zsh)"
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
