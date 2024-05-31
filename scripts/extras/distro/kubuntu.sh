@@ -25,7 +25,6 @@ sudo apt install -y \
 	luajit \
 	magic-wormhole \
 	make \
-	nautilus-gtkhash \
 	nautilus-image-converter \
 	nautilus-wipe \
 	ncdu \
