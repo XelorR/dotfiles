@@ -34,6 +34,7 @@ sudo apt install -y \
 	qalc \
 	qbittorrent \
 	qemu-kvm \
+	remmina{,-plugin-{vnc,rdp}} \
 	ripgrep \
 	rsync \
 	tmate \
