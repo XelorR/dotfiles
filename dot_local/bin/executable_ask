@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    model = "dolphin-llama3"
+    model = "qwen2:7b-instruct"
     command = ["ollama", "run", model] + sys.argv[1:]
     subprocess.run(command)
 
