@@ -36,6 +36,7 @@ GroupAdd "editing", "ahk_class Emacs"
 GroupAdd "editing", "ahk_group explorer"
 GroupAdd "editing", "ahk_group terminals"
 GroupAdd "editing", "ahk_group games"
+GroupAdd "editing", "ahk_exe excel.exe"
 
 ;; MODIFIERS
 ; CapsLock? Does someone need it? Easier to reash Escape!
