@@ -156,7 +156,7 @@ CapsLock::Escape
   !5::^+7 ; Cmd+5: Back to windows default view
 }
 
-;; OTHER
+;; OTHER, VERY APP SPECIFIC
 ; open settings
 #HotIf WinActive("ahk_group chromes")
 {
