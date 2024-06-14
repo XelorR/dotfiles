@@ -158,7 +158,7 @@ CapsLock::Escape
 }
 
 ;; OTHER, VERY APP SPECIFIC
-; open settings
+; browsers
 #HotIf WinActive("ahk_group chromes")
 {
   ^,::Send "{Ctrl Down}{t}{Ctrl Up}chrome://settings{Enter}"
