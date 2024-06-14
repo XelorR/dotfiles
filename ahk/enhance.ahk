@@ -50,6 +50,7 @@ GroupAdd "explorer", "ahk_class WorkerW ahk_exe explorer.exe"
 ; group used to exclude functionality
 GroupAdd "editing", "ahk_class Emacs"
 GroupAdd "editing", "ahk_group explorer"
+GroupAdd "editing", "ahk_group terminals"
 
 ;; WORKSPACES
 $^#1::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}")
@@ -104,6 +105,8 @@ $^#Enter::
 ^!t::Run "wt"
 #HotIf WinActive("ahk_group terminals")
 {
+  !BackSpace::Send "+{Home}{BackSpace}"
+  !Delete::Send "+{End}{Delete}"
   ^+v::!+= ; split vertically
   ^+h::!+- ; split horisontally
   ^+s::!+- ; split horisontally
@@ -125,6 +128,8 @@ $^#Enter::
   #BackSpace::Send "^+{Left}{BackSpace}"
   !Delete::Send "+{End}{Delete}"
   #Delete::Send "^+{Right}{Delete}"
+  !b::^Left
+  !f::^Right
   !d::Send "^+{Right}{Delete}"
 }
 
