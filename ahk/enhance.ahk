@@ -82,6 +82,7 @@ $^#Enter::
   WinMinimizeAll
   WinActivate active_id
 }
+!q::!F4
 
 ;; TABS
 #HotIf WinActive("ahk_group tabsCPgUp")
