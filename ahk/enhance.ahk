@@ -157,7 +157,9 @@ CapsLock::Escape
   !5::^+7 ; Cmd+5: Back to windows default view
 }
 
-;; OTHER, VERY APP SPECIFIC
+;; OTHER
+; onehanded lockscreen
+^!q::DllCall("LockWorkStation")
 ; browsers
 #HotIf WinActive("ahk_group chromes")
 {
