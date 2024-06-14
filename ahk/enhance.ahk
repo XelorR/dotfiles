@@ -167,3 +167,15 @@ CapsLock::Escape
 {
   ^,::Send "{Ctrl Down}{t}{Ctrl Up}about:preferences{Enter}"
 }
+; excel
+#HotIf WinActive("ahk_exe excel.exe")
+{
+  !BackSpace::Send "+{Home}{BackSpace}"
+  #BackSpace::Send "^+{Left}{BackSpace}"
+  !Delete::Send "+{End}{Delete}"
+  #Delete::Send "^+{Right}{Delete}"
+  !b::^Left
+  !f::^Right
+  !d::Send "^+{Right}{Delete}"
+  +Enter::!Enter
+}
