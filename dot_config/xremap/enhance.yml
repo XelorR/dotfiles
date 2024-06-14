@@ -66,24 +66,23 @@ keymap:
       # exclude terminals, filemanagers and Emacs
       not:
         [
+          Emacs,
           konsole,
           Gnome-terminal,
           gnome-terminal-server,
           kitty,
           wezterm,
-          Emacs,
+          Warp,
           Nautilus,
           dolphin,
           qemu-system-x86_64,
           qemu,
-          Warp,
-          Logseq,
         ]
     remap:
       Alt-left: home
       Alt-right: end
-      Alt-up: Control-home # cmd-up    | go to beginning of file
-      Alt-down: Control-end # cmd-down | go to end of file
+      Alt-up: Control-home
+      Alt-down: Control-end
       Alt-Backspace: [Shift-home, Backspace]
       Super-Backspace: Control-Backspace
       Alt-Delete: [Shift-end, Delete]
