@@ -3,24 +3,6 @@
 #InputLevel 0
 SendMode("Input")     ; Recommended for new scripts due to its superior speed and reliability
 
-;; MODIFIERS
-SetCapsLockState "AlwaysOff"
-CapsLock::Escape
-*Space::
-{
-  Send("{Blind}{LCtrl down}")
-  return
-}
-*Space up::
-{
-  Send("{Blind}{LCtrl up}")
-  if (A_PRIORKEY = "Space")
-  {
-    Send("{Space}")
-  }
-  return
-}
-
 ;; GROUPS
 ; define application groups
 GroupAdd "vscodes", "ahk_exe Code.exe"
@@ -48,42 +30,69 @@ GroupAdd "tabsCPgUp", "ahk_group office"
 GroupAdd "explorer", "ahk_class CabinetWClass ahk_exe explorer.exe"
 GroupAdd "explorer", "ahk_class WorkerW ahk_exe explorer.exe"
 ; group used to exclude functionality
+; don't forget to exclude games!
+GroupAdd "games", "ahk_exe minetest.exe"
 GroupAdd "editing", "ahk_class Emacs"
 GroupAdd "editing", "ahk_group explorer"
 GroupAdd "editing", "ahk_group terminals"
+GroupAdd "editing", "ahk_group games"
 
-;; WORKSPACES
-$^#1::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}")
-$^#2::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}")
-$^#3::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}")
-$^#4::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}")
-$^#5::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}")
-$^#6::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
-$^#7::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
-$^#8::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
-$^#9::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
-$^#0::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
-
-;; WINDOWS
-$^#Enter::
+;; MODIFIERS
+; CapsLock? Does someone need it? Easier to reash Escape!
+SetCapsLockState "AlwaysOff"
+CapsLock::Escape
+; Space on tap, Control on hold - more ergonomic copypasting!
+*Space::
 {
-  active_id := WinGetID("A")
-  MX := WinGetMinMax(active_id )
-  if (MX==1)
-      WinRestore active_id 
-  else if (MX==-1)
-      WinRestore active_id 
-  else if (MX==0)
-      WinMaximize active_id
+  Send("{Blind}{LCtrl down}")
+  return
 }
-#h::WinMinimize "A"
+*Space up::
+{
+  Send("{Blind}{LCtrl up}")
+  if (A_PRIORKEY = "Space")
+  {
+    Send("{Space}")
+  }
+  return
+}
+
+#HotIf not WinActive("ahk_group games")
+{
+  ;; WORKSPACES
+  $^#1::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}")
+  $^#2::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}")
+  $^#3::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}")
+  $^#4::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}")
+  $^#5::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}")
+  $^#6::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
+  $^#7::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
+  $^#8::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
+  $^#9::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
+  $^#0::Send("#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Left}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}#^{Right}")
+  
+  ;; WINDOWS
+  !q::!F4
+  $^#Enter::
+  {
+    active_id := WinGetID("A")
+    MX := WinGetMinMax(active_id )
+    if (MX==1)
+        WinRestore active_id 
+    else if (MX==-1)
+        WinRestore active_id 
+    else if (MX==0)
+        WinMaximize active_id
+  }
+  #h::WinMinimize "A"
+}
+; hide all windows except current
 !#h::
 {
   active_id := WinGetID("A")
   WinMinimizeAll
   WinActivate active_id
 }
-!q::!F4
 
 ;; TABS
 #HotIf WinActive("ahk_group tabsCPgUp")
@@ -110,7 +119,7 @@ $^#Enter::
   ^+v::!+= ; split vertically
   ^+h::!+- ; split horisontally
   ^+s::!+- ; split horisontally
-  ; navigate panes, like in Konsole
+  ; focus panes, like in Konsole
   ^+Left::!Left
   ^+Right::!Right
   ^+Up::!Up
