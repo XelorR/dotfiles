@@ -5,7 +5,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 	platform="gnome"
 elif [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
 	platform="kde"
-elif [ "$XDG_CURRENT_DESKTOP" = "WLROOTS" ]; then
+elif [ "$XDG_CURRENT_DESKTOP" = "sway" ]; then
 	platform="wlroots"
 else
 	platform="x11"
