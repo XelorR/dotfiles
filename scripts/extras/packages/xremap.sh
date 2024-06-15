@@ -3,6 +3,10 @@
 # download the binary
 if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
 	platform="gnome"
+elif [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+	platform="kde"
+elif [ "$XDG_CURRENT_DESKTOP" = "WLROOTS" ]; then
+	platform="wlroots"
 else
 	platform="x11"
 fi
