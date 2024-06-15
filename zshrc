@@ -46,6 +46,16 @@ if command -v rsync &>/dev/null; then
 	alias cpv='rsync -ah --info=progress2'
 fi
 
+# create directory and cd into it
+mkcd() {
+  mkdir $1 && cd $1
+}
+
+# start editing executable file
+mkscript() {
+  touch $1 && chmod +x $1 && $VISUAL $1
+}
+
 # tmux
 tm() {
 	if [ $# -eq 0 ]; then
