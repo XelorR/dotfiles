@@ -19,8 +19,8 @@ sudo dnf install -y \
 	libheif \
 	luajit \
 	make \
-	minetest \
 	ncdu \
+	neovim \
 	npm \
 	p7zip \
 	python-pip \
@@ -28,6 +28,7 @@ sudo dnf install -y \
 	qbittorrent \
 	qemu-{kvm,tools} \
 	qt \
+	remmina{,-plugins-{rdp,vnc}} \
 	ripgrep \
 	rsync \
 	syncthing \
@@ -46,10 +47,11 @@ flatpak remote-add --user --if-not-exists \
 flatpak install -y \
 	chat.delta.desktop \
 	com.logseq.Logseq \
-	org.telegram.desktop \
-	org.wezfurlong.wezterm
+	net.minetest.Minetest \
+	org.telegram.desktop
 
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/vscode.sh
+bash $HOME/.local/share/chezmoi/scripts/extras/packages/warp.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/brave.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/gh.sh
 bash $HOME/.local/share/chezmoi/scripts/extras/packages/lazygit.sh
