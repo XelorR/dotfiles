@@ -2,9 +2,6 @@ modmap:
   - name: Modifiers
     remap:
       CapsLock: Esc
-      Space:
-        alone: Space
-        held: Control
 keymap:
   # WORKSPACES and WINDOWS
   - name: "workspace and window management"

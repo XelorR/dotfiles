@@ -42,21 +42,6 @@ GroupAdd "editing", "ahk_exe excel.exe"
 ; CapsLock? Does someone need it? Easier to reash Escape!
 SetCapsLockState "AlwaysOff"
 CapsLock::Escape
-; Space on tap, Control on hold - more ergonomic copypasting!
-*Space::
-{
-  Send("{Blind}{LCtrl down}")
-  return
-}
-*Space up::
-{
-  Send("{Blind}{LCtrl up}")
-  if (A_PRIORKEY = "Space")
-  {
-    Send("{Space}")
-  }
-  return
-}
 
 #HotIf not WinActive("ahk_group games")
 {
