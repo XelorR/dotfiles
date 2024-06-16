@@ -23,6 +23,9 @@ vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true,
 vim.keymap.set({ "n", "v" }, "<leader>oo", ":Gen<CR>")
 vim.keymap.set({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 
+-- Yank buffer name
+vim.keymap.set({ "n", "v" }, "<leader>bn", ":let @0 = expand("%:t")<CR>", { noremap = true, desc = "Yank buffer name" })
+
 -- Emacs-like --
 
 --- Navigation
