@@ -46,6 +46,9 @@ if command -v rsync &>/dev/null; then
 	alias cpv='rsync -ah --info=progress2'
 fi
 
+# edit latest daily note
+alias note="$VISUAL $HOME/org/journals/$(ls $HOME/org/journals | tail -n 1)"
+
 # create directory and cd into it
 mkcd() {
   mkdir $1 && cd $1
