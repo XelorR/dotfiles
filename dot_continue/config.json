@@ -1,0 +1,30 @@
+{
+  "models": [
+    {
+      "title": "codeqwen:chat",
+      "provider": "ollama",
+      "model": "codeqwen:chat"
+    },
+    {
+      "title": "qwen2:7b-instruct",
+      "provider": "ollama",
+      "model": "qwen2:7b-instruct"
+    },
+    {
+      "title": "codestral",
+      "provider": "ollama",
+      "model": "codestral"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+      "description": "Write unit tests for highlighted code"
+    }
+  ],
+  "allowAnonymousTelemetry": true,
+  "embeddingsProvider": {
+    "provider": "transformers.js"
+  }
+}
