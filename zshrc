@@ -48,7 +48,7 @@ fi
 
 # edit latest daily note
 alias note="$VISUAL $HOME/org/journals/$(ls $HOME/org/journals | tail -n 1)"
-alias notemd="$VISUAL $HOME/org/pages/$(date +%Y%m%d%H%M%S).md"
+alias notemd="$VISUAL $HOME/org/pages/$(date +%Y%m%d%H%M%S).md $(ls $HOME/org/journals | tail -n 1)"
 
 # create directory and cd into it
 mkcd() {
