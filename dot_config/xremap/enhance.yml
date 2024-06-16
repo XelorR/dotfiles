@@ -6,8 +6,8 @@ keymap:
   # WORKSPACES and WINDOWS
   - name: "workspace and window management"
     application:
-      # to exclude virtualization systems and remote controls
-      not: [qemu-system-x86_64, qemu]
+      # to exclude virtualization systems, remote controls and games
+      not: [qemu-system-x86_64, qemu, Minetest, Remmina]
     remap:
       Alt-q: Alt-F4
   # TABS
