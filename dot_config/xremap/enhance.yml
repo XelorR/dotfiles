@@ -150,7 +150,7 @@ keymap:
   # emacs-like notepads
   - name: notepads
     application:
-      only: [TextEditor, kate]
+      only: [TextEditor, kate, kwrite]
     remap:
       Control-p: Up
       Control-n: Down
