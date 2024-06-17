@@ -10,3 +10,10 @@ rm -rf nvim-linux64.tar.gz
 
 rm -rf $HOME/.local/bin/nvim
 ln -s $HOME/.opt/nvim-linux64/bin/nvim $HOME/.local/bin/nvim
+
+if ! grep -q '.local/bin' $HOME/.bashrc; then
+	echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
+fi
+if ! grep -q '.local/bin' $HOME/.zshrc; then
+	echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.zshrc
+fi
