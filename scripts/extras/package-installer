@@ -1,9 +1,50 @@
 #!/usr/bin/env python3
 
-import argparse
+import re
+from sys import argv
+from subprocess import check_output, PIPE, Popen
+from urllib.request import urlopen
 
-# get list of all my installer scroipts
+help_message = """
+Usage: package-installer [options] [packages]
 
-# allow to srlect
+  packages
+      package names, separated by space
 
-# run selected scripts
+Options:
+  -l --list
+      list installation scripts currently avaliable in repo
+  -h --help
+      show this message
+"""
+
+
+if "-l" in argv or "--list" in argv:
+    link = "https://github.com/XelorR/dotfiles/tree/master/scripts/extras/packages"
+    with urlopen(link) as response:
+        html = response.read()
+        results = [
+            s.replace('"name":', "").replace('"', "").replace(".sh", "")
+            for s in re.findall('"name":"[a-z]+.sh"', str(html))
+        ]
+        print("Following installation scripts avaliable:")
+        for i, script in enumerate(results):
+            print(f"  {i+1}. {script}")
+        print("\nRun command with script names to run scripts.\nFor example:")
+        print("  package-installer neovim lazygit sfmono")
+elif "-h" in argv or "--help" in argv or len(argv) == 1:
+    print(help_message)
+else:
+    for script in argv[1:]:
+        print(f"Installing {script}...", end="\t")
+        script_text = Popen(
+            [
+                "curl",
+                "-sL",
+                f"https://raw.githubusercontent.com/XelorR/dotfiles/master/scripts/extras/packages/{script}.sh",
+            ],
+            stdout=PIPE,
+        )
+        check_output(["bash", "-"], stdin=script_text.stdout)
+        script_text.wait()
+        print("Done!")
