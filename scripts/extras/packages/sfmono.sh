@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
 	FONTS=$HOME/Library/Fonts
 else
 	FONTS=$HOME/.fonts
