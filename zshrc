@@ -46,7 +46,7 @@ if command -v rsync &>/dev/null; then
 	alias cpv='rsync -ah --info=progress2'
 fi
 
-# edit latest daily note
+# edit today note
 alias note="$VISUAL $HOME/org/journals/$(date +%Y_%m_%d).org"
 alias notemd="$VISUAL $HOME/org/pages/$(date +%Y%m%d%H%M%S).md $HOME/org/journals/$(date +%Y_%m_%d).org"
 
