@@ -9,6 +9,9 @@ or
 ```bash
 sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xelorr
 ```
+## List and run installation scripts
+
+[Use this script](./scripts/extras/package-installer)
 
 ## Log
 
