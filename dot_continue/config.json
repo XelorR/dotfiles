@@ -11,9 +11,9 @@
       "model": "qwen2:7b-instruct"
     },
     {
-      "title": "codestral",
+      "title": "deepseek-coder-v2",
       "provider": "ollama",
-      "model": "codestral"
+      "model": "deepseek-coder-v2"
     }
   ],
   "customCommands": [
