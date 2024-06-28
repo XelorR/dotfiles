@@ -4,7 +4,6 @@ import re
 from sys import argv
 from subprocess import check_output, PIPE, Popen
 from urllib.request import urlopen
-from functools import cache
 
 help_message = """
 Usage: package-installer [options] [packages]
@@ -20,7 +19,6 @@ Options:
 """
 
 
-@cache
 def list_avaliable(link: str) -> list:
     with urlopen(link) as response:
         html = response.read()
