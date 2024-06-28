@@ -21,8 +21,7 @@ Options:
 
 
 @cache
-def list_avaliable():
-    link = "https://github.com/XelorR/dotfiles/tree/master/scripts/extras/packages"
+def list_avaliable(link: str) -> list:
     with urlopen(link) as response:
         html = response.read()
     return [
@@ -32,12 +31,13 @@ def list_avaliable():
 
 
 if "-l" in argv or "--list" in argv:
-        results = list_avaliable()
-        print("Following installation scripts avaliable:")
-        for i, script in enumerate(results):
-            print(f"  {i+1}. {script}")
-        print("\nRun command with script names to run scripts.\nFor example:")
-        print("  package-installer neovim lazygit sfmono")
+    link = "https://github.com/XelorR/dotfiles/tree/master/scripts/extras/packages"
+    results = list_avaliable(link)
+    print("Following installation scripts avaliable:")
+    for i, script in enumerate(results):
+        print(f"  {i+1}. {script}")
+    print("\nRun command with script names to run scripts.\nFor example:")
+    print("  package-installer neovim lazygit sfmono")
 elif "-h" in argv or "--help" in argv or len(argv) == 1:
     print(help_message)
 else:
