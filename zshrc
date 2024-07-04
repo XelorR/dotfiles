@@ -49,9 +49,17 @@ elif command -v kate &>/dev/null; then
 notepad() {
   kate $@ &!
 }
+elif command -v gnome-text-editor &>/dev/null; then
+notepad() {
+  gnome-text-editor $@ &!
+}
 elif command -v gedit &>/dev/null; then
 notepad() {
   gedit $@ &!
+}
+elif command -v leafpad &>/dev/null; then
+notepad() {
+  leafpad $@ &!
 }
 fi
 
