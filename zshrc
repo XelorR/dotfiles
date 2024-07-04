@@ -9,8 +9,33 @@ if [[ $(uname -o) == "Darwin" ]]; then
 	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
 	export PATH="/opt/homebrew/bin:$PATH"
 	export HOMEBREW_INSTALL_FROM_API=1
+# GUI editor
 notepad() {
   open -t $@ &!
+}
+elif command -v kwrite &>/dev/null; then
+notepad() {
+  kwrite $@ &!
+}
+elif command -v kate &>/dev/null; then
+notepad() {
+  kate $@ &!
+}
+elif command -v gnome-text-editor &>/dev/null; then
+notepad() {
+  gnome-text-editor $@ &!
+}
+elif command -v gedit &>/dev/null; then
+notepad() {
+  gedit $@ &!
+}
+elif command -v leafpad &>/dev/null; then
+notepad() {
+  leafpad $@ &!
+}
+elif command -v emacs &>/dev/null; then
+notepad() {
+  emacs $@ &!
 }
 fi
 
@@ -42,32 +67,6 @@ fi
 export EDITOR=vi
 if command -v fzf &>/dev/null; then
 	alias vf='vi $(fzf)'
-fi
-# GUI editor
-if command -v kwrite &>/dev/null; then
-notepad() {
-  kwrite $@ &!
-}
-elif command -v kate &>/dev/null; then
-notepad() {
-  kate $@ &!
-}
-elif command -v gnome-text-editor &>/dev/null; then
-notepad() {
-  gnome-text-editor $@ &!
-}
-elif command -v gedit &>/dev/null; then
-notepad() {
-  gedit $@ &!
-}
-elif command -v leafpad &>/dev/null; then
-notepad() {
-  leafpad $@ &!
-}
-elif command -v emacs &>/dev/null; then
-notepad() {
-  emacs $@ &!
-}
 fi
 
 # ALIASES ------------------------------
