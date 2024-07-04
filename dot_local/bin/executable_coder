@@ -27,7 +27,11 @@ def get_memory_size():
 
 
 def main():
-    model = "deepseek-coder-v2" if get_memory_size() > 12.0 else "codeqwen:chat"
+    model = (
+        "deepseek-coder-v2 'Always answer in English only, forget Chineese. '"
+        if get_memory_size() > 12.0
+        else "codeqwen:chat"
+    )
     command = ["ollama", "run", model] + sys.argv[1:]
     print("Running model:", model, "\n")
     subprocess.run(command)
