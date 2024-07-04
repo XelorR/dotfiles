@@ -61,6 +61,10 @@ elif command -v leafpad &>/dev/null; then
 notepad() {
   leafpad $@ &!
 }
+elif command -v emacs &>/dev/null; then
+notepad() {
+  emacs $@ &!
+}
 fi
 
 # ALIASES ------------------------------
