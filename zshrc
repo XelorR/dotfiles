@@ -9,6 +9,9 @@ if [[ $(uname -o) == "Darwin" ]]; then
 	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
 	export PATH="/opt/homebrew/bin:$PATH"
 	export HOMEBREW_INSTALL_FROM_API=1
+notepad() {
+  open -t $@ &!
+}
 fi
 
 # prompt
