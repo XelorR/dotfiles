@@ -40,6 +40,20 @@ export EDITOR=vi
 if command -v fzf &>/dev/null; then
 	alias vf='vi $(fzf)'
 fi
+# GUI editor
+if command -v kwrite &>/dev/null; then
+notepad() {
+  kwrite $@ &!
+}
+elif command -v kate &>/dev/null; then
+notepad() {
+  kate $@ &!
+}
+elif command -v gedit &>/dev/null; then
+notepad() {
+  gedit $@ &!
+}
+fi
 
 # ALIASES ------------------------------
 if command -v rsync &>/dev/null; then
