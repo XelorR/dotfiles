@@ -83,6 +83,11 @@ mkcd() {
   mkdir $1 && cd $1
 }
 
+# print ip and share files through http protocol
+www() {
+  ip a | grep -E 'inet .*brd.* scope' | awk -F ' ' '{print $2}' && python3 -m http.server
+}
+
 # start editing executable file
 mkscript() {
   touch $1 && chmod +x $1 && $VISUAL $1
