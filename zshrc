@@ -105,6 +105,11 @@ if command -v tmux &>/dev/null; then
   alias tml='tmux list-sessions'
 fi
 
+# k8s
+if command -v minikube &>/dev/null; then
+  alias kubectl="minikube kubectl --"
+fi
+
 # terminal file manager
 if command -v lf &>/dev/null; then
 	lf() {
