@@ -13,6 +13,14 @@ if [[ $(uname -o) == "Darwin" ]]; then
   notepad() {
     open -t $@ &!
   }
+elif command -v zeditor &>/dev/null; then
+notepad() {
+    zeditor --new $@ &!
+  }
+elif command -v zedit &>/dev/null; then
+notepad() {
+    zedit --new $@ &!
+  }
 elif command -v kwrite &>/dev/null; then
   notepad() {
     kwrite $@ &!
@@ -117,4 +125,3 @@ if command -v lf &>/dev/null; then
 		cd "$(command lf -print-last-dir "$@")"
 	}
 fi
-
