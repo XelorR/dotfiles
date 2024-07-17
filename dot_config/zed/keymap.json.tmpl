@@ -9,6 +9,17 @@
     "context": "vim_mode == insert",
     "bindings": {
       "j j": "vim::NormalBefore", // remap jj in insert mode to escape.
+      "ctrl-p": "editor::MoveUp",
+      "ctrl-n": "editor::MoveDown",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "ctrl-d": "editor::Delete",
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-a": "editor::MoveToBeginningOfLine",
+      "ctrl-k": "editor::DeleteToEndOfLine",
+      "alt-d": "editor::DeleteToNextWordEnd",
+      "alt-f": "editor::MoveToNextWordEnd",
+      "alt-b": "editor::MoveToPreviousWordStart",
       "alt-x": "command_palette::Toggle"
     }
   },
