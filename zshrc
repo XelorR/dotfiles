@@ -132,3 +132,7 @@ if command -v lf &>/dev/null; then
 		cd "$(command lf -print-last-dir "$@")"
 	}
 fi
+
+if [ -f /data/data/com.termux/files/usr/bin/termux-camera-photo ]; then
+  export PATH=/data/data/com.termux/files/usr/bin:$PATH
+fi
