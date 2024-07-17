@@ -6,7 +6,9 @@ fi
 export PATH="$HOME/.local/bin:$HOME/.anaconda3/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH"
 
 if [[ $(uname -o) == "Darwin" ]]; then
-	alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+  if [ -f "/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm" ]; then
+	  alias charm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm'
+  fi
 	export PATH="/opt/homebrew/bin:$PATH"
 	export HOMEBREW_INSTALL_FROM_API=1
   # GUI editor
