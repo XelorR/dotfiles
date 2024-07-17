@@ -88,7 +88,14 @@ alias notemd="$VISUAL $HOME/org/pages/$(date +%Y%m%d%H%M%S).md $HOME/org/journal
 
 # create directory and cd into it
 mkcd() {
-  mkdir $1 && cd $1
+    local dir=$1
+    # Check if the directory already exists
+    if [[ -d "$dir" ]]; then
+        cd "$dir" || return 1
+    else
+        # Create the directory and change to it
+        mkdir -p "$dir" && cd "$dir" || return 1
+    fi
 }
 
 # print ip and share files through http protocol
