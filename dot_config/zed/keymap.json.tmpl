@@ -4,5 +4,38 @@
     "bindings": {
       "ctrl-alt-v": "workspace::ToggleVimMode"
     }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape.
+      "alt-x": "command_palette::Toggle",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "space q q": "workspace::CloseWindow",
+      "space space": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::Save",
+      "space f r": "projects::OpenRecent",
+      "space f t": "terminal_panel::ToggleFocus",
+      "space b d": "pane::CloseActiveItem",
+      "space b n": "pane::ActivateNextItem",
+      "space b p": "pane::ActivatePrevItem",
+      "alt-x": "command_palette::Toggle",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePrevItem",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
   }
 ]
