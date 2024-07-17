@@ -1,0 +1,55 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "vim_mode": true,
+  "ui_font_size": 13,
+  "buffer_font_size": 13,
+  "buffer_font_family": "Liga SFMono Nerd Font",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  // "indent_guides": {
+  //   "enabled": true,
+  //   "coloring": "indent_aware"
+  // },
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "name": "openai",
+      "type": "openai",
+      "default_model": "gpt-4-turbo-preview",
+      "api_url": "http://localhost:11434/v1"
+    }
+  },
+  "languages": {
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      },
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": "/usr/bin/python3"
+        }
+      }
+    }
+  }
+}
