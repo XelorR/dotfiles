@@ -18,11 +18,13 @@ notepad() {
     zeditor --new $@ &!
   }
   alias zed=zeditor
+  alias zn=notepad
 elif command -v zedit &>/dev/null; then
 notepad() {
     zedit --new $@ &!
   }
   alias zed=zedit
+  alias zn=notepad
 elif command -v kwrite &>/dev/null; then
   notepad() {
     kwrite $@ &!
