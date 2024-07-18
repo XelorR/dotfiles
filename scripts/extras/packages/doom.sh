@@ -7,4 +7,4 @@ mkdir -p ~/.opt/doom
 
 echo Done!
 echo Now you can run Doom Emacs using the following command:
-echo '( HOME=$HOME/.opt/doom; emacs &! )'
+echo '( HOME=$HOME/.opt/doom; emacs --daemon )'
