@@ -6,5 +6,9 @@ mkdir -p ~/.opt/doom
 ( HOME=$HOME/.opt/doom; ~/.config/emacs/bin/doom install --env -! )
 
 echo Done!
+echo
 echo Now you can run Doom Emacs using the following command:
-echo '( HOME=$HOME/.opt/doom; emacs --daemon )'
+echo '  ( HOME=$HOME/.opt/doom; emacs --daemon )'
+echo
+echo To sync your configs, do the following:
+echo '  ( HOME=$HOME/.opt/doom; ~/.config/emacs/bin/doom sync )'
