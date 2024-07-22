@@ -1,9 +1,30 @@
 #!/usr/bin/env bash
 
 rm -rf ~/.opt/doom
-mkdir -p ~/.opt/doom
-( HOME=$HOME/.opt/doom; git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs )
-( HOME=$HOME/.opt/doom; ~/.config/emacs/bin/doom install --env -! )
+mkdir -p ~/.opt/doom ~/.local/bin
+
+(
+  HOME=$HOME/.opt/doom
+  git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+)
+(
+  HOME=$HOME/.opt/doom
+  ~/.config/emacs/bin/doom install --env -!
+)
+
+sh -c 'cat << EOF > ~/.local/bin/doom
+#!/usr/bin/env bash
+
+( HOME=$HOME/.opt/doom; emacs $@ ) &!
+EOF'
+chmod +x ~/.local/bin/doom
+
+if ! grep -q '.local/bin' $HOME/.bashrc; then
+  echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
+fi
+if ! grep -q '.local/bin' $HOME/.zshrc; then
+  echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.zshrc
+fi
 
 echo Done!
 echo
