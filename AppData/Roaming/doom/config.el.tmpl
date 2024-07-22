@@ -120,3 +120,8 @@
          :target (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}") :unnarrowed t)))
 (org-roam-db-autosync-mode)
+
+;; Set the system locale to US English
+(set-locale-environment "en_US.UTF-8")
+;; Ensure that Org-Mode uses the US locale
+(setq system-time-locale "C")
