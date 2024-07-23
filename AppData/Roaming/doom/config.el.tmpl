@@ -125,3 +125,12 @@
 (set-locale-environment "en_US.UTF-8")
 ;; Ensure that Org-Mode uses the US locale
 (setq system-time-locale "C")
+
+;; Navigation
+(map! :n "H" #'previous-buffer
+      :n "L" #'next-buffer
+      :n "C-h" #'evil-window-left
+      :n "C-j" #'evil-window-down
+      :n "C-k" #'evil-window-up
+      :n "C-l" #'evil-window-right
+      )
