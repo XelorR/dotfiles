@@ -11,7 +11,7 @@ mkdir -p ~/.opt/spacemacs ~/.local/bin
 sh -c 'cat << EOF > ~/.local/bin/spacemacs
 #!/usr/bin/env bash
 
-( HOME=$HOME/.opt/spacemacs; emacs $@ ) &!
+( HOME=$HOME/.opt/spacemacs; emacs $@ )
 EOF'
 chmod +x ~/.local/bin/spacemacs
 

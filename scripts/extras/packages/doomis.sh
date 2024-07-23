@@ -15,7 +15,7 @@ mkdir -p ~/.opt/doom ~/.local/bin
 sh -c 'cat << EOF > ~/.local/bin/doom
 #!/usr/bin/env bash
 
-( HOME=$HOME/.opt/doom; emacs $@ ) &!
+( HOME=$HOME/.opt/doom; emacs $@ )
 EOF'
 chmod +x ~/.local/bin/doom
 
