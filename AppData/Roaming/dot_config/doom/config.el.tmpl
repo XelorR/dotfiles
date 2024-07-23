@@ -39,6 +39,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type nil)
 
+{{ if ne .chezmoi.os "windows" -}}
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "{{ .chezmoi.homeDir }}{{ if eq .chezmoi.os "windows" }}\\{{ else }}/{{ end }}org/")
@@ -49,6 +50,7 @@
   (setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)"
                              "|" "DONE(d)" "KILL(k)" "CANCELED(c)")))
   (setq org-todo-keywords-for-agenda '((sequence "TODO" "HOLD" "|" "DONE" "KILL" "CANCELED"))))
+{{ end -}}
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -94,7 +96,7 @@
 (delete-selection-mode t)
 (global-visual-line-mode t)
 
-; (setq which-key-idle-delay 0.0)
+                                        ; (setq which-key-idle-delay 0.0)
 
 (setq evil-split-window-below t)
 (setq evil-vsplit-window-right t)
@@ -104,6 +106,7 @@
 (setq mac-command-modifier 'meta)
 {{ end -}}
 
+{{ if ne .chezmoi.os "windows" -}}
 (setq org-roam-directory (file-truename org-directory))
 (setq org-roam-file-exclude-regexp (concat org-directory "logseq/.*"))
 (setq org-logseq-dir (file-truename org-directory))
@@ -120,6 +123,7 @@
          :target (file+head "pages/%<%Y%m%d%H%M%S>-${slug}.org"
                             "#+title: ${title}") :unnarrowed t)))
 (org-roam-db-autosync-mode)
+{{ end -}}
 
 ;; Set the system locale to US English
 (set-locale-environment "en_US.UTF-8")
