@@ -27,6 +27,24 @@ echo '  ( HOME=$HOME/.opt/doom; ~/.config/emacs/bin/doom sync )'
 
 (
   HOME=$HOME/.opt/doom
+
   git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
   ~/.config/emacs/bin/doom install --env -!
+
+  cat <<'EOF' >~/.config/doom/config.el
+
+;; Set the system locale to US English
+(set-locale-environment "en_US.UTF-8")
+(setq system-time-locale "C")
+
+;; Navigation
+(map! :n "H" #'previous-buffer
+      :n "L" #'next-buffer
+      :n "C-h" #'evil-window-left
+      :n "C-j" #'evil-window-down
+      :n "C-k" #'evil-window-up
+      :n "C-l" #'evil-window-right
+      )
+EOF
+
 )
