@@ -8,11 +8,11 @@ mkdir -p ~/.opt/spacemacs ~/.local/bin
   git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 )
 
-sh -c 'cat << EOF > ~/.local/bin/spacemacs
+cat <<'EOF' >~/.local/bin/spacemacs
 #!/usr/bin/env bash
 
 ( HOME=$HOME/.opt/spacemacs; emacs $@ )
-EOF'
+EOF
 chmod +x ~/.local/bin/spacemacs
 
 if ! grep -q '.local/bin' $HOME/.bashrc; then
