@@ -28,8 +28,5 @@ echo '  ( HOME=$HOME/.opt/doom; ~/.config/emacs/bin/doom sync )'
 (
   HOME=$HOME/.opt/doom
   git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-)
-(
-  HOME=$HOME/.opt/doom
   ~/.config/emacs/bin/doom install --env -!
 )
