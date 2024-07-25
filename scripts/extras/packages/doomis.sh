@@ -3,11 +3,11 @@
 rm -rf ~/.opt/doom
 mkdir -p ~/.opt/doom ~/.local/bin
 
-sh -c 'cat << EOF > ~/.local/bin/doom
+cat <<'EOF' >~/.local/bin/doom
 #!/usr/bin/env bash
 
 ( HOME=$HOME/.opt/doom; emacs $@ )
-EOF'
+EOF
 chmod +x ~/.local/bin/doom
 
 if ! grep -q '.local/bin' $HOME/.bashrc; then
