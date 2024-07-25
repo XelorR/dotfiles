@@ -5,4 +5,4 @@ if "%~1" == "--help" (
     exit /b 0
 )
 
-ollama run qwen2:7b-instruct %*
+ollama run llama3.1 %*
