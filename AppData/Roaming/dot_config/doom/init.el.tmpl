@@ -159,9 +159,9 @@
        plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        {{ if ne .chezmoi.os "android" -}}
-       (python +lsp +pyright +conda +pyenv)  ; beautiful is better than ugly
+       (python +lsp +tree-sitter +poetry +pyright +conda +pyenv)  ; beautiful is better than ugly
        {{ else -}}
-       (python +lsp +pyright +pyenv)  ; beautiful is better than ugly
+       (python +lsp +tree-sitter +poetry +pyright +pyenv)  ; beautiful is better than ugly
        {{ end -}}
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
