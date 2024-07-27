@@ -74,6 +74,9 @@ if command -v emacs &>/dev/null; then
 	alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
 	alias macs="emacsclient -a '' -c -nw"
 fi
+if command -v lazyvim &>/dev/null; then
+	alias lv='lazyvim'
+fi
 if command -v nvim &>/dev/null; then
 	export VISUAL=nvim
 	alias vi='nvim --clean'
@@ -81,6 +84,9 @@ fi
 export EDITOR=vi
 if command -v fzf &>/dev/null; then
 	alias vf='vi $(fzf)'
+  if command -v lazyvim &>/dev/null; then
+    alias lvf='lv $(fzf)'
+  fi
 fi
 
 # ALIASES ------------------------------
@@ -89,8 +95,17 @@ if command -v rsync &>/dev/null; then
 fi
 
 # edit today note
-alias note="$VISUAL $HOME/org/journals/$(date +%Y_%m_%d).org"
-alias notemd="$VISUAL $HOME/org/pages/$(date +%Y%m%d%H%M%S).md $HOME/org/journals/$(date +%Y_%m_%d).org"
+if command -v doom &>/dev/null; then
+  export NOTE_EDITOR='doom -nw'
+elif command -v spacemacs &>/dev/null; then
+  export NOTE_EDITOR='spacemacs -nw'
+elif command -v nvim &>/dev/null; then
+  export NOTE_EDITOR='nvim'
+else
+  export NOTE_EDITOR='vi'
+fi
+alias note="$NOTE_EDITOR $HOME/org/journals/$(date +%Y_%m_%d).org"
+alias notemd="$NOTE_EDITOR $HOME/org/pages/$(date +%Y%m%d%H%M%S).md $HOME/org/journals/$(date +%Y_%m_%d).org"
 
 # create directory and cd into it
 mkcd() {
