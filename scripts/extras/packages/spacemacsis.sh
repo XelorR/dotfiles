@@ -2,6 +2,9 @@
 
 rm -rf ~/.opt/spacemacs
 mkdir -p ~/.opt/spacemacs ~/.local/bin
+if [ -f ~/.gitconfig ]; then
+  ln -s ~/.gitconfig ~/.opt/spacemacs/.gitconfig
+fi
 
 (
   HOME=$HOME/.opt/spacemacs

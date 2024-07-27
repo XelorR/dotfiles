@@ -22,6 +22,9 @@ fi
 
 rm -rf ~/.opt/lazyvim
 mkdir -p ~/.opt/lazyvim ~/.local/bin
+if [ -f ~/.gitconfig ]; then
+  ln -s ~/.gitconfig ~/.opt/lazyvim/.gitconfig
+fi
 
 cat <<'EOF' >~/.local/bin/lazyvim
 #!/usr/bin/env bash

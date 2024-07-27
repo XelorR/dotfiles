@@ -2,6 +2,9 @@
 
 rm -rf ~/.opt/doom
 mkdir -p ~/.opt/doom ~/.local/bin
+if [ -f ~/.gitconfig ]; then
+  ln -s ~/.gitconfig ~/.opt/doom/.gitconfig
+fi
 
 cat <<'EOF' >~/.local/bin/doom
 #!/usr/bin/env bash
