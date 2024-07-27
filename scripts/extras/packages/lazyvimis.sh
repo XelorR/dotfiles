@@ -47,6 +47,20 @@ return {
     },
 }
 EOF
+  cat <<'EOF' >~/.config/nvim/lua/config/keymaps.lua
+-- Return to normal mode
+vim.keymap.set("i", "jj", "<Esc>", { silent = true })
+vim.keymap.set("t", "jj", "<C-\\><C-n>", { silent = true })
+
+-- Files and windows
+vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save buffer" })
+vim.keymap.set("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this file" })
+vim.keymap.set("n", "<leader>wo", "<C-w>o", { noremap = true, desc = "Delete other windows" })
+
+--- Run command
+vim.keymap.set("i", "<M-x>", "<Esc>:")
+vim.keymap.set("n", "<M-x>", ":")
+EOF
 
   cat <<'EOF' >~/.config/nvim/lua/plugins/iron.lua
 return {
