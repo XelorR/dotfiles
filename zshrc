@@ -76,6 +76,7 @@ if command -v emacs &>/dev/null; then
 fi
 if command -v lazyvim &>/dev/null; then
 	alias lv='lazyvim'
+	alias slv='sudo ~/.local/bin/lazyvim'
 fi
 if command -v nvim &>/dev/null; then
 	export VISUAL=nvim
