@@ -49,6 +49,7 @@ return {
         stages = "static",
     },
 }
+
 EOF
   cat <<'EOF' >~/.config/nvim/lua/config/keymaps.lua
 -- Return to normal mode
