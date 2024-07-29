@@ -20,22 +20,15 @@ if ! command -v nvim &>/dev/null; then
   fi
 fi
 
-rm -rf ~/.opt/nvchad
-mkdir -p ~/.opt/nvchad ~/.local/bin
-if [ -f ~/.gitconfig ]; then
-  ln -s ~/.gitconfig ~/.opt/nvchad/.gitconfig
-fi
+rm -rf ~/.config/nvchad
+mkdir -p ~/.config/nvchad ~/.local/bin
 
 cat <<'EOF' >~/.local/bin/nvchad
 #!/usr/bin/env bash
 
-( HOME=$HOME/.opt/nvchad; nvim $@ )
+( NVIM_APPNAME=nvchad nvim $@ )
 EOF
 chmod +x ~/.local/bin/nvchad
 
-(
-  HOME=$HOME/.opt/nvchad
-
-  git clone https://github.com/NvChad/starter ~/.config/nvim
-  rm -rf ~/.config/nvim/.git
-)
+git clone https://github.com/NvChad/starter ~/.config/nvchad
+rm -rf ~/.config/nvchad/.git
