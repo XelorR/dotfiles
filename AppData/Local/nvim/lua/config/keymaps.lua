@@ -2,53 +2,57 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local map = vim.keymap.set
+local del = vim.keymap.del
+
 -- Return to normal mode
-vim.keymap.set("i", "jj", "<Esc>", { silent = true })
-vim.keymap.set("t", "jj", "<C-\\><C-n>", { silent = true })
+map("i", "jj", "<Esc>", { silent = true })
+map("t", "jj", "<C-\\><C-n>", { silent = true })
+map("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 
 -- Files and windows
-vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save buffer" })
-vim.keymap.set("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this file" })
-vim.keymap.set("n", "<leader>wo", "<C-w>o", { noremap = true, desc = "Delete other windows" })
+map("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save buffer" })
+map("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this file" })
+map("n", "<leader>wo", "<C-w>o", { noremap = true, desc = "Delete other windows" })
 
 -- Org Babel
-vim.keymap.set("n", "<leader>obe", "<cmd>OrgE!<cr>", { noremap = true, desc = "Babel Execute" })
-vim.keymap.set("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "Babel Tangle" })
+map("n", "<leader>obe", "<cmd>OrgE!<cr>", { noremap = true, desc = "Babel Execute" })
+map("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "Babel Tangle" })
 
 -- NeoGit
--- vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
--- vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
+-- map("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
+-- map("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
 
 -- Gen.nvim
-vim.keymap.set({ "n", "v" }, "<leader>oo", ":Gen<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
+map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
+map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 
 -- Yank file name
-vim.keymap.set("n", "<leader>fy", '<cmd>let @" = expand("%:t")<cr>', { noremap = true, desc = "Yank file name" })
+map("n", "<leader>fy", '<cmd>let @" = expand("%:t")<cr>', { noremap = true, desc = "Yank file name" })
 
 -- Emacs-like --
 
 --- Navigation
-vim.keymap.set("!", "<C-b>", "<Left>", { silent = true })
-vim.keymap.set("!", "<C-f>", "<Right>", { silent = true })
-vim.keymap.set("i", "<C-p>", "<Up>", { silent = true })
-vim.keymap.set("i", "<C-n>", "<Down>", { silent = true })
-vim.keymap.set("!", "<C-a>", "<Home>", { silent = true })
-vim.keymap.set("!", "<C-e>", "<End>", { silent = true })
-vim.keymap.set("i", "<M-a>", "<C-o>(", { silent = true })
-vim.keymap.set("i", "<M-e>", "<C-o>)", { silent = true })
-vim.keymap.set("i", "<M-b>", "<C-Left>", { silent = true })
-vim.keymap.set("c", "<M-b>", "<S-Left>", { silent = true })
-vim.keymap.set("i", "<M-f>", "<C-o>e<Right>", { silent = true })
-vim.keymap.set("c", "<M-f>", "<S-Right>", { silent = true })
-vim.keymap.set("i", "<M-v>", "<PageUp>", { silent = true })
-vim.keymap.set("i", "<C-v>", "<PageDown>", { silent = true })
+map("!", "<C-b>", "<Left>", { silent = true })
+map("!", "<C-f>", "<Right>", { silent = true })
+map("i", "<C-p>", "<Up>", { silent = true })
+map("i", "<C-n>", "<Down>", { silent = true })
+map("!", "<C-a>", "<Home>", { silent = true })
+map("!", "<C-e>", "<End>", { silent = true })
+map("i", "<M-a>", "<C-o>(", { silent = true })
+map("i", "<M-e>", "<C-o>)", { silent = true })
+map("i", "<M-b>", "<C-Left>", { silent = true })
+map("c", "<M-b>", "<S-Left>", { silent = true })
+map("i", "<M-f>", "<C-o>e<Right>", { silent = true })
+map("c", "<M-f>", "<S-Right>", { silent = true })
+map("i", "<M-v>", "<PageUp>", { silent = true })
+map("i", "<C-v>", "<PageDown>", { silent = true })
 --- Copy & Paste
-vim.keymap.set("!", "<C-d>", "<Del>", { silent = true })
+map("!", "<C-d>", "<Del>", { silent = true })
 --- Editing
-vim.keymap.set("!", "<M-BS>", "<C-w>", { silent = true })
-vim.keymap.set("i", "<C-BS>", "<C-w>", { silent = true })
-vim.keymap.set("i", "<C-k>", function()
+map("!", "<M-BS>", "<C-w>", { silent = true })
+map("i", "<C-BS>", "<C-w>", { silent = true })
+map("i", "<C-k>", function()
   local col = vim.api.nvim_win_get_cursor(0)[2]
   local line = vim.api.nvim_get_current_line()
   if #line <= col then
@@ -56,8 +60,8 @@ vim.keymap.set("i", "<C-k>", function()
   end
   return "<C-o>dw"
 end, { silent = true, expr = true })
-vim.keymap.set("c", "<C-k>", "<C-f>d$<C-c><End>", { silent = true })
-vim.keymap.set("i", "<M-d>", function()
+map("c", "<C-k>", "<C-f>d$<C-c><End>", { silent = true })
+map("i", "<M-d>", function()
   local col = vim.api.nvim_win_get_cursor(0)[2]
   local line = vim.api.nvim_get_current_line()
   if #line <= col then
@@ -65,10 +69,10 @@ vim.keymap.set("i", "<M-d>", function()
   end
   return "<C-o>d$"
 end, { silent = true, expr = true })
-vim.keymap.set("i", "<M-k>", "<C-o>d)", { silent = true })
+map("i", "<M-k>", "<C-o>d)", { silent = true })
 --- Run command
-vim.keymap.set("i", "<M-x>", "<Esc>:")
-vim.keymap.set("n", "<M-x>", ":")
+map("i", "<M-x>", "<Esc>:")
+map("n", "<M-x>", ":")
 --- Run external command
-vim.keymap.set("i", "<M-!>", "<Esc>:!")
-vim.keymap.set("n", "<M-!>", ":!")
+map("i", "<M-!>", "<Esc>:!")
+map("n", "<M-!>", ":!")
