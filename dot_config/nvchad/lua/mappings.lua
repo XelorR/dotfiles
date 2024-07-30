@@ -80,6 +80,12 @@ map("t", "<M-x>", "<C-\\><C-n>:")
 map("i", "<M-x>", "<Esc>:")
 map({ "n", "v" }, "<M-x>", ":")
 
+-- plugins
+-- iron
+-- map("n", "<leader>ris", function()
+-- 	require("iron.nvim").IronRepl()
+-- end, { desc = "start REPL" })
+
 -- overridings
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
 del("n", "<leader>b")
