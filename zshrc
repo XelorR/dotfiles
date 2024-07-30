@@ -100,6 +100,8 @@ if command -v doom &>/dev/null; then
   export NOTE_EDITOR='doom -nw'
 elif command -v spacemacs &>/dev/null; then
   export NOTE_EDITOR='spacemacs -nw'
+elif command -v nvchad &>/dev/null; then
+  export NOTE_EDITOR='nvchad'
 elif command -v nvim &>/dev/null; then
   export NOTE_EDITOR='nvim'
 else
