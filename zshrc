@@ -74,12 +74,12 @@ if command -v emacs &>/dev/null; then
 	alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
 	alias macs="emacsclient -a '' -c -nw"
 fi
-if command -v lazyvim &>/dev/null; then
-	alias lv='lazyvim'
-	alias slv='sudo ~/.local/bin/lazyvim'
-fi
 if command -v nvim &>/dev/null; then
-	export VISUAL=nvim
+  if command -v nvchad &>/dev/null; then
+	  export VISUAL=nvchad
+  else
+	  export VISUAL=nvim
+  fi
 	alias vi='nvim --clean'
 fi
 export EDITOR=vi
