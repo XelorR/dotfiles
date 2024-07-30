@@ -21,15 +21,33 @@ map("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this
 map("n", "<leader>qq", "<cmd>qa<cr>", { noremap = true, desc = "quit" })
 
 -- buffers
-map({ "n", "v" }, "H", "<cmd>bp!<cr>", { noremap = true, desc = "previous buffer" })
-map({ "n", "v" }, "L", "<cmd>bn!<cr>", { noremap = true, desc = "next buffer" })
 map("n", "<leader><tab>", "<cmd>b#<cr>", { noremap = true, desc = "previously active buffer" })
-map("n", "<leader>bp", "<cmd>bp!<cr>", { noremap = true, desc = "previous buffer" })
-map("n", "<leader>bn", "<cmd>bn!<cr>", { noremap = true, desc = "next buffer" })
-map("n", "<leader>bo", "<cmd>%bd|e#|bd#<cr>", { noremap = true, desc = "delete other buffers" })
-map("n", "<leader>bd", "<cmd>bd!<cr>", { noremap = true, desc = "delete buffer" })
-map("n", "<leader>bk", "<cmd>bd!<cr>", { noremap = true, desc = "delete buffer" })
 map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
+map("n", "<leader>bo", "<cmd>%bd|e#|bd#<cr>", { noremap = true, desc = "delete other buffers" })
+
+map("n", "L", function()
+  require("nvchad.tabufline").next()
+end, { desc = "buffer goto next" })
+
+map("n", "H", function()
+  require("nvchad.tabufline").prev()
+end, { desc = "buffer goto prev" })
+
+map("n", "<leader>bn", function()
+  require("nvchad.tabufline").next()
+end, { desc = "buffer goto next" })
+
+map("n", "<leader>bp", function()
+  require("nvchad.tabufline").prev()
+end, { desc = "buffer goto prev" })
+
+map("n", "<leader>bd", function()
+  require("nvchad.tabufline").close_buffer()
+end, { desc = "buffer close" })
+
+map("n", "<leader>bk", function()
+  require("nvchad.tabufline").close_buffer()
+end, { desc = "buffer close" })
 
 -- windows
 map("n", "<leader>ww", "<C-w><C-w>", { desc = "cycle windows" })
