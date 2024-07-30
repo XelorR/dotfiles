@@ -76,6 +76,7 @@ map("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "switch window down" })
 map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "switch window up" })
 
 -- run command
+map("t", "<M-x>", "<C-\\><C-n>:")
 map("i", "<M-x>", "<Esc>:")
 map({ "n", "v" }, "<M-x>", ":")
 
