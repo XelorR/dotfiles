@@ -19,6 +19,7 @@ map("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "save buffer" })
 map("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "telescope find oldfiles" })
 map("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this file" })
 map("n", "<leader>qq", "<cmd>qa<cr>", { noremap = true, desc = "quit" })
+map("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 
 -- buffers
 map("n", "<leader><tab>", "<cmd>b#<cr>", { noremap = true, desc = "previously active buffer" })
