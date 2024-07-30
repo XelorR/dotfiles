@@ -67,7 +67,6 @@ map("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 -- Files and windows
 map("n", "<leader>fs", "<cmd>w<cr>", { noremap = true, desc = "Save buffer" })
 map("n", "<leader>cd", "<cmd>cd %:p:h<cr>", { noremap = true, desc = "cd to this file" })
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader><tab>", "<cmd>b#<cr>", { noremap = true, desc = "Previously active buffer" })
 map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 map("n", "<leader>wd", "<C-w>q", { desc = "Close window" })
