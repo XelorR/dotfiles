@@ -116,4 +116,37 @@ return {
 			require("telescope").load_extension("lazygit")
 		end,
 	},
+	{
+		"nvim-orgmode/orgmode",
+		lazy = true,
+		dependencies = {
+			{ "nvim-treesitter/nvim-treesitter", lazy = true },
+		},
+		event = "VeryLazy",
+		config = function()
+			-- Setup treesitter
+			require("nvim-treesitter.configs").setup({
+				highlight = {
+					enable = true,
+					additional_vim_regex_highlighting = { "org" },
+				},
+				ensure_installed = { "org" },
+			})
+			-- Setup orgmode
+			require("orgmode").setup({
+				org_agenda_files = "~/org/*/*.org",
+				org_default_notes_file = "~/org/pages/refile.org",
+				org_hide_leading_stars = true,
+				org_blank_before_new_entry = { heading = false, plain_list_item = false },
+				org_startup_indented = false,
+				org_edit_src_content_indentation = 2,
+				win_split_mode = "auto",
+				org_highlight_latex_and_related = "entities",
+				org_agenda_span = "day",
+				org_agenda_start_on_weekday = false,
+				org_todo_keywords = { "TODO", "DOING", "|", "DONE", "CANCELED" },
+				-- org_startup_folded = "showeverything",
+			})
+		end,
+	},
 }
