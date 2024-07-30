@@ -16,8 +16,8 @@ vim.keymap.set("n", "<leader>obe", "<cmd>OrgE!<cr>", { noremap = true, desc = "B
 vim.keymap.set("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "Babel Tangle" })
 
 -- NeoGit
-vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
-vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
+-- vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
+-- vim.keymap.set("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
 
 -- Gen.nvim
 vim.keymap.set({ "n", "v" }, "<leader>oo", ":Gen<CR>")
