@@ -18,12 +18,13 @@ map("n", "<leader><tab>", "<cmd>b#<cr>", { noremap = true, desc = "Previously ac
 map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 map("n", "<leader>wd", "<C-w>q", { desc = "Close window" })
 map("n", "<leader>wo", "<C-w>o", { desc = "Close other windows" })
+-- del("n", "<leader>wh")
+-- del("n", "<leader>wj")
+-- del("n", "<leader>wk")
+-- del("n", "<leader>wl")
+-- map("n", "<leader>wh", "<C-w>s", { desc = "Split window horisontally" })
 map("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
 map("n", "<leader>ws", "<C-w>s", { desc = "Split window horisontally" })
-map("n", "<leader>wh", "<C-w>s", { desc = "Split window horisontally" })
-del("n", "<leader>wj")
-del("n", "<leader>wk")
-del("n", "<leader>wl")
 
 -- Org Babel
 map("n", "<leader>obe", "<cmd>OrgE!<cr>", { noremap = true, desc = "Babel Execute" })
