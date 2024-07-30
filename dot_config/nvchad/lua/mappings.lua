@@ -3,6 +3,7 @@ require "nvchad.mappings"
 -- add yours here
 
 local map = vim.keymap.set
+local del = vim.keymap.del
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
@@ -50,4 +51,4 @@ map("n", "<M-x>", ":")
 
 -- overridings
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
-vim.keymap.del("n", "<leader>b")
+del("n", "<leader>b")
