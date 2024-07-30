@@ -88,6 +88,8 @@ map({ "n", "v" }, "<M-x>", ":")
 -- gen.nvim
 map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
 map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
+-- lazygit
+map({ "n", "v" }, "<leader>gg", ":LazyGitCurrentFile<CR>")
 
 -- overridings
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
