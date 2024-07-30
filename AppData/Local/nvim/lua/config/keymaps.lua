@@ -18,21 +18,12 @@ map("n", "<leader><tab>", "<cmd>b#<cr>", { noremap = true, desc = "Previously ac
 map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 map("n", "<leader>wd", "<C-w>q", { desc = "Close window" })
 map("n", "<leader>wo", "<C-w>o", { desc = "Close other windows" })
--- del("n", "<leader>wh")
--- del("n", "<leader>wj")
--- del("n", "<leader>wk")
--- del("n", "<leader>wl")
--- map("n", "<leader>wh", "<C-w>s", { desc = "Split window horisontally" })
 map("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
 map("n", "<leader>ws", "<C-w>s", { desc = "Split window horisontally" })
 
 -- Org Babel
 map("n", "<leader>obe", "<cmd>OrgE!<cr>", { noremap = true, desc = "Babel Execute" })
 map("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "Babel Tangle" })
-
--- NeoGit
--- map("n", "<leader>gn", "<cmd>Neogit<cr>", { noremap = true, desc = "Neogit status (root dir)" })
--- map("n", "<leader>gN", "<cmd>Neogit cwd=%:p:h<cr>", { noremap = true, desc = "Neogit status (cwd)" })
 
 -- Gen.nvim
 map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
