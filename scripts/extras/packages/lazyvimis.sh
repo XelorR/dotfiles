@@ -29,18 +29,18 @@ fi
 cat <<'EOF' >~/.local/bin/lazyvim
 #!/usr/bin/env bash
 
-( HOME=$HOME/.opt/lazyvim; nvim $@ )
+( NVIM_APPNAME=lazyvim nvim $@ )
 EOF
 chmod +x ~/.local/bin/lazyvim
 
 (
-  HOME=$HOME/.opt/lazyvim
+  NVIM_APPNAME=lazyvim
 
-  git clone https://github.com/LazyVim/starter ~/.config/nvim
-  rm -rf ~/.config/nvim/.git
+  git clone https://github.com/LazyVim/starter ~/.config/lazyvim
+  rm -rf ~/.config/lazyvim/.git
 
-  mkdir -p ~/.config/nvim/lua/plugins
-  cat <<'EOF' >~/.config/nvim/lua/plugins/nvim-notify.lua
+  mkdir -p ~/.config/lazyvim/lua/plugins
+  cat <<'EOF' >~/.config/lazyvim/lua/plugins/nvim-notify.lua
 return {
     "rcarriga/nvim-notify",
     opts = {
@@ -51,7 +51,7 @@ return {
 }
 
 EOF
-  cat <<'EOF' >~/.config/nvim/lua/config/keymaps.lua
+  cat <<'EOF' >~/.config/lazyvim/lua/config/keymaps.lua
 -- Return to normal mode
 vim.keymap.set("i", "jj", "<Esc>", { silent = true })
 vim.keymap.set("t", "jj", "<C-\\><C-n>", { silent = true })
@@ -66,7 +66,7 @@ vim.keymap.set("i", "<M-x>", "<Esc>:")
 vim.keymap.set("n", "<M-x>", ":")
 EOF
 
-  cat <<'EOF' >~/.config/nvim/lua/plugins/iron.lua
+  cat <<'EOF' >~/.config/lazyvim/lua/plugins/iron.lua
 return {
   {
     "hkupty/iron.nvim",
