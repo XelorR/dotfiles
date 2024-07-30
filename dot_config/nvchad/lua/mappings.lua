@@ -85,6 +85,9 @@ map({ "n", "v" }, "<M-x>", ":")
 -- map("n", "<leader>ris", function()
 -- 	require("iron.nvim").IronRepl()
 -- end, { desc = "start REPL" })
+-- gen.nvim
+map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
+map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 
 -- overridings
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
