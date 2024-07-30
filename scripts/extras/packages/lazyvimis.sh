@@ -96,8 +96,8 @@ map("c", "<M-f>", "<S-Right>", { silent = true })
 map("i", "<M-v>", "<PageUp>", { silent = true })
 map("i", "<C-v>", "<PageDown>", { silent = true })
 --- Copy & Paste
-map("!", "<C-d>", "<Del>", { silent = true })
 --- Editing
+map("!", "<C-d>", "<Del>", { silent = true })
 map("!", "<M-BS>", "<C-w>", { silent = true })
 map("i", "<C-BS>", "<C-w>", { silent = true })
 map("i", "<C-k>", function()
