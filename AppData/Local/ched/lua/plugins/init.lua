@@ -36,7 +36,8 @@ return {
 
 	{
 		"hkupty/iron.nvim",
-		lazy = false,
+		-- lazy = false,
+    event = "VeryLazy",
 		config = function()
 			local iron = require("iron.core")
 			iron.setup({
@@ -87,7 +88,8 @@ return {
 	},
 	{
 		"David-Kunz/gen.nvim",
-		lazy = false,
+		-- lazy = false,
+    event = "VeryLazy",
 		opts = {
 			model = "deepseek-coder-v2", -- The default model to use.
 			host = "localhost", -- The host running the Ollama service.
@@ -118,7 +120,8 @@ return {
 	},
 	{
 		"kdheepak/lazygit.nvim",
-		lazy = false,
+		-- lazy = false,
+    event = "VeryLazy",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"nvim-lua/plenary.nvim",
