@@ -1,5 +1,6 @@
 return {
   "David-Kunz/gen.nvim",
+  event = "VeryLazy",
   opts = {
     model = "codeqwen:chat", -- The default model to use.
     host = "localhost", -- The host running the Ollama service.

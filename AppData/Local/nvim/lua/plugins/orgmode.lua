@@ -1,6 +1,7 @@
 return {
   {
     "nvim-orgmode/orgmode",
+    event = "VeryLazy",
     dependencies = {
       { "nvim-treesitter/nvim-treesitter", lazy = true },
     },
