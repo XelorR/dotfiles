@@ -95,10 +95,10 @@ map("n", "<leader>wo", "<C-w>o", { desc = "close other windows" })
 map("n", "<leader>ws", "<C-w>s", { desc = "split window horisontally" })
 map("n", "<leader>wh", "<C-w>s", { desc = "split window horisontally" })
 map("n", "<leader>wv", "<C-w>v", { desc = "split window vertically" })
-map("n", "<C-left>", "<cmd>vert res -5<cr>")
-map("n", "<C-right>", "<cmd>vert res +5<cr>")
-map("n", "<C-down>", "<cmd>res -5<cr>")
-map("n", "<C-up>", "<cmd>res +5<cr>")
+map("n", "<C-left>", "<cmd>vert res -2<cr>")
+map("n", "<C-right>", "<cmd>vert res +2<cr>")
+map("n", "<C-down>", "<cmd>res -2<cr>")
+map("n", "<C-up>", "<cmd>res +2<cr>")
 map({ "n", "v" }, "<C-h>", "<C-w>h", { desc = "switch window left" })
 map({ "n", "v" }, "<C-l>", "<C-w>l", { desc = "switch window right" })
 map({ "n", "v" }, "<C-j>", "<C-w>j", { desc = "switch window down" })
@@ -112,10 +112,52 @@ map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "switch window right" })
 map("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "switch window down" })
 map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "switch window up" })
 
--- run command
+-- Emacs-like --
+--- Navigation
+map("!", "<C-b>", "<Left>", { silent = true })
+map("!", "<C-f>", "<Right>", { silent = true })
+map("i", "<C-p>", "<Up>", { silent = true })
+map("i", "<C-n>", "<Down>", { silent = true })
+map("!", "<C-a>", "<Home>", { silent = true })
+map("!", "<C-e>", "<End>", { silent = true })
+map("i", "<M-a>", "<C-o>(", { silent = true })
+map("i", "<M-e>", "<C-o>)", { silent = true })
+map("i", "<M-b>", "<C-Left>", { silent = true })
+map("c", "<M-b>", "<S-Left>", { silent = true })
+map("i", "<M-f>", "<C-o>e<Right>", { silent = true })
+map("c", "<M-f>", "<S-Right>", { silent = true })
+map("i", "<M-v>", "<PageUp>", { silent = true })
+map("i", "<C-v>", "<PageDown>", { silent = true })
+--- Copy & Paste
+--- Editing
+map("!", "<C-d>", "<Del>", { silent = true })
+map("!", "<M-BS>", "<C-w>", { silent = true })
+map("i", "<C-BS>", "<C-w>", { silent = true })
+map("i", "<C-k>", function()
+  local col = vim.api.nvim_win_get_cursor(0)[2]
+  local line = vim.api.nvim_get_current_line()
+  if #line <= col then
+    return "<Del><C-o>dw"
+  end
+  return "<C-o>dw"
+end, { silent = true, expr = true })
+map("c", "<C-k>", "<C-f>d$<C-c><End>", { silent = true })
+map("i", "<M-d>", function()
+  local col = vim.api.nvim_win_get_cursor(0)[2]
+  local line = vim.api.nvim_get_current_line()
+  if #line <= col then
+    return "<Del>"
+  end
+  return "<C-o>d$"
+end, { silent = true, expr = true })
+map("i", "<M-k>", "<C-o>d)", { silent = true })
+--- Run command
 map("t", "<M-x>", "<C-\\><C-n>:")
 map("i", "<M-x>", "<Esc>:")
 map({ "n", "v" }, "<M-x>", ":")
+--- Run external command
+map("i", "<M-!>", "<Esc>:!")
+map("n", "<M-!>", ":!")
 
 -- plugins
 -- iron
