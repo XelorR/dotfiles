@@ -77,6 +77,10 @@ fi
 if command -v nvim &>/dev/null; then
   if command -v nvchad &>/dev/null; then
 	  export VISUAL=nvchad
+  elif command -v ched &>/dev/null; then
+	  export VISUAL=ched
+  elif command -v lazyvim &>/dev/null; then
+	  export VISUAL=lazyvim
   else
 	  export VISUAL=nvim
   fi
