@@ -20,7 +20,7 @@ if ! command -v nvim &>/dev/null; then
   fi
 fi
 
-rm -rf ~/.config/nvchad
+rm -rf ~/.config/nvchad ~/.local/share/nvchad
 mkdir -p ~/.config/nvchad ~/.local/bin
 
 cat <<'EOF' >~/.local/bin/nvchad

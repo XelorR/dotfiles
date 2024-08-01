@@ -20,11 +20,8 @@ if ! command -v nvim &>/dev/null; then
   fi
 fi
 
-rm -rf ~/.opt/lazyvim
-mkdir -p ~/.opt/lazyvim ~/.local/bin
-if [ -f ~/.gitconfig ]; then
-  ln -s ~/.gitconfig ~/.opt/lazyvim/.gitconfig
-fi
+rm -rf ~/.config/lazyvim ~/.local/share/lazyvim
+mkdir -p ~/.config/lazyvim ~/.local/bin
 
 cat <<'EOF' >~/.local/bin/lazyvim
 #!/usr/bin/env bash
