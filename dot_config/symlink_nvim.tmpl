@@ -1,1 +1,5 @@
+{{ if ne .chezmoi.os "android" -}}
+{{ .chezmoi.homeDir }}/AppData/Local/ched
+{{ else -}}
 {{ .chezmoi.homeDir }}/AppData/Local/nvim
+{{ end -}}
