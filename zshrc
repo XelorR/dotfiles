@@ -126,6 +126,10 @@ mkscript() {
   touch $1 && chmod +x $1 && $VISUAL $1
 }
 
+if command -v minikube &>/dev/null; then
+  alias kubectl="minikube kubectl --"
+fi
+
 # tmux
 if command -v tmux &>/dev/null; then
   tm() {
