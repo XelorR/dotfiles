@@ -41,6 +41,8 @@ scripts/macos/**
 {{ if ne .chezmoi.os "android" }}
 .termux
 .hushlogin
+.local/bin/ched
+.config/ched
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
