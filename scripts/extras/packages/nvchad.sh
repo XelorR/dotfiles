@@ -46,7 +46,7 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- insert mode
 map("i", "jj", "<Esc>", { silent = true })
-map("t", "jj", "<C-\\><C-n>", { silent = true })
+-- map("t", "jj", "<C-\\><C-n>", { silent = true })
 map("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 
 -- files

@@ -58,7 +58,7 @@ local del = vim.keymap.del
 
 -- Return to normal mode
 map("i", "jj", "<Esc>", { silent = true })
-map("t", "jj", "<C-\\><C-n>", { silent = true })
+-- map("t", "jj", "<C-\\><C-n>", { silent = true })
 map("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 
 -- Files and windows
