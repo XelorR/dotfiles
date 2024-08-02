@@ -75,15 +75,7 @@ if command -v emacs &>/dev/null; then
 	alias macs="emacsclient -a '' -c -nw"
 fi
 if command -v nvim &>/dev/null; then
-  if command -v nvchad &>/dev/null; then
-	  export VISUAL=nvchad
-  elif command -v ched &>/dev/null; then
-	  export VISUAL=ched
-  elif command -v lazyvim &>/dev/null; then
-	  export VISUAL=lazyvim
-  else
-	  export VISUAL=nvim
-  fi
+	export VISUAL=nvim
 	alias vi='nvim --clean'
 fi
 export EDITOR=vi
@@ -104,10 +96,6 @@ if command -v doom &>/dev/null; then
   export NOTE_EDITOR='doom -nw'
 elif command -v spacemacs &>/dev/null; then
   export NOTE_EDITOR='spacemacs -nw'
-elif command -v ched &>/dev/null; then
-  export NOTE_EDITOR='ched'
-elif command -v nvchad &>/dev/null; then
-  export NOTE_EDITOR='nvchad'
 elif command -v nvim &>/dev/null; then
   export NOTE_EDITOR='nvim'
 else
