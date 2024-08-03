@@ -80,9 +80,10 @@ if command -v nvim &>/dev/null; then
 fi
 export EDITOR=vi
 if command -v fzf &>/dev/null; then
-	alias vf='vi $(fzf)'
-  if command -v lazyvim &>/dev/null; then
-    alias lvf='lv $(fzf)'
+  if command -v nvim &>/dev/null; then
+    alias vf='nvim $(fzf)'
+  else
+    alias vf='vi $(fzf)'
   fi
 fi
 
