@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+@s = split /\n/, `gsettings list-schemas`;
+print "gsettings";
+foreach (@s) {
+    system "gsettings list-recursively $_";    
+};
+print "dconf";
+print `dconf dump /`;
