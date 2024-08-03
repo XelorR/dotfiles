@@ -25,6 +25,6 @@ elif [ "$ID" = "opensuse" ]; then
     sudo zypper install syncthing
 
 elif [ "$ID_LIKE" = "arch" ]; then
-    sudo pacman -Sy syncthing
+    sudo pacman -Sy --noconfirm syncthing
 
 fi
