@@ -15,7 +15,9 @@ config.window_decorations = "RESIZE"
 {{ else -}}
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 {{ end -}}
--- config.hide_tab_bar_if_only_one_tab = true
+{{ if eq .chezmoi.os "linux" -}}
+config.hide_tab_bar_if_only_one_tab = true
+{{ end -}}
 
 -- font
 config.font_dirs = { ".fonts", "Library/Fonts" }
