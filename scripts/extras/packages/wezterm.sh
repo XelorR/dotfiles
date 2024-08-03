@@ -10,7 +10,8 @@ if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
     sudo apt update
     sudo apt install -y wezterm
 elif [ "$ID" = "fedora" ]; then
-    sudo dnf install -y https://github.com/wez/wezterm/releases/download/nightly/wezterm-nightly-fedora40.rpm
+    sudo dnf copr enable wezfurlong/wezterm-nightly
+    sudo dnf install -y wezterm
 elif [ "$ID" = "opensuse" ]; then
     zypper install wezterm
 elif [ "$ID_LIKE" = "arch" ]; then
