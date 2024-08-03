@@ -1,23 +1,23 @@
 #!/bin/bash
 
 if ! command -v nvim &>/dev/null; then
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 
-  mkdir -p $HOME/.opt $HOME/.local/bin
-  rm -rf $HOME/.opt/nvim-linux64
+    mkdir -p $HOME/.opt $HOME/.local/bin
+    rm -rf $HOME/.opt/nvim-linux64
 
-  tar -C $HOME/.opt -xzf nvim-linux64.tar.gz
-  rm -rf nvim-linux64.tar.gz
+    tar -C $HOME/.opt -xzf nvim-linux64.tar.gz
+    rm -rf nvim-linux64.tar.gz
 
-  rm -rf $HOME/.local/bin/nvim
-  ln -s $HOME/.opt/nvim-linux64/bin/nvim $HOME/.local/bin/nvim
+    rm -rf $HOME/.local/bin/nvim
+    ln -s $HOME/.opt/nvim-linux64/bin/nvim $HOME/.local/bin/nvim
 
-  if ! grep -q '.local/bin' $HOME/.bashrc; then
-    echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
-  fi
-  if ! grep -q '.local/bin' $HOME/.zshrc; then
-    echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.zshrc
-  fi
+    if ! grep -q '.local/bin' $HOME/.bashrc; then
+        echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
+    fi
+    if ! grep -q '.local/bin' $HOME/.zshrc; then
+        echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.zshrc
+    fi
 fi
 
 rm -rf ~/.config/nvchad ~/.local/share/nvchad
@@ -207,18 +207,23 @@ EOF
 
 cat <<'EOF' >~/.config/nvchad/lua/configs/conform.lua
 local options = {
-  formatters_by_ft = {
-    lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
-    python = { "black" },
-  },
+	formatters_by_ft = {
+		lua = { "stylua" },
+		css = { "prettier" },
+		javascript = { "prettier" },
+		html = { "prettier" },
+		json = { "jq" },
+		python = { "black" },
+		sh = { "beautysh" },
+		bash = { "beautysh" },
+		zsh = { "beautysh" },
+	},
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+	format_on_save = {
+		-- These options will be passed to conform.format()
+		timeout_ms = 500,
+		lsp_fallback = true,
+	},
 }
 
 return options
@@ -264,7 +269,7 @@ return {
 EOF
 
 cat <<'EOF' >~/.config/nvchad/lua/chadrc.lua
--- This file needs to have same structure as nvconfig.lua 
+-- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
