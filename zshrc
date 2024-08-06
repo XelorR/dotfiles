@@ -72,7 +72,9 @@ fi
 # editor
 if command -v emacs &>/dev/null; then
 	alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
-	alias macs="emacsclient -a '' -c -nw"
+  if [ -f ~/AppData/Roaming/.config/doom/init.el ]; then
+    alias macs="emacsclient -a '' -c -nw"
+  fi
 fi
 if command -v nvim &>/dev/null; then
 	export VISUAL=nvim
@@ -93,7 +95,9 @@ if command -v rsync &>/dev/null; then
 fi
 
 # edit today note
-if command -v doom &>/dev/null; then
+if command -v macs &>/dev/null; then
+  export NOTE_EDITOR='macs -nw'
+elif command -v doom &>/dev/null; then
   export NOTE_EDITOR='doom -nw'
 elif command -v spacemacs &>/dev/null; then
   export NOTE_EDITOR='spacemacs -nw'
