@@ -18,19 +18,6 @@ elif [ "$ID_LIKE" = "arch" ]; then
     sudo pacman -Sy --noconfirm wezterm
 fi
 
-# font
-
-if [ "$(uname)" = "Darwin" ]; then
-    FONTS=$HOME/Library/Fonts
-else
-    FONTS=$HOME/.fonts
-fi
-
-wget https://github.com/xelorr/SFMono-Nerd-Font-Ligaturized/releases/latest/download/sf.tar.xz
-mkdir -p $FONTS
-tar xvf sf.tar.xz -C $FONTS/
-rm sf.tar.xz
-
 # config
 
 cat <<'EOF' >~/.config/wezterm/wezterm.lua
@@ -39,7 +26,7 @@ local config = {}
 
 -- basic decorations and theme
 config.color_scheme = "Everblush"
-config.window_background_opacity = 0.90
+-- config.window_background_opacity = 0.90
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
@@ -52,10 +39,10 @@ config.window_padding = {
 
 -- font
 config.font_dirs = { ".fonts", "Library/Fonts" }
-config.font = wezterm.font_with_fallback{
-  "Liga SFMono Nerd Font",
-  "MesloLGS Nerd Font Mono",
-}
+-- config.font = wezterm.font_with_fallback{
+--   "Liga SFMono Nerd Font",
+--   "MesloLGS Nerd Font Mono",
+-- }
 config.font_size = 11.5
 
 -- disabling confirmation on exit
