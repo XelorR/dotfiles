@@ -132,8 +132,9 @@ map("n", "<M-!>", ":!")
 -- gen.nvim
 map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
 map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
--- lazygit
-map({ "n", "v" }, "<leader>gg", ":LazyGitCurrentFile<CR>")
+-- git
+map({ "n", "v" }, "<leader>gg", ":Neogit cwd=%:p:h<CR>")
+map({ "n", "v" }, "<leader>gl", ":LazyGitCurrentFile<CR>")
 -- lazy
 map({ "n", "v" }, "<leader>l", ":Lazy<CR>")
 
