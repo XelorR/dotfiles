@@ -133,8 +133,8 @@ map("n", "<M-!>", ":!")
 map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
 map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 -- git
-map({ "n", "v" }, "<leader>gg", ":Neogit cwd=%:p:h<CR>")
-map({ "n", "v" }, "<leader>gl", ":LazyGitCurrentFile<CR>")
+map({ "n", "v" }, "<leader>gn", ":Neogit cwd=%:p:h<CR>")
+map({ "n", "v" }, "<leader>gg", ":LazyGitCurrentFile<CR>")
 -- lazy
 map({ "n", "v" }, "<leader>l", ":Lazy<CR>")
 
