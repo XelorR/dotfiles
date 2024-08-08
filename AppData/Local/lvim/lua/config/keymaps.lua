@@ -29,6 +29,9 @@ map("n", "<leader>obt", "<cmd>OrgT!<cr>", { noremap = true, desc = "Babel Tangle
 map({ "n", "v" }, "<leader>oo", ":Gen<CR>")
 map({ "n", "v" }, "<leader>ol", ":lua require('gen').select_model()<CR>")
 
+-- Magit
+map({ "n", "v" }, "<leader>gn", ":Neogit cwd=%:p:h<CR>")
+
 -- Yank file name
 map("n", "<leader>fy", '<cmd>let @" = expand("%:t")<cr>', { noremap = true, desc = "Yank file name" })
 
