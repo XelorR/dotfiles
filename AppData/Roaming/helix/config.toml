@@ -7,3 +7,5 @@ cursorline = true
 [keys.normal]
 "H" = "goto_previous_buffer"
 "L" = "goto_next_buffer"
+"S-tab" = "goto_previous_buffer"
+"tab" = "goto_next_buffer"
