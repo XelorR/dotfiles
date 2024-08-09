@@ -4,7 +4,7 @@ local config = {}
 {{ if eq .chezmoi.os "windows" -}}
 config.default_prog = { "pwsh" }
 {{ else -}}
-config.default_prog = { "zsh" }
+-- config.default_prog = { "fish" }
 {{ end }}
 
 -- basic decorations and theme
