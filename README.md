@@ -9,12 +9,6 @@ or
 ```bash
 sh -c "$(wget -qO- get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --ssh xelorr
 ```
-## List and run installation scripts
-
-[Use this script](./scripts/extras/package-installer), you can run it with this oneliner:
-```bash
-python3 -c "$(curl -sL https://raw.githubusercontent.com/XelorR/dotfiles/master/scripts/extras/package-installer)" --list
-```
 
 ## Log
 
