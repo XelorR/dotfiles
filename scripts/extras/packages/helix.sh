@@ -16,6 +16,3 @@ elif [ "$ID_LIKE" = "arch" ]; then
   sudo pacman -Sy --noconfirm helix
 
 fi
-
-mkdir -p ~/.config
-git clone https://github.com/LGUG2Z/helix-vim ~/.config/helix
