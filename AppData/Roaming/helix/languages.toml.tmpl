@@ -1,11 +1,14 @@
 {{ if ne .chezmoi.os "windows" -}}
 [[language]]
 name = "python"
-roots = ["pyproject.toml", "setup.py", "Poetry.lock", ".git"]
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
+language-servers = [ "pyright", "ruff" ]
+formatter = { command = 'ruff', args = ["format"] }
 auto-format = true
-formatter = {command = 'black', args = ["--quiet", "-"]}
-config = ""
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+[language-server.ruff]
+command = "ruff"
+config = { settings = { args = ["server"] } }
 {{ else -}}
 [[language]]
 name = "python"
