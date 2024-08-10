@@ -1,3 +1,4 @@
+{{ if ne .chezmoi.os "windows" -}}
 [[language]]
 name = "python"
 roots = ["pyproject.toml", "setup.py", "Poetry.lock", ".git"]
@@ -5,6 +6,15 @@ language-server = { command = "pyright-langserver", args = ["--stdio"] }
 auto-format = true
 formatter = {command = 'black', args = ["--quiet", "-"]}
 config = ""
+{{ else -}}
+[[language]]
+name = "python"
+language-servers = [ "ruff" ]
+auto-format = true
+[language-server.ruff]
+command = "ruff"
+config = { settings = { args = ["server"] } }
+{{ end -}}
 
 [[language]]
 name = "html"
