@@ -22,9 +22,11 @@ if status is-interactive
         alias orgnote='em $HOME/org/journals/$(date +%Y_%m_%d).org'
     end
 
-    if set -q ZELLIJ
-    else
-        zellij
+    if command -v zellij &>/dev/null
+        if set -q ZELLIJ
+        else
+            zellij
+        end
     end
 
     if command -v lf &>/dev/null
