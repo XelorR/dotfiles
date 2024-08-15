@@ -14,7 +14,7 @@ if status is-interactive
         set -Ux EDITOR vi
         set -Ux VISUAL vi
     end
-    alias note='$EDITOR $HOME/org/journals/$(date +%Y_%m_%d).org'
+    alias note='$VISUAL $HOME/org/journals/$(date +%Y_%m_%d).org'
 
     if command -v emacs &>/dev/null
         alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
