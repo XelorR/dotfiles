@@ -22,12 +22,13 @@ if status is-interactive
         alias orgnote='em $HOME/org/journals/$(date +%Y_%m_%d).org'
     end
 
-    # if command -v zellij &>/dev/null
-    #     if set -q ZELLIJ
-    #     else
-    #         zellij
-    #     end
-    # end
+    function mkcd --description="Create directory and cd into it"
+        mkdir -p $argv[1] && cd $argv[1]
+    end
+
+    function mkscript --description="Create script, mark executable and start editing"
+        touch $argv[1] && chmod +x $argv[1] && $VISUAL $argv[1]
+    end
 
     if command -v lf &>/dev/null
         function lf --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
