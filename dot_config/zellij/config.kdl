@@ -154,6 +154,10 @@ keybinds {
         bind "Alt l" { MoveFocusOrTab "Right"; }
         bind "Alt j" { MoveFocus "Down"; }
         bind "Alt k" { MoveFocus "Up"; }
+        unbind "Alt Left"
+        unbind "Alt Right"
+        unbind "Alt Down"
+        unbind "Alt Up"
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
