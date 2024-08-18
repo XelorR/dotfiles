@@ -22,12 +22,12 @@ if status is-interactive
         alias orgnote='em $HOME/org/journals/$(date +%Y_%m_%d).org'
     end
 
-    if command -v zellij &>/dev/null
-        if set -q ZELLIJ
-        else
-            zellij
-        end
-    end
+    # if command -v zellij &>/dev/null
+    #     if set -q ZELLIJ
+    #     else
+    #         zellij
+    #     end
+    # end
 
     if command -v lf &>/dev/null
         function lf --wraps="lf" --description="lf - Terminal file manager (changing directory on exit)"
