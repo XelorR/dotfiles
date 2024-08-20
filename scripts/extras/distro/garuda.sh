@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-paru -Syu \
+sudo pacman -Syu --noconfirm \
 	aria2 \
 	bash-language-server \
 	chezmoi \
