@@ -163,3 +163,4 @@ fi
 if [ -f /data/data/com.termux/files/usr/bin/termux-camera-photo ]; then
   export PATH=/data/data/com.termux/files/usr/bin:$PATH
 fi
+export EDITOR=hx

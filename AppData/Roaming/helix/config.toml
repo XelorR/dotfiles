@@ -1,0 +1,14 @@
+theme="dark_plus"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor]
+bufferline = "multiple"
+cursorline = true
+
+[keys.normal]
+A-z = [ ":toggle-option soft-wrap.enable", ":redraw" ]
+
+[keys.normal.'space'.'space']
+g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
