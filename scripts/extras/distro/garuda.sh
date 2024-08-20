@@ -1,67 +1,71 @@
 #!/usr/bin/env bash
 
 paru -Syu \
-	appimagelauncher \
 	aria2 \
-	bat \
-	borgbackup \
+	bash-language-server \
 	chezmoi \
-	docker{,-compose} \
+	curl \
+	docker \
+	docker-compose \
+	element-desktop \
 	emacs \
-	eza \
 	fd \
-	ffmpeg \
+	firefox \
+	flatpak \
 	fzf \
-	gcc \
-	git \
 	github-cli \
-	go \
-	gwenview \
-	imagemagick \
+	gnome-shell-extension-caffeine \
+	gnome-shell-extension-dash-to-dock \
+	gnome-shell-extensions \
+	gnome-tweaks \
+	helix \
 	jq \
 	keepassxc \
 	lazygit \
 	lf \
-	libheif \
 	libreoffice-fresh \
-	luajit \
-	make \
+	marksman \
 	minetest \
+	minikube \
+	nautilus-image-converter \
+	ncdu \
+	nekoray \
 	neovim \
+	nmap \
 	npm \
-	pycharm-community-edition \
-	python-llfuse \
-	qalculate-qt \
+	ollama \
+	p7zip \
+	pika-backup \
+	prettier \
+	proxychains \
+	pyright \
+	python-black \
+	python-pip \
 	qbittorrent \
 	qemu-desktop \
 	ripgrep \
 	rsync \
+	serpl \
+	sshfs \
+	sushi \
 	syncthing \
-	tmate \
-	tmux \
-	unzip \
-	virt-manager \
+	telegram-desktop \
+	virtualbox \
 	visual-studio-code-bin \
 	vlc \
-	vorta \
-	w3m \
 	wezterm \
+	wget \
+	yaru-gnome-shell-theme \
+	yaru-gtk-theme \
+	yaru-gtksourceview-theme \
+	yaru-icon-theme \
+	yaru-metacity-theme \
+	yaru-session \
+	yaru-sound-theme \
+	zellij \
 	zsh \
-	cdrkit \
-	{element,telegram}-desktop \
-	chaotic-aur/antimicrox \
-	chaotic-aur/brave-bin \
-	chaotic-aur/logseq-desktop-bin \
-	chaotic-aur/rpcs3-git \
-	chaotic-aur/ventoy-bin \
-	chaotic-aur/xboxdrv
 
-chsh -s "$(which zsh)"
+chsh -s "$(which fish)"
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
-
-# kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
-# qdbus org.kde.KWin /KWin reconfigure
-
-bash $HOME/.local/share/chezmoi/scripts/extras/packages/qe.sh
