@@ -91,6 +91,10 @@ sudo pacman -Syu --noconfirm \
 	chaotic-aur/yaru-session \
 	chaotic-aur/yaru-sound-theme \
 
+# installing missing software via flatpak
+flatpak install -y \
+	com.logseq.Logseq \
+
 # setting up default shell
 chsh -s "$(which fish)"
 
