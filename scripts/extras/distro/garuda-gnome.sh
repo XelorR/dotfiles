@@ -67,6 +67,7 @@ sudo pacman -Syu --needed --noconfirm \
 	pyright \
 	python-black \
 	python-pip \
+	python-pipx \
 	qbittorrent \
 	qemu-desktop \
 	ripgrep \
