@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pacman -Syu \
+pacman -Syu --needed \
 	aria2 \
 	bat \
 	borgbackup \

@@ -26,7 +26,7 @@ tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
 
 # installing packages
-sudo pacman -Syu --noconfirm \
+sudo pacman -Syu --needed --noconfirm \
 	aria2 \
 	bash-language-server \
 	chezmoi \
