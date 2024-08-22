@@ -55,13 +55,13 @@ sudo pacman -Syu --noconfirm \
 	minikube \
 	nautilus-image-converter \
 	ncdu \
-	nekoray \
+	nekoray \ # chaotic AUR
 	neovim \
 	nmap \
 	npm \
 	ollama \
 	p7zip \
-	pika-backup \
+	pika-backup \ # chaotic AUR
 	prettier \
 	proxychains \
 	pyright \
@@ -77,17 +77,17 @@ sudo pacman -Syu --noconfirm \
 	syncthing \
 	telegram-desktop \
 	virtualbox \
-	visual-studio-code-bin \
+	visual-studio-code-bin \ # chaotic AUR
 	vlc \
 	wezterm \
 	wget \
-	yaru-gnome-shell-theme \
-	yaru-gtk-theme \
-	yaru-gtksourceview-theme \
-	yaru-icon-theme \
-	yaru-metacity-theme \
-	yaru-session \
-	yaru-sound-theme \
+	yaru-gnome-shell-theme \ # chaotic AUR
+	yaru-gtk-theme \ # chaotic AUR
+	yaru-gtksourceview-theme \ # chaotic AUR
+	yaru-icon-theme \ # chaotic AUR
+	yaru-metacity-theme \ # chaotic AUR
+	yaru-session \ # chaotic AUR
+	yaru-sound-theme \ # chaotic AUR
 	zellij \
 	zsh \
 
