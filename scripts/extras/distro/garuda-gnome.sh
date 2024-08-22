@@ -55,13 +55,11 @@ sudo pacman -Syu --noconfirm \
 	minikube \
 	nautilus-image-converter \
 	ncdu \
-	nekoray \ # chaotic AUR
 	neovim \
 	nmap \
 	npm \
 	ollama \
 	p7zip \
-	pika-backup \ # chaotic AUR
 	prettier \
 	proxychains \
 	pyright \
@@ -77,19 +75,21 @@ sudo pacman -Syu --noconfirm \
 	syncthing \
 	telegram-desktop \
 	virtualbox \
-	visual-studio-code-bin \ # chaotic AUR
+	chaotic-aur/visual-studio-code-bin \
 	vlc \
 	wezterm \
 	wget \
-	yaru-gnome-shell-theme \ # chaotic AUR
-	yaru-gtk-theme \ # chaotic AUR
-	yaru-gtksourceview-theme \ # chaotic AUR
-	yaru-icon-theme \ # chaotic AUR
-	yaru-metacity-theme \ # chaotic AUR
-	yaru-session \ # chaotic AUR
-	yaru-sound-theme \ # chaotic AUR
 	zellij \
 	zsh \
+	chaotic-aur/pika-backup \
+	chaotic-aur/nekoray \
+	chaotic-aur/yaru-gnome-shell-theme \
+	chaotic-aur/yaru-gtk-theme \
+	chaotic-aur/yaru-gtksourceview-theme \
+	chaotic-aur/yaru-icon-theme \
+	chaotic-aur/yaru-metacity-theme \
+	chaotic-aur/yaru-session \
+	chaotic-aur/yaru-sound-theme \
 
 # setting up default shell
 chsh -s "$(which fish)"
