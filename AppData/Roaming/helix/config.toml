@@ -6,6 +6,7 @@ insert = "bar"
 [editor]
 bufferline = "multiple"
 cursorline = true
+true-color = true
 
 [keys.normal]
 A-z = [ ":toggle-option soft-wrap.enable", ":redraw" ]
