@@ -24,6 +24,7 @@ gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift>
 curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
+rm cachyos-repo.tar.xz
 
 # installing packages
 sudo pacman -Syu --needed --noconfirm \
