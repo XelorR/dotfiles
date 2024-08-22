@@ -75,7 +75,6 @@ sudo pacman -Syu --noconfirm \
 	syncthing \
 	telegram-desktop \
 	virtualbox \
-	chaotic-aur/visual-studio-code-bin \
 	vlc \
 	wezterm \
 	wget \
@@ -83,6 +82,7 @@ sudo pacman -Syu --noconfirm \
 	zsh \
 	chaotic-aur/pika-backup \
 	chaotic-aur/nekoray \
+	chaotic-aur/visual-studio-code-bin \
 	chaotic-aur/yaru-gnome-shell-theme \
 	chaotic-aur/yaru-gtk-theme \
 	chaotic-aur/yaru-gtksourceview-theme \
