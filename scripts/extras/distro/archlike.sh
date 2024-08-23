@@ -103,8 +103,13 @@ if command -v pacman &>/dev/null; then
 			chaotic-aur/yaru-session \
 			chaotic-aur/yaru-sound-theme
 	else
-		sudo pacman -Syu --needed --noconfirm \
-			cachyos/vscodium
+		if command -v paru &>/dev/null; then
+			sudo paru -Syu --needed --noconfirm \
+				logseq-desktop-bin
+		else
+			sudo pacman -Syu --needed --noconfirm \
+				cachyos/vscodium
+		fi
 
 		# installing missing software via flatpak
 		flatpak install -y \
