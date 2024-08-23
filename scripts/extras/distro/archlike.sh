@@ -4,6 +4,8 @@
 if [[ $(uname -o) == "Darwin" ]]; then
 	# macos part
 	if command -v brew &>/dev/null; then
+	else
+		echo No brew installation found, skipping...
 	fi
 
 elif [[ $(uname -o) == "Android" ]]; then
