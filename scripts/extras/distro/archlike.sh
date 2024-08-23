@@ -32,7 +32,7 @@ if command -v pacman &>/dev/null; then
 		rm -rf cachyos-repo.tar.xz cachyos-repo
 	fi
 
-# installing packages
+	# installing packages
 	sudo pacman -Syu --needed --noconfirm \
 		aria2 \
 		bash-language-server \
@@ -114,7 +114,7 @@ if command -v pacman &>/dev/null; then
 		# TODO - install nekoray
 	fi
 else
-# place to implement for different distros
+	# place to implement for different distros
 fi
 
 # setting up default shell
