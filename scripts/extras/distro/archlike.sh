@@ -113,6 +113,10 @@ if command -v pacman &>/dev/null; then
 
 		# TODO - install nekoray
 	fi
+elif command -v apt &>/dev/null; then
+elif command -v dnf &>/dev/null; then
+elif command -v zypper &>/dev/null; then
+elif command -v rpm-ostree &>/dev/null; then
 else
 	# place to implement for different distros
 fi
