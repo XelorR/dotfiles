@@ -1,31 +1,35 @@
 #!/usr/bin/env bash
 
-# assuming gnome version
 # enabling ubuntu-like alt-tab and windows-like win-r
-echo Configuring Alt-tab, Super-grave and Super-tab...
-gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab']"
+if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+	# assuming gnome version
+	echo Configuring Alt-tab, Super-grave and Super-tab...
+	gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab']"
 
-echo Configuring Win-r...
-gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
+	echo Configuring Win-r...
+	gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
 
-echo Configuring scrolling...
-gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+	echo Configuring scrolling...
+	gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+	gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
-echo Configuring Super-Shift-s to make a screenshot...
-gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
+	echo Configuring Super-Shift-s to make a screenshot...
+	gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
+fi
 
 # enabling cachy os repos
-curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
-tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-sudo ./cachyos-repo.sh
-cd ..
-rm -rf cachyos-repo.tar.xz cachyos-repo
+if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
+	curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+	tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+	sudo ./cachyos-repo.sh
+	cd ..
+	rm -rf cachyos-repo.tar.xz cachyos-repo
+fi
 
 # installing packages
 sudo pacman -Syu --needed --noconfirm \
@@ -82,21 +86,32 @@ sudo pacman -Syu --needed --noconfirm \
 	wezterm \
 	wget \
 	zellij \
-	zsh \
-	chaotic-aur/pika-backup \
-	chaotic-aur/nekoray \
-	chaotic-aur/visual-studio-code-bin \
-	chaotic-aur/yaru-gnome-shell-theme \
-	chaotic-aur/yaru-gtk-theme \
-	chaotic-aur/yaru-gtksourceview-theme \
-	chaotic-aur/yaru-icon-theme \
-	chaotic-aur/yaru-metacity-theme \
-	chaotic-aur/yaru-session \
-	chaotic-aur/yaru-sound-theme \
+	zsh
 
-# installing missing software via flatpak
-flatpak install -y \
-	com.logseq.Logseq \
+if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
+	sudo pacman -Syu --needed --noconfirm \
+		chaotic-aur/logseq-desktop-bin \
+		chaotic-aur/nekoray \
+		chaotic-aur/pika-backup \
+		chaotic-aur/visual-studio-code-bin \
+		chaotic-aur/yaru-gnome-shell-theme \
+		chaotic-aur/yaru-gtk-theme \
+		chaotic-aur/yaru-gtksourceview-theme \
+		chaotic-aur/yaru-icon-theme \
+		chaotic-aur/yaru-metacity-theme \
+		chaotic-aur/yaru-session \
+		chaotic-aur/yaru-sound-theme
+else
+	sudo pacman -Syu --needed --noconfirm \
+		cachyos/vscodium
+
+	# installing missing software via flatpak
+	flatpak install -y \
+		org.gnome.World.PikaBackup \
+		com.logseq.Logseq
+
+	# TODO - install nekoray
+fi
 
 # setting up default shell
 chsh -s "$(which fish)"
