@@ -104,7 +104,7 @@ if command -v pacman &>/dev/null; then
 			chaotic-aur/yaru-sound-theme
 	else
 		if command -v paru &>/dev/null; then
-			sudo paru -Syu --needed --noconfirm \
+			paru -Syu --needed --noconfirm \
 				logseq-desktop-bin
 		else
 			sudo pacman -S --needed --noconfirm \
