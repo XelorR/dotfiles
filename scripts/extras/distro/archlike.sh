@@ -22,95 +22,99 @@ if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNO
 	gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
 fi
 
-# enabling cachy os repos
-if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
-	curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
-	tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-	sudo ./cachyos-repo.sh
-	cd ..
-	rm -rf cachyos-repo.tar.xz cachyos-repo
-fi
+if command -v pacman &>/dev/null; then
+	# enabling cachy os repos
+	if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
+		curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+		tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+		sudo ./cachyos-repo.sh
+		cd ..
+		rm -rf cachyos-repo.tar.xz cachyos-repo
+	fi
 
 # installing packages
-sudo pacman -Syu --needed --noconfirm \
-	aria2 \
-	bash-language-server \
-	chezmoi \
-	curl \
-	docker \
-	docker-compose \
-	element-desktop \
-	emacs \
-	fd \
-	firefox \
-	flatpak \
-	fzf \
-	github-cli \
-	gnome-shell-extension-caffeine \
-	gnome-shell-extension-dash-to-dock \
-	gnome-shell-extensions \
-	gnome-tweaks \
-	helix \
-	jq \
-	keepassxc \
-	lazygit \
-	lf \
-	libreoffice-fresh \
-	marksman \
-	minetest \
-	minikube \
-	nautilus-image-converter \
-	ncdu \
-	neovim \
-	nmap \
-	npm \
-	ollama \
-	p7zip \
-	prettier \
-	proxychains \
-	pyright \
-	python-black \
-	python-pip \
-	python-pipx \
-	qbittorrent \
-	qemu-desktop \
-	ripgrep \
-	rsync \
-	serpl \
-	sshfs \
-	sushi \
-	syncthing \
-	telegram-desktop \
-	virtualbox \
-	vlc \
-	wezterm \
-	wget \
-	zellij \
-	zsh
-
-if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
 	sudo pacman -Syu --needed --noconfirm \
-		chaotic-aur/logseq-desktop-bin \
-		chaotic-aur/nekoray \
-		chaotic-aur/pika-backup \
-		chaotic-aur/visual-studio-code-bin \
-		chaotic-aur/yaru-gnome-shell-theme \
-		chaotic-aur/yaru-gtk-theme \
-		chaotic-aur/yaru-gtksourceview-theme \
-		chaotic-aur/yaru-icon-theme \
-		chaotic-aur/yaru-metacity-theme \
-		chaotic-aur/yaru-session \
-		chaotic-aur/yaru-sound-theme
+		aria2 \
+		bash-language-server \
+		chezmoi \
+		curl \
+		docker \
+		docker-compose \
+		element-desktop \
+		emacs \
+		fd \
+		firefox \
+		flatpak \
+		fzf \
+		github-cli \
+		gnome-shell-extension-caffeine \
+		gnome-shell-extension-dash-to-dock \
+		gnome-shell-extensions \
+		gnome-tweaks \
+		helix \
+		jq \
+		keepassxc \
+		lazygit \
+		lf \
+		libreoffice-fresh \
+		marksman \
+		minetest \
+		minikube \
+		nautilus-image-converter \
+		ncdu \
+		neovim \
+		nmap \
+		npm \
+		ollama \
+		p7zip \
+		prettier \
+		proxychains \
+		pyright \
+		python-black \
+		python-pip \
+		python-pipx \
+		qbittorrent \
+		qemu-desktop \
+		ripgrep \
+		rsync \
+		serpl \
+		sshfs \
+		sushi \
+		syncthing \
+		telegram-desktop \
+		virtualbox \
+		vlc \
+		wezterm \
+		wget \
+		zellij \
+		zsh
+
+	if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
+		sudo pacman -Syu --needed --noconfirm \
+			chaotic-aur/logseq-desktop-bin \
+			chaotic-aur/nekoray \
+			chaotic-aur/pika-backup \
+			chaotic-aur/visual-studio-code-bin \
+			chaotic-aur/yaru-gnome-shell-theme \
+			chaotic-aur/yaru-gtk-theme \
+			chaotic-aur/yaru-gtksourceview-theme \
+			chaotic-aur/yaru-icon-theme \
+			chaotic-aur/yaru-metacity-theme \
+			chaotic-aur/yaru-session \
+			chaotic-aur/yaru-sound-theme
+	else
+		sudo pacman -Syu --needed --noconfirm \
+			cachyos/vscodium
+
+		# installing missing software via flatpak
+		flatpak install -y \
+			org.gnome.World.PikaBackup \
+			com.logseq.Logseq
+
+		# TODO - install nekoray
+	fi
 else
-	sudo pacman -Syu --needed --noconfirm \
-		cachyos/vscodium
-
-	# installing missing software via flatpak
-	flatpak install -y \
-		org.gnome.World.PikaBackup \
-		com.logseq.Logseq
-
-	# TODO - install nekoray
+# place to implement for different distros
 fi
 
 # setting up default shell
