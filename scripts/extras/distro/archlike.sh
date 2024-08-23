@@ -107,7 +107,7 @@ if command -v pacman &>/dev/null; then
 			sudo paru -Syu --needed --noconfirm \
 				logseq-desktop-bin
 		else
-			sudo pacman -Syu --needed --noconfirm \
+			sudo pacman -S --needed --noconfirm \
 				cachyos/vscodium
 		fi
 
