@@ -63,6 +63,7 @@ else
 			flatpak \
 			fzf \
 			github-cli \
+			gnome-shell-extension-appindicator \
 			gnome-shell-extension-caffeine \
 			gnome-shell-extension-dash-to-dock \
 			gnome-shell-extensions \
