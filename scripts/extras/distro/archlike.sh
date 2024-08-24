@@ -37,6 +37,9 @@ else
 
 		echo Configuring Super-Shift-s to make a screenshot...
 		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
+
+		echo Allowing VirtualBox to grab all keyboard input
+		gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 	fi
 
 	if command -v pacman &>/dev/null; then
