@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # OS check
 if [[ $(uname -o) == "Darwin" ]]; then
