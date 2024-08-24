@@ -4,6 +4,7 @@
 if [[ $(uname -o) == "Darwin" ]]; then
 	# macos part
 	if command -v brew &>/dev/null; then
+		echo Not implemented
 	else
 		echo No brew installation found, skipping...
 	fi
