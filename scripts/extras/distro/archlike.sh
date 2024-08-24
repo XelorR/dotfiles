@@ -100,6 +100,7 @@ else
 			syncthing \
 			telegram-desktop \
 			virtualbox \
+			virtualbox-guest-iso \
 			vlc \
 			wezterm \
 			wget \
@@ -111,6 +112,7 @@ else
 				chaotic-aur/logseq-desktop-bin \
 				chaotic-aur/nekoray \
 				chaotic-aur/pika-backup \
+				chaotic-aur/virtualbox-ext-oracle \
 				chaotic-aur/visual-studio-code-bin \
 				chaotic-aur/yaru-gnome-shell-theme \
 				chaotic-aur/yaru-gtk-theme \
@@ -122,17 +124,20 @@ else
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
+					logseq-desktop-bin \
+					virtualbox-ext-oracle \
 					logseq-desktop-bin
 			else
 				sudo pacman -S --needed --noconfirm \
 					cachyos/vscodium
+				flatpak install -y \
+					com.logseq.Logseq
+				# TODO add virtualbox giest additions
 			fi
 
 			# installing missing software via flatpak
 			flatpak install -y \
-				org.gnome.World.PikaBackup \
-				com.logseq.Logseq
-
+				org.gnome.World.PikaBackup
 			# TODO - install nekoray
 		fi
 	elif command -v apt &>/dev/null; then
