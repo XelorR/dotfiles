@@ -158,6 +158,11 @@ else
 	# setting up default shell
 	chsh -s "$(which fish)"
 
+	/bin/fish <<'EOF'
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jethrokuan/z
+EOF
+
 	# setting up docker
 	sudo groupadd docker
 	sudo usermod -aG docker $USER
