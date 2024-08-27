@@ -165,6 +165,7 @@ EOF
 	sudo groupadd docker
 	sudo usermod -aG docker $USER
 
+	sudo mkdir -p /etc/docker
 	sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
 {
   "registry-mirrors": [
