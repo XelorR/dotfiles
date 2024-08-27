@@ -57,6 +57,7 @@ else
 			aria2 \
 			bash-language-server \
 			chezmoi \
+			cronie \
 			curl \
 			docker \
 			docker-compose \
