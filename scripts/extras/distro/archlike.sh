@@ -167,6 +167,16 @@ EOF
 	sudo groupadd docker
 	sudo usermod -aG docker $USER
 
+	sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
+{
+  "registry-mirrors": [
+        "https://dockerhub.timeweb.cloud",
+        "https://mirror.gcr.io",
+        "https://huecker.io"
+  ]
+}
+EOF'
+
 	# solving inconsistencies with windows dual boot
 	timedatectl set-local-rtc 1 --adjust-system-clock
 
