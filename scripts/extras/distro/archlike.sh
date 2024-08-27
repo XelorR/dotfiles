@@ -65,6 +65,8 @@ else
 			emacs \
 			fd \
 			firefox \
+			fish \
+			fisher \
 			flatpak \
 			fzf \
 			github-cli \
@@ -156,7 +158,7 @@ else
 	chsh -s "$(which fish)"
 
 	/bin/fish <<'EOF'
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+# curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher install jethrokuan/z
 EOF
 
