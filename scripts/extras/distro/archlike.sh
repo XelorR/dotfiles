@@ -118,13 +118,6 @@ else
 				chaotic-aur/pika-backup \
 				chaotic-aur/virtualbox-ext-oracle \
 				chaotic-aur/visual-studio-code-bin \
-				chaotic-aur/yaru-gnome-shell-theme \
-				chaotic-aur/yaru-gtk-theme \
-				chaotic-aur/yaru-gtksourceview-theme \
-				chaotic-aur/yaru-icon-theme \
-				chaotic-aur/yaru-metacity-theme \
-				chaotic-aur/yaru-session \
-				chaotic-aur/yaru-sound-theme
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
