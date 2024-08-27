@@ -70,6 +70,7 @@ else
 			gnome-shell-extension-appindicator \
 			gnome-shell-extension-caffeine \
 			gnome-shell-extension-dash-to-dock \
+			gnome-shell-extension-no-overview \
 			gnome-shell-extensions \
 			gnome-tweaks \
 			helix \
