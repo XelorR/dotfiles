@@ -127,7 +127,6 @@ else
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
-					logseq-desktop-bin \
 					virtualbox-ext-oracle \
 					logseq-desktop-bin
 			else
