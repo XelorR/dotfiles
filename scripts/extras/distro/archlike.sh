@@ -117,7 +117,7 @@ else
 				chaotic-aur/nekoray \
 				chaotic-aur/pika-backup \
 				chaotic-aur/virtualbox-ext-oracle \
-				chaotic-aur/visual-studio-code-bin \
+				chaotic-aur/visual-studio-code-bin
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
