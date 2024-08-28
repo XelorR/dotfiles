@@ -128,6 +128,7 @@ else
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
+					visual-studio-code-bin \
 					virtualbox-ext-oracle \
 					logseq-desktop-bin
 			else
@@ -135,6 +136,7 @@ else
 					cachyos/vscodium
 				flatpak install -y \
 					com.logseq.Logseq
+				# TODO install virtualbox guest additions
 				# TODO add virtualbox giest additions
 			fi
 
