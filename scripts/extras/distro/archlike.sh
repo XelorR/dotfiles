@@ -114,6 +114,7 @@ else
 			vlc \
 			wezterm \
 			wget \
+			wl-clipboard \
 			zellij \
 			zsh
 
