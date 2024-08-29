@@ -131,14 +131,12 @@ else
 					visual-studio-code-bin \
 					virtualbox-ext-oracle \
 					logseq-desktop-bin
-				# TODO add virtualbox giest additions
 			else
 				sudo pacman -S --needed --noconfirm \
 					cachyos/vscodium
 				flatpak install -y \
 					com.logseq.Logseq
 				# TODO install virtualbox guest additions
-				# TODO add virtualbox giest additions
 			fi
 
 			# installing missing software via flatpak
