@@ -131,6 +131,7 @@ else
 					visual-studio-code-bin \
 					virtualbox-ext-oracle \
 					logseq-desktop-bin
+				# TODO add virtualbox giest additions
 			else
 				sudo pacman -S --needed --noconfirm \
 					cachyos/vscodium
