@@ -10,7 +10,7 @@ true-color = true
 
 [keys.normal]
 A-z = [ ":toggle-option soft-wrap.enable", ":redraw" ]
-A-r = [ ":reload-all" ]
+A-r = [ ":reload-all", ":config-reload", ":redraw" ]
 
 [keys.normal.'space'.'space']
 g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
