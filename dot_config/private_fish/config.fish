@@ -20,6 +20,7 @@ if status is-interactive
         alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
         alias macs="emacsclient -a '' -c -nw"
         alias orgnote='em $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
+        alias doomnote='macs $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
     end
 
     function mkcd --description="Create directory and cd into it"
