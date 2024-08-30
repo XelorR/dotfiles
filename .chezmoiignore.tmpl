@@ -1,33 +1,22 @@
 README.md
 LICENSE
 **.asc
-.local/bin/ffmpeg
-plasma
-plasma/**
+.local/bin/ffmpeg*
 zshrc
 scripts
 scripts/**
-.local/bin/nvim
 .emacs
 AppData/Roaming/.emacs
 
-.config/systemd/user-dirs.locale
 AppData/Local/nvim/*.json
 scripts/tools
 scripts/extras
-dockerfiles
-dockerfiles/**
 
 {{ if ne .chezmoi.os "linux" }}
-scripts/linux/**
 .config/systemd/**
 .config/xremap/**
 .local/share/warp-terminal/**
-.local/share/konsole/**
-.local/share/konsole
 .local/bin/to-gif
-.local/bin/nvim
-.local/bin/lf
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
@@ -43,7 +32,7 @@ scripts/macos/**
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
-.local/bin/ask*
+.local/bin/coder*
 .zprezto
 .zprezto-contrib
 .zprezto/**
@@ -77,8 +66,6 @@ ahk
 .config/doom
 .opt
 .opt/**
-scripts/install-packages.sh
-scripts/install-fish-plugins.sh
 .zshrc
 .zprezto
 .zprezto-contrib

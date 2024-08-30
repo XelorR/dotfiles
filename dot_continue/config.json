@@ -1,14 +1,14 @@
 {
   "models": [
     {
+      "title": "phi3.5",
+      "provider": "ollama",
+      "model": "phi3.5"
+    },
+    {
       "title": "codeqwen:chat",
       "provider": "ollama",
       "model": "codeqwen:chat"
-    },
-    {
-      "title": "qwen2:7b-instruct",
-      "provider": "ollama",
-      "model": "qwen2:7b-instruct"
     },
     {
       "title": "deepseek-coder-v2",
