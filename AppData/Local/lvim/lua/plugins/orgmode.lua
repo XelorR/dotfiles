@@ -5,7 +5,6 @@ return {
     dependencies = {
       { "nvim-treesitter/nvim-treesitter", lazy = true },
     },
-    event = "VeryLazy",
     config = function()
       -- Setup treesitter
       require("nvim-treesitter.configs").setup({
