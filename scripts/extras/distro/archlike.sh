@@ -100,6 +100,7 @@ else
 			proxychains \
 			pyright \
 			python-black \
+			python-llfuse \
 			python-pip \
 			python-pipx \
 			qbittorrent \
