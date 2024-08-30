@@ -69,6 +69,7 @@ else
 			fisher \
 			flatpak \
 			fzf \
+			gcc \
 			github-cli \
 			gnome-shell-extension-appindicator \
 			gnome-shell-extension-arc-menu \
@@ -84,6 +85,7 @@ else
 			lazygit \
 			lf \
 			libreoffice-fresh \
+			luajit \
 			marksman \
 			minetest \
 			minikube \
