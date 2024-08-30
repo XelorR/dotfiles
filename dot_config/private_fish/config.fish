@@ -1,12 +1,12 @@
 if status is-interactive
     set fish_greeting
 
-    if command -v hx &>/dev/null
+    if command -v lvim &>/dev/null
+        set -Ux EDITOR lvim
+        set -Ux VISUAL lvim
+    else if command -v hx &>/dev/null
         set -Ux EDITOR hx
         set -Ux VISUAL hx
-        if command -v fzf &>/dev/null
-            alias hz='hx $(fzf)'
-        end
     else if command -v nvim &>/dev/null
         set -Ux EDITOR nvim
         set -Ux VISUAL nvim
@@ -14,6 +14,7 @@ if status is-interactive
         set -Ux EDITOR vi
         set -Ux VISUAL vi
     end
+    alias hz='$VISUAL $(fzf)'
     alias note='$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
 
     if command -v emacs &>/dev/null
