@@ -14,6 +14,10 @@ if status is-interactive
         set -Ux EDITOR vi
         set -Ux VISUAL vi
     end
+    if command -v nvim &>/dev/null
+        alias vi='nvim --clean'
+        alias vf='$VISUAL $(fzf)'
+    end
     alias hz='$VISUAL $(fzf)'
     alias note='$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
 
