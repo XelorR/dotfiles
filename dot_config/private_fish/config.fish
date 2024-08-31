@@ -16,7 +16,7 @@ if status is-interactive
     end
     if command -v nvim &>/dev/null
         alias vi='nvim --clean'
-        alias vf='$VISUAL $(fzf)'
+        alias vf='nvim --clean $(fzf)'
     end
     alias hz='$VISUAL $(fzf)'
     alias note='$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
