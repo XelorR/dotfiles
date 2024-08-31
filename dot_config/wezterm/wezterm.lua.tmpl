@@ -36,7 +36,43 @@ config.font_size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11.5{{ end }}
 config.window_close_confirmation = "NeverPrompt"
 
 -- keybinding
+{{ if eq .chezmoi.os "windows" -}}
+config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
+{{ end -}}
 config.keys = {
+{{ if eq .chezmoi.os "windows" -}}
+  -- tmux/zellij sim
+  {
+    mods   = "LEADER",
+    key    = "h",
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    mods   = "LEADER",
+    key    = "v",
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 'h',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Left",
+  },
+  {
+    key = 'j',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Down",
+  },
+  {
+    key = 'k',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Up",
+  },
+  {
+    key = 'l',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Right",
+  },
+{{ end -}}
   -- Warp-like splits
   {
     key = 'd',
