@@ -148,8 +148,13 @@ else
 			# TODO - install nekoray
 		fi
 	elif command -v apt &>/dev/null; then
+		sudo apt update
 	  if [[ "$ID" == "debian" || "$ID" == "kali" ]]; then
+			sudo apt install -y \
+			aria2
 	  elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
+			sudo apt install -y \
+			aria2
 	  fi
 	elif command -v dnf &>/dev/null; then
 	elif command -v zypper &>/dev/null; then
