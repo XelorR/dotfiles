@@ -157,8 +157,16 @@ else
 			aria2
 	  fi
 	elif command -v dnf &>/dev/null; then
+		sudo dnf check-update
+		sudo dnt install -y \
+			aria2
 	elif command -v zypper &>/dev/null; then
+		sudo sypper refresh
+		sudo zypper --non-interactive --no-confirm install \
+			aria2
 	elif command -v rpm-ostree &>/dev/null; then
+		sudo rpm-ostree install --apply-live \
+			aria2
 	else
 		# place to implement for different distros
 	fi
