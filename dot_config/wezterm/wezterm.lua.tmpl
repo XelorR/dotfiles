@@ -59,6 +59,12 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.SplitVertical {domain="CurrentPaneDomain"},
   },
+  -- Disabling Alt-Enter as conflicting with Org-Mode
+  {
+    key = 'Enter',
+    mods = 'ALT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
 }
 
 return config
