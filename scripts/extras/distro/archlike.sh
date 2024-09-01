@@ -100,6 +100,7 @@ else
 			proxychains \
 			pyright \
 			python-black \
+			python-ipykernel \
 			python-llfuse \
 			python-pip \
 			python-pipx \
