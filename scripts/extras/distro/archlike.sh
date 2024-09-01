@@ -118,6 +118,7 @@ else
 			wezterm \
 			wget \
 			wl-clipboard \
+			zed \
 			zellij \
 			zsh
 
