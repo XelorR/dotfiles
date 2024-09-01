@@ -19,6 +19,7 @@
     "context": "VimControl && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
+      // basic lazyvim-like buffers, files and quit
       "space q q": "workspace::CloseWindow",
       "space space": "file_finder::Toggle",
       "space f f": "file_finder::Toggle",
@@ -29,12 +30,7 @@
       "space b n": "pane::ActivateNextItem",
       "space b p": "pane::ActivatePrevItem",
       "space b o": "workspace::CloseInactiveTabsAndPanes",
-      "space w v": "pane::SplitRight",
-      "space w s": "pane::SplitDown",
-      "space w d": "pane::CloseActiveItem",
-      "space w o": "workspace::CloseInactiveTabsAndPanes",
-      "space w w": "workspace::ActivateNextPane",
-      "alt-x": "command_palette::Toggle",
+      // tabs and panes
       "shift-l": "pane::ActivateNextItem",
       "shift-h": "pane::ActivatePrevItem",
       "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
@@ -45,6 +41,16 @@
       "space w j": ["workspace::ActivatePaneInDirection", "Down"],
       "space w k": ["workspace::ActivatePaneInDirection", "Up"],
       "space w l": ["workspace::ActivatePaneInDirection", "Right"]
+      "space w v": "pane::SplitRight",
+      "space w s": "pane::SplitDown",
+      "space w d": "pane::CloseActiveItem",
+      "space w o": "workspace::CloseInactiveTabsAndPanes",
+      "space w w": "workspace::ActivateNextPane",
+      // lazyvim-like treesitter
+      "ctrl-space": "editor::SelectLargerSyntaxNode",
+      "backspace": "editor::SelectSmallerSyntaxNode",
+      // emacs-like command launcher
+      "alt-x": "command_palette::Toggle",
     }
   }
 ]
