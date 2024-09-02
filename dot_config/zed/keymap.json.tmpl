@@ -4,11 +4,6 @@
     "bindings": {
       // kate-like vim mode switcher
       "ctrl-alt-v": "workspace::ToggleVimMode",
-      // zellij-like multiplexing
-      "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
     }
   },
   {
@@ -48,6 +43,11 @@
       "space w d": "pane::CloseActiveItem",
       "space w o": "workspace::CloseInactiveTabsAndPanes",
       "space w w": "workspace::ActivateNextPane",
+      // zellij-like multiplexing
+      "alt-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "alt-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "alt-l": ["workspace::ActivatePaneInDirection", "Right"],
       // lazyvim-like treesitter
       "ctrl-space": "editor::SelectLargerSyntaxNode",
       "backspace": "editor::SelectSmallerSyntaxNode",
