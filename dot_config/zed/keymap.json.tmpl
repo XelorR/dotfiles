@@ -2,12 +2,14 @@
   {
     "context": "Editor",
     "bindings": {
+      // kate-like vim mode switcher
       "ctrl-alt-v": "workspace::ToggleVimMode"
     }
   },
   {
     "context": "vim_mode == insert",
     "bindings": {
+      // emacs-like insert mode alt keys
       "alt-d": "editor::DeleteToNextWordEnd",
       "alt-f": "editor::MoveToNextWordEnd",
       "alt-b": "editor::MoveToPreviousWordStart",
