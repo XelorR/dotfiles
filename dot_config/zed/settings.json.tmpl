@@ -33,7 +33,11 @@
   "assistant": {
     "default_model": {
       "provider": "ollama",
+{{ if eq .chezmoi.hostname "lptp" -}}
+      "model": "deepseek-coder-v2"
+{{ else -}}
       "model": "phi3.5:latest"
+{{ end -}}
     },
     "version": "2",
     "provider": null
