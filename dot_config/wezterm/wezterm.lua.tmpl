@@ -30,7 +30,7 @@ config.font = wezterm.font_with_fallback{
   "Liga SFMono Nerd Font",
   "MesloLGS Nerd Font Mono",
 }
-config.font_size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11.5{{ end }}
+config.font_size = {{ if eq .chezmoi.os "darwin" }}16{{ else }}14{{ end }}
 
 -- disabling confirmation on exit
 config.window_close_confirmation = "NeverPrompt"
