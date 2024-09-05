@@ -9,8 +9,12 @@ cursorline = true
 true-color = true
 
 [keys.normal]
+H = [ ":buffer-previous" ]
+L = [ ":buffer-next" ]
 A-z = [ ":toggle-option soft-wrap.enable", ":redraw" ]
 A-r = [ ":reload-all", ":config-reload", ":redraw" ]
+C-space = [ "expand_selection" ]
+backspace = [ "shrink_selection" ]
 
 [keys.normal.'space'.'space']
 w = [":write", ":redraw"]
