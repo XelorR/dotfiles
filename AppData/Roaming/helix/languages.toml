@@ -5,6 +5,10 @@ formatter = { command = 'black', args = ["--quiet", "-"] }
 auto-format = true
 
 [[language]]
+name = "bash"
+auto-format = true
+
+[[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 
