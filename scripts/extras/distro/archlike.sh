@@ -71,14 +71,6 @@ else
 			fzf \
 			gcc \
 			github-cli \
-			gnome-shell-extension-appindicator \
-			gnome-shell-extension-arc-menu \
-			gnome-shell-extension-caffeine \
-			gnome-shell-extension-dash-to-dock \
-			gnome-shell-extension-desktop-icons-ng \
-			gnome-shell-extension-no-overview \
-			gnome-shell-extensions \
-			gnome-tweaks \
 			helix \
 			jq \
 			keepassxc \
@@ -123,6 +115,18 @@ else
 			zellij \
 			zsh \
     ;
+    if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+      sudo pacman -Syu --needed --noconfirm \
+        gnome-shell-extension-appindicator \
+        gnome-shell-extension-arc-menu \
+        gnome-shell-extension-caffeine \
+        gnome-shell-extension-dash-to-dock \
+        gnome-shell-extension-desktop-icons-ng \
+        gnome-shell-extension-no-overview \
+        gnome-shell-extensions \
+        gnome-tweaks \
+      ;
+    fi
 
 		if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
 			sudo pacman -Syu --needed --noconfirm \
@@ -176,13 +180,6 @@ else
         fzf \
         gcc \
         genisoimage \
-        gnome-shell-extension-appindicator \
-        gnome-shell-extension-desktop-icons-ng \
-        gnome-shell-extension-extersion-manager \
-        gnome-shell-extension-ubuntu-dock \
-        gnome-shell-extensions \
-        gnome-sushi \
-        gnome-tweaks \
         jq \
         keepassxc \
         libreoffice \
@@ -211,6 +208,17 @@ else
         wl-clipboard \
         zsh \
       ;
+      if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+        sudo pacman -Syu --needed --noconfirm \
+          gnome-shell-extension-appindicator \
+          gnome-shell-extension-desktop-icons-ng \
+          gnome-shell-extension-extersion-manager \
+          gnome-shell-extension-ubuntu-dock \
+          gnome-shell-extensions \
+          gnome-sushi \
+          gnome-tweaks \
+        ;
+      fi
 
       for app in \
         chezmoi \
