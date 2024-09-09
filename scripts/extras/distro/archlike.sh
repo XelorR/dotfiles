@@ -258,8 +258,14 @@ fisher install jethrokuan/z
 EOF
 
 	# setting up docker
-	sudo groupadd docker
-	sudo usermod -aG docker $USER
+  for group in \
+    docker \
+    qemu \
+    vboxusers \
+  ; do
+    sudo groupadd $group
+    sudo usermod -aG $group $USER
+  done
 
 	sudo mkdir -p /etc/docker
 	sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
