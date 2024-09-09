@@ -141,7 +141,8 @@ else
         ;
 			else
 				sudo pacman -S --needed --noconfirm \
-					cachyos/vscodium
+					cachyos/vscodium \
+        ;
 				flatpak install -y \
 					com.logseq.Logseq \
         ;
