@@ -156,7 +156,83 @@ else
 			aria2
 	  elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
 			sudo apt install -y \
-			aria2
+        aria2 \
+        black \
+        cron \
+        curl \
+        docker \
+        docker-compose \
+        emacs \
+        fd-find \
+        firefox \
+        flatpak \
+        fzf \
+        gcc \
+        genisoimage \
+        gnome-shell-extension-appindicator \
+        gnome-shell-extension-desktop-icons-ng \
+        gnome-shell-extension-extersion-manager \
+        gnome-shell-extension-ubuntu-dock \
+        gnome-shell-extensions \
+        gnome-sushi \
+        gnome-tweaks \
+        jq \
+        keepassxc \
+        libreoffice \
+        luajit \
+        nautilus-image-converter \
+        nautilus-wipe \
+        ncdu \
+        nmap \
+        npm \
+        p7zip-full \
+        pipx \
+        proxychains \
+        python3-ipykernel \
+        python3-llfuse \
+        python3-pip \
+        qbittorrent \
+        qemu-kvm \
+        ripgrep \
+        rsync \
+        sshfs \
+        virtualbox \
+        virtualbox-ext-pack \
+        virtualbox-guest-additions-iso \
+        vlc \
+        wget \
+        wl-clipboard \
+        zsh \
+      ;
+
+      for app in \
+        chezmoi \
+        fish \
+        gh \
+        helix \
+        lazygit \
+        lf \
+        neovim \
+        ollama \
+        serpl \
+        syncthing \
+        ventoy \
+        vscode \
+        wezterm \
+        zellij \
+      ; do
+        curl -sL https://bit.ly/package-installer | bash -s $app
+      done
+
+      flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+			flatpak install -y \
+				org.gnome.World.PikaBackup \
+        com.logseq.Logseq \
+        im.riot.Riot \
+        net.minetest.Minetest \
+        org.telegram.desktop \
+      ;
+
 	  fi
 	elif command -v dnf &>/dev/null; then
 		sudo dnf check-update
