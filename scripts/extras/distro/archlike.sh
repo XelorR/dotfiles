@@ -116,6 +116,7 @@ else
     ;
     if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
       sudo pacman -Syu --needed --noconfirm \
+        drawing \
         gnome-shell-extension-appindicator \
         gnome-shell-extension-arc-menu \
         gnome-shell-extension-caffeine \
@@ -208,6 +209,7 @@ else
       ;
       if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
         sudo pacman -Syu --needed --noconfirm \
+          drawing \
           gnome-shell-extension-appindicator \
           gnome-shell-extension-desktop-icons-ng \
           gnome-shell-extension-extersion-manager \
