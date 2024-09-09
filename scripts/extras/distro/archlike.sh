@@ -121,7 +121,8 @@ else
 			wl-clipboard \
 			zed \
 			zellij \
-			zsh
+			zsh \
+    ;
 
 		if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
 			sudo pacman -Syu --needed --noconfirm \
@@ -129,24 +130,28 @@ else
 				chaotic-aur/nekoray \
 				chaotic-aur/pika-backup \
 				chaotic-aur/virtualbox-ext-oracle \
-				chaotic-aur/visual-studio-code-bin
+				chaotic-aur/visual-studio-code-bin \
+      ;
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
 					visual-studio-code-bin \
 					virtualbox-ext-oracle \
-					logseq-desktop-bin
+					logseq-desktop-bin \
+        ;
 			else
 				sudo pacman -S --needed --noconfirm \
 					cachyos/vscodium
 				flatpak install -y \
-					com.logseq.Logseq
+					com.logseq.Logseq \
+        ;
 				# TODO install virtualbox guest additions
 			fi
 
 			# installing missing software via flatpak
 			flatpak install -y \
-				org.gnome.World.PikaBackup
+				org.gnome.World.PikaBackup \
+      ;
 			# TODO - install nekoray
 		fi
 	elif command -v apt &>/dev/null; then
