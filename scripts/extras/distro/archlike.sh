@@ -228,6 +228,7 @@ else
 			flatpak install -y \
 				org.gnome.World.PikaBackup \
         com.logseq.Logseq \
+        dev.zed.Zed \
         im.riot.Riot \
         net.minetest.Minetest \
         org.telegram.desktop \
