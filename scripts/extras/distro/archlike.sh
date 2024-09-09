@@ -71,14 +71,6 @@ else
 			fzf \
 			gcc \
 			github-cli \
-			gnome-shell-extension-appindicator \
-			gnome-shell-extension-arc-menu \
-			gnome-shell-extension-caffeine \
-			gnome-shell-extension-dash-to-dock \
-			gnome-shell-extension-desktop-icons-ng \
-			gnome-shell-extension-no-overview \
-			gnome-shell-extensions \
-			gnome-tweaks \
 			helix \
 			jq \
 			keepassxc \
@@ -89,7 +81,6 @@ else
 			marksman \
 			minetest \
 			minikube \
-			nautilus-image-converter \
 			ncdu \
 			neovim \
 			nmap \
@@ -121,7 +112,22 @@ else
 			wl-clipboard \
 			zed \
 			zellij \
-			zsh
+			zsh \
+    ;
+    if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+      sudo pacman -Syu --needed --noconfirm \
+        drawing \
+        gnome-shell-extension-appindicator \
+        gnome-shell-extension-arc-menu \
+        gnome-shell-extension-caffeine \
+        gnome-shell-extension-dash-to-dock \
+        gnome-shell-extension-desktop-icons-ng \
+        gnome-shell-extension-no-overview \
+        gnome-shell-extensions \
+        gnome-tweaks \
+        nautilus-image-converter \
+      ;
+    fi
 
 		if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
 			sudo pacman -Syu --needed --noconfirm \
@@ -129,34 +135,122 @@ else
 				chaotic-aur/nekoray \
 				chaotic-aur/pika-backup \
 				chaotic-aur/virtualbox-ext-oracle \
-				chaotic-aur/visual-studio-code-bin
+				chaotic-aur/visual-studio-code-bin \
+      ;
 		else
 			if command -v paru &>/dev/null; then
 				paru -Syu --needed --noconfirm \
 					visual-studio-code-bin \
 					virtualbox-ext-oracle \
-					logseq-desktop-bin
+					logseq-desktop-bin \
+        ;
 			else
 				sudo pacman -S --needed --noconfirm \
-					cachyos/vscodium
+					cachyos/vscodium \
+        ;
 				flatpak install -y \
-					com.logseq.Logseq
+					com.logseq.Logseq \
+        ;
 				# TODO install virtualbox guest additions
 			fi
 
 			# installing missing software via flatpak
 			flatpak install -y \
-				org.gnome.World.PikaBackup
+				org.gnome.World.PikaBackup \
+      ;
 			# TODO - install nekoray
 		fi
 	elif command -v apt &>/dev/null; then
 		sudo apt update
 	  if [[ "$ID" == "debian" || "$ID" == "kali" ]]; then
 			sudo apt install -y \
-			aria2
+        aria2 \
+      ;
 	  elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
 			sudo apt install -y \
-			aria2
+        aria2 \
+        black \
+        cron \
+        curl \
+        docker \
+        docker-compose \
+        emacs \
+        fd-find \
+        firefox \
+        flatpak \
+        fzf \
+        gcc \
+        genisoimage \
+        jq \
+        keepassxc \
+        libreoffice \
+        luajit \
+        ncdu \
+        nmap \
+        npm \
+        p7zip-full \
+        pipx \
+        proxychains \
+        python3-ipykernel \
+        python3-llfuse \
+        python3-pip \
+        qbittorrent \
+        qemu-kvm \
+        ripgrep \
+        rsync \
+        sshfs \
+        virtualbox \
+        virtualbox-ext-pack \
+        virtualbox-guest-additions-iso \
+        vlc \
+        wget \
+        wl-clipboard \
+        zsh \
+      ;
+      if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+        sudo pacman -Syu --needed --noconfirm \
+          drawing \
+          gnome-shell-extension-appindicator \
+          gnome-shell-extension-desktop-icons-ng \
+          gnome-shell-extension-extersion-manager \
+          gnome-shell-extension-ubuntu-dock \
+          gnome-shell-extensions \
+          gnome-sushi \
+          gnome-tweaks \
+          nautilus-image-converter \
+          nautilus-wipe \
+        ;
+      fi
+
+      for app in \
+        chezmoi \
+        fish \
+        gh \
+        helix \
+        lazygit \
+        lf \
+        neovim \
+        ollama \
+        serpl \
+        syncthing \
+        ventoy \
+        vscode \
+        wezterm \
+        zellij \
+      ; do
+        curl -sL https://bit.ly/package-installer | bash -s $app
+      done
+
+      flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+			flatpak install -y \
+				org.gnome.World.PikaBackup \
+        com.logseq.Logseq \
+        dev.zed.Zed \
+        im.riot.Riot \
+        net.minetest.Minetest \
+        org.telegram.desktop \
+      ;
+
 	  fi
 	elif command -v dnf &>/dev/null; then
 		sudo dnf check-update
@@ -182,8 +276,14 @@ fisher install jethrokuan/z
 EOF
 
 	# setting up docker
-	sudo groupadd docker
-	sudo usermod -aG docker $USER
+  for group in \
+    docker \
+    qemu \
+    vboxusers \
+  ; do
+    sudo groupadd $group
+    sudo usermod -aG $group $USER
+  done
 
 	sudo mkdir -p /etc/docker
 	sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
