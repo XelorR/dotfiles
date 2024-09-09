@@ -81,7 +81,6 @@ else
 			marksman \
 			minetest \
 			minikube \
-			nautilus-image-converter \
 			ncdu \
 			neovim \
 			nmap \
@@ -125,6 +124,7 @@ else
         gnome-shell-extension-no-overview \
         gnome-shell-extensions \
         gnome-tweaks \
+        nautilus-image-converter \
       ;
     fi
 
@@ -184,8 +184,6 @@ else
         keepassxc \
         libreoffice \
         luajit \
-        nautilus-image-converter \
-        nautilus-wipe \
         ncdu \
         nmap \
         npm \
@@ -217,6 +215,8 @@ else
           gnome-shell-extensions \
           gnome-sushi \
           gnome-tweaks \
+          nautilus-image-converter \
+          nautilus-wipe \
         ;
       fi
 
