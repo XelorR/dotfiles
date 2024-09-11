@@ -31,7 +31,7 @@ else
     # Win-r
     gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
 
-      # Mouse and touchpad scrolling directions
+    # Mouse and touchpad scrolling directions
     gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
     gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
@@ -42,8 +42,8 @@ else
     gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 
     # Workspaces
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>,']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super>.']"
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left']"
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right']"
 
@@ -53,11 +53,11 @@ else
     gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Control><Alt>F8']" # to solve conflict with workspace 8
     for i in $(seq 9); do
       echo Configuring desktop $i...
-      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
-      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i', '<Control><Super>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i', '<Super>$i']"
     done
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0', '<Control><Super>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0', '<Super>0']"
   fi
 
   if command -v pacman &>/dev/null; then
@@ -142,7 +142,7 @@ else
       zed \
       zellij \
       zsh \
-    ;
+      ;
     if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
       sudo pacman -Syu --needed --noconfirm \
         drawing \
@@ -155,7 +155,7 @@ else
         gnome-shell-extensions \
         gnome-tweaks \
         nautilus-image-converter \
-      ;
+        ;
     fi
 
     if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
@@ -165,27 +165,27 @@ else
         chaotic-aur/pika-backup \
         chaotic-aur/virtualbox-ext-oracle \
         chaotic-aur/visual-studio-code-bin \
-      ;
+        ;
     elif command -v paru &>/dev/null; then
       paru -Syu --needed --noconfirm \
         visual-studio-code-bin \
         virtualbox-ext-oracle \
         logseq-desktop-bin \
-      ;
+        ;
     else
       sudo pacman -S --needed --noconfirm \
         cachyos/vscodium \
-      ;
+        ;
       flatpak install -y \
         com.logseq.Logseq \
-      ;
+        ;
       # TODO install virtualbox guest additions
     fi
 
     # installing missing software via flatpak
     flatpak install -y \
       org.gnome.World.PikaBackup \
-    ;
+      ;
     # TODO - install nekoray
   # fi
   elif command -v apt &>/dev/null; then
@@ -193,7 +193,7 @@ else
     if [[ "$ID" == "debian" || "$ID" == "kali" ]]; then
       sudo apt install -y \
         aria2 \
-      ;
+        ;
     elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
       sudo apt install -y \
         alacritty \
@@ -235,7 +235,7 @@ else
         wget \
         wl-clipboard \
         zsh \
-      ;
+        ;
       if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
         sudo pacman -Syu --needed --noconfirm \
           drawing \
@@ -248,7 +248,7 @@ else
           gnome-tweaks \
           nautilus-image-converter \
           nautilus-wipe \
-        ;
+          ;
       fi
 
       for app in \
@@ -265,19 +265,18 @@ else
         ventoy \
         vscode \
         wezterm \
-        zellij \
-      ; do
+        zellij; do
         curl -sL https://bit.ly/package-installer | bash -s $app
       done
 
       flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
       flatpak install -y \
         org.gnome.World.PikaBackup \
-          com.logseq.Logseq \
-          dev.zed.Zed \
-          im.riot.Riot \
-          net.minetest.Minetest \
-          org.telegram.desktop \
+        com.logseq.Logseq \
+        dev.zed.Zed \
+        im.riot.Riot \
+        net.minetest.Minetest \
+        org.telegram.desktop \
         ;
     fi
 
@@ -285,16 +284,16 @@ else
     sudo dnf check-update
     sudo dnt install -y \
       aria2 \
-    ;
+      ;
   elif command -v zypper &>/dev/null; then
     sudo sypper refresh
     sudo zypper --non-interactive --no-confirm install \
       aria2 \
-    ;
+      ;
   elif command -v rpm-ostree &>/dev/null; then
     sudo rpm-ostree install --apply-live \
       aria2 \
-    ;
+      ;
   else
     echo Not implemented
     # place to implement for different distros
@@ -312,8 +311,7 @@ EOF
   for group in \
     docker \
     qemu \
-    vboxusers \
-  ; do
+    vboxusers; do
     sudo groupadd $group
     sudo usermod -aG $group $USER
   done
