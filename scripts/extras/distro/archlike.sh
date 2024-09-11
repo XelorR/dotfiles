@@ -62,14 +62,6 @@ else
 	fi
 
 	if command -v pacman &>/dev/null; then
-		# enabling cachy os repos
-		if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
-			curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
-			tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-			sudo ./cachyos-repo.sh
-			cd ..
-			rm -rf cachyos-repo.tar.xz cachyos-repo
-		fi
     # enabling arcolinux repos
     if [ ! -f /etc/pacman.d/arcolinux-mirrorlist ]; then
       (
@@ -79,6 +71,14 @@ else
       )
       rm -rf arcolinux-spices
     fi
+		# enabling cachy os repos
+		if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
+			curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+			tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+			sudo ./cachyos-repo.sh
+			cd ..
+			rm -rf cachyos-repo.tar.xz cachyos-repo
+		fi
 
 		# installing packages
 		sudo pacman -Syu --needed --noconfirm \
