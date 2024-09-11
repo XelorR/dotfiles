@@ -1,45 +1,45 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # OS check
 if [[ $(uname -o) == "Darwin" ]]; then
-	# macos part
-	if command -v brew &>/dev/null; then
-		echo Not implemented
-	else
-		echo No brew installation found, skipping...
-	fi
+  # macos part
+  if command -v brew &>/dev/null; then
+    echo Not implemented
+  else
+    echo No brew installation found, skipping...
+  fi
 
 elif [[ $(uname -o) == "Android" ]]; then
-	# termux part
+  echo Not implemented
+  # termux part
 
 else
-	# gnu linux part
-	. /etc/os-release
+  # gnu linux part
+  . /etc/os-release
 
+  # enabling ubuntu-like alt-tab and windows-like win-r
+  if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
 
-	# enabling ubuntu-like alt-tab and windows-like win-r
-	if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+    # Alt-tab, Super-grave and Super-tab
+    gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab']"
 
-		# Alt-tab, Super-grave and Super-tab
-		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
-		gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab']"
+    # Win-r
+    gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
 
-		# Win-r
-		gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
+      # Mouse and touchpad scrolling directions
+    gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+    gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
-    # Mouse and touchpad scrolling directions
-		gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-		gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+    # Scrennshooting
+    gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
 
-		# Scrennshooting
-		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
-
-		# VirtualBox - allowing to grab all keyboard input
-		gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
+    # VirtualBox - allowing to grab all keyboard input
+    gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 
     # Workspaces
     gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left']"
@@ -56,12 +56,11 @@ else
       gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
       gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
     done
-    echo Configuring desktop 10...
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
     gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
-	fi
+  fi
 
-	if command -v pacman &>/dev/null; then
+  if command -v pacman &>/dev/null; then
     # enabling arcolinux repos
     if [ ! -f /etc/pacman.d/arcolinux-mirrorlist ]; then
       (
@@ -71,78 +70,78 @@ else
       )
       rm -rf arcolinux-spices-master
     fi
-		# enabling cachy os repos
-		if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
-			curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
-			tar xvf cachyos-repo.tar.xz && cd cachyos-repo
-			sudo ./cachyos-repo.sh
-			cd ..
-			rm -rf cachyos-repo.tar.xz cachyos-repo
-		fi
+    # enabling cachy os repos
+    if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
+      curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+      tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+      sudo ./cachyos-repo.sh
+      cd ..
+      rm -rf cachyos-repo.tar.xz cachyos-repo
+    fi
 
-		# installing packages
-		sudo pacman -Syu --needed --noconfirm \
+    # installing packages
+    sudo pacman -Syu --needed --noconfirm \
       alacritty \
       arcolinux_repo/archlinux-tweak-tool-git \
-			aria2 \
-			bash-language-server \
-			chezmoi \
-			cronie \
-			curl \
-			docker \
-			docker-compose \
-			element-desktop \
-			emacs \
-			fd \
-			firefox \
-			fish \
-			fisher \
-			flatpak \
-			fzf \
-			gcc \
-			github-cli \
-			helix \
-			jq \
-			keepassxc \
-			lazygit \
-			lf \
-			libreoffice-fresh \
-			luajit \
-			marksman \
-			minetest \
-			minikube \
-			ncdu \
-			neovim \
-			nmap \
-			npm \
-			ollama \
-			p7zip \
-			prettier \
-			proxychains \
-			pyright \
-			python-black \
-			python-ipykernel \
-			python-llfuse \
-			python-pip \
-			python-pipx \
-			qbittorrent \
-			qemu-desktop \
-			ripgrep \
-			rsync \
-			serpl \
-			sshfs \
-			sushi \
-			syncthing \
-			telegram-desktop \
-			virtualbox \
-			virtualbox-guest-iso \
-			vlc \
-			wezterm \
-			wget \
-			wl-clipboard \
-			zed \
-			zellij \
-			zsh \
+      aria2 \
+      bash-language-server \
+      chezmoi \
+      cronie \
+      curl \
+      docker \
+      docker-compose \
+      element-desktop \
+      emacs \
+      fd \
+      firefox \
+      fish \
+      fisher \
+      flatpak \
+      fzf \
+      gcc \
+      github-cli \
+      helix \
+      jq \
+      keepassxc \
+      lazygit \
+      lf \
+      libreoffice-fresh \
+      luajit \
+      marksman \
+      minetest \
+      minikube \
+      ncdu \
+      neovim \
+      nmap \
+      npm \
+      ollama \
+      p7zip \
+      prettier \
+      proxychains \
+      pyright \
+      python-black \
+      python-ipykernel \
+      python-llfuse \
+      python-pip \
+      python-pipx \
+      qbittorrent \
+      qemu-desktop \
+      ripgrep \
+      rsync \
+      serpl \
+      sshfs \
+      sushi \
+      syncthing \
+      telegram-desktop \
+      virtualbox \
+      virtualbox-guest-iso \
+      vlc \
+      wezterm \
+      wget \
+      wl-clipboard \
+      zed \
+      zellij \
+      zsh \
     ;
     if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
       sudo pacman -Syu --needed --noconfirm \
@@ -159,45 +158,44 @@ else
       ;
     fi
 
-		if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
-			sudo pacman -Syu --needed --noconfirm \
-				chaotic-aur/logseq-desktop-bin \
-				chaotic-aur/nekoray \
-				chaotic-aur/pika-backup \
-				chaotic-aur/virtualbox-ext-oracle \
-				chaotic-aur/visual-studio-code-bin \
+    if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
+      sudo pacman -Syu --needed --noconfirm \
+        chaotic-aur/logseq-desktop-bin \
+        chaotic-aur/nekoray \
+        chaotic-aur/pika-backup \
+        chaotic-aur/virtualbox-ext-oracle \
+        chaotic-aur/visual-studio-code-bin \
       ;
-		else
-			if command -v paru &>/dev/null; then
-				paru -Syu --needed --noconfirm \
-					visual-studio-code-bin \
-					virtualbox-ext-oracle \
-					logseq-desktop-bin \
-        ;
-			else
-				sudo pacman -S --needed --noconfirm \
-					cachyos/vscodium \
-        ;
-				flatpak install -y \
-					com.logseq.Logseq \
-        ;
-				# TODO install virtualbox guest additions
-			fi
+    elif command -v paru &>/dev/null; then
+      paru -Syu --needed --noconfirm \
+        visual-studio-code-bin \
+        virtualbox-ext-oracle \
+        logseq-desktop-bin \
+      ;
+    else
+      sudo pacman -S --needed --noconfirm \
+        cachyos/vscodium \
+      ;
+      flatpak install -y \
+        com.logseq.Logseq \
+      ;
+      # TODO install virtualbox guest additions
+    fi
 
-			# installing missing software via flatpak
-			flatpak install -y \
-				org.gnome.World.PikaBackup \
-      ;
-			# TODO - install nekoray
-		fi
-	elif command -v apt &>/dev/null; then
-		sudo apt update
-	  if [[ "$ID" == "debian" || "$ID" == "kali" ]]; then
-			sudo apt install -y \
+    # installing missing software via flatpak
+    flatpak install -y \
+      org.gnome.World.PikaBackup \
+    ;
+    # TODO - install nekoray
+  # fi
+  elif command -v apt &>/dev/null; then
+    sudo apt update
+    if [[ "$ID" == "debian" || "$ID" == "kali" ]]; then
+      sudo apt install -y \
         aria2 \
       ;
-	  elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
-			sudo apt install -y \
+    elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
+      sudo apt install -y \
         alacritty \
         aria2 \
         black \
@@ -273,40 +271,44 @@ else
       done
 
       flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-			flatpak install -y \
-				org.gnome.World.PikaBackup \
-        com.logseq.Logseq \
-        dev.zed.Zed \
-        im.riot.Riot \
-        net.minetest.Minetest \
-        org.telegram.desktop \
-      ;
+      flatpak install -y \
+        org.gnome.World.PikaBackup \
+          com.logseq.Logseq \
+          dev.zed.Zed \
+          im.riot.Riot \
+          net.minetest.Minetest \
+          org.telegram.desktop \
+        ;
+    fi
 
-	  fi
-	elif command -v dnf &>/dev/null; then
-		sudo dnf check-update
-		sudo dnt install -y \
-			aria2
-	elif command -v zypper &>/dev/null; then
-		sudo sypper refresh
-		sudo zypper --non-interactive --no-confirm install \
-			aria2
-	elif command -v rpm-ostree &>/dev/null; then
-		sudo rpm-ostree install --apply-live \
-			aria2
-	else
-		# place to implement for different distros
-	fi
+  elif command -v dnf &>/dev/null; then
+    sudo dnf check-update
+    sudo dnt install -y \
+      aria2 \
+    ;
+  elif command -v zypper &>/dev/null; then
+    sudo sypper refresh
+    sudo zypper --non-interactive --no-confirm install \
+      aria2 \
+    ;
+  elif command -v rpm-ostree &>/dev/null; then
+    sudo rpm-ostree install --apply-live \
+      aria2 \
+    ;
+  else
+    echo Not implemented
+    # place to implement for different distros
+  fi
 
-	# setting up default shell
-	chsh -s "$(which fish)"
+  # setting up default shell
+  chsh -s "$(which fish)"
 
-	/bin/fish <<'EOF'
+  /bin/fish <<'EOF'
 # curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher install jethrokuan/z
 EOF
 
-	# setting up docker
+  # setting up docker
   for group in \
     docker \
     qemu \
@@ -316,8 +318,8 @@ EOF
     sudo usermod -aG $group $USER
   done
 
-	sudo mkdir -p /etc/docker
-	sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
+  sudo mkdir -p /etc/docker
+  sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
 {
   "registry-mirrors": [
         "https://dockerhub.timeweb.cloud",
@@ -327,8 +329,11 @@ EOF
 }
 EOF'
 
-	# solving inconsistencies with windows dual boot
-	timedatectl set-local-rtc 1 --adjust-system-clock
+  # solving inconsistencies with windows dual boot
+  # timedatectl set-local-rtc 1 --adjust-system-clock
+
+  # ensuring unix default time mode in use
+  timedatectl set-local-rtc 0 --adjust-system-clock
 
   # using capslock as additional escape
   /usr/bin/setxkbmap -option "caps:escape"
