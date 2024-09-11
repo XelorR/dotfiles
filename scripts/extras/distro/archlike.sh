@@ -70,6 +70,15 @@ else
 			cd ..
 			rm -rf cachyos-repo.tar.xz cachyos-repo
 		fi
+    # enabling arcolinux repos
+    if [ ! -f /etc/pacman.d/arcolinux-mirrorlist ]; then
+      (
+        git clone https://github.com/arcolinux/arcolinux-spices
+        cd ./arcolinux-spices/usr/share/arcolinux-spices/scripts
+        sudo ./get-the-keys-and-repos.sh
+      )
+      rm -rf arcolinux-spices
+    fi
 
 		# installing packages
 		sudo pacman -Syu --needed --noconfirm \
