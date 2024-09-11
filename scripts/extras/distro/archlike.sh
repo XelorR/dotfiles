@@ -42,23 +42,23 @@ else
 		gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 
     # Workspaces
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right']"
 
     gsettings set org.gnome.mutter dynamic-workspaces false
     gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
 
-    gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Super><Alt>F8']" # to solve conflict with workspace 8
+    gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Control><Alt>F8']" # to solve conflict with workspace 8
     for i in $(seq 9); do
       echo Configuring desktop $i...
-      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Alt><Shift>$i']"
-      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super><Alt>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
     done
     echo Configuring desktop 10...
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Alt><Shift>0']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super><Alt>0']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
 	fi
 
 	if command -v pacman &>/dev/null; then
