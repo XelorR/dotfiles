@@ -83,6 +83,7 @@ else
 		# installing packages
 		sudo pacman -Syu --needed --noconfirm \
       alacritty \
+      arcolinux_repo/archlinux-tweak-tool-git \
 			aria2 \
 			bash-language-server \
 			chezmoi \
