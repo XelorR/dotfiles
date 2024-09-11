@@ -69,7 +69,7 @@ else
         cd ./arcolinux-spices-master/usr/share/arcolinux-spices/scripts/
         sudo ./get-the-keys-and-repos.sh
       )
-      rm -rf arcolinux-spices
+      rm -rf arcolinux-spices-master
     fi
 		# enabling cachy os repos
 		if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
