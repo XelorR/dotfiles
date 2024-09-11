@@ -65,8 +65,8 @@ else
     # enabling arcolinux repos
     if [ ! -f /etc/pacman.d/arcolinux-mirrorlist ]; then
       (
-        git clone https://github.com/arcolinux/arcolinux-spices
-        cd ./arcolinux-spices/usr/share/arcolinux-spices/scripts
+        curl -sL https://github.com/arcolinux/arcolinux-spices/archive/master.tar.gz -o arcolinux-repo.tar.gz
+        cd ./arcolinux-spices-master/usr/share/arcolinux-spices/scripts/
         sudo ./get-the-keys-and-repos.sh
       )
       rm -rf arcolinux-spices
