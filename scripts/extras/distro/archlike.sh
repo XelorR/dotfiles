@@ -19,8 +19,8 @@ else
 
 	# enabling ubuntu-like alt-tab and windows-like win-r
 	if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
-		# assuming gnome version
-		echo Configuring Alt-tab, Super-grave and Super-tab...
+
+		# Alt-tab, Super-grave and Super-tab
 		gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 		gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
 		gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
@@ -28,18 +28,37 @@ else
 		gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
 		gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Super>Above_Tab']"
 
-		echo Configuring Win-r...
+		# Win-r
 		gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Alt>F1', '<Super>r']"
 
-		echo Configuring scrolling...
+    # Mouse and touchpad scrolling directions
 		gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
 		gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
-		echo Configuring Super-Shift-s to make a screenshot...
+		# Scrennshooting
 		gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print', '<Shift><Super>s']"
 
-		echo Allowing VirtualBox to grab all keyboard input
+		# VirtualBox - allowing to grab all keyboard input
 		gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
+
+    # Workspaces
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right']"
+
+    gsettings set org.gnome.mutter dynamic-workspaces false
+    gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
+
+    gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Super><Alt>F8']" # to solve conflict with workspace 8
+    for i in $(seq 9); do
+      echo Configuring desktop $i...
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Alt><Shift>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super><Alt>$i']"
+    done
+    echo Configuring desktop 10...
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Alt><Shift>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super><Alt>0']"
 	fi
 
 	if command -v pacman &>/dev/null; then
