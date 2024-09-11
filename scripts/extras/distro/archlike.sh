@@ -299,4 +299,7 @@ EOF'
 	# solving inconsistencies with windows dual boot
 	timedatectl set-local-rtc 1 --adjust-system-clock
 
+  # using capslock as additional escape
+  /usr/bin/setxkbmap -option "caps:escape"
+
 fi
