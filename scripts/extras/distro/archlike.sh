@@ -73,6 +73,7 @@ else
 
 		# installing packages
 		sudo pacman -Syu --needed --noconfirm \
+      alacritty \
 			aria2 \
 			bash-language-server \
 			chezmoi \
@@ -187,6 +188,7 @@ else
       ;
 	  elif [[ "$ID" == "ubuntu" || "$ID_LIKE" == "ubuntu debian" ]]; then
 			sudo apt install -y \
+        alacritty \
         aria2 \
         black \
         cron \
