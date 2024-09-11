@@ -19,6 +19,8 @@ else
 
   # enabling ubuntu-like alt-tab and windows-like win-r
   if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
+    # discover current with something like this:
+    # gsettings list-recursively org.gnome.desktop.wm.keybindings | hx
 
     # Alt-tab, Super-grave and Super-tab
     gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
@@ -41,9 +43,12 @@ else
     # VirtualBox - allowing to grab all keyboard input
     gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 
+    # fullscreen
+    gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Super>f']"
+
     # Workspaces
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>,']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super>.']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>comma', '<Super><Shift>h']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super><Shift>l']"
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left']"
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right']"
 
