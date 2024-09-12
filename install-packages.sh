@@ -70,10 +70,11 @@ else
     if [ ! -f /etc/pacman.d/arcolinux-mirrorlist ]; then
       (
         curl -sL https://github.com/arcolinux/arcolinux-spices/archive/master.tar.gz -o arcolinux-repo.tar.gz
+        tar xvf arcolinux-repo.tar.xz && cd cachyos-repo
         cd ./arcolinux-spices-master/usr/share/arcolinux-spices/scripts/
         sudo ./get-the-keys-and-repos.sh
       )
-      rm -rf arcolinux-spices-master
+      rm -rf arcolinux-spices-master arcolinux-repo.tar.xz
     fi
     # enabling cachy os repos
     if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
