@@ -73,7 +73,7 @@ else
         tar xvf arcolinux-repo.tar.gz && cd ./arcolinux-spices-master/usr/share/arcolinux-spices/scripts/
         sudo ./get-the-keys-and-repos.sh
       )
-      rm -rf arcolinux-spices-master arcolinux-repo.tar.xz
+      rm -rf arcolinux-spices-master arcolinux-repo.tar.gz
     fi
     # enabling cachy os repos
     if [ ! -f /etc/pacman.d/cachyos-mirrorlist ]; then
