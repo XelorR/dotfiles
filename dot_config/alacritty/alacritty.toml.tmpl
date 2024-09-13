@@ -23,7 +23,11 @@ background = "#222222"
 foreground = "#F9F9F9"
 
 [font]
+{{ if eq .chezmoi.hostname "lptp" -}}
+size = 11.5
+{{ else -}}
 size = 9.0
+{{ end -}}
 
 [font.bold]
 family = "Liga SFMono Nerd Font"
