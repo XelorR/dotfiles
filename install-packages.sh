@@ -101,6 +101,7 @@ else
       firefox \
       fish \
       fisher \
+      flameshot \
       flatpak \
       fzf \
       gcc \
