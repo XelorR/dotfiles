@@ -171,6 +171,7 @@ else
         network-manager-applet \
         python-i3ipc \
         python-requests \
+        rofi \
         ;
       if command -v paru &>/dev/null; then
         paru -Syu --needed --noconfirm \
