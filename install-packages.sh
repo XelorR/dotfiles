@@ -163,6 +163,19 @@ else
         nautilus-image-converter \
         ;
     fi
+    if [ "$XDG_CURRENT_DESKTOP" = "XFCE" ]; then
+      sudo pacman -Syu --needed --noconfirm \
+        autotiling \
+        feh \
+        i3-wm \
+        python-i3ipc \
+        ;
+      if command -v paru &>/dev/null; then
+        paru -Syu --needed --noconfirm \
+          xborder-git \
+          ;
+      fi
+    fi
 
     if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
       sudo pacman -Syu --needed --noconfirm \
