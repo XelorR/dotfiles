@@ -102,10 +102,6 @@
         <value type="string" value="clipman"/>
       </property>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="wi-fi network connection “snr-cpe-19095” active: snr-cpe-19095 (70%)"/>
-        <value type="string" value="wi-fi network connection “snr-cpe-19095” active: snr-cpe-19095 (67%)"/>
-        <value type="string" value="wi-fi network connection “snr-cpe-19095” active: snr-cpe-19095 (74%)"/>
-        <value type="string" value="wi-fi network connection “snr-cpe-19095” active: snr-cpe-19095 (73%)"/>
         <value type="string" value="volumeicon"/>
         <value type="string" value="blueberry-tray.py"/>
         <value type="string" value="clipman"/>
