@@ -168,7 +168,9 @@ else
         autotiling \
         feh \
         i3-wm \
+        network-manager-applet \
         python-i3ipc \
+        python-requests \
         ;
       if command -v paru &>/dev/null; then
         paru -Syu --needed --noconfirm \
