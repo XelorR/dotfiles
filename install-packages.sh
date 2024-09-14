@@ -169,6 +169,7 @@ else
         feh \
         i3-wm \
         network-manager-applet \
+        picom \
         python-i3ipc \
         python-requests \
         rofi \
