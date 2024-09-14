@@ -173,11 +173,11 @@ else
         python-requests \
         rofi \
         ;
-      if command -v paru &>/dev/null; then
-        paru -Syu --needed --noconfirm \
-          xborder-git \
-          ;
-      fi
+      # if command -v paru &>/dev/null; then
+      #   paru -Syu --needed --noconfirm \
+      #     xborder-git \
+      #     ;
+      # fi
     fi
 
     if [ -f /etc/pacman.d/chaotic-mirrorlist ]; then
