@@ -25,7 +25,7 @@ if status is-interactive
     alias note='$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
 
     if command -v emacs &>/dev/null
-        alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1))'"
+        alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1) (setq mode-line-format nil))'"
         alias macs="emacsclient -a '' -c -nw"
         alias orgnote='em $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
         alias doomnote='macs $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
