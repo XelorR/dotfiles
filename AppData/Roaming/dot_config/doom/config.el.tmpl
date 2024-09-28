@@ -96,7 +96,7 @@
 
 (global-auto-revert-mode t)
 (delete-selection-mode t)
-;(global-visual-line-mode t)
+                                        ;(global-visual-line-mode t)
 
 (setq evil-split-window-below t)
 (setq evil-vsplit-window-right t)
@@ -136,8 +136,8 @@
       :n "C-h" #'evil-window-left
       :n "C-j" #'evil-window-down
       :n "C-k" #'evil-window-up
-      :n "C-l" #'evil-window-right
-      )
+      :n "C-l" #'evil-window-right)
+
 
 ;; File/Path completion
 (define-key global-map (kbd "C-x C-f") 'company-files)
