@@ -47,10 +47,10 @@ else
     gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Super>f']"
 
     # Workspaces
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>comma', '<Super><Shift>h']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super><Shift>l']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>comma']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super>period']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left', '<Super><Shift>comma']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right', '<Super><Shift>period']"
 
     gsettings set org.gnome.mutter dynamic-workspaces false
     gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
