@@ -47,10 +47,10 @@ else
     gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen "['<Super>f']"
 
     # Workspaces
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>comma', '<Super><Shift>h']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super><Shift>l']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Control><Alt>Left', '<Super>comma']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Control><Alt>Right', '<Super>period']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Page_Up', '<Control><Shift><Alt>Left', '<Super><Shift>comma']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Page_Down', '<Control><Shift><Alt>Right', '<Super><Shift>period']"
 
     gsettings set org.gnome.mutter dynamic-workspaces false
     gsettings set org.gnome.desktop.wm.preferences num-workspaces 10
@@ -58,11 +58,11 @@ else
     gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Control><Alt>F8']" # to solve conflict with workspace 8
     for i in $(seq 9); do
       echo Configuring desktop $i...
-      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i', '<Control><Super>$i']"
-      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i', '<Super>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
     done
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0', '<Control><Super>0']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0', '<Super>0']"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
   fi
 
   if command -v pacman &>/dev/null; then
@@ -153,11 +153,7 @@ else
       sudo pacman -Syu --needed --noconfirm \
         drawing \
         gnome-shell-extension-appindicator \
-        gnome-shell-extension-arc-menu \
         gnome-shell-extension-caffeine \
-        gnome-shell-extension-dash-to-dock \
-        gnome-shell-extension-desktop-icons-ng \
-        gnome-shell-extension-no-overview \
         gnome-shell-extensions \
         gnome-tweaks \
         nautilus-image-converter \
