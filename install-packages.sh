@@ -153,11 +153,7 @@ else
       sudo pacman -Syu --needed --noconfirm \
         drawing \
         gnome-shell-extension-appindicator \
-        gnome-shell-extension-arc-menu \
         gnome-shell-extension-caffeine \
-        gnome-shell-extension-dash-to-dock \
-        gnome-shell-extension-desktop-icons-ng \
-        gnome-shell-extension-no-overview \
         gnome-shell-extensions \
         gnome-tweaks \
         nautilus-image-converter \
