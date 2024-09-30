@@ -1,15 +1,29 @@
 if status is-interactive
     set fish_greeting
 
-    if command -v lvim &>/dev/null
-        set -Ux EDITOR lvim
-        set -Ux VISUAL lvim
-    else if command -v hx &>/dev/null
+    if command -v emacs &>/dev/null
+        alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1) (setq mode-line-format nil) (global-set-key [remap dabbrev-expand] \'hippie-expand))'"
+        alias sem="sudo em"
+        alias macs="emacsclient -a '' -c -nw"
+        alias orgnote='em $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
+        alias doomnote='macs $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
+    end
+
+    if command -v hx &>/dev/null
         set -Ux EDITOR hx
         set -Ux VISUAL hx
+    else if command -v helix &>/dev/null
+        set -Ux EDITOR helix
+        set -Ux VISUAL helix
+    else if command -v lvim &>/dev/null
+        set -Ux EDITOR lvim
+        set -Ux VISUAL lvim
     else if command -v nvim &>/dev/null
         set -Ux EDITOR nvim
         set -Ux VISUAL nvim
+    else if command -v em &>/dev/null
+        set -Ux EDITOR em
+        set -Ux VISUAL em
     else
         set -Ux EDITOR vi
         set -Ux VISUAL vi
@@ -18,19 +32,9 @@ if status is-interactive
         alias vi='nvim --clean'
         alias vf='nvim --clean $(fzf)'
     end
-    if command -v hx &>/dev/null
-        alias hxnote='hx $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
-    end
+
     alias hz='$VISUAL $(fzf)'
     alias note='$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
-
-    if command -v emacs &>/dev/null
-        alias em="emacs -nw -Q --eval '(progn (setq make-backup-files nil) (menu-bar-mode -1) (setq mode-line-format nil) (global-set-key [remap dabbrev-expand] \'hippie-expand))'"
-        alias sem="sudo em"
-        alias macs="emacsclient -a '' -c -nw"
-        alias orgnote='em $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
-        alias doomnote='macs $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
-    end
 
     function mkcd --description="Create directory and cd into it"
         mkdir -p $argv[1] && cd $argv[1]
