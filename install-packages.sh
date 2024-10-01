@@ -58,11 +58,13 @@ else
     gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "['<Control><Alt>F8']" # to solve conflict with workspace 8
     for i in $(seq 9); do
       echo Configuring desktop $i...
-      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i']"
-      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i']"
+      gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Control><Alt><Shift>$i', '<Super><Shift>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Control><Alt>$i', '<Super>$i']"
     done
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0']"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0']"
+    gsettings set org.gnome.shell.keybindings switch-to-application-10 "[]"
+    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Control><Alt><Shift>0', '<Super><Shift>0']"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Control><Alt>0', '<Super>0']"
   fi
 
   if command -v pacman &>/dev/null; then
