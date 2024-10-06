@@ -328,14 +328,9 @@ else
 fisher install jethrokuan/z
 EOF
 
-  # setting up docker
-  for group in \
-    docker \
-    qemu \
-    vboxusers; do
-    sudo groupadd $group
-    sudo usermod -aG $group $USER
-  done
+  # setting up docker and virtualization software
+  sudo groupadd docker,qemu,vboxusers
+  sudo usermod -aG docker,qemu,vboxusers $USER
 
   sudo mkdir -p /etc/docker
   sudo sh -c 'cat <<EOF >/etc/docker/daemon.json
