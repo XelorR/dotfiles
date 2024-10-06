@@ -90,6 +90,7 @@ else
     sudo pacman -Syu --needed --noconfirm \
       alacritty \
       arcolinux_repo/archlinux-tweak-tool-git \
+      arcolinux_repo_3party/rofi-lbonn-wayland \
       aria2 \
       bash-language-server \
       chezmoi \
@@ -151,6 +152,21 @@ else
       zellij \
       zsh \
       ;
+
+    if [ -n "$WAYLAND_DISPLAY" ]; then
+      echo "Wayland detected, installing Wayland-specific tools"
+      # sudo pacman -Syu --needed --noconfirm \
+      #   rofi \
+      #   ;
+    elif [ -n "$DISPLAY" ]; then
+      echo "X11 detected, installing Wayland-specific tools"
+      # sudo pacman -Syu --needed --noconfirm \
+      #   rofi \
+      #   ;
+    else
+      echo "No X11 or Wayland detected, skippling related tool installation"
+    fi
+
     if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
       sudo pacman -Syu --needed --noconfirm \
         drawing \
@@ -169,7 +185,6 @@ else
         network-manager-applet \
         picom \
         python-i3ipc \
-        rofi \
         ;
       # if command -v paru &>/dev/null; then
       #   paru -Syu --needed --noconfirm \
@@ -257,6 +272,7 @@ else
         wl-clipboard \
         zsh \
         ;
+
       if [[ "$XDG_CURRENT_DESKTOP" == "GNOME" || "$XDG_CURRENT_DESKTOP" == "ubuntu:GNOME" ]]; then
         sudo pacman -Syu --needed --noconfirm \
           drawing \
